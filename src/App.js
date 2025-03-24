@@ -33,7 +33,11 @@ function App() {
           </svg>
         </div>
         <div className="header-content">
-          <img src="/alex.jpg" alt="Alex Anthony" className="profile-image" />
+          <img
+            src={process.env.PUBLIC_URL + '/alex.jpg'}
+            alt="Alex Anthony"
+            className="profile-image"
+          />
           <h1>Alex Anthony</h1>
         </div>
         <p className="bio-text">
