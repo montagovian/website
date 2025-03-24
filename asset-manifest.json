@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cursed_website/static/css/main.39b0cd5f.css",
+    "main.js": "/cursed_website/static/js/main.e7f19095.js",
+    "static/js/453.49bf11dd.chunk.js": "/cursed_website/static/js/453.49bf11dd.chunk.js",
+    "index.html": "/cursed_website/index.html",
+    "main.39b0cd5f.css.map": "/cursed_website/static/css/main.39b0cd5f.css.map",
+    "main.e7f19095.js.map": "/cursed_website/static/js/main.e7f19095.js.map",
+    "453.49bf11dd.chunk.js.map": "/cursed_website/static/js/453.49bf11dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39b0cd5f.css",
+    "static/js/main.e7f19095.js"
+  ]
+}
