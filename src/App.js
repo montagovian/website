@@ -72,11 +72,11 @@ function App() {
             <div className="feature-card">
               <h3>Failed philosopher</h3>
               <p>
-                <a href="/eefd.pdf" target="_blank" rel="noopener noreferrer">
+                <a href={process.env.PUBLIC_URL + '/eefd.pdf'} target="_blank" rel="noopener noreferrer">
                   Experience, evaluation and Faultless Disagreement. Inquiry, 2016.
                 </a>
                 <br />
-                <a href="/dispositionalpredicates.pdf" target="_blank" rel="noopener noreferrer">
+                <a href={process.env.PUBLIC_URL + '/dispositionalpredicates.pdf'} target="_blank" rel="noopener noreferrer">
                   Dispositional predicates in context. Thesis (Wesleyan University), 2010.
                 </a>
               </p>
