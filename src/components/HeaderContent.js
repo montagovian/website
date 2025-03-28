@@ -2,6 +2,12 @@ import React from 'react';
 import './HeaderContent.css';
 
 function HeaderContent() {
+  const trackEvent = (eventName) => {
+    if (window.umami) {
+      window.umami.track(eventName);
+    }
+  };
+
   return (
     <div className="bio">
       <img
@@ -28,21 +34,45 @@ function HeaderContent() {
           I'm excited to build the next generation of infrastructure and tools that empower AI engineers to deliver on their most ambitious and creative visions for AI-enabled experiences.
         </p>
         <div className="bio-links">
-          <a href={process.env.PUBLIC_URL + '/aanthony-resume.pdf'} target="_blank" rel="noopener noreferrer" className="bio-link">CV</a>
+          <a 
+            href={process.env.PUBLIC_URL + '/aanthony-resume.pdf'} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bio-link"
+            onClick={() => trackEvent('cv_click')}
+          >CV</a>
           <span className="bio-link-separator">•</span>
-          <a href="https://www.linkedin.com/in/aoanthony/" target="_blank" rel="noopener noreferrer" className="bio-link">LinkedIn</a>
+          <a 
+            href="https://www.linkedin.com/in/aoanthony/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bio-link"
+            onClick={() => trackEvent('linkedin_click')}
+          >LinkedIn</a>
         </div>
         <div className="publications">
           <h3 className="publications-title">Research</h3>
           <div className="publications-list">
             <p className="publication-item">
-              <a href={process.env.PUBLIC_URL + '/eefd.pdf'} target="_blank" rel="noopener noreferrer" className="publication-link">
+              <a 
+                href={process.env.PUBLIC_URL + '/eefd.pdf'} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="publication-link"
+                onClick={() => trackEvent('paper_eefd_click')}
+              >
                 Experience, evaluation and Faultless Disagreement
               </a>
               <span className="publication-venue">Inquiry, 2016</span>
             </p>
             <p className="publication-item">
-              <a href={process.env.PUBLIC_URL + '/dispositionalpredicates.pdf'} target="_blank" rel="noopener noreferrer" className="publication-link">
+              <a 
+                href={process.env.PUBLIC_URL + '/dispositionalpredicates.pdf'} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="publication-link"
+                onClick={() => trackEvent('paper_dispositional_click')}
+              >
                 Dispositional predicates in context
               </a>
               <span className="publication-venue">Thesis (Wesleyan University), 2010</span>
