@@ -25,7 +25,7 @@ function HeaderContent() {
             I lead Product for LLM Infrastructure at Indeed, the world's #1 job site.
           </p>
           <p className="bio-text">
-            With 8+ years of experience as a PM for impactful technical platform teams in AI, data products, and data platforms at leading tech companies like Indeed and Bloomberg, I bring technical excellence and customer obsession to every opportunity.
+            With 7+ years of experience as a PM for impactful technical platform teams in AI, data products, and data platforms at leading tech companies like Indeed and Bloomberg, I bring technical excellence and customer obsession to every opportunity.
           </p>
           <p className="bio-text">
             My research background (going back 15+ years) is in natural language semantics, cognitive science, formal logic, and philosophy of language.
