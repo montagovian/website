@@ -81,6 +81,17 @@
   hyphens: auto;
 }
 
+.bio-text a {
+  color: #c0e0dc; /* Slightly brighter than surrounding text */
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bio-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .bio-text--lead {
   margin-top: 1.2rem;
   font-size: 1.3rem;

@@ -22,7 +22,7 @@ function HeaderContent() {
         </header>
         <section className="bio-description">
           <p className="bio-text bio-text--lead">
-            I lead Product for LLM Infrastructure at Indeed, the world's #1 job site.
+            I lead Product for LLM Infrastructure at <a href="https://www.indeed.com" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('indeed_click')} aria-label="Visit Indeed Website">Indeed</a>, the world's #1 job site.
           </p>
           <p className="bio-text">
             With 7+ years of experience as a PM for impactful technical platform teams in AI, data products, and data platforms at leading tech companies like Indeed and Bloomberg, I bring technical excellence and customer obsession to every opportunity.
@@ -31,7 +31,7 @@ function HeaderContent() {
             My research background (going back 15+ years) is in natural language semantics, cognitive science, formal logic, and philosophy of language.
           </p>
           <p className="bio-text">
-            I spent five years as a Member of the Technical Staff at Cycorp (the leading symbolic AI lab), doing ontology (knowledge representation), natural language generation, inference programming, and data engineering.
+            I spent five years as a Member of the Technical Staff at <a href="https://en.wikipedia.org/wiki/Cyc" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('cycorp_wiki_click')} aria-label="Visit Cyc Wikipedia Page">Cycorp</a> (the leading symbolic AI lab), doing ontology (knowledge representation), natural language generation, inference programming, and data engineering.
           </p>
           <p className="bio-text">
             I'm excited to build the next generation of infrastructure and tools that empower AI engineers to deliver on their most ambitious and creative visions for AI-enabled experiences.
@@ -39,7 +39,7 @@ function HeaderContent() {
         </section>
         <nav className="bio-links" aria-label="Professional links">
           <a 
-            href={process.env.PUBLIC_URL + '/aanthony-resume.pdf'} 
+            href={process.env.PUBLIC_URL + '/aanthony-resume-latest.pdf'} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="bio-link"
