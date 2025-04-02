@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# This is the code for Alex Anthony's website
+You can visit the site at [https://montagovian.github.io/website/](https://montagovian.github.io/website/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
