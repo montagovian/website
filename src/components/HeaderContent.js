@@ -33,9 +33,6 @@ function HeaderContent() {
           <p className="bio-text">
             I spent five years as a Member of the Technical Staff at <a href="https://en.wikipedia.org/wiki/Cyc" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('cycorp_wiki_click')} aria-label="Visit Cyc Wikipedia Page">Cycorp</a> (the leading symbolic AI lab), doing ontology (knowledge representation), natural language generation, inference programming, and data engineering.
           </p>
-          <p className="bio-text">
-            I'm excited to build the next generation of infrastructure and tools that empower AI engineers to deliver on their most ambitious and creative visions for AI-enabled experiences.
-          </p>
         </section>
         <nav className="bio-links" aria-label="Professional links">
           <a 
