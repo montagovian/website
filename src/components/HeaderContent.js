@@ -41,8 +41,8 @@ function HeaderContent() {
             rel="noopener noreferrer" 
             className="bio-link"
             onClick={() => trackEvent('cv_click')}
-            aria-label="Download CV"
-          >CV</a>
+            aria-label="Download CV (Résumé)"
+          >CV (Résumé)</a>
           <span className="bio-link-separator">•</span>
           <a 
             href="https://www.linkedin.com/in/aoanthony/" 
@@ -52,6 +52,12 @@ function HeaderContent() {
             onClick={() => trackEvent('linkedin_click')}
             aria-label="View LinkedIn Profile"
           >LinkedIn</a>
+          <span className="bio-link-separator">•</span>
+          <img 
+            src={process.env.PUBLIC_URL + '/email.png'}
+            alt="Email address"
+            style={{ height: '2em', verticalAlign: 'middle', opacity: 0.85 }}
+          />
         </nav>
         <section className="publications" aria-labelledby="publications-title">
           <h2 id="publications-title" className="publications-title">Research</h2>
