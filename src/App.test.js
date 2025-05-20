@@ -34,3 +34,23 @@ test('renders professional links correctly', () => {
   expect(emailImage).toBeInTheDocument();
   expect(emailImage).toHaveAttribute('src', '/email.png'); // Expect root path in tests
 });
+
+describe('Homepage main links and PDFs', () => {
+  it('renders CV, LinkedIn, and research paper links', () => {
+    render(<App />);
+    // CV (Résumé)
+    const cvLink = screen.getByRole('link', { name: /cv|résumé/i });
+    expect(cvLink).toHaveAttribute('href', expect.stringContaining('/aanthony-resume-latest.pdf'));
+    // LinkedIn
+    const linkedinLink = screen.getByRole('link', { name: /linkedin/i });
+    expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/aoanthony/');
+    // Email image
+    const emailImg = screen.getByAltText(/email address/i);
+    expect(emailImg).toBeInTheDocument();
+    // Research papers
+    const eefdLink = screen.getByRole('link', { name: /experience, evaluation and faultless disagreement/i });
+    expect(eefdLink).toHaveAttribute('href', expect.stringContaining('/eefd.pdf'));
+    const dispositionalLink = screen.getByRole('link', { name: /dispositional predicates in context/i });
+    expect(dispositionalLink).toHaveAttribute('href', expect.stringContaining('/dispositionalpredicates.pdf'));
+  });
+});
