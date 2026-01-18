@@ -1,0 +1,378 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container */
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: #1e3d3b;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Bio Container */
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 880px;
+  padding: 0 2rem;
+}
+
+/* Avatar */
+.bio-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: all 0.4s ease;
+  filter: grayscale(20%) contrast(1.1);
+  animation: avatar-glow 3s ease-in-out infinite;
+}
+
+.bio-avatar:hover {
+  transform: scale(1.05) rotate(2deg);
+  filter: grayscale(0%) contrast(1.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes avatar-glow {
+  0% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 4px 30px rgba(159, 235, 232, 0.3); }
+  100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+}
+
+/* Bio Content */
+.bio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.bio-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.4rem;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  text-align: left;
+  line-height: 1;
+}
+
+.bio-title {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0.15rem 0 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  opacity: 0.85;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Bio Text */
+.bio-text {
+  color: #a8d8d4;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  width: 100%;
+  margin: 0.5rem auto 0;
+  font-weight: 300;
+  opacity: 0.9;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.bio-text a {
+  color: #c0e0dc;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bio-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.bio-text--lead {
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.bio-text + .bio-text {
+  margin-top: 1.2rem;
+}
+
+/* Bio Links */
+.bio-links {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.bio-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.bio-link:hover {
+  opacity: 1;
+}
+
+.bio-link-separator {
+  color: white;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+.email-image {
+  height: 2em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+/* Publications */
+.publications {
+  margin-top: 2.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.publications-title {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
+  text-align: left;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.publication-item {
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.publication-link {
+  color: #a8d8d4;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline;
+}
+
+.publication-link:hover {
+  color: white;
+}
+
+.publication-venue {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Footer */
+.app-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.personal-link {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.personal-link a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.personal-link a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1600px) {
+  .bio {
+    max-width: 52%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bio {
+    max-width: 65%;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .bio-text--lead {
+    font-size: 1.2rem;
+  }
+
+  .bio-text + .bio-text {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+
+  .bio-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bio-name {
+    font-size: 2.2rem;
+  }
+
+  .bio-title {
+    font-size: 1.2rem;
+    margin: 0.2rem 0 0.8rem;
+  }
+
+  .bio-text {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .bio-text--lead {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .bio-text + .bio-text {
+    margin-top: 0.8rem;
+  }
+
+  .bio-links {
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .bio-link,
+  .bio-link-separator {
+    font-size: 1rem;
+  }
+
+  .publications {
+    margin-top: 2rem;
+  }
+
+  .publications-title {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .publication-link {
+    font-size: 0.95rem;
+  }
+
+  .publication-venue {
+    font-size: 0.85rem;
+    margin-left: 0.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .bio {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+
+  .bio-text {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .bio-avatar {
+    animation: none;
+  }
+
+  .bio-avatar:hover {
+    transform: none;
+  }
+}
