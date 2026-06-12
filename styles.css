@@ -21,7 +21,7 @@ body {
 
 /* Header */
 .app-header {
-  background: #1e3d3b;
+  background: #0f4634;
   min-height: 45vh;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ body {
 
 /* Bio Text */
 .bio-text {
-  color: #a8d8d4;
+  color: #a9d8c6;
   font-size: 1.1rem;
   line-height: 1.4;
   width: 100%;
@@ -113,7 +113,7 @@ body {
 }
 
 .bio-text a {
-  color: #c0e0dc;
+  color: #c2e2d2;
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -197,7 +197,7 @@ body {
 }
 
 .publication-link {
-  color: #a8d8d4;
+  color: #a9d8c6;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
