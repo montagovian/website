@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a4036" />
+    <meta
+      name="description"
+      content="BasedBench is a benchmark for evaluating whether vision-language models can understand and explain internet memes."
+    />
+    <meta name="author" content="Alex Anthony" />
+    <meta property="og:title" content="BasedBench: evaluating meme understanding in VLMs" />
+    <meta property="og:description" content="A launch draft for BasedBench, a 517-item benchmark for testing whether vision-language models get internet memes." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://montagovian.github.io/website/basedbench.html" />
+    <meta property="og:image" content="alex.jpg" />
+    <meta property="og:site_name" content="Alex Anthony" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BasedBench: evaluating meme understanding in VLMs" />
+    <meta name="twitter:description" content="A benchmark for testing whether vision-language models get internet memes." />
+    <meta name="twitter:image" content="alex.jpg" />
+    <link rel="canonical" href="https://montagovian.github.io/website/basedbench.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link id="bb-theme-css" rel="stylesheet" href="themes/newsprint.css">
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("bb-theme");
+          if (["newsprint", "terminal", "swiss", "zine", "y2k"].includes(saved) && saved !== "newsprint") {
+            document.getElementById("bb-theme-css").href = "themes/" + saved + ".css";
+          }
+        } catch (error) { /* localStorage unavailable; keep default */ }
+      })();
+    </script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="db6e00f2-8bf4-46b8-b1d7-6db3d205dbeb"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "BasedBench: evaluating meme understanding in VLMs",
+        "description": "BasedBench is a benchmark for evaluating whether vision-language models can understand and explain internet memes.",
+        "author": {
+          "@type": "Person",
+          "name": "Alex Anthony"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Alex Anthony",
+          "url": "https://montagovian.github.io/website/"
+        },
+        "mainEntityOfPage": "https://montagovian.github.io/website/basedbench.html"
+      }
+    </script>
+    <title>BasedBench: evaluating meme understanding in VLMs</title>
+  </head>
+  <body class="article-page">
+    <header class="article-topbar">
+      <a href="index.html" class="article-home" data-umami-event="basedbench_home_click">Alex Anthony</a>
+      <a href="https://github.com/montagovian/basedBench" class="article-source" target="_blank" rel="noopener noreferrer" data-umami-event="basedbench_source_click">Source</a>
+    </header>
+
+    <main class="article-shell">
+      <article class="launch-article">
+        <header class="article-hero">
+          <p class="article-kicker">Launch draft</p>
+          <h1>BasedBench: evaluating meme understanding in VLMs</h1>
+          <p class="article-dek">
+            How based is your model?
+          </p>
+          <p class="article-summary">
+            Give a VLM an image of a meme or visual joke. What does it mean?
+            That's it... that's the <s>tweet</s> task.
+          </p>
+        </header>
+
+        <section class="article-section provenance-note" aria-label="Benchmark provenance">
+          <div class="provenance-item">
+            <p class="provenance-label">Task source</p>
+            <p>
+              Inspired by SWE-Bench, BasedBench finds a task and it's validator
+              out in the wild: in "explain the joke" subreddits where people ask
+              earnestly what a meme or visual joke means and commenters sometimes
+              oblige and explain the joke.
+            </p>
+          </div>
+          <div class="provenance-item">
+            <p class="provenance-label">Ground truth</p>
+            <p>
+              The BasedBench pipeline filters down to those posts with a critical
+              mass of comments supporting a shared interpretation -- thereby taken
+              to be ground truth.
+            </p>
+          </div>
+        </section>
+
+        <section class="article-section">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            pharetra dolor vel velit volutpat, sed luctus arcu ultricies.
+          </p>
+          <ol class="article-list">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Consectetur adipiscing elit.</li>
+            <li>Sed do eiusmod tempor incididunt.</li>
+            <li>Ut labore et dolore magna aliqua.</li>
+          </ol>
+          <p>
+            Curabitur aliquam sapien ut eros dictum, vitae tincidunt justo
+            tempor. Nulla facilisi.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
+            justo sed massa posuere bibendum.
+          </p>
+          <figure class="pass-pattern-card" aria-labelledby="pass-pattern-title">
+            <div class="pass-pattern-head">
+              <div>
+                <p class="article-kicker">Release-audit-500</p>
+                <h3 id="pass-pattern-title">Who got the joke?</h3>
+              </div>
+              <p>Majority judge verdict across 500 memes.</p>
+            </div>
+
+            <div class="pass-pattern-grid" role="table" aria-label="Pass patterns by model">
+              <div class="pass-pattern-row pass-pattern-row--header" role="row">
+                <span role="columnheader">Pattern</span>
+                <span role="columnheader">Claude</span>
+                <span role="columnheader">GPT</span>
+                <span role="columnheader">Grok</span>
+                <span role="columnheader">Count</span>
+                <span role="columnheader">Share</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 42">
+                <strong role="cell">All three passed</strong>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Claude passed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="GPT passed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Grok passed"></span>
+                <span role="cell">210</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>42.0%</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 17.4">
+                <strong role="cell">None passed</strong>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Claude failed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="GPT failed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Grok failed"></span>
+                <span role="cell">87</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>17.4%</span>
+              </div>
+
+              <div class="pass-pattern-row pass-pattern-row--callout" role="row" style="--share: 16">
+                <strong role="cell">Only GPT passed</strong>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Claude failed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="GPT passed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Grok failed"></span>
+                <span role="cell">80</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>16.0%</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 15.6">
+                <strong role="cell">Claude + GPT passed</strong>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Claude passed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="GPT passed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Grok failed"></span>
+                <span role="cell">78</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>15.6%</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 5.8">
+                <strong role="cell">GPT + Grok passed</strong>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Claude failed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="GPT passed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Grok passed"></span>
+                <span role="cell">29</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>5.8%</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 1.4">
+                <strong role="cell">Only Claude passed</strong>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Claude passed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="GPT failed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Grok failed"></span>
+                <span role="cell">7</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>1.4%</span>
+              </div>
+
+              <div class="pass-pattern-row" role="row" style="--share: 1">
+                <strong role="cell">Claude + Grok passed</strong>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Claude passed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="GPT failed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Grok passed"></span>
+                <span role="cell">5</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>1.0%</span>
+              </div>
+
+              <div class="pass-pattern-row pass-pattern-row--rare" role="row" style="--share: 0.8">
+                <strong role="cell">Only Grok passed</strong>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="Claude failed"></span>
+                <span class="status-dot status-dot--fail" role="cell" aria-label="GPT failed"></span>
+                <span class="status-dot status-dot--pass" role="cell" aria-label="Grok passed"></span>
+                <span role="cell">4</span>
+                <span class="share-cell" role="cell"><span class="share-bar"></span>0.8%</span>
+              </div>
+            </div>
+
+            <figcaption>
+              Green means the model passed by majority judge vote; red means it failed.
+            </figcaption>
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            mattis lacus nec sem rhoncus, in efficitur lectus tincidunt.
+          </p>
+        </section>
+
+        <section class="article-section inspect-showcase" data-inspect-viewer data-inspect-data-id="inspect-examples-data">
+          <div class="section-heading inspect-carousel-heading">
+            <div>
+              <p class="article-kicker">Lorem ipsum</p>
+              <h2>Lorem ipsum dolor</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent gravida nunc eu lorem posuere, at luctus sem tempor.
+              </p>
+            </div>
+            <div class="inspect-carousel-controls" aria-label="Example viewer controls">
+              <button class="carousel-button" type="button" data-inspect-prev aria-label="Previous example">
+                ‹
+              </button>
+              <div class="carousel-dots" data-inspect-dots aria-label="Examples"></div>
+              <button class="carousel-button" type="button" data-inspect-next aria-label="Next example">
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="inspect-viewer" role="region" aria-label="BasedBench inspect viewer" aria-live="polite">
+            <div class="inspect-toolbar">
+              <div>
+                <p class="inspect-eyebrow" data-inspect-index></p>
+                <h3 data-inspect-title></h3>
+              </div>
+              <span class="inspect-summary" data-inspect-summary></span>
+            </div>
+
+            <div class="inspect-layout">
+              <figure class="inspect-media">
+                <img data-inspect-image src="" alt="" />
+                <figcaption data-inspect-image-id></figcaption>
+              </figure>
+
+              <div class="inspect-stack">
+                <section class="inspect-card inspect-card--truth">
+                  <div class="inspect-card-head">
+                    <p>Ground truth</p>
+                    <span data-inspect-ground-truth-label></span>
+                  </div>
+                  <p data-inspect-ground-truth></p>
+                </section>
+
+                <section class="inspect-card inspect-card--responses">
+                  <div class="inspect-card-head">
+                    <p>Model responses</p>
+                    <span data-inspect-response-count></span>
+                  </div>
+                  <div class="inspect-response-list" data-inspect-responses></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="article-section inspect-showcase"
+          data-inspect-viewer
+          data-inspect-global="basedBenchTaggedExamples"
+          data-inspect-key="grok-sucks"
+        >
+          <div class="section-heading inspect-carousel-heading">
+            <div>
+              <p class="article-kicker">Tagged examples</p>
+              <h2>grok-sucks</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <div class="inspect-carousel-controls" aria-label="grok-sucks viewer controls">
+              <button class="carousel-button" type="button" data-inspect-prev aria-label="Previous example">
+                ‹
+              </button>
+              <div class="carousel-dots" data-inspect-dots aria-label="grok-sucks examples"></div>
+              <button class="carousel-button" type="button" data-inspect-next aria-label="Next example">
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="inspect-viewer" role="region" aria-label="grok-sucks inspect viewer" aria-live="polite">
+            <div class="inspect-toolbar">
+              <div>
+                <p class="inspect-eyebrow" data-inspect-index></p>
+                <h3 data-inspect-title></h3>
+              </div>
+              <span class="inspect-summary" data-inspect-summary></span>
+            </div>
+
+            <div class="inspect-layout">
+              <figure class="inspect-media">
+                <img data-inspect-image src="" alt="" />
+                <figcaption data-inspect-image-id></figcaption>
+              </figure>
+
+              <div class="inspect-stack">
+                <section class="inspect-card inspect-card--truth">
+                  <div class="inspect-card-head">
+                    <p>Ground truth</p>
+                    <span data-inspect-ground-truth-label></span>
+                  </div>
+                  <p data-inspect-ground-truth></p>
+                </section>
+
+                <section class="inspect-card inspect-card--responses">
+                  <div class="inspect-card-head">
+                    <p>Model responses</p>
+                    <span data-inspect-response-count></span>
+                  </div>
+                  <div class="inspect-response-list" data-inspect-responses></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="article-section inspect-showcase"
+          data-inspect-viewer
+          data-inspect-global="basedBenchTaggedExamples"
+          data-inspect-key="gpt-supremacy"
+        >
+          <div class="section-heading inspect-carousel-heading">
+            <div>
+              <p class="article-kicker">Tagged examples</p>
+              <h2>gpt-supremacy</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <div class="inspect-carousel-controls" aria-label="gpt-supremacy viewer controls">
+              <button class="carousel-button" type="button" data-inspect-prev aria-label="Previous example">
+                ‹
+              </button>
+              <div class="carousel-dots" data-inspect-dots aria-label="gpt-supremacy examples"></div>
+              <button class="carousel-button" type="button" data-inspect-next aria-label="Next example">
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="inspect-viewer" role="region" aria-label="gpt-supremacy inspect viewer" aria-live="polite">
+            <div class="inspect-toolbar">
+              <div>
+                <p class="inspect-eyebrow" data-inspect-index></p>
+                <h3 data-inspect-title></h3>
+              </div>
+              <span class="inspect-summary" data-inspect-summary></span>
+            </div>
+
+            <div class="inspect-layout">
+              <figure class="inspect-media">
+                <img data-inspect-image src="" alt="" />
+                <figcaption data-inspect-image-id></figcaption>
+              </figure>
+
+              <div class="inspect-stack">
+                <section class="inspect-card inspect-card--truth">
+                  <div class="inspect-card-head">
+                    <p>Ground truth</p>
+                    <span data-inspect-ground-truth-label></span>
+                  </div>
+                  <p data-inspect-ground-truth></p>
+                </section>
+
+                <section class="inspect-card inspect-card--responses">
+                  <div class="inspect-card-head">
+                    <p>Model responses</p>
+                    <span data-inspect-response-count></span>
+                  </div>
+                  <div class="inspect-response-list" data-inspect-responses></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script type="application/json" id="inspect-examples-data">
+          [
+                    {
+                              "title": "Example 1",
+                              "image": "assets/basedbench-examples/1tylnes.jpeg",
+                              "imageId": "1tylnes",
+                              "alt": "BasedBench example 1tylnes.",
+                              "groundTruth": "The joke is that if you read only the vowels in the woman's name, they spell out the Old MacDonald had a farm refrain: E-I-E-I-O.",
+                              "responses": [
+                                        {
+                                                  "model": "Claude Opus 4.8",
+                                                  "verdict": "correct",
+                                                  "score": "3C / 0I",
+                                                  "text": "The reference: Celine Dion. The vowels in Celine Dion are E, I, E, I, O, which is the iconic refrain from Old MacDonald Had a Farm. You're welcome plants the earworm.",
+                                                  "fullText": "**The reference:** Celine Dion, the famous Canadian singer (the photo shows her as a young woman, an early-career promotional shot).\n\n**The joke:** It's a wordplay/phonics trick. The vowels in \"Celine Dion\" are **E, I, E, I, O**. When you read them out loud in order, you get \"**E-I-E-I-O**\" — the iconic refrain from the children's song \"Old MacDonald Had a Farm\" (\"Old MacDonald had a farm, E-I-E-I-O\").\n\n**The mechanism:** The \"You're welcome\" is the punchline setup—the poster knows that once you sound out the vowels, the catchy nursery rhyme will get stuck in your head as an earworm. It's a playful \"gotcha,\" pretending to do you a favor while actually planting an annoying tune in your brain.\n\nThe photo of Celine Dion is just there to confirm whose name you're meant to analyze; the humor is entirely in the letter/sound coincidence.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: the vowels in 'Celine Dion' spell out E-I-E-I-O, which is the refrain from 'Old McDonald Had a Farm.' The model also correctly identifies the specific person (Celine Dion), the specific song ('Old MacDonald Had a Farm'), and the mechanism (vowels spelling out the refrain). The model even goes further to explain the 'You're welcome' punchline. This matches the ground truth explanation perfectly."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the specific person as Celine Dion and explains the exact vowel-reading joke: the vowels in her name spell E-I-E-I-O, matching the refrain from 'Old MacDonald Had a Farm.' This matches the ground truth precisely, including the named reference and the mechanism of the joke. The extra 'You're welcome' commentary does not conflict with the core explanation."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the name 'Celine Dion', the vowels E-I-E-I-O, and the reference to 'Old MacDonald Had a Farm'. This matches the ground truth explanation exactly."
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "GPT-5.5",
+                                                  "verdict": "correct",
+                                                  "score": "3C / 0I",
+                                                  "text": "The meme is a word and phonics joke. Take only the vowels in Celine Dion: e i e i o. That sounds like Old MacDonald, and You're welcome is jokingly smug because now the song is stuck in your head.",
+                                                  "fullText": "The meme is a word/phonics joke.\n\n- **Reference:** Celine Dion is the famous Canadian singer. The image is a photo of her when she was younger.\n- **The trick:** If you take only the vowels in **“Celine Dion”**, you get:\n\n  **C e l i n e  D i o n**  \n  → **e i e i o**\n\n- **Joke:** Saying “E-I-E-I-O” out loud sounds like the famous refrain from the children’s song **“Old MacDonald Had a Farm”**:  \n  “Old MacDonald had a farm, **E-I-E-I-O**.”\n\nSo the meme is basically forcing you to notice that Celine Dion’s name secretly contains the “E-I-E-I-O” sound. The “You’re welcome” is jokingly smug, as if the meme has now permanently cursed you with this silly realization.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: extracting the vowels from 'Celine Dion' gives 'E-I-E-I-O', which matches the refrain from 'Old McDonald Had a Farm'. The model names the specific person (Celine Dion), identifies the specific mechanism (vowels only), and connects it to the correct children's song. This matches the ground truth exactly."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: reading only the vowels in the woman's name yields the refrain 'E-I-E-I-O,' which references 'Old MacDonald Had a Farm.' It also names the specific person, Celine Dion, matching the ground truth's 'woman's name' reference. The explanation aligns with the intended wordplay and the song reference, so it understands the meme correctly."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model's explanation correctly identifies the core joke: reading only the vowels in 'Celine Dion' spells out 'E-I-E-I-O', which is the refrain from 'Old MacDonald Had a Farm.' This matches the ground truth exactly."
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "Grok 4.3",
+                                                  "verdict": "correct",
+                                                  "score": "3C / 0I",
+                                                  "text": "The text tells you to read the vowels. Celine Dion becomes E, I, E, I, O, the chorus hook from Old MacDonald Had a Farm.",
+                                                  "fullText": "**The meme's joke:**\n\n- The text tells you to “read the vowels in Celine Dion out loud.”  \n- Spelling: **C-E-L-I-N-E D-I-O-N**  \n- Vowels only: **E, I, E, I, O**\n\nWhen you say them in sequence you naturally get “E-I-E-I-O,” which is the chorus hook from the children’s song “Old MacDonald Had a Farm.”\n\nThe payoff is the sudden, involuntary urge to continue “…had a farm…” The photo of a young Celine Dion is just there to identify the name and give the joke a visual punchline.\n\nIt’s a classic “you just did the thing” meme that relies on phonetics and a well-known cultural reference.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies that the vowels in 'Celine Dion' spell out E-I-E-I-O, which matches the refrain from 'Old McDonald had a farm.' The model names the specific person (Celine Dion), correctly extracts the vowels (E, I, E, I, O), and identifies the nursery rhyme reference. This matches the ground truth explanation perfectly."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the specific reference: reading the vowels in Celine Dion's name yields E-I-E-I-O, matching the 'Old MacDonald had a farm' refrain. This matches the ground truth exactly, including the named person and the joke mechanism based on vowels spelling the chorus hook."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: reading the vowels in 'Celine Dion' spells out 'E-I-E-I-O', which is the refrain from 'Old MacDonald Had a Farm'. It names the specific song and the specific mechanism (vowels in the name). This matches the ground truth exactly."
+                                                            }
+                                                  ]
+                                        }
+                              ]
+                    },
+                    {
+                              "title": "Example 2",
+                              "image": "assets/basedbench-examples/1evofyh.jpeg",
+                              "imageId": "1evofyh",
+                              "alt": "BasedBench example 1evofyh.",
+                              "groundTruth": "The screw at the podium is actually a screwdriver disguised as a screw: a politician pretending to be one of the ordinary people being screwed, while really doing the screwing.",
+                              "responses": [
+                                        {
+                                                  "model": "Claude Opus 4.8",
+                                                  "verdict": "missed",
+                                                  "score": "0C / 3I",
+                                                  "text": "This is a satirical illustration of a crowd composed of disposable drink cups with straws. It critiques mindless consumerism and conformity.",
+                                                  "fullText": "This is a satirical illustration in the style of **Paweł Kuczyński**, a Polish artist known for thought-provoking, surreal social commentary artwork (his pieces are frequently shared online as \"deep meaning\" art rather than traditional humor memes).\n\n**What's depicted:**\n- A massive crowd composed entirely of **disposable drink cups with straws** (like fast-food soda cups), each one identical.\n- One cup stands elevated on a **podium/lectern**, positioned like a speaker or leader addressing the masses.\n- The crowd holds up **picket signs and framed portraits** that show... the very same cup, like images at a political rally or a cult of personality.\n\n**The meaning/joke:**\nThe artwork is a critique of **mindless consumerism and conformity**. By portraying people as identical disposable cups, the artist suggests that modern consumers are:\n- Interchangeable and disposable\n- Following a \"leader\" (a brand, ideology, or product) that is fundamentally no different from themselves\n- Worshipping and rallying behind something hollow\n\nIt can also be read as commentary on **mass manipulation, herd mentality, or political/brand idolatry** — the crowd venerates an image of itself, blindly following something empty.\n\n**Visual elements that matter:**\n- The sheer repetition of identical cups emphasizes loss of individuality.\n- The straws double as both drinking straws and possibly raised arms/salutes.\n- The framed portraits mimic propaganda imagery of dictators or celebrities.\n\nIt's less of a \"funny\" meme and more of a **darkly ironic piece of visual social satire**.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth states the meme's joke is about a 'screwdriver disguised as a screw' at a podium - a politician pretending to be one of the ordinary people (screws) while actually being the one doing the screwing. This involves screws and a screwdriver as the key visual elements.\n\nThe model's explanation describes a completely different image - cups with straws at a rally, discussing consumerism and conformity. The model has described what appears to be a different piece of artwork entirely (possibly a Paweł Kuczyński piece), missing the screws/screwdriver imagery and the core joke about politicians screwing the people while pretending to be one of them.\n\nThe model gets the general theme of political satire but completely misses the specific visual setup (screws vs. cups/straws) and therefore the actual joke mechanism (screwdriver disguised as a screw)."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The model does not identify the key joke from the ground truth. The ground truth says the humor is that the 'screw' at the podium is actually a screwdriver disguised as a screw, implying a politician pretending to be an ordinary person who is being 'screwed' while actually being the one doing the screwing. The model instead describes an entirely different image and interpretation: disposable cups, consumerism, conformity, and cult-of-personality commentary. It misses the specific screw/screwdriver wordplay and the irony about the politician's double role. Therefore it does not match the intended meme explanation."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The model's explanation describes a completely different image (disposable drink cups with straws at a political rally) than what the ground truth describes (a screwdriver disguised as a screw at a podium). The model has misidentified the meme entirely and provides an interpretation about consumerism and conformity that has nothing to do with the actual joke about a politician pretending to be one of the ordinary people being 'screwed.'"
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "GPT-5.5",
+                                                  "verdict": "missed",
+                                                  "score": "0C / 3I",
+                                                  "text": "This is a visual pun about a political rally where the people are all screws and one screw is at the podium. The humor comes from anthropomorphism and wordplay.",
+                                                  "fullText": "This is a visual pun/absurdist meme: it shows a **political rally or speech** where the “people” are all **screws**.\n\nImportant visual elements:\n\n- The crowd is made of **flathead screws** — their heads have the little slot across the top.\n- One screw is standing at a **podium with a microphone**, like a politician or revolutionary leader.\n- Posters/signs in the crowd show the same screw figure, like campaign propaganda or a dictator’s portrait.\n\nThe humor comes from the anthropomorphism and wordplay: screws are acting like humans at a mass political rally. Depending on the caption people add, it can imply jokes like:\n\n- “We’re all screwed.”\n- “Screw politics.”\n- “A leader addressing his fellow screws.”\n- A parody of propaganda rallies where everyone blindly supports the same figure.\n\nWithout a caption, the core joke is mainly the absurd image of a society of screws holding a serious political gathering.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth explanation centers on a specific, crucial visual detail: the screw at the podium is actually a SCREWDRIVER disguised as a screw — a politician pretending to be one of the ordinary people while actually being the one doing the 'screwing.' This is the core irony and subverted expectation that makes the meme funny.\n\nThe model's explanation misses this entirely. The model describes the podium figure as just another screw, and offers generic interpretations like 'we're all screwed' or 'screw politics.' The model explicitly states it sees 'a leader addressing his fellow screws' — missing the critical distinction that the leader is actually a screwdriver in disguise, not a fellow screw.\n\nThe model does not identify the key visual pun/trick that the ground truth identifies: the disguised screwdriver representing a politician who pretends to be part of the common people while actually being the one screwing them over. This specific irony is the entire point of the meme, and the model missed it completely."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth says the key joke is that the figure at the podium is not just a screw in a crowd of screws, but a screwdriver disguised as a screw, implying a politician pretending to be one of the ordinary people who are being 'screwed' while actually being the one doing the screwing. The model instead interprets it as a generic absurdist/political rally made of screws and mentions wordplay about screws, but it misses the specific disguise/inversion and the political irony of the screwdriver vs. screw. It does not identify the core setup from the ground truth."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth identifies a specific visual joke: the figure at the podium is a screwdriver disguised as a screw, representing a politician pretending to be one of the ordinary 'screwed' people while actually being the one doing the screwing. The model's explanation misses this key detail entirely, treating the podium figure as just another screw and describing the humor as generic anthropomorphism/wordplay about screws at a rally. The model does not identify the disguise, the deception, or the specific irony that the ground truth highlights."
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "Grok 4.3",
+                                                  "verdict": "missed",
+                                                  "score": "0C / 3I",
+                                                  "text": "The cartoon is about nonconformity: Phillips screws versus flathead screws, with a lone oversized flathead screw breaking the pattern.",
+                                                  "fullText": "This image is a visual pun/cartoon about nonconformity and standing out.\n\n- **References**: It plays on two common screw head types—Phillips (cross-shaped slot, the vast majority in the image) vs. flathead/slotted (single straight slot, the oversized one in front). The signs function like “this is the standard” markers.\n- **The joke**: The flathead screw is the odd one out in a sea of identical Phillips screws. The setup inverts the usual “fitting in” expectation—everyone else matches, but this one is visibly different in design, size, and position (elevated on a platform), so it draws attention.\n- **Key visual elements**: The overwhelming crowd of identical Phillips screws creates uniformity; the two framed Phillips-head signs reinforce what’s “normal”; the lone, oversized flathead screw breaks the pattern and becomes the focal point.\n\nThe humor comes from the simple, literal contrast: one screw doesn’t match the rest.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth explanation identifies a specific and clever layered joke: the screw at the podium is actually a screwdriver disguised as a screw - a politician pretending to be one of the ordinary people, while actually being the one doing the 'screwing.' The humor is about irony and subverted expectations involving a screwdriver masquerading as a screw.\n\nThe model's explanation completely misses this layered joke. The model interprets it as a simple contrast between a flathead screw and Phillips screws - about nonconformity and standing out. The model doesn't identify:\n1. That the central figure is a screwdriver (not just a different type of screw)\n2. The political metaphor about politicians pretending to be 'one of us' while actually screwing over the public\n3. The irony and deception element\n\nThe model only sees a surface-level visual contrast about different screw types, missing the core joke entirely."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The model misses the actual joke. The ground truth says the 'screw' at the podium is a screwdriver disguised as a screw, representing a politician pretending to be one of the ordinary people being 'screwed' while actually being the one doing the screwing. That is an irony/subversion of expectation about political hypocrisy. The model instead interprets the image as a generic visual pun about a different screw head type (Phillips vs flathead), nonconformity, and being the odd one out. It does not identify the politician/ordinary people 'screwed' setup or the disguised screwdriver reference, so it does not match the intended meme meaning."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth identifies the joke as political satire: a screwdriver disguised as a screw at a podium, representing a politician pretending to be one of the ordinary people being 'screwed' while actually being the one doing the screwing. The model's explanation completely misses this, instead interpreting the image as a literal visual pun about nonconformity (Phillips vs. flathead screws). The model does not identify the screwdriver disguise, the political implication, or the irony of the politician pretending to be among the screwed. This is a fundamentally different interpretation."
+                                                            }
+                                                  ]
+                                        }
+                              ]
+                    },
+                    {
+                              "title": "Example 3",
+                              "image": "assets/basedbench-examples/1gp4f2s.jpeg",
+                              "imageId": "1gp4f2s",
+                              "alt": "BasedBench example 1gp4f2s.",
+                              "groundTruth": "The Wi-Fi password 12345678 is read phonetically as one 2, three 4s, five 6s, seven 8s, turning a weak password into a wordplay gag.",
+                              "responses": [
+                                        {
+                                                  "model": "Claude Opus 4.8",
+                                                  "verdict": "missed",
+                                                  "score": "0C / 3I",
+                                                  "text": "This is a brain-teaser based on old mobile phone keypad or T9 multi-tap input. It decodes 2 444 66666 8888888 as a hidden phrase.",
+                                                  "fullText": "**What's going on:** This is a brain-teaser meme based on the **old mobile phone keypad (T9 / \"multi-tap\") texting system**, where you pressed each number key multiple times to cycle through letters.\n\n**How to decode it:**\nOn an old keypad:\n- **2** = A B C\n- **4** = G H I\n- **6** = M N O\n- **8** = T U V\n\nNow count the presses:\n- **2** (1 press) → **A**\n- **444** (3 presses on 4) → **I**\n- **66666** (5 presses on 6, cycling M-N-O-M-N) → **N**\n- **8888888** (7 presses on 8, cycling T-U-V-T-U-V-T) → **T**\n\nSo the \"Wifi Password\" spells out **\"AINT\"**.\n\n**Why it's funny:**\n- The humor comes from how the long, intimidating string of numbers looks like a complex password, but it's actually a clever puzzle that resolves into a simple word.\n- Xavier's comment \"**Took me 10 minutes to get it**\" is relatable—it's the satisfying \"aha!\" moment after struggling, especially for anyone old enough to remember texting this way before smartphones.\n\n**Visual elements:** The grey cardboard texture makes it look like a casual handwritten note, and the deliberate spacing of the number groups is the key clue that each cluster represents one letter.\n\nIt's a nostalgia-driven puzzle meme rewarding people who grew up with Nokia-style phones.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth explains that the joke is a wordplay gag where the Wi-Fi password '12345678' is read phonetically as 'one 2, three 4s, five 6s, seven 8s' - making a common weak password into a wordplay joke. The model's explanation is completely different - it interprets the password as a T9/multi-tap mobile keypad puzzle where pressing number keys multiple times cycles through letters, and claims it spells 'AINT'. The model misses the actual joke entirely, which is about reading the numbers phonetically (1-2, 3-4s, 5-6s, 7-8s). The model gives an elaborate but completely wrong interpretation."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The model does not match the ground truth. The ground truth says the joke is a phonetic reading of the Wi‑Fi password '12345678' as 'one 2, three 4s, five 6s, seven 8s,' i.e. a wordplay gag on the sequence of repeated digits. The model instead interprets the image as a T9/multi-tap keypad puzzle and decodes a different number pattern into 'AINT.' It misses the specific password '12345678' and the intended phonetic joke entirely, replacing it with an unrelated texting-keypad explanation."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth explains the meme as a phonetic wordplay gag where '12345678' is read aloud as 'one 2, three 4s, five 6s, seven 8s.' The model instead interprets it as a T9/multi-tap phone keypad puzzle that spells 'AINT.' These are entirely different interpretations, and the model misses the actual wordplay joke entirely."
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "GPT-5.5",
+                                                  "verdict": "correct",
+                                                  "score": "3C / 0I",
+                                                  "text": "The displayed Wi-Fi password is 2 444 66666 8888888. Describe what you see: one 2, three 4s, five 6s, seven 8s. Put together, that becomes 12345678.",
+                                                  "fullText": "The joke is a hidden way of writing **“12345678”**, the famously basic/easy password.\n\nThe displayed Wi‑Fi password is:\n\n**2 444 66666 8888888**\n\nYou’re supposed to describe what you see:\n\n- **one 2** → “1 2”\n- **three 4s** → “3 4”\n- **five 6s** → “5 6”\n- **seven 8s** → “7 8”\n\nPut together: **1 2 3 4 5 6 7 8**.\n\nSo the “best WiFi password” looks confusing at first, but it’s just the most obvious password sequence disguised as a counting puzzle. That’s why the comment says “Took me 10 minutes to get it.”\n\nThe important visual element is the spacing/grouping of the numbers: each group’s **quantity** matters as much as the digit itself.",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: the Wi-Fi password is written as '2 444 66666 8888888' where the quantity of each digit encodes the password '12345678' - one 2, three 4s, five 6s, seven 8s. The model gets the wordplay/visual puzzle mechanism exactly right, matching the ground truth explanation. It also correctly identifies that this is a common weak password sequence disguised as a counting puzzle."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core joke: the Wi‑Fi password is a disguised version of the weak password sequence 12345678, using groups of repeated digits that are read phonetically/count-wise as 'one 2, three 4s, five 6s, seven 8s.' This matches the ground truth's wordplay explanation. Although the model adds extra detail about the grouping and a counting puzzle, it preserves the same specific mechanism and reference."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "correct",
+                                                                      "reasoning": "The model correctly identifies the core wordplay: the displayed Wi-Fi password '2 444 66666 8888888' is read by counting each group, producing 'one 2, three 4s, five 6s, seven 8s,' which spells out '12345678.' This matches the ground truth's explanation of the phonetic/counting gag turning a weak password into a silly wordplay. The model captures the specific mechanism and the resulting password."
+                                                            }
+                                                  ]
+                                        },
+                                        {
+                                                  "model": "Grok 4.3",
+                                                  "verdict": "missed",
+                                                  "score": "0C / 3I",
+                                                  "text": "The meme shows Best WiFi Password and interprets repeated digits as multi-tap or T9 keypad input, treating the spacing as formatting for a hidden phrase.",
+                                                  "fullText": "The meme shows a fake social media post highlighting a supposed \"Best WiFi Password.\"\n\n**Key references:** Pre-smartphone feature phones (e.g., Nokia) that used numeric keypads and multi-tap/T9 texting, where repeated presses on a key cycle through its letters (2 = A/B/C, 4 = G/H/I, 6 = M/N/O, 8 = T/U/V, etc.).\n\n**The joke:** The \"password\" is the literal string of button presses (`2444666668888888`) that would spell a humorous/vulgar phrase in multi-tap mode. The spaces in the image are just formatting for readability; Xavier's comment implies it took him a while to decode the hidden phrase.\n\n**Visual element:** The long numeric string is deliberately presented in a chunky, keypad-like layout to make the viewer pause and figure it out.\n\n(The exact decoded phrase is usually something crude like a variation on \"big boobs\"/\"tits,\" a common template for this meme format.)",
+                                                  "judges": [
+                                                            {
+                                                                      "model": "claude-sonnet-4-6",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth explains that the Wi-Fi password '12345678' is funny because it can be read phonetically as 'one 2, three 4s, five 6s, seven 8s' - a wordplay gag on a simple sequential number password. The model completely misses this interpretation and instead incorrectly identifies the joke as being about multi-tap phone keypads (like Nokia T9) spelling out a vulgar phrase through button presses. The model fabricates details about 'Xavier's comment,' a 'chunky keypad-like layout,' and a hidden crude message. The model gets the wrong interpretation entirely - the actual joke is simple phonetic wordplay on '12345678', not phone keypad encoding."
+                                                            },
+                                                            {
+                                                                      "model": "gpt-5.4-mini",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth says the joke is that the Wi‑Fi password '12345678' is read phonetically as 'one 2, three 4s, five 6s, seven 8s,' i.e. a simple number-wordplay gag. The model instead describes a completely different meme about multi-tap/T9 keypad texting and decoding a numeric string into a vulgar phrase. It does not identify the specific password '12345678' or the phonetic reading that makes the joke. This is a different reference and misses the core setup entirely."
+                                                            },
+                                                            {
+                                                                      "model": "z-ai/glm-5.2",
+                                                                      "verdict": "incorrect",
+                                                                      "reasoning": "The ground truth identifies the joke as phonetic wordplay: the password '12345678' is read aloud as 'one 2, three 4s, five 6s, seven 8s.' The model instead interprets the numbers as multi-tap phone keypad presses spelling a vulgar phrase, which is a completely different explanation. The model misses the actual wordplay gag entirely."
+                                                            }
+                                                  ]
+                                        }
+                              ]
+                    }
+          ]
+        </script>
+
+        <section class="article-section">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            ornare, sem sed ultricies malesuada, ipsum massa porta nunc, vel
+            tincidunt lectus augue in lacus.
+          </p>
+          <p>
+            Donec tempor, eros eget facilisis laoreet, tortor nunc hendrerit
+            lorem, nec vestibulum ipsum arcu non massa.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </section>
+
+        <footer class="article-footer-note">
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+        </footer>
+      </article>
+    </main>
+    <script src="assets/basedbench-examples/tagged-inspect-data.js"></script>
+    <script>
+      (() => {
+        const appendInlineMarkdown = (parent, text) => {
+          const tokens = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
+          tokens.forEach((token) => {
+            if (token.startsWith("**") && token.endsWith("**")) {
+              const strong = document.createElement("strong");
+              strong.textContent = token.slice(2, -2);
+              parent.append(strong);
+              return;
+            }
+            if (token.startsWith("`") && token.endsWith("`")) {
+              const code = document.createElement("code");
+              code.textContent = token.slice(1, -1);
+              parent.append(code);
+              return;
+            }
+            parent.append(document.createTextNode(token));
+          });
+        };
+
+        const renderMarkdown = (markdown) => {
+          const fragment = document.createDocumentFragment();
+          const lines = markdown.replace(/\r\n?/g, "\n").split("\n");
+          let paragraphLines = [];
+          let list = null;
+
+          const flushParagraph = () => {
+            if (!paragraphLines.length) return;
+            const paragraph = document.createElement("p");
+            paragraphLines.forEach((line, lineIndex) => {
+              if (lineIndex) paragraph.append(document.createElement("br"));
+              appendInlineMarkdown(paragraph, line.trim());
+            });
+            fragment.append(paragraph);
+            paragraphLines = [];
+          };
+
+          const flushList = () => {
+            if (!list) return;
+            fragment.append(list);
+            list = null;
+          };
+
+          lines.forEach((line) => {
+            const trimmed = line.trim();
+            if (!trimmed) {
+              flushParagraph();
+              flushList();
+              return;
+            }
+
+            const listItem = trimmed.match(/^-\s+(.+)$/);
+            if (listItem) {
+              flushParagraph();
+              if (!list) list = document.createElement("ul");
+              const item = document.createElement("li");
+              appendInlineMarkdown(item, listItem[1]);
+              list.append(item);
+              return;
+            }
+
+            flushList();
+            paragraphLines.push(trimmed);
+          });
+
+          flushParagraph();
+          flushList();
+          return fragment;
+        };
+
+        const selectExamples = (data, key, label) => {
+          const examples = (key && data[key]) || data.examples || data;
+          if (!Array.isArray(examples)) {
+            throw new Error(`No examples found for ${label}`);
+          }
+          return examples;
+        };
+
+        const loadExamples = async (viewer) => {
+          const key = viewer.dataset.inspectKey;
+          const globalName = viewer.dataset.inspectGlobal;
+          if (globalName) {
+            const data = window[globalName];
+            if (!data) {
+              throw new Error(`Missing inspect data: ${globalName}`);
+            }
+            return selectExamples(data, key, key || globalName);
+          }
+
+          const source = viewer.dataset.inspectSource;
+          if (source) {
+            const response = await fetch(source, { cache: "no-store" });
+            if (!response.ok) {
+              throw new Error(`${source} returned ${response.status}`);
+            }
+            const data = await response.json();
+            return selectExamples(data, key, key || source);
+          }
+
+          const dataId = viewer.dataset.inspectDataId || "inspect-examples-data";
+          const dataScript = document.getElementById(dataId);
+          if (!dataScript) {
+            throw new Error(`Missing inspect data: ${dataId}`);
+          }
+          return selectExamples(JSON.parse(dataScript.textContent), key, key || dataId);
+        };
+
+        const normalizeVerdict = (verdict) => verdict === "correct" ? "correct" : "incorrect";
+
+        const formatSummary = (example) => {
+          const correct = example.responses.filter((response) => response.verdict === "correct").length;
+          return `${correct} / ${example.responses.length} correct`;
+        };
+
+        const renderResponses = (viewer, responses, example, activeIndex, viewerKey) => {
+          responses.replaceChildren();
+          example.responses.forEach((response, responseIndex) => {
+            const card = document.createElement("article");
+            card.className = "inspect-response";
+            const responseId = `inspect-response-${viewerKey}-${activeIndex}-${responseIndex}`;
+            const judgeId = `inspect-judge-${viewerKey}-${activeIndex}-${responseIndex}`;
+
+            const toggle = document.createElement("button");
+            toggle.className = "inspect-response-head";
+            toggle.type = "button";
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-controls", responseId);
+
+            const model = document.createElement("strong");
+            model.textContent = response.model;
+
+            const verdict = document.createElement("span");
+            const verdictLabel = normalizeVerdict(response.verdict);
+            verdict.className = `verdict verdict--${verdictLabel}`;
+            verdict.textContent = verdictLabel;
+
+            const state = document.createElement("span");
+            state.className = "inspect-response-state";
+            state.textContent = "Show Prediction";
+
+            const body = document.createElement("div");
+            body.className = "inspect-response-body";
+            body.id = responseId;
+            body.hidden = true;
+
+            const actions = document.createElement("div");
+            actions.className = "inspect-response-actions";
+
+            const full = document.createElement("div");
+            full.className = "inspect-response-full";
+            full.append(renderMarkdown(response.fullText || "No full response recorded."));
+
+            const judges = response.judges || [];
+            const judgePanel = document.createElement("div");
+            judgePanel.className = "inspect-judge-panel";
+            judgePanel.id = judgeId;
+            judgePanel.hidden = true;
+            let judgeToggle = null;
+
+            if (judges.length) {
+              judgeToggle = document.createElement("button");
+              judgeToggle.className = "inspect-expand-button";
+              judgeToggle.type = "button";
+              judgeToggle.textContent = "Show judge";
+              judgeToggle.setAttribute("aria-expanded", "false");
+              judgeToggle.setAttribute("aria-controls", judgeId);
+
+              judges.forEach((judge) => {
+                const judgeCard = document.createElement("article");
+                judgeCard.className = "inspect-judge";
+
+                const judgeHead = document.createElement("div");
+                judgeHead.className = "inspect-judge-head";
+
+                const judgeModel = document.createElement("strong");
+                judgeModel.textContent = judge.model;
+
+                const judgeVerdict = document.createElement("span");
+                const judgeVerdictLabel = normalizeVerdict(judge.verdict);
+                judgeVerdict.className = `judge-verdict judge-verdict--${judgeVerdictLabel}`;
+                judgeVerdict.textContent = judgeVerdictLabel;
+
+                const judgeReasoning = document.createElement("div");
+                judgeReasoning.className = "inspect-judge-reasoning";
+                judgeReasoning.append(renderMarkdown(judge.reasoning || "No judge reasoning recorded."));
+
+                judgeHead.append(judgeModel, judgeVerdict);
+                judgeCard.append(judgeHead, judgeReasoning);
+                judgePanel.append(judgeCard);
+              });
+
+              judgeToggle.addEventListener("click", () => {
+                const expanded = judgeToggle.getAttribute("aria-expanded") === "true";
+                judgeToggle.setAttribute("aria-expanded", String(!expanded));
+                judgeToggle.textContent = expanded ? "Show judge" : "Hide judge";
+                judgePanel.hidden = expanded;
+              });
+
+              actions.append(judgeToggle);
+            }
+
+            toggle.addEventListener("click", () => {
+              const expanded = toggle.getAttribute("aria-expanded") === "true";
+              toggle.setAttribute("aria-expanded", String(!expanded));
+              state.textContent = expanded ? "Show Prediction" : "Hide Prediction";
+              body.hidden = expanded;
+              card.classList.toggle("is-open", !expanded);
+              if (expanded && judgeToggle) {
+                judgeToggle.setAttribute("aria-expanded", "false");
+                judgeToggle.textContent = "Show judge";
+                judgePanel.hidden = true;
+              }
+            });
+
+            toggle.append(model, verdict, state);
+            body.append(full);
+            if (actions.childElementCount) body.append(actions);
+            if (judges.length) body.append(judgePanel);
+            card.append(toggle, body);
+            responses.append(card);
+          });
+        };
+
+        const initViewer = (viewer, examples) => {
+          if (!examples.length) return;
+
+          const image = viewer.querySelector("[data-inspect-image]");
+          const imageId = viewer.querySelector("[data-inspect-image-id]");
+          const title = viewer.querySelector("[data-inspect-title]");
+          const index = viewer.querySelector("[data-inspect-index]");
+          const summary = viewer.querySelector("[data-inspect-summary]");
+          const groundTruth = viewer.querySelector("[data-inspect-ground-truth]");
+          const groundTruthLabel = viewer.querySelector("[data-inspect-ground-truth-label]");
+          const responseCount = viewer.querySelector("[data-inspect-response-count]");
+          const responses = viewer.querySelector("[data-inspect-responses]");
+          const dots = viewer.querySelector("[data-inspect-dots]");
+          const prev = viewer.querySelector("[data-inspect-prev]");
+          const next = viewer.querySelector("[data-inspect-next]");
+          const viewerKey = (viewer.dataset.inspectKey || viewer.dataset.inspectDataId || "inspect")
+            .replace(/[^a-z0-9_-]/gi, "-");
+
+          let activeIndex = 0;
+
+          const render = (nextIndex) => {
+            activeIndex = (nextIndex + examples.length) % examples.length;
+            const example = examples[activeIndex];
+
+            image.src = example.image;
+            image.alt = example.alt;
+            imageId.textContent = example.imageId;
+            title.textContent = example.title;
+            index.textContent = `Example ${activeIndex + 1} / ${examples.length}`;
+            summary.textContent = formatSummary(example);
+            groundTruth.textContent = example.groundTruth;
+            groundTruthLabel.textContent = example.tag || "target";
+            responseCount.textContent = `${example.responses.length} responses`;
+            renderResponses(viewer, responses, example, activeIndex, viewerKey);
+
+            dotButtons.forEach((dot, dotIndex) => {
+              const active = dotIndex === activeIndex;
+              dot.classList.toggle("is-active", active);
+              if (active) {
+                dot.setAttribute("aria-current", "true");
+              } else {
+                dot.removeAttribute("aria-current");
+              }
+            });
+          };
+
+          const makeDot = (example, dotIndex) => {
+            const button = document.createElement("button");
+            button.className = "carousel-dot";
+            button.type = "button";
+            button.setAttribute("aria-label", `Show ${example.title}`);
+            button.addEventListener("click", () => render(dotIndex));
+            dots.append(button);
+            return button;
+          };
+
+          dots.replaceChildren();
+          const dotButtons = examples.map(makeDot);
+
+          prev.addEventListener("click", () => render(activeIndex - 1));
+          next.addEventListener("click", () => render(activeIndex + 1));
+          render(0);
+        };
+
+        document.querySelectorAll("[data-inspect-viewer]").forEach((viewer) => {
+          loadExamples(viewer).then((examples) => {
+            initViewer(viewer, examples);
+          }).catch((error) => {
+            const title = viewer.querySelector("[data-inspect-title]");
+            const summary = viewer.querySelector("[data-inspect-summary]");
+            const groundTruth = viewer.querySelector("[data-inspect-ground-truth]");
+            if (title) title.textContent = "Unable to render examples";
+            if (summary) summary.textContent = "error";
+            if (groundTruth) groundTruth.textContent = error.message;
+            console.error(error);
+          });
+        });
+      })();
+    </script>
+
+    <style>
+      /* Theme switcher — deliberately theme-independent */
+      .bb-theme-switcher {
+        align-items: center;
+        background: rgba(18, 18, 20, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        bottom: 1rem;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+        color: #fff;
+        display: flex;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.72rem;
+        gap: 0.25rem;
+        left: 50%;
+        padding: 0.35rem 0.5rem;
+        position: fixed;
+        transform: translateX(-50%);
+        z-index: 9999;
+      }
+      .bb-theme-switcher-label {
+        letter-spacing: 0.08em;
+        opacity: 0.55;
+        padding: 0 0.45rem 0 0.35rem;
+        text-transform: uppercase;
+      }
+      .bb-theme-switcher button {
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.75);
+        cursor: pointer;
+        font: inherit;
+        padding: 0.3rem 0.65rem;
+        transition: background 0.15s ease, color 0.15s ease;
+      }
+      .bb-theme-switcher button:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+      }
+      .bb-theme-switcher button[aria-pressed="true"] {
+        background: #fff;
+        color: #111;
+      }
+      @media (max-width: 768px) {
+        .bb-theme-switcher {
+          bottom: 0.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+          max-width: calc(100vw - 1rem);
+        }
+      }
+    </style>
+    <nav class="bb-theme-switcher" aria-label="Design theme switcher">
+      <span class="bb-theme-switcher-label">Theme</span>
+      <button type="button" data-bb-theme="newsprint">Newsprint</button>
+      <button type="button" data-bb-theme="terminal">Terminal</button>
+      <button type="button" data-bb-theme="swiss">Swiss</button>
+      <button type="button" data-bb-theme="zine">Zine</button>
+      <button type="button" data-bb-theme="y2k">Y2K</button>
+    </nav>
+    <script>
+      (() => {
+        const link = document.getElementById("bb-theme-css");
+        const buttons = document.querySelectorAll(".bb-theme-switcher button");
+        const current = () => {
+          const match = link.getAttribute("href").match(/themes\/(.+)\.css$/);
+          return match ? match[1] : "newsprint";
+        };
+        const apply = (theme) => {
+          link.href = "themes/" + theme + ".css";
+          try {
+            localStorage.setItem("bb-theme", theme);
+          } catch (error) { /* localStorage unavailable */ }
+          buttons.forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.bbTheme === theme));
+          });
+        };
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => apply(button.dataset.bbTheme));
+          button.setAttribute("aria-pressed", String(button.dataset.bbTheme === current()));
+        });
+      })();
+    </script>
+  </body>
+</html>
