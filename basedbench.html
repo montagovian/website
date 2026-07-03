@@ -24,17 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <link id="bb-theme-css" rel="stylesheet" href="themes/newsprint.css">
-    <script>
-      (() => {
-        try {
-          const saved = localStorage.getItem("bb-theme");
-          if (["newsprint", "terminal", "swiss", "zine", "y2k"].includes(saved) && saved !== "newsprint") {
-            document.getElementById("bb-theme-css").href = "themes/" + saved + ".css";
-          }
-        } catch (error) { /* localStorage unavailable; keep default */ }
-      })();
-    </script>
+    <link rel="stylesheet" href="themes/newsprint.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="db6e00f2-8bf4-46b8-b1d7-6db3d205dbeb"></script>
     <script type="application/ld+json">
       {
@@ -977,89 +967,5 @@
       })();
     </script>
 
-    <style>
-      /* Theme switcher — deliberately theme-independent */
-      .bb-theme-switcher {
-        align-items: center;
-        background: rgba(18, 18, 20, 0.92);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 999px;
-        bottom: 1rem;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-        color: #fff;
-        display: flex;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        font-size: 0.72rem;
-        gap: 0.25rem;
-        left: 50%;
-        padding: 0.35rem 0.5rem;
-        position: fixed;
-        transform: translateX(-50%);
-        z-index: 9999;
-      }
-      .bb-theme-switcher-label {
-        letter-spacing: 0.08em;
-        opacity: 0.55;
-        padding: 0 0.45rem 0 0.35rem;
-        text-transform: uppercase;
-      }
-      .bb-theme-switcher button {
-        background: transparent;
-        border: 1px solid transparent;
-        border-radius: 999px;
-        color: rgba(255, 255, 255, 0.75);
-        cursor: pointer;
-        font: inherit;
-        padding: 0.3rem 0.65rem;
-        transition: background 0.15s ease, color 0.15s ease;
-      }
-      .bb-theme-switcher button:hover {
-        background: rgba(255, 255, 255, 0.12);
-        color: #fff;
-      }
-      .bb-theme-switcher button[aria-pressed="true"] {
-        background: #fff;
-        color: #111;
-      }
-      @media (max-width: 768px) {
-        .bb-theme-switcher {
-          bottom: 0.5rem;
-          flex-wrap: wrap;
-          justify-content: center;
-          max-width: calc(100vw - 1rem);
-        }
-      }
-    </style>
-    <nav class="bb-theme-switcher" aria-label="Design theme switcher">
-      <span class="bb-theme-switcher-label">Theme</span>
-      <button type="button" data-bb-theme="newsprint">Newsprint</button>
-      <button type="button" data-bb-theme="terminal">Terminal</button>
-      <button type="button" data-bb-theme="swiss">Swiss</button>
-      <button type="button" data-bb-theme="zine">Zine</button>
-      <button type="button" data-bb-theme="y2k">Y2K</button>
-    </nav>
-    <script>
-      (() => {
-        const link = document.getElementById("bb-theme-css");
-        const buttons = document.querySelectorAll(".bb-theme-switcher button");
-        const current = () => {
-          const match = link.getAttribute("href").match(/themes\/(.+)\.css$/);
-          return match ? match[1] : "newsprint";
-        };
-        const apply = (theme) => {
-          link.href = "themes/" + theme + ".css";
-          try {
-            localStorage.setItem("bb-theme", theme);
-          } catch (error) { /* localStorage unavailable */ }
-          buttons.forEach((button) => {
-            button.setAttribute("aria-pressed", String(button.dataset.bbTheme === theme));
-          });
-        };
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => apply(button.dataset.bbTheme));
-          button.setAttribute("aria-pressed", String(button.dataset.bbTheme === current()));
-        });
-      })();
-    </script>
   </body>
 </html>
