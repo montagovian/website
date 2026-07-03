@@ -1,0 +1,1165 @@
+/* BasedBench theme: Swiss — International Typographic Style. White field,
+   near-black grotesk, one red. Grid, hairlines, and scale do the talking.
+   Müller-Brockmann would file this under "acceptable". */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ---------------------------------------------------------------------------
+   01  Foundations
+--------------------------------------------------------------------------- */
+
+.article-page {
+  --bb-white: #ffffff;
+  --bb-ink: #111111;
+  --bb-red: #e30613;
+  --bb-grey: #6f6f6f;
+  --bb-hairline: #dddddd;
+  --bb-field: #f7f7f7;
+  --bb-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --bb-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bb-white);
+  color: var(--bb-ink);
+  font-family: var(--bb-sans);
+  font-feature-settings: 'ss01' 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.article-page button,
+.article-page figcaption,
+.article-page th,
+.article-page .article-kicker,
+.article-page .inspect-eyebrow,
+.article-page .inspect-summary,
+.article-page .inspect-card-head p,
+.article-page .inspect-card-head span,
+.article-page .inspect-expand-button,
+.article-page .pass-pattern-row--header,
+.article-page .provenance-label,
+.article-page .verdict,
+.article-page .judge-verdict {
+  font-family: var(--bb-sans);
+}
+
+.article-page a:focus-visible,
+.article-page button:focus-visible {
+  outline: 2px solid var(--bb-red);
+  outline-offset: 2px;
+}
+
+.article-page ::selection {
+  background: var(--bb-red);
+  color: var(--bb-white);
+}
+
+/* ---------------------------------------------------------------------------
+   02  Top bar
+--------------------------------------------------------------------------- */
+
+.article-topbar {
+  align-items: baseline;
+  background: var(--bb-white);
+  border-bottom: 1px solid var(--bb-ink);
+  color: var(--bb-ink);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.1rem clamp(1rem, 5vw, 4rem);
+  width: 100%;
+}
+
+.article-home,
+.article-source {
+  color: var(--bb-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
+}
+
+.article-source {
+  font-weight: 500;
+}
+
+.article-home:hover,
+.article-source:hover {
+  color: var(--bb-red);
+}
+
+/* ---------------------------------------------------------------------------
+   03  Shell + folio
+--------------------------------------------------------------------------- */
+
+.article-shell {
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem) clamp(4rem, 8vw, 7rem);
+  width: 100%;
+}
+
+.launch-article {
+  counter-reset: bb-section;
+  margin: 0 auto;
+  width: min(100%, 1120px);
+}
+
+.article-folio {
+  border-top: 2px solid var(--bb-ink);
+  color: var(--bb-ink);
+  display: grid;
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  letter-spacing: 0.14em;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+  padding-top: 0.55rem;
+  text-transform: uppercase;
+}
+
+.article-folio span {
+  position: relative;
+}
+
+.article-folio span:nth-child(2) {
+  text-align: center;
+}
+
+.article-folio span:nth-child(3) {
+  color: var(--bb-red);
+  text-align: right;
+}
+
+/* ---------------------------------------------------------------------------
+   04  Hero
+--------------------------------------------------------------------------- */
+
+.article-hero {
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.article-kicker {
+  color: var(--bb-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+}
+
+.article-hero .article-kicker {
+  color: var(--bb-red);
+}
+
+.article-hero h1 {
+  color: var(--bb-ink);
+  font-size: clamp(2.7rem, 8.5vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin-bottom: 1.6rem;
+  max-width: 18ch;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.article-dek {
+  color: var(--bb-red);
+  font-size: clamp(1.25rem, 2.6vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin-bottom: 1.3rem;
+  max-width: 34ch;
+}
+
+.article-summary {
+  border-top: 1px solid var(--bb-ink);
+  color: var(--bb-ink);
+  font-size: 1.18rem;
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 62ch;
+  padding-top: 1.1rem;
+}
+
+.article-summary s {
+  color: var(--bb-grey);
+}
+
+/* ---------------------------------------------------------------------------
+   05  Sections — counters do the numbering
+--------------------------------------------------------------------------- */
+
+.article-section {
+  border-top: 1px solid var(--bb-hairline);
+  margin-top: clamp(2.6rem, 6vw, 4.2rem);
+  padding-top: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.article-section:not(.inspect-showcase),
+.article-footer-note {
+  max-width: 760px;
+}
+
+.article-section h2 {
+  color: var(--bb-ink);
+  counter-increment: bb-section;
+  font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 1.1rem;
+}
+
+.article-section h2::before {
+  color: var(--bb-red);
+  content: counter(bb-section, decimal-leading-zero);
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.55rem;
+}
+
+.article-section p {
+  color: var(--bb-ink);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  max-width: 68ch;
+}
+
+.article-list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 1.3rem 0 0;
+  counter-reset: bb-item;
+}
+
+.article-list li {
+  color: var(--bb-ink);
+  counter-increment: bb-item;
+  display: grid;
+  font-size: 1.02rem;
+  gap: 1.1rem;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  line-height: 1.55;
+}
+
+.article-list li::before {
+  border-top: 1px solid var(--bb-ink);
+  color: var(--bb-grey);
+  content: counter(bb-item, decimal-leading-zero);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-top: 0.3rem;
+}
+
+/* ---------------------------------------------------------------------------
+   06  Provenance note — two flush columns, hairline spine
+--------------------------------------------------------------------------- */
+
+.provenance-note {
+  border-bottom: 1px solid var(--bb-ink);
+  border-top: 2px solid var(--bb-ink);
+  display: grid;
+  gap: 0;
+  padding-top: 0;
+}
+
+.provenance-item {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  grid-template-columns: 10rem minmax(0, 1fr);
+  padding: 1.3rem 0;
+}
+
+.provenance-item + .provenance-item {
+  border-top: 1px solid var(--bb-hairline);
+}
+
+.article-section .provenance-label {
+  color: var(--bb-red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+}
+
+.provenance-item p:last-child {
+  color: var(--bb-ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-top: 0;
+  max-width: 62ch;
+}
+
+/* ---------------------------------------------------------------------------
+   07  Results table — hairlines only, no vertical rules
+--------------------------------------------------------------------------- */
+
+.results-table-wrap {
+  border-bottom: 1px solid var(--bb-ink);
+  border-top: 2px solid var(--bb-ink);
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.results-table {
+  border-collapse: collapse;
+  min-width: 680px;
+  width: 100%;
+}
+
+.results-table th,
+.results-table td {
+  border-bottom: 1px solid var(--bb-hairline);
+  padding: 0.95rem 1.5rem 0.95rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.results-table th {
+  color: var(--bb-ink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-table td {
+  color: var(--bb-ink);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.results-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   08  Pass-pattern figure — the Swiss data table
+--------------------------------------------------------------------------- */
+
+.pass-pattern-card {
+  background: var(--bb-white);
+  border: 0;
+  border-top: 2px solid var(--bb-ink);
+  border-radius: 0;
+  margin: 1.6rem 0 0;
+}
+
+.pass-pattern-head {
+  align-items: flex-end;
+  background: var(--bb-white);
+  border-bottom: 1px solid var(--bb-ink);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 1.1rem 0 1.1rem;
+}
+
+.pass-pattern-head .article-kicker {
+  color: var(--bb-red);
+  margin-bottom: 0.45rem;
+}
+
+.pass-pattern-head h3 {
+  color: var(--bb-ink);
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.pass-pattern-head p:last-child {
+  color: var(--bb-grey);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 240px;
+  text-align: right;
+}
+
+.pass-pattern-grid {
+  overflow-x: auto;
+}
+
+.pass-pattern-row {
+  align-items: center;
+  border-bottom: 1px solid var(--bb-hairline);
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(210px, 1.3fr) repeat(3, 64px) 56px minmax(140px, 0.85fr);
+  min-width: 720px;
+  padding: 0.85rem 0;
+}
+
+.pass-pattern-row:last-child {
+  border-bottom: 1px solid var(--bb-ink);
+}
+
+.pass-pattern-row--header {
+  background: var(--bb-white);
+  border-bottom: 1px solid var(--bb-ink);
+  color: var(--bb-ink);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-transform: uppercase;
+}
+
+.pass-pattern-row--callout strong {
+  color: var(--bb-red);
+}
+
+.pass-pattern-row--rare strong {
+  color: var(--bb-grey);
+}
+
+.pass-pattern-row strong {
+  color: var(--bb-ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.pass-pattern-row span {
+  color: var(--bb-ink);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Status dots become status squares */
+.status-dot {
+  border-radius: 0;
+  display: inline-flex;
+  height: 0.7rem;
+  justify-self: center;
+  width: 0.7rem;
+}
+
+.status-dot--pass {
+  background: var(--bb-ink);
+}
+
+.status-dot--fail {
+  background: var(--bb-red);
+}
+
+.share-cell {
+  align-items: center;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: minmax(42px, 1fr) auto;
+}
+
+.share-bar {
+  background: var(--bb-field);
+  border-radius: 0;
+  display: block;
+  height: 0.45rem;
+  overflow: hidden;
+}
+
+.share-bar::before {
+  background: var(--bb-red);
+  border-radius: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: calc(var(--share) * 1%);
+}
+
+.pass-pattern-card figcaption {
+  color: var(--bb-grey);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  padding: 0.8rem 0 0;
+}
+
+/* ---------------------------------------------------------------------------
+   09  Section headings + carousel controls
+--------------------------------------------------------------------------- */
+
+.inspect-showcase {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.section-heading {
+  margin-bottom: 1.6rem;
+}
+
+.section-heading .article-kicker {
+  color: var(--bb-red);
+  margin-bottom: 0.6rem;
+}
+
+.section-heading p {
+  color: var(--bb-ink);
+  margin-top: 0.7rem;
+  max-width: 62ch;
+}
+
+.inspect-carousel-heading {
+  align-items: flex-end;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.inspect-carousel-heading > div:first-child {
+  min-width: 0;
+}
+
+.inspect-carousel-controls {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.75rem;
+}
+
+.carousel-button {
+  align-items: center;
+  background: var(--bb-white);
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+  color: var(--bb-ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.5rem;
+  height: 2.4rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 0 0.18rem;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  width: 2.4rem;
+}
+
+.carousel-button:hover {
+  border-color: var(--bb-red);
+  color: var(--bb-red);
+}
+
+.carousel-button:focus-visible {
+  border-color: var(--bb-red);
+  color: var(--bb-red);
+}
+
+.carousel-button:active {
+  background: var(--bb-red);
+  border-color: var(--bb-red);
+  color: var(--bb-white);
+}
+
+.carousel-dots {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  background: var(--bb-white);
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+  cursor: pointer;
+  height: 0.55rem;
+  padding: 0;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  width: 0.55rem;
+}
+
+.carousel-dot:hover {
+  border-color: var(--bb-red);
+}
+
+.carousel-dot.is-active {
+  background: var(--bb-red);
+  border-color: var(--bb-red);
+}
+
+/* ---------------------------------------------------------------------------
+   10  Inspect viewer — flat panels, hairline separations
+--------------------------------------------------------------------------- */
+
+.inspect-viewer {
+  background: var(--bb-white);
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+}
+
+.inspect-toolbar {
+  align-items: center;
+  background: var(--bb-white);
+  border-bottom: 1px solid var(--bb-ink);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem clamp(1rem, 3vw, 1.5rem);
+}
+
+.inspect-eyebrow {
+  color: var(--bb-red);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+}
+
+.inspect-toolbar h3 {
+  color: var(--bb-ink);
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.inspect-summary {
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+  color: var(--bb-ink);
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.inspect-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.35fr);
+  min-height: 560px;
+}
+
+.inspect-media {
+  align-items: stretch;
+  align-self: start;
+  background: var(--bb-field);
+  border-right: 1px solid var(--bb-ink);
+  color: var(--bb-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 420px;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  text-align: left;
+}
+
+.inspect-media img {
+  border: 0;
+  border-radius: 0;
+  display: block;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+.inspect-media figcaption {
+  border-top: 1px solid var(--bb-hairline);
+  color: var(--bb-grey);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin-top: 0.85rem;
+  padding-top: 0.6rem;
+  text-transform: uppercase;
+}
+
+.inspect-stack {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.inspect-card {
+  padding: clamp(1rem, 2.6vw, 1.5rem);
+}
+
+.inspect-card--truth {
+  border-bottom: 1px solid var(--bb-ink);
+}
+
+.inspect-card-head {
+  align-items: baseline;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.inspect-card-head p {
+  color: var(--bb-red);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inspect-card-head span {
+  color: var(--bb-grey);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.inspect-card--truth > p {
+  color: var(--bb-ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* ---------------------------------------------------------------------------
+   11  Model responses — a hairline-ruled list, not boxes
+--------------------------------------------------------------------------- */
+
+.inspect-response-list {
+  border-top: 1px solid var(--bb-ink);
+  display: grid;
+  gap: 0;
+  max-height: 390px;
+  overflow: auto;
+  padding-right: 0;
+}
+
+.inspect-response {
+  background: var(--bb-white);
+  border: 0;
+  border-bottom: 1px solid var(--bb-hairline);
+  border-radius: 0;
+  padding: 0;
+}
+
+.inspect-response:last-child {
+  border-bottom: 0;
+}
+
+.inspect-response.is-open {
+  background: var(--bb-white);
+}
+
+.inspect-response-head {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: space-between;
+  padding: 0.85rem 0.25rem 0.85rem 0;
+  text-align: left;
+  transition: color 0.15s ease;
+  width: 100%;
+}
+
+.inspect-response-head:hover,
+.inspect-response-head:focus-visible {
+  background: transparent;
+  color: var(--bb-red);
+}
+
+.inspect-response-head:hover strong,
+.inspect-response-head:focus-visible strong {
+  color: var(--bb-red);
+}
+
+.inspect-response.is-open .inspect-response-head {
+  border-bottom: 1px solid var(--bb-hairline);
+}
+
+.inspect-response strong {
+  color: var(--bb-ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+.inspect-response-state {
+  color: var(--bb-red);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.inspect-response-body {
+  display: grid;
+  padding: 0.95rem 0.25rem 1.1rem 0;
+}
+
+.inspect-response-body[hidden],
+.inspect-judge-panel[hidden] {
+  display: none;
+}
+
+.inspect-response-full {
+  color: var(--bb-ink);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.inspect-response-full p {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  max-width: none;
+}
+
+.inspect-response-full p + p,
+.inspect-response-full p + ul,
+.inspect-response-full ul + p,
+.inspect-response-full ul + ul {
+  margin-top: 0.75rem;
+}
+
+.inspect-response-full ul {
+  display: grid;
+  gap: 0.35rem;
+  list-style: square;
+  margin: 0 0 0 1.1rem;
+  padding: 0;
+}
+
+.inspect-response-full li {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-left: 0.15rem;
+}
+
+.inspect-response-full li::marker {
+  color: var(--bb-red);
+}
+
+.inspect-response-full strong {
+  color: var(--bb-ink);
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.inspect-response-full code {
+  background: var(--bb-field);
+  border-radius: 0;
+  color: var(--bb-ink);
+  font-family: var(--bb-mono);
+  font-size: 0.9em;
+  padding: 0.08rem 0.28rem;
+}
+
+.inspect-response-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.inspect-expand-button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--bb-ink);
+  color: var(--bb-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-top: 0.9rem;
+  padding: 0 0 0.15rem;
+  text-transform: uppercase;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.inspect-response-actions .inspect-expand-button {
+  margin-top: 0;
+}
+
+.inspect-expand-button:hover,
+.inspect-expand-button:focus-visible {
+  border-bottom-color: var(--bb-red);
+  color: var(--bb-red);
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------
+   12  Judge panel
+--------------------------------------------------------------------------- */
+
+.inspect-judge-panel {
+  border-top: 1px solid var(--bb-ink);
+  display: grid;
+  gap: 0;
+  margin-top: 0.95rem;
+  padding-top: 0;
+}
+
+.inspect-judge {
+  background: var(--bb-white);
+  border: 0;
+  border-bottom: 1px solid var(--bb-hairline);
+  border-radius: 0;
+  padding: 0.85rem 0;
+}
+
+.inspect-judge:last-child {
+  border-bottom: 0;
+}
+
+.inspect-judge-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.inspect-judge-head strong {
+  color: var(--bb-ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.judge-verdict {
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+  display: inline-flex;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.22rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.judge-verdict--correct {
+  background: var(--bb-white);
+  border-color: var(--bb-ink);
+  color: var(--bb-ink);
+}
+
+.judge-verdict--incorrect {
+  background: var(--bb-red);
+  border-color: var(--bb-red);
+  color: var(--bb-white);
+}
+
+.inspect-judge-reasoning,
+.inspect-judge-reasoning p,
+.inspect-judge-reasoning li {
+  color: var(--bb-grey);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.inspect-judge-reasoning p {
+  margin: 0;
+  max-width: none;
+}
+
+.inspect-judge-reasoning p + p,
+.inspect-judge-reasoning p + ul,
+.inspect-judge-reasoning ul + p,
+.inspect-judge-reasoning ul + ul {
+  margin-top: 0.6rem;
+}
+
+.inspect-judge-reasoning ul {
+  display: grid;
+  gap: 0.3rem;
+  list-style: square;
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   13  Verdict badges — flat rectangles, black pass / red fail
+--------------------------------------------------------------------------- */
+
+.verdict {
+  border: 1px solid var(--bb-ink);
+  border-radius: 0;
+  display: inline-flex;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.6rem;
+  text-transform: uppercase;
+}
+
+.verdict--correct {
+  background: var(--bb-ink);
+  border-color: var(--bb-ink);
+  color: var(--bb-white);
+}
+
+.verdict--partial {
+  background: var(--bb-white);
+  border-color: var(--bb-ink);
+  color: var(--bb-ink);
+}
+
+.verdict--incorrect,
+.verdict--missed {
+  background: var(--bb-red);
+  border-color: var(--bb-red);
+  color: var(--bb-white);
+}
+
+/* ---------------------------------------------------------------------------
+   14  Footer note
+--------------------------------------------------------------------------- */
+
+.article-footer-note {
+  border-top: 2px solid var(--bb-ink);
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: 1.2rem;
+}
+
+.article-footer-note p {
+  color: var(--bb-grey);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  max-width: 62ch;
+}
+
+.article-footer-note code {
+  color: var(--bb-ink);
+  font-family: var(--bb-mono);
+  font-size: 0.9em;
+}
+
+/* ---------------------------------------------------------------------------
+   15  Responsive
+--------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .article-folio {
+    gap: 0.3rem;
+    grid-template-columns: 1fr;
+  }
+
+  .article-folio span:nth-child(2),
+  .article-folio span:nth-child(3) {
+    text-align: left;
+  }
+
+  .article-hero h1 {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    letter-spacing: -0.02em;
+  }
+
+  .article-section p {
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .provenance-item {
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    padding: 1.1rem 0;
+  }
+
+  .article-section .provenance-label {
+    margin-top: 0;
+  }
+
+  .provenance-item p:last-child {
+    font-size: 0.96rem;
+  }
+
+  .article-list li {
+    gap: 0.8rem;
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .pass-pattern-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .pass-pattern-head p:last-child {
+    max-width: none;
+    text-align: left;
+  }
+
+  .inspect-carousel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inspect-carousel-controls {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .carousel-dots {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .inspect-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .inspect-summary {
+    align-self: flex-start;
+  }
+
+  .inspect-layout {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .inspect-media {
+    border-bottom: 1px solid var(--bb-ink);
+    border-right: 0;
+    min-height: 220px;
+  }
+
+  .inspect-response-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .inspect-eyebrow,
+  .inspect-card-head p,
+  .inspect-card-head span {
+    line-height: 1.25;
+  }
+
+  .inspect-card--truth > p,
+  .inspect-response-full {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .inspect-response-full p,
+  .inspect-response-full li {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
