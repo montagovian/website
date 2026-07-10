@@ -252,7 +252,6 @@
 .article-page .inspect-card-head p,
 .article-page .inspect-card-head span,
 .article-page .inspect-expand-button,
-.article-page .pass-pattern-row--header,
 .article-page .provenance-label,
 .article-page .verdict,
 .article-page .judge-verdict {
@@ -402,6 +401,10 @@
   fill: url(#benchmark-gpt-fill);
 }
 
+.benchmark-bar--muse {
+  fill: url(#benchmark-muse-fill);
+}
+
 .benchmark-bar--claude {
   fill: url(#benchmark-claude-fill);
 }
@@ -414,111 +417,43 @@
   pointer-events: none;
 }
 
-.pass-pattern-grid {
-  border-top: 2px solid var(--bb-ink);
-  overflow: hidden;
-}
-
-.pass-pattern-row {
-  align-items: center;
-  border-bottom: 1px solid var(--bb-rule);
-  box-sizing: border-box;
-  display: grid;
-  gap: clamp(0.35rem, 1.2vw, 0.75rem);
-  grid-template-columns:
-    minmax(190px, 1.6fr)
-    repeat(4, minmax(38px, 0.42fr))
-    minmax(48px, 0.48fr)
-    minmax(105px, 0.9fr);
-  padding: 0.75rem clamp(1rem, 3vw, 1.25rem);
-  width: 100%;
-}
-
-.pass-pattern-row:last-child {
-  border-bottom: 0;
-}
-
-.pass-pattern-row--header {
-  background: rgba(12, 43, 36, 0.06);
-  color: var(--bb-ink);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  padding-bottom: 0.55rem;
-  padding-top: 0.55rem;
-  text-transform: uppercase;
-}
-
-.pass-pattern-row--callout {
-  background: rgba(12, 43, 36, 0.035);
-}
-
-.pass-pattern-row--rare {
-  background: rgba(12, 43, 36, 0.035);
-}
-
-.pass-pattern-row strong {
-  color: var(--bb-ink);
-  font-size: 0.96rem;
-  font-weight: 500;
-}
-
-.pass-pattern-row span {
-  color: var(--bb-ink);
-  font-size: 0.92rem;
-}
-
-.pass-pattern-row > :nth-child(n + 2):nth-child(-n + 5) {
-  justify-self: center;
-  text-align: center;
-}
-
-.status-dot {
-  border-radius: 50%;
-  display: inline-flex;
-  height: 0.8rem;
-  justify-self: center;
-  width: 0.8rem;
-}
-
-.status-dot--pass {
-  background: #00d26a;
-}
-
-.status-dot--fail {
-  background: #ff304f;
-}
-
-.share-cell {
-  align-items: center;
-  display: grid;
-  gap: 0.55rem;
-  grid-template-columns: minmax(42px, 1fr) auto;
-}
-
-.share-bar {
-  background: rgba(12, 43, 36, 0.13);
-  border-radius: 0;
-  display: block;
-  height: 0.42rem;
-  overflow: hidden;
-}
-
-.share-bar::before {
-  background: var(--bb-ink);
-  border-radius: inherit;
-  content: "";
-  display: block;
-  height: 100%;
-  width: calc(var(--share) * 1%);
-}
-
 .benchmark-chart-card figcaption {
   border-top: 1px solid var(--bb-rule);
   color: var(--bb-muted);
   font-size: 0.84rem;
   line-height: 1.4;
   padding: 0.75rem clamp(1rem, 3vw, 1.25rem);
+}
+
+.results-winner-heading {
+  background: linear-gradient(
+    90deg,
+    rgba(138, 109, 241, 0.14),
+    rgba(66, 133, 244, 0.07) 72%,
+    transparent
+  );
+  border-left: 0.35rem solid #8a6df1;
+  color: var(--bb-ink);
+  font-family: var(--bb-display);
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  font-weight: 650;
+  line-height: 1.14;
+  margin: 1.75rem 0 0.35rem;
+  padding: 0.8rem clamp(0.9rem, 2.5vw, 1.15rem) 0.9rem;
+}
+
+.results-winner-heading span {
+  color: #665fdc;
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .results-winner-heading span {
+    background: linear-gradient(90deg, #8a6df1, #4285f4);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .inspect-showcase {
@@ -669,6 +604,15 @@
   width: 0.5rem;
 }
 
+[data-inspect-compact] .carousel-dots {
+  gap: 0.28rem;
+}
+
+[data-inspect-compact] .carousel-dot {
+  height: 0.45rem;
+  width: 0.45rem;
+}
+
 .inspect-layout {
   display: grid;
   grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.35fr);
@@ -796,6 +740,14 @@
 .inspect-response-head:hover,
 .inspect-response-head:focus-visible {
   background: rgba(12, 43, 36, 0.045);
+}
+
+.inspect-response-head--static {
+  cursor: default;
+}
+
+.inspect-response-head--static:hover {
+  background: transparent;
 }
 
 .inspect-response.is-open .inspect-response-head {
@@ -1084,41 +1036,6 @@
   .benchmark-chart-card,
   .inspect-viewer {
     box-shadow: none;
-  }
-
-  .pass-pattern-row {
-    gap: 0.28rem;
-    grid-template-columns:
-      minmax(116px, 1.35fr)
-      repeat(4, minmax(24px, 0.3fr))
-      minmax(34px, 0.34fr)
-      minmax(58px, 0.58fr);
-    padding-left: 0.55rem;
-    padding-right: 0.55rem;
-  }
-
-  .pass-pattern-row--header {
-    font-size: 0.58rem;
-    letter-spacing: 0.04em;
-  }
-
-  .pass-pattern-row strong {
-    font-size: 0.78rem;
-    line-height: 1.25;
-  }
-
-  .pass-pattern-row span {
-    font-size: 0.72rem;
-  }
-
-  .status-dot {
-    height: 0.58rem;
-    width: 0.58rem;
-  }
-
-  .share-cell {
-    gap: 0.3rem;
-    grid-template-columns: minmax(20px, 1fr) auto;
   }
 
   .inspect-carousel-heading {
