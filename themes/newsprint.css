@@ -744,6 +744,7 @@
 
 .inspect-response-head--static {
   cursor: default;
+  justify-content: flex-start;
 }
 
 .inspect-response-head--static:hover {

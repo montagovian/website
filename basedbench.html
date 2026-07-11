@@ -2866,11 +2866,7 @@
               const head = document.createElement("div");
               head.className = "inspect-response-head inspect-response-head--static";
 
-              const score = document.createElement("span");
-              score.className = "inspect-response-state";
-              score.textContent = response.score || "passed";
-
-              head.append(model, verdict, score);
+              head.append(model, verdict);
               card.append(head);
               responses.append(card);
               return;
