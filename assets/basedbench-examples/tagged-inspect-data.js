@@ -14,8 +14,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on your instructions, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** The image is a screenshot of a quote-tweet from the social media platform X (formerly Twitter).\n*   **Subject Matter:** The original post referenc...",
+          "text": "Based on your instructions, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** The image is a screenshot of a quote-tweet from the social media platform X (formerly Twitter).\n*   **Subject Matter:** The original post references the \"Suic...",
           "fullText": "Based on your instructions, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** The image is a screenshot of a quote-tweet from the social media platform X (formerly Twitter).\n*   **Subject Matter:** The original post references the \"Suicide Belt,\" a real demographic phenomenon in the United States where the Mountain West region historically has higher per-capita suicide rates than the rest of the country.\n\n**2. The Joke**\nThe joke relies on grammar and the drastic difference between the *intended* meaning of a sentence and its *literal* meaning. \n\n*   **The Setup:** The original tweet captions the map by saying the Suicide Belt is the region \"**where most people take their own lives**.\"\n*   **The Mechanism/Implication:** Taken literally, the phrase \"most people\" means a majority (more than 50%). Therefore, the original account accidentally stated that the majority of the entire population living in those eight states dies by suicide, which is an absurd, apocalyptic scenario. \n*   **The Inversion:** The quote-tweeter points out that the original author is \"missing an important 'the'.\" If they had written \"**where *the* most people take their own lives**,\" the sentence would correctly mean that this region has the highest statistical rate compared to other regions, rather than claiming most of the residents kill themselves.\n\n**3. Important Visual Elements**\nWhile the joke is entirely text-based, the visual of the map enhances it. The stark, solid red highlighting covers a massive, multi-state landmass. Looking at that giant red zone while reading the accidental claim that *most people living there* die by suicide makes the grammatical error feel much more dramatic and comical.",
           "judges": [
             {
@@ -38,8 +37,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a grammar/wording joke about a very dark subject.\n\nThe quoted tweet says:\n\n> “The Suicide Belt, the US region where most people take their own lives”\n\nBut without the word **“the”** before “most,” it reads like:\n\n> In this region, **most...",
+          "text": "This is a grammar/wording joke about a very dark subject.\n\nThe quoted tweet says:\n\n> “The Suicide Belt, the US region where most people take their own lives”\n\nBut without the word **“the”** before “most,” it reads like:\n\n> In this region, **most people** ta...",
           "fullText": "This is a grammar/wording joke about a very dark subject.\n\nThe quoted tweet says:\n\n> “The Suicide Belt, the US region where most people take their own lives”\n\nBut without the word **“the”** before “most,” it reads like:\n\n> In this region, **most people** take their own lives  \n> meaning a majority of the population dies by suicide.\n\nThat would be absurdly extreme.\n\nWhat the tweet presumably meant was:\n\n> “the US region where **the most** people take their own lives”\n\nMeaning it has the highest suicide rates or highest number of suicides compared with other regions.\n\nSo the reply “missing an important ‘the’ here” is pointing out that one tiny missing word changes the sentence from “this region has the highest suicide numbers/rates” to “almost everyone there kills themselves.”\n\nVisual elements:\n- The map highlights parts of the western/mountain U.S. in red: Montana, Idaho, Wyoming, Nevada, Utah, Colorado, Arizona, and New Mexico.\n- This area is sometimes referred to as the **“Suicide Belt,”** similar in naming style to regions like the “Bible Belt” or “Rust Belt.”\n- The seriousness of the map contrasts with the pedantic grammar correction, which is the source of the humor.",
           "judges": [
             {
@@ -61,33 +59,31 @@ window.basedBenchTaggedExamples = {
         },
         {
           "model": "Muse Spark 1.1",
-          "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "",
-          "fullText": "",
+          "verdict": "correct",
+          "text": "It's a grammar / dark humor joke.\n\n**The reference:**\nThe image is a quote-tweet of a map post titled \"The Suicide Belt, the US region where most people take their own lives.\" \n\nThe Suicide Belt is a real nickname for the Intermountain West - Montana, Idaho...",
+          "fullText": "It's a grammar / dark humor joke.\n\n**The reference:**\nThe image is a quote-tweet of a map post titled \"The Suicide Belt, the US region where most people take their own lives.\" \n\nThe Suicide Belt is a real nickname for the Intermountain West - Montana, Idaho, Wyoming, Nevada, Utah, Colorado, Arizona, New Mexico - which does have the highest suicide rates in the US. It's named like other US regional nicknames - the Bible Belt, the Sun Belt, the Rust Belt. The map highlights those 8 states in red.\n\n**What the \"missing 'the'\" means:**\nThe account @TownsUsa is pointing out a definite article that completely changes the meaning.\n\nThe tweet says:\n\n> ...where **most** people take their own lives\n\nWithout the article, that literally reads as: in that region, *a majority of the population* - most people - kill themselves.\n\nWhat it meant to say is:\n\n> ...where **the most** people take their own lives\n\nWith `the`, it becomes a superlative - *the most* compared to other US regions. Meaning it has the highest *rate*, not that 50%+ of residents do it.\n\nSo the joke is that omitting that one small word turns a dry demographic fact into an absurd, extremely dark claim that everyone living in those 8 states commits suicide. The comment \"missing an important 'the' here\" is understated on purpose.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
-              "verdict": "incorrect",
-              "reasoning": "The model did not provide any explanation at all, so it cannot be judged as correctly identifying the missing-word ambiguity or the intended contrast between 'most people' and 'the most people' in the suicide-rate joke."
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a missing-word ambiguity involving \"most\" vs. \"the most,\" and explains that the intended meaning is the region with the highest suicide rate/count rather than a literal majority of people committing suicide. This matches the ground truth exactly. It also references the specific phrase and the dark humor/grammar setup. No key reference is missed."
             },
             {
               "model": "claude-sonnet-4-6",
-              "verdict": "incorrect",
-              "reasoning": "The model provided no explanation at all, so it cannot be evaluated as correct."
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the missing 'the' creates an ambiguity where 'where most people take their own lives' sounds like a majority of the population commits suicide, rather than the intended meaning of 'where the most people take their own lives' (i.e., the highest rate/count compared to other regions). The model also correctly identifies the specific map (The Suicide Belt), the US regions involved, and the specific tweet commentary about the missing 'the'. This matches the ground truth explanation precisely."
             },
             {
               "model": "z-ai/glm-5.2",
-              "verdict": "incorrect",
-              "reasoning": "The model did not provide an explanation, so it cannot be considered correct. It fails to identify the missing-word ambiguity or any other aspect of the joke mentioned in the ground truth."
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the missing definite article 'the' changes the meaning from a superlative ('the most people take their own lives' = highest suicide rate among regions) to an absurd literal claim ('most people take their own lives' = a majority of the population commits suicide). This matches the ground truth explanation exactly."
             }
           ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "**What's being shown:** This is a screenshot of a quote-tweet. The bottom tweet (from \"Vintage Maps\") shows a map of the western US highlighting the \"Suicide Belt\" — a real, recognized region (the intermountain West: Montana, Wyoming, Nevada, Ut...",
+          "text": "**What's being shown:** This is a screenshot of a quote-tweet. The bottom tweet (from \"Vintage Maps\") shows a map of the western US highlighting the \"Suicide Belt\" — a real, recognized region (the intermountain West: Montana, Wyoming, Nevada, Utah, Colorado...",
           "fullText": "**What's being shown:** This is a screenshot of a quote-tweet. The bottom tweet (from \"Vintage Maps\") shows a map of the western US highlighting the \"Suicide Belt\" — a real, recognized region (the intermountain West: Montana, Wyoming, Nevada, Utah, Colorado, etc.) that genuinely does have higher suicide rates than the national average.\n\n**The joke:** The original caption reads:\n\n> \"The Suicide Belt, the US region where most people take their own lives\"\n\nThe commenter says **\"missing an important 'the' here.\"** The intended, accurate phrasing would be something like \"where **the** most people take their own lives\" — meaning the area with the *highest number/rate* of suicides.\n\nWithout the word \"the,\" the sentence reads as \"where **most people** take their own lives\" — which absurdly implies that the *majority* of people living in those states commit suicide, as if it's just a normal thing everyone there does.\n\n**Why it's funny:** It's a grammar-pedantry joke combined with dark humor. A single missing word transforms a statistical statement into a darkly comic exaggeration suggesting most residents of Montana, Utah, Nevada, etc. all kill themselves. The commenter pointing out the missing \"the\" plays it deadpan, as if the only problem with the morbid sentence is the grammar.",
           "judges": [
             {
@@ -110,8 +106,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a screenshot of a reply on X/Twitter.\n\n- **The image being replied to**: A map labeled as showing “The Suicide Belt” (a real informal name for the western U.S. states with statistically elevated suicide rates). The map’s states are c...",
+          "text": "The meme is a screenshot of a reply on X/Twitter.\n\n- **The image being replied to**: A map labeled as showing “The Suicide Belt” (a real informal name for the western U.S. states with statistically elevated suicide rates). The map’s states are colored in re...",
           "fullText": "The meme is a screenshot of a reply on X/Twitter.\n\n- **The image being replied to**: A map labeled as showing “The Suicide Belt” (a real informal name for the western U.S. states with statistically elevated suicide rates). The map’s states are colored in red, but all the labels are written in Spanish (“NUEVO MÉXICO,” “EE.UU.,” “MÉXICO,” etc.) and it carries a Google watermark, undercutting the “vintage maps” account that posted it.\n- **The reply**: “missing an important ‘the’ here.”\n\nThe joke is a quick grammar pun. Because the map is rendered in Spanish, the English name “Suicide Belt” is comically incomplete; inserting the missing definite article turns it into the fully grammatical (and slightly absurd) “The the Suicide Belt.” The Spanish labels on the map are the visual cue that makes the wordplay land.\n\nIn short, the humor comes from the mismatch between the English caption and the Spanish map, turned into a one-word grammar correction.",
           "judges": [
             {
@@ -147,8 +142,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Visual Setup**\nThe image shows a man from behind, wearing a navy blue suit and carrying a backpack while standing on a subway train.\n\n**The Key Visual Element**\nTo get the j...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Visual Setup**\nThe image shows a man from behind, wearing a navy blue suit and carrying a backpack while standing on a subway train.\n\n**The Key Visual Element**\nTo get the joke, you hav...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Visual Setup**\nThe image shows a man from behind, wearing a navy blue suit and carrying a backpack while standing on a subway train.\n\n**The Key Visual Element**\nTo get the joke, you have to look closely at the bottom edge of the suit jacket's back. There is a slit in the fabric (called a \"vent\"), and at the bottom of that slit, there is a small white \"X\" sewn in thread. There is also another visible stitch right on the bottom corner.\n\n**The Joke / Cultural Reference**\nThe joke relies on knowing a specific rule about buying and wearing new suits. \n\nWhen suits are manufactured and shipped, tailors use temporary \"tack stitches\" or \"basting threads\" (like the white 'X' seen here) to ensure the vents or pockets stay closed, flat, and unwrinkled while on display at the store. **The buyer is supposed to cut and remove these threads before wearing the suit.** \n\nWearing a suit with these temporary stitches still in place is a classic \"rookie mistake.\" It immediately signals to outsiders that the person has likely just bought their first real suit and is inexperienced with professional dress codes.\n\n**The Implication**\nThe text overlay, \"Summer interns have landed in nyc,\" ties this visual together. New York City is a major hub for corporate summer internships (finance, law, etc.). Every June, thousands of college students arrive, eager to look professional. \n\nThe meme is gently poking fun at this rite of passage: a young guy bought a brand-new suit to look the part of a big-city professional, but missed a crucial detail that instantly outed him as an inexperienced intern on his first day. \n\nThe poster adds \"(I did help him out after taking this),\" implying they kindly informed the intern about the threading so he wouldn't walk into his new job looking like a novice.",
           "judges": [
             {
@@ -171,8 +165,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is joking about the annual arrival of **summer interns in New York City**, especially finance/consulting/law interns who show up in brand-new business clothes and commute on the subway.\n\nThe key visual joke is the man’s suit: you can s...",
+          "text": "This meme is joking about the annual arrival of **summer interns in New York City**, especially finance/consulting/law interns who show up in brand-new business clothes and commute on the subway.\n\nThe key visual joke is the man’s suit: you can see the littl...",
           "fullText": "This meme is joking about the annual arrival of **summer interns in New York City**, especially finance/consulting/law interns who show up in brand-new business clothes and commute on the subway.\n\nThe key visual joke is the man’s suit: you can see the little **white “X” stitches** on the back vents of his jacket near the bottom. Those are temporary **factory tacking stitches** put on suits to keep the vents closed during shipping/display. You’re supposed to **cut them off before wearing the suit**. Leaving them on is a classic “I’m new to wearing suits” mistake.\n\nSo the joke is:\n\n- Summer interns have “landed” in NYC like a recognizable seasonal species.\n- This guy is identifiable as a fresh intern because he’s wearing a new suit incorrectly.\n- The subway setting adds to the NYC-specific humor: young professionals/interns flooding the trains in formal clothes.\n- The caption “I did help him out after taking this” softens it—meaning the poster snapped the funny evidence, then told him to remove the stitches.\n\nIt’s funny because it captures a very specific, common “first real office job” rookie error.",
           "judges": [
             {
@@ -195,8 +188,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a photo / observation joke about NYC summer intern season.\n\n**The reference:** Every May/June, thousands of college students arrive in New York City for summer internships in finance, consulting, law, etc. It's a yearly ritual on NYC soc...",
+          "text": "This is a photo / observation joke about NYC summer intern season.\n\n**The reference:** Every May/June, thousands of college students arrive in New York City for summer internships in finance, consulting, law, etc. It's a yearly ritual on NYC social media to...",
           "fullText": "This is a photo / observation joke about NYC summer intern season.\n\n**The reference:** Every May/June, thousands of college students arrive in New York City for summer internships in finance, consulting, law, etc. It's a yearly ritual on NYC social media to spot and gently mock them - they're young, overdressed for the subway in a full suit in summer, look a little lost, and are obviously new to office life. The stereotypical uniform is exactly what you see here: navy suit, brown loafers, business backpack.\n\n**The joke / what's happening:**\n\nThe man is wearing a brand new suit, and he hasn't removed the temporary stitching.\n\nIf you look at the bottom of his suit jacket, just above the butt, you can see two little white \"X\" stitches. Those are called tack stitches / basting stitches. Manufacturers sew the vent and sometimes the pockets and sleeves shut with a loose X to keep the jacket's shape while it's shipped and on the rack. You are supposed to cut them out with scissors before you wear it for the first time.\n\nLeaving them in is a classic first-suit mistake. It keeps the vent from opening when you move or sit, and it instantly signals: \"I've never worn a suit before and this one is brand new.\"\n\nSo the caption \"Summer interns have landed in nyc\" is saying: this can only be a summer intern - enthusiastic but clueless enough to wear his new suit straight from the store to the subway without knowing that step.\n\nThe \"(I did help him out after taking this)\" is the poster saying she told him about it after she took the photo.\n\n**Visual details that matter:**\n\n* The two white X's on the lower back of the jacket at the vent.\n* The overall look - suit on a crowded subway car, holding a backpack, standing stiffly - which codes as a young office worker commuting.\n* It's taken from behind so you focus on the stitching, not the person.",
           "judges": [
             {
@@ -219,8 +211,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "# Meme Explanation\n\n**The Reference:** This meme plays on the seasonal phenomenon of \"summer interns\" arriving in New York City—typically college students or recent grads starting internships at finance, consulting, or corporate firms. There's a...",
+          "text": "# Meme Explanation\n\n**The Reference:** This meme plays on the seasonal phenomenon of \"summer interns\" arriving in New York City—typically college students or recent grads starting internships at finance, consulting, or corporate firms. There's a well-establ...",
           "fullText": "# Meme Explanation\n\n**The Reference:** This meme plays on the seasonal phenomenon of \"summer interns\" arriving in New York City—typically college students or recent grads starting internships at finance, consulting, or corporate firms. There's a well-established stereotype that these young interns are eager, overdressed, and visibly inexperienced with city life.\n\n**The Joke:** The humor comes from several tell-tale \"intern\" signs visible in the photo:\n\n1. **Brand new suit** – The navy suit still has the **manufacturing X-stitches** (the white thread holding the back vent and pocket flaps closed). Experienced professionals know to snip these off before wearing a suit. The intern hasn't realized this yet, marking him as a rookie.\n\n2. **The full corporate \"starter pack\" look** – Crisp suit, brown dress shoes, and a backpack, all suggesting someone trying very hard to look professional on their first days.\n\n3. **Subway context** – He's clearly navigating the NYC subway, a quintessential \"welcome to the city\" experience for newcomers.\n\n**The Wholesome Twist:** The caption \"(I did help him out after taking this)\" implies the poster gently told him about the stitches afterward—adding a kind, relatable touch to what could otherwise be pure mockery.\n\n**Why It Works:** It's a affectionate, knowing dig that anyone familiar with corporate culture or NYC summer recognizes. The X-stitches are a genuine giveaway that veterans instantly spot, making it an \"if you know, you know\" type of joke.",
           "judges": [
             {
@@ -243,8 +234,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The joke is a classic NYC subway observation meme about the annual arrival of summer interns (mostly finance/corporate).\n\n**Setup and visual punchline:**  \nA young guy in a freshly bought navy suit is standing on the subway. The white paper tags...",
+          "text": "The joke is a classic NYC subway observation meme about the annual arrival of summer interns (mostly finance/corporate).\n\n**Setup and visual punchline:**  \nA young guy in a freshly bought navy suit is standing on the subway. The white paper tags are still a...",
           "fullText": "The joke is a classic NYC subway observation meme about the annual arrival of summer interns (mostly finance/corporate).\n\n**Setup and visual punchline:**  \nA young guy in a freshly bought navy suit is standing on the subway. The white paper tags are still attached to the back of his jacket and trousers (and possibly the backpack). This is the giveaway that the suit is brand-new and he hasn't realized he needs to remove the tags.\n\n**The implied joke:**  \nEvery summer, a wave of wide-eyed interns (often from elsewhere) descend on NYC in their first real business attire. Forgetting to snip the tags off new clothes is a recurring telltale sign of someone who just arrived and is figuring out professional norms. The caption treats it like a natural phenomenon (\"interns have landed\"), and the parenthetical note adds the \"I helped him\" twist for extra relatable comedy.\n\nThe red-nailed hand on the pole is the person taking the photo, completing the \"spotted in the wild\" meme format.",
           "judges": [
             {
@@ -280,8 +270,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Person:** The original poster is Karoline Leavitt, a prominent conservative political figure and current national press secretary for Donald Trump'...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Person:** The original poster is Karoline Leavitt, a prominent conservative political figure and current national press secretary for Donald Trump's 2024 presi...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Person:** The original poster is Karoline Leavitt, a prominent conservative political figure and current national press secretary for Donald Trump's 2024 presidential campaign. \n*   **The Political Context:** A core tenet of modern conservative and \"pro-life\" ideology is the belief that life, personhood, and constitutional rights begin at the moment of *conception*, not at birth. \n\n**2. The Joke**\n*   **The Setup:** Leavitt posts an innocuous, traditional birth announcement, stating that her new baby \"joined our family\" on May 1st (the day the baby was born). \n*   **The Irony/Gotcha:** The commenter is pointing out a perceived hypocrisy between Leavitt's colloquial language and her political ideology. If Leavitt believes that personhood begins at conception, the commenter implies that the baby should have \"joined the family\" nine months prior to her birth.\n*   **The Mechanism:** The joke relies on ideological contradiction. The commenter uses Leavitt's own words against her to highlight how standard, everyday ways of talking about pregnancy and birth often conflict with rigid political talking points regarding fetal personhood. \n\n**3. Important Visual Elements**\n*   **The Juxtaposition:** The meme works by placing a very wholesome, non-political birth announcement photo directly next to a snarky, politically charged comment.\n*   **The Emoji:** The \"thinking face\" emoji (🤔) at the end of the comment is doing a lot of the heavy lifting. It dictates the sarcastic tone, showing the commenter pretending to be confused in order to lay a logical trap for the original poster.",
           "judges": [
             {
@@ -304,8 +293,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a screenshot of a baby announcement by Karoline Leavitt, a conservative/Republican political figure. She writes:\n\n> “On May 1st, Viviana aka ‘Vivi’ joined our family…”\n\nThe comment underneath says:\n\n> “Wait wait… soooo Vivi didn’t e...",
+          "text": "This meme is a screenshot of a baby announcement by Karoline Leavitt, a conservative/Republican political figure. She writes:\n\n> “On May 1st, Viviana aka ‘Vivi’ joined our family…”\n\nThe comment underneath says:\n\n> “Wait wait… soooo Vivi didn’t enter ur fami...",
           "fullText": "This meme is a screenshot of a baby announcement by Karoline Leavitt, a conservative/Republican political figure. She writes:\n\n> “On May 1st, Viviana aka ‘Vivi’ joined our family…”\n\nThe comment underneath says:\n\n> “Wait wait… soooo Vivi didn’t enter ur family til her BIRTH… Interesting… 🤔”\n\nThe joke is political and about abortion rhetoric. Many anti-abortion conservatives argue that a fetus is already a baby/person/member of the family from conception. The commenter is sarcastically pointing out that even Leavitt’s own wording treats the baby as having “joined the family” at birth, not at conception.\n\nSo the humor is a “gotcha”:  \n- If you believe life/personhood begins at conception, then technically Vivi “joined the family” months earlier.  \n- But in normal everyday speech, people usually say a baby joins the family when they’re born.  \n- The commenter is using that ordinary phrasing to mock perceived inconsistency in anti-abortion/pro-life language.\n\nImportant visual elements:\n- The wholesome photo of the mother holding the newborn makes it look like a standard birth announcement.\n- The verified account/name signals this is from a public political figure.\n- The sarcastic comment with “Interesting…” and the thinking emoji frames it like the commenter has caught her contradicting her ideology.",
           "judges": [
             {
@@ -328,8 +316,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a political \"gotcha\" meme about abortion and the definition of family.\n\n**1. References:**\n\n* **Karoline Leavitt** - White House Press Secretary in the second Trump administration, who is publicly pro-life / anti-abortion. She did have a...",
+          "text": "This is a political \"gotcha\" meme about abortion and the definition of family.\n\n**1. References:**\n\n* **Karoline Leavitt** - White House Press Secretary in the second Trump administration, who is publicly pro-life / anti-abortion. She did have a child in 20...",
           "fullText": "This is a political \"gotcha\" meme about abortion and the definition of family.\n\n**1. References:**\n\n* **Karoline Leavitt** - White House Press Secretary in the second Trump administration, who is publicly pro-life / anti-abortion. She did have a child in 2024, though his name is Niko and he was born in July, so this specific post with a daughter named \"Viviana aka Vivi\" on May 1st appears to be edited/fake. The meme uses her image and persona anyway.\n* **The US abortion debate** - A core argument of the pro-life movement is that personhood and family membership begin at conception or fertilization, not at birth. The pro-choice position generally ties legal personhood to birth/viability.\n\n**2. What the joke is:**\n\nThe setup is a completely normal, wholesome birth announcement: \"Vivi joined our family on May 1st.\"\n\nThe comment at the bottom from \"Tiffany Woosley\" is doing a sarcastic, pedantic reading of that phrase:\n\n> Wait wait... soooo Vivi didnt enter ur family til her BIRTH... Interesting....\n\nThe implication is: If you are pro-life, you should say the baby joined your family when you got pregnant, not when she was born. By saying she \"joined\" on her birth date, you are linguistically implying she *wasn't* part of the family before birth — which is the pro-choice framing.\n\nThe joke / punchline is the accusation of hypocrisy or ideological inconsistency. The commenter is pretending to be shocked to expose what she sees as a contradiction between Leavitt's personal language and her political position.\n\nIt's a common format online for political purity-testing. It goes viral because pro-choice people share it as a funny \"gotcha\" against a conservative figure, and pro-life people share it as an example of being overly literal.\n\nIn reality, \"joined our family\" on a birth date is an idiom everyone uses for both birth and adoption, and doesn't normally carry a statement about fetal personhood.\n\n**3. Visual elements that matter:**\n\n* Top half looks like an X/Twitter post from a verified account, with Leavitt smiling in a nursery holding a newborn — classic birth announcement aesthetic.\n* Bottom half is in Facebook-comment style, with a thinking-face emoji 🤔, elongated \"soooo,\" and BIRTH in all caps for sarcastic emphasis. The 3.1K likes shows it resonated.\n* The contrast between the warm, soft nursery photo and the snarky, passive-aggressive text comment is what makes it read as a meme.",
           "judges": [
             {
@@ -352,8 +339,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a satirical screenshot (likely edited/fake) that plays on the contradiction surrounding **pro-life beliefs and personhood**.\n\n**The reference:**\n- Karoline Leavitt is a conservative political figure (White House Press Secretary in t...",
+          "text": "This meme is a satirical screenshot (likely edited/fake) that plays on the contradiction surrounding **pro-life beliefs and personhood**.\n\n**The reference:**\n- Karoline Leavitt is a conservative political figure (White House Press Secretary in the Trump adm...",
           "fullText": "This meme is a satirical screenshot (likely edited/fake) that plays on the contradiction surrounding **pro-life beliefs and personhood**.\n\n**The reference:**\n- Karoline Leavitt is a conservative political figure (White House Press Secretary in the Trump administration), associated with the Republican party and generally pro-life positions.\n- The post depicts her announcing the birth of a baby, Viviana (\"Vivi\"), saying the baby \"joined our family\" on the date of birth (May 1st).\n\n**The joke:**\n- The commenter, \"Tiffany Woosley,\" points out an apparent contradiction. A core argument in the pro-life movement is that life and personhood begin at **conception**, not at birth.\n- By saying Vivi \"joined our family\" on the day she was *born*, the wording implies the baby became part of the family at birth—seemingly contradicting the \"life begins at conception\" stance.\n- The comment sarcastically highlights this: \"soooo Vivi didn't enter ur family til her BIRTH... Interesting....\" paired with a side-eye/thinking emoji to emphasize the perceived hypocrisy.\n\n**Why it's funny:**\nThe humor comes from a \"gotcha\" moment—catching someone in an apparent logical inconsistency between their stated political beliefs and their casual everyday language. The high engagement (3.1K likes on the comment) reinforces that many viewers found the observation cleverly damning.\n\nIt's essentially a political \"dunk\" meme, regardless of whether the original post is authentic.",
           "judges": [
             {
@@ -376,8 +362,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is a screenshot of a social media exchange (originally likely Facebook or X/Twitter), and the humor comes entirely from the reply.\n\n**The setup:**\n- Top post: Karoline Leavitt announces her baby’s birth in normal, slightly sentimental...",
+          "text": "This meme is a screenshot of a social media exchange (originally likely Facebook or X/Twitter), and the humor comes entirely from the reply.\n\n**The setup:**\n- Top post: Karoline Leavitt announces her baby’s birth in normal, slightly sentimental new-parent l...",
           "fullText": "This meme is a screenshot of a social media exchange (originally likely Facebook or X/Twitter), and the humor comes entirely from the reply.\n\n**The setup:**\n- Top post: Karoline Leavitt announces her baby’s birth in normal, slightly sentimental new-parent language (“Viviana aka ‘Vivi’ joined our family… our hearts instantly exploded with love”), accompanied by a photo of her holding the newborn.\n\n**The joke:**\n- The reply (“Wait wait… soooo Vivi didnt enter ur family til her BIRTH… Interesting… 🤔”) is deliberately, absurdly literal. It pretends the phrasing “joined our family” is suspicious or meaningful, as if the baby had some prior existence outside the family and only became part of it at the moment of birth. \n- This is comedic because that is how *every* biological child enters a family. The reply is mocking/misreading standard birth-announcement language (very common with both biological and adopted children) and treating it like a gotcha or conspiracy.\n\n**Why it lands as a meme:**\n- It’s poking fun at people who over-analyze innocuous wording with a side-eye emoji, turning a wholesome post into something “interesting.” The contrast between the sweet, ordinary announcement and the conspiratorial reply is the entire point.\n\nNo deeper media references or coded imagery—just classic social-media pedantry humor.",
           "judges": [
             {
@@ -413,8 +398,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media Reference:** The meme is directly referencing the 2021 movie ***Godzilla vs. Kong***. \n*   **Character References:** The gorilla in the image represe...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media Reference:** The meme is directly referencing the 2021 movie ***Godzilla vs. Kong***. \n*   **Character References:** The gorilla in the image represents **King K...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media Reference:** The meme is directly referencing the 2021 movie ***Godzilla vs. Kong***. \n*   **Character References:** The gorilla in the image represents **King Kong**, while the \"radioactive dinosaur\" mentioned in the text refers to **Godzilla**.\n\n**2. The Joke**\n*   **The Context:** Leading up to the release of *Godzilla vs. Kong*, a major internet debate centered on the inherent mismatch between the two monsters. People pointed out that Kong is essentially just a very big ape who punches things, while Godzilla is a near-indestructible monster that lives in the ocean and shoots atomic lasers out of its mouth.\n*   **The Setup & Mechanism:** The joke anthropomorphizes King Kong, framing him as a regular guy having a serious conversation with his fans or \"coaches\" (the humans looking at him). He is trying to manage their expectations before the big fight. \n*   **The Humor:** The humor comes from applying grounded, real-world logic to an absurd sci-fi movie premise. By scaling down this epic monster battle to a mundane image of a zoo animal, it highlights the ridiculousness of expecting a monkey to beat a creature with nuclear superpowers.\n\n**3. Visual Elements**\n*   **The Gorilla's Pose:** The most important visual element is the gorilla's body language. He is sitting down with his hands open and palms facing upward, looking directly at the crowd. It perfectly mimics a human gesture of appealing to reason, pleading for understanding, or saying, \"Let's be realistic here.\"",
           "judges": [
             {
@@ -437,8 +421,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a joke about **King Kong vs. Godzilla**.\n\n- The image shows a **gorilla** sitting in front of zoo visitors, looking almost like it’s giving a serious speech or press conference.\n- The caption says: **“Guys I’m gonna try my best but...",
+          "text": "This meme is a joke about **King Kong vs. Godzilla**.\n\n- The image shows a **gorilla** sitting in front of zoo visitors, looking almost like it’s giving a serious speech or press conference.\n- The caption says: **“Guys I’m gonna try my best but it’s a f*cki...",
           "fullText": "This meme is a joke about **King Kong vs. Godzilla**.\n\n- The image shows a **gorilla** sitting in front of zoo visitors, looking almost like it’s giving a serious speech or press conference.\n- The caption says: **“Guys I’m gonna try my best but it’s a f*cking radioactive dinosaur.”**\n- The “radioactive dinosaur” is a reference to **Godzilla**, who is commonly portrayed as a giant reptilian monster awakened or mutated by nuclear radiation.\n- The gorilla represents **King Kong**, another famous giant movie monster.\n\nThe humor comes from making King Kong sound like a normal, self-aware guy admitting that fighting Godzilla is kind of unfair. Kong is “just” a giant ape, while Godzilla has radioactive powers, atomic breath, and is basically a walking nuclear disaster. So the gorilla is saying, “I’ll do what I can, but let’s be realistic.”\n\nThe visual gag is that the gorilla is seated calmly in front of people, as if explaining the situation to his team before an impossible fight.",
           "judges": [
             {
@@ -461,8 +444,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a **King Kong vs. Godzilla** meme.\n\n**References:**\n* **King Kong** is the giant gorilla movie monster. **Godzilla** is the other giant movie monster - a huge, city-destroying kaiju who was mutated by nuclear radiation and is often jokin...",
+          "text": "This is a **King Kong vs. Godzilla** meme.\n\n**References:**\n* **King Kong** is the giant gorilla movie monster. **Godzilla** is the other giant movie monster - a huge, city-destroying kaiju who was mutated by nuclear radiation and is often jokingly describe...",
           "fullText": "This is a **King Kong vs. Godzilla** meme.\n\n**References:**\n* **King Kong** is the giant gorilla movie monster. **Godzilla** is the other giant movie monster - a huge, city-destroying kaiju who was mutated by nuclear radiation and is often jokingly described as a \"radioactive dinosaur.\"\n* The two have fought in multiple movies, most recently *Godzilla vs. Kong [2021]*. It's part of the long-running fan debate of who would win. Godzilla is almost always portrayed as vastly more powerful - he has atomic breath, nuclear regeneration, etc. - while Kong is just a very big, very strong gorilla.\n* The image itself is a real photo of a zoo gorilla in its enclosure in front of a crowd of visitors, but the caption turns it into King Kong.\n\n**The joke:**\nThe text is written as if the gorilla is King Kong talking to humanity:\nTop text: **\"GUYS I'M GONNA TRY MY BEST\"**\nBottom text: **\"BUT IT'S A F*CKING RADIOACTIVE DINOSAUR\"**\n\nThe humor comes from the contrast and the hopeless underdog situation. Kong is being positioned as humanity's defender and is earnestly trying to reassure everyone, but he also knows his opponent is absurdly overpowered and impossible. It's funny because it's relatable - being asked to handle a problem that is comically beyond your pay grade or abilities.\n\nThe visual helps sell it - the gorilla's posture and open mouth makes it look like it's genuinely addressing the crowd and gesturing with its hands, like \"what do you want me to do about *that*?\"\n\nIt's used as a reaction meme for any time you have to attempt something completely out of your league.",
           "judges": [
             {
@@ -485,8 +467,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "# Meme Explanation\n\n**The setup:** This meme shows a gorilla sitting in a zoo enclosure, facing a crowd of people who are watching it. The gorilla appears to be looking directly at the viewers/crowd, almost as if it's about to address them.\n\n**T...",
+          "text": "# Meme Explanation\n\n**The setup:** This meme shows a gorilla sitting in a zoo enclosure, facing a crowd of people who are watching it. The gorilla appears to be looking directly at the viewers/crowd, almost as if it's about to address them.\n\n**The reference...",
           "fullText": "# Meme Explanation\n\n**The setup:** This meme shows a gorilla sitting in a zoo enclosure, facing a crowd of people who are watching it. The gorilla appears to be looking directly at the viewers/crowd, almost as if it's about to address them.\n\n**The reference:** This is a reference to **Godzilla vs. Kong** (and the broader Monsterverse franchise). The joke plays on the idea that this gorilla represents **King Kong** preparing to fight **Godzilla**.\n\n**The joke:** The humor comes from the text framing the gorilla as if it's giving a determined pep talk to its supporters/fans:\n- **Top text:** \"GUYS I'M GONNA TRY MY BEST\" — making the gorilla seem earnest and motivated\n- **Bottom text:** \"BUT IT'S A F*CKING RADIOACTIVE DINOSAUR\" — the comedic deflation, acknowledging that Godzilla (a giant atomic/radioactive reptilian monster) is a wildly unfair opponent\n\n**Why it's funny:** The humor lies in the relatable underdog sentiment. It anthropomorphizes the gorilla as a sympathetic character who is willing to try hard but is realistically outmatched against an absurdly overpowered enemy. The casual, almost defeated tone (\"I'm gonna try my best, BUT...\") contrasts comically with the impossible situation. It's a humorous way of expressing \"I'll do my best, but the odds are stacked impossibly against me\" — a feeling many people relate to in everyday challenging situations.\n\nThe gorilla's somewhat resigned facial expression adds to the comedic effect.",
           "judges": [
             {
@@ -509,8 +490,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme uses a photo of a gorilla in a zoo enclosure, posed with open hands as if giving a speech or presentation to an audience (the viewer sees the backs of several onlookers). This visual sets up the gorilla as an unlikely \"speaker.\"\n\n**Refe...",
+          "text": "The meme uses a photo of a gorilla in a zoo enclosure, posed with open hands as if giving a speech or presentation to an audience (the viewer sees the backs of several onlookers). This visual sets up the gorilla as an unlikely \"speaker.\"\n\n**References:** \n-...",
           "fullText": "The meme uses a photo of a gorilla in a zoo enclosure, posed with open hands as if giving a speech or presentation to an audience (the viewer sees the backs of several onlookers). This visual sets up the gorilla as an unlikely \"speaker.\"\n\n**References:** \n- Godzilla (the \"radioactive dinosaur\" from the classic monster movies, created by nuclear radiation).\n\n**Joke mechanism:**  \nAbsurd contrast and deadpan delivery. The top text shows the speaker offering a sincere, reassuring promise (\"Guys I'm gonna try my best\"). The bottom text undercuts it with the ridiculous reveal that the speaker is actually Godzilla. The humor comes from the massive mismatch between the humble, relatable effort and the fact that a city-destroying monster is the one making the promise.\n\nThe joke works because the visual (a normal-looking gorilla gesturing calmly) clashes with the caption's over-the-top description, making the whole situation feel both pathetic and hilarious.",
           "judges": [
             {
@@ -546,8 +526,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **\"You had ONE job\":** This is a long-standing internet meme and phrase used to point out hilariously obvious mistakes in design or execution where someone fai...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **\"You had ONE job\":** This is a long-standing internet meme and phrase used to point out hilariously obvious mistakes in design or execution where someone failed at a ver...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **\"You had ONE job\":** This is a long-standing internet meme and phrase used to point out hilariously obvious mistakes in design or execution where someone failed at a very simple task.\n*   **Financial/Stock Market Visuals:** The imagery references line charts typically used in finance or data visualization to track performance over time. Standard cultural convention dictates that **red** signifies a loss, deficit, or downward trend, while cool colors like **green or blue** signify profit, growth, or an upward trend.\n\n**The Joke:**\nThe joke relies on **inversion** and contradiction. The fundamental meaning of the graphs' shapes contradicts the standard meaning of their colors. \n*   The graph on the left shows a positive, upward trend, but it is colored **red** (traditionally indicating a loss/bad).\n*   The graph on the right shows a negative, downward crash, but it is colored **blue** (traditionally indicating growth/good). \n\nThe implication is that the designer who created these specific icons fundamentally failed to understand standard color-coding conventions for data, hence they failed their \"one job.\"\n\n**Important Visual Elements:**\nThe core of the joke hinges entirely on noticing the mismatch between the **direction of the line** (up vs. down) and the **color of the line** (red vs. blue).",
           "judges": [
             {
@@ -570,8 +549,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is joking about the emojis 📈 and 📉.\n\n- **Reference:** These are the “chart increasing” and “chart decreasing” emojis, used for things like stocks, profits, trends, or statistics.\n- **The joke:** In many contexts, especially finance, **...",
+          "text": "This meme is joking about the emojis 📈 and 📉.\n\n- **Reference:** These are the “chart increasing” and “chart decreasing” emojis, used for things like stocks, profits, trends, or statistics.\n- **The joke:** In many contexts, especially finance, **green/blue-i...",
           "fullText": "This meme is joking about the emojis 📈 and 📉.\n\n- **Reference:** These are the “chart increasing” and “chart decreasing” emojis, used for things like stocks, profits, trends, or statistics.\n- **The joke:** In many contexts, especially finance, **green/blue-ish colors are associated with gains or positive movement**, while **red is associated with losses or danger**. But the “going up” chart is **red**, and the “going down” chart is **blue**, which feels backwards to many people.\n- **“Had ONE job”:** This is a common meme phrase meaning someone had a very simple task and somehow messed it up. Here, the “one job” was to make the rising chart look positive and the falling chart look negative.\n- **Visual humor:** The red line clearly trends upward, while the blue line clearly trends downward, making the color choice look absurd or unintuitive.\n\nSo the meme is basically saying: “How did the emoji designer make the positive graph red and the negative graph blue?”",
           "judges": [
             {
@@ -594,8 +572,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "Those are the 📈 **Chart Increasing** and 📉 **Chart Decreasing** emojis, Apple/Microsoft's rendering - red line going up, blue line going down on graph paper. They're used for \"stonks\" / stocks / stats jokes.\n\nThe text \"had ONE job\" is a format f...",
+          "text": "Those are the 📈 **Chart Increasing** and 📉 **Chart Decreasing** emojis, Apple/Microsoft's rendering - red line going up, blue line going down on graph paper. They're used for \"stonks\" / stocks / stats jokes.\n\nThe text \"had ONE job\" is a format for pointing...",
           "fullText": "Those are the 📈 **Chart Increasing** and 📉 **Chart Decreasing** emojis, Apple/Microsoft's rendering - red line going up, blue line going down on graph paper. They're used for \"stonks\" / stocks / stats jokes.\n\nThe text \"had ONE job\" is a format for pointing out a very simple, obvious failure.\n\nThe failure here is pedantic and you only see it when you put them side-by-side like this:\n\n**1. They are supposed to be perfect opposites, but they don't line up.** Their ONE job was to make the same grid and just flip the line. If you put them edge-to-edge, the red line ends near the top-right corner and the blue line starts at the top-left corner, but not at the *same height* - there's a small vertical discontinuity. The background grid also doesn't perfectly continue across.\n\n**2. And they're not even strictly increasing/decreasing.** The math-meme version of the joke: an \"increasing\" chart should only go up, and a \"decreasing\" chart should only go down. Both of these actually go up, then down a little, then sharply up/down. So they fail the definition of increasing/decreasing - they're not monotonic.\n\nThe humor is that it's a tiny, nerdy, meaningless flaw that 99% of people would never notice, but once you put the two emojis together the mismatch is obvious.",
           "judges": [
             {
@@ -618,8 +595,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "# Meme Explanation\n\nThis meme uses the two standard chart emojis: 📈 (the \"Chart Increasing\" emoji, shown in red and trending upward) and 📉 (the \"Chart Decreasing\" emoji, shown in blue and trending downward).\n\n**The reference:** \"You had ONE job\"...",
+          "text": "# Meme Explanation\n\nThis meme uses the two standard chart emojis: 📈 (the \"Chart Increasing\" emoji, shown in red and trending upward) and 📉 (the \"Chart Decreasing\" emoji, shown in blue and trending downward).\n\n**The reference:** \"You had ONE job\" is a popula...",
           "fullText": "# Meme Explanation\n\nThis meme uses the two standard chart emojis: 📈 (the \"Chart Increasing\" emoji, shown in red and trending upward) and 📉 (the \"Chart Decreasing\" emoji, shown in blue and trending downward).\n\n**The reference:** \"You had ONE job\" is a popular internet meme format used to mock obvious, ironic failures—situations where someone messed up the single most important and basic aspect of their task.\n\n**The joke (and the twist):** At first glance, the meme seems to be criticizing the emoji designers for a mistake. But the real humor is in *color symbolism*. In most of the world (and especially in financial/stock market contexts), **green means up/positive/gains** and **red means down/negative/losses**.\n\nThe \"error\" the meme is pointing out:\n- The **upward** trending chart (good news, gains) is colored **RED**—the color usually associated with losses\n- The **downward** trending chart (bad news, losses) is colored **BLUE**—not the expected red\n\nSo the designers arguably got the color coding \"backwards\" relative to financial conventions, where the rising chart should be green and the falling chart should be red.\n\n**Why it's funny:** It points out a counterintuitive design choice that most people never consciously noticed, framed through the exasperated \"you had ONE job\" template that exaggerates the supposed incompetence.",
           "judges": [
             {
@@ -642,8 +618,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme mocks the design of the 📈 (\"chart increasing\") and 📉 (\"chart decreasing\") emojis.\n\n**The joke:** The caption (\"whoever designed these emojis had ONE job\") sets up the expectation that the designer had one simple, obvious task — to creat...",
+          "text": "The meme mocks the design of the 📈 (\"chart increasing\") and 📉 (\"chart decreasing\") emojis.\n\n**The joke:** The caption (\"whoever designed these emojis had ONE job\") sets up the expectation that the designer had one simple, obvious task — to create a clearly...",
           "fullText": "The meme mocks the design of the 📈 (\"chart increasing\") and 📉 (\"chart decreasing\") emojis.\n\n**The joke:** The caption (\"whoever designed these emojis had ONE job\") sets up the expectation that the designer had one simple, obvious task — to create a clearly rising chart and a clearly falling chart. The images then deliver the punchline by showing that both emojis are badly flawed: the red \"increasing\" chart has a noticeable dip (it goes down before rising), and the blue \"decreasing\" chart has a rise in the middle (it goes up before continuing down). The emojis therefore fail at their core purpose.\n\n**Visual elements:** The two side-by-side squares on graph paper are stylized versions of the actual 📈 and 📉 emojis, emphasizing the zigzag/wobbly lines that undermine the intended meaning. The red vs. blue coloring and the left-to-right \"trend\" layout make the contrast obvious.",
           "judges": [
             {
@@ -679,8 +654,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural/Industry Reference**\nThis meme is specifically aimed at people who have worked in the restaurant industry, particularly in \"back of house\" (kitchen) roles. The white...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural/Industry Reference**\nThis meme is specifically aimed at people who have worked in the restaurant industry, particularly in \"back of house\" (kitchen) roles. The white plastic tub...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural/Industry Reference**\nThis meme is specifically aimed at people who have worked in the restaurant industry, particularly in \"back of house\" (kitchen) roles. The white plastic tubs shown are commercial food storage containers, commonly referred to by industry brand names like \"Cambros.\" \n\n**2. Visual Elements**\nThe key visual is the massive quantity of these specific containers sitting on dry metal shelving. Crucially, they are all impeccably clean, empty, and neatly stacked together.\n\n**3. The Joke (Implication & Deduction)**\nThe humor comes from deductive reasoning and understanding restaurant operations. \n\n*   **The Setup:** In a restaurant kitchen, these containers are designed to hold prepared ingredients, sauces, and bulk foods. Their primary home is inside the large walk-in refrigerators.\n*   **The Implication:** If *all* of the restaurant's storage containers are clean, dry, and sitting out on these shelves, it means none of them are currently being used to hold food. \n*   **The Punchline:** Therefore, without even having to open the door to look, a kitchen worker seeing this wall of clean plastic instantly knows that \"the fridges are empty.\" \n\nFor a restaurant worker, this is often a daunting image rather than a funny one, as a totally empty fridge means a monumental amount of manual preparation work is about to be required to chop, cook, and prep enough food to refill all those containers for the next service.",
           "judges": [
             {
@@ -696,15 +670,14 @@ window.basedBenchTaggedExamples = {
             {
               "model": "z-ai/glm-5.2",
               "verdict": "correct",
-              "reasoning": ""
+              "reasoning": "The model correctly identifies the meme as a restaurant/kitchen workplace joke. It explains that the stack of clean, empty containers means no prep has been done, which implies the fridges are empty and a lot of work is ahead. This matches the ground truth's core point: a full stack of containers means no prep was done and the staff faces a rough shift."
             }
           ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a kitchen/food-service meme.\n\nThe caption says: **“When you know the fridges are empty”** and the image shows **huge stacks of empty plastic food storage containers**.\n\nThe joke is that in a restaurant or commercial kitchen, food is usua...",
+          "text": "This is a kitchen/food-service meme.\n\nThe caption says: **“When you know the fridges are empty”** and the image shows **huge stacks of empty plastic food storage containers**.\n\nThe joke is that in a restaurant or commercial kitchen, food is usually stored i...",
           "fullText": "This is a kitchen/food-service meme.\n\nThe caption says: **“When you know the fridges are empty”** and the image shows **huge stacks of empty plastic food storage containers**.\n\nThe joke is that in a restaurant or commercial kitchen, food is usually stored in these containers in the fridges. So if *all* the containers are clean, empty, and stacked on the shelf, that means there’s probably **no prepped food, leftovers, ingredients, or stock in the refrigerators**.\n\nWhy it’s funny:\n\n- It’s a visual “evidence” joke: you don’t even need to open the fridges to know they’re empty.\n- For kitchen workers, this is a bad sign because it means there’s no prep done and someone has a lot of work ahead.\n- For home cooks, it’s also relatable: when the fridge has no leftovers, suddenly all the Tupperware is available.\n\nThe important visual element is the **absurd number of empty containers**, implying that literally everything that should be holding food is currently empty.",
           "judges": [
             {
@@ -727,8 +700,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a commercial kitchen / restaurant worker meme.\n\n**Reference:**\nIn a restaurant, prepped food - chopped veg, sauces, meats, etc - is stored in plastic deli containers / 6th-pans in the walk-in fridge and line fridges. \"The fridges are emp...",
+          "text": "This is a commercial kitchen / restaurant worker meme.\n\n**Reference:**\nIn a restaurant, prepped food - chopped veg, sauces, meats, etc - is stored in plastic deli containers / 6th-pans in the walk-in fridge and line fridges. \"The fridges are empty\" doesn't...",
           "fullText": "This is a commercial kitchen / restaurant worker meme.\n\n**Reference:**\nIn a restaurant, prepped food - chopped veg, sauces, meats, etc - is stored in plastic deli containers / 6th-pans in the walk-in fridge and line fridges. \"The fridges are empty\" doesn't mean there is nothing to eat like it would at home, it means all that prepped stock is gone and has to be remade from scratch.\n\nIt's a popular type of meme on r/KitchenConfidential, chef Facebook groups, etc.\n\n**The joke / setup:**\nThe text \"When you know the fridges are empty\" sets up the dread feeling. You walk in, open the fridge, and realize it's empty.\n\nThe image is the punchline. It's not empty fridges, it's what an empty fridge *looks like* from the other side: hundreds of those white plastic containers washed and neatly stacked up, waiting to be filled. \n\nThe humor is in the scale and the shared trauma. Anyone who has worked prep knows that one stack = one item to fully prep, portion, and label. 15+ huge stacks means HOURS of chopping, cooking, and restocking before service can even happen.\n\nIt's also an inversion of the home fridge meme. At home, empty fridge = you have nothing to do / you're hungry. In a professional kitchen, empty fridge = you have *everything* to do.",
           "judges": [
             {
@@ -751,8 +723,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "## Explanation\n\n**The Setting:** This is a restaurant/commercial kitchen meme. The image shows stacks and stacks of empty food storage containers (commonly called \"Cambros\" in the industry) neatly piled up on stainless steel shelving and counter...",
+          "text": "## Explanation\n\n**The Setting:** This is a restaurant/commercial kitchen meme. The image shows stacks and stacks of empty food storage containers (commonly called \"Cambros\" in the industry) neatly piled up on stainless steel shelving and counters.\n\n**The Jo...",
           "fullText": "## Explanation\n\n**The Setting:** This is a restaurant/commercial kitchen meme. The image shows stacks and stacks of empty food storage containers (commonly called \"Cambros\" in the industry) neatly piled up on stainless steel shelving and counters.\n\n**The Joke:** The caption \"When you know the fridges are empty\" plays on a relatable experience for restaurant kitchen workers, particularly during prep work or cleaning/closing shifts.\n\nThe humor works on a couple of levels:\n\n1. **For kitchen staff:** If all these containers are sitting empty and stacked up, it means there's no prepped food/ingredients stored inside them. In a working kitchen, these containers should normally be *full* of prepped vegetables, sauces, proteins, etc., sitting in the fridges/walk-in coolers. Seeing them all empty and stacked signals either a massive amount of prep work still to do, or that the kitchen has run completely out of stock—a stressful realization for any cook.\n\n2. **The dread factor:** The sheer *number* of empty containers visually emphasizes how much work lies ahead. Each one represents an item that needs to be filled, meaning a daunting prep list.\n\n**Visual Element:** The overwhelming quantity of identical, empty containers is key to the joke—it conveys the scale of the problem. The sterile, industrial kitchen setting confirms this is workplace humor aimed at people in the food service industry.\n\nThis is essentially an **insider/occupational meme** that resonates strongly with line cooks and kitchen workers who instantly recognize the \"uh oh, we have so much to do\" feeling.",
           "judges": [
             {
@@ -775,8 +746,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme shows a commercial kitchen (likely a walk-in fridge or prep area) where every single plastic food-storage container is empty and neatly stacked. \n\nThe joke plays on the common “open the fridge and there’s nothing to eat” situation. The...",
+          "text": "This meme shows a commercial kitchen (likely a walk-in fridge or prep area) where every single plastic food-storage container is empty and neatly stacked. \n\nThe joke plays on the common “open the fridge and there’s nothing to eat” situation. The caption imp...",
           "fullText": "This meme shows a commercial kitchen (likely a walk-in fridge or prep area) where every single plastic food-storage container is empty and neatly stacked. \n\nThe joke plays on the common “open the fridge and there’s nothing to eat” situation. The caption implies the fridges themselves are barren, but the punchline is visual: the sheer number of empty containers proves the fridges were recently full—they’ve just been completely used up. It’s the restaurant/kitchen version of “we’re out of everything.” \n\nThe empty measuring cup in the foreground reinforces the “nothing left” gag.",
           "judges": [
             {
@@ -812,8 +782,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\nThis meme relies on the knowledge of two specific movie roles played by actor Robert Downey Jr.:\n*   **Tony Stark / Iron Man:** Robert Downey Jr. famously played...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\nThis meme relies on the knowledge of two specific movie roles played by actor Robert Downey Jr.:\n*   **Tony Stark / Iron Man:** Robert Downey Jr. famously played this charac...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\nThis meme relies on the knowledge of two specific movie roles played by actor Robert Downey Jr.:\n*   **Tony Stark / Iron Man:** Robert Downey Jr. famously played this character in the Marvel Cinematic Universe for over a decade.\n*   **Kirk Lazarus in *Tropic Thunder* (2008):** In this famous satirical comedy, Robert Downey Jr. plays an intense, white Australian method actor who undergoes controversial \"pigmentation alteration\" surgery to play a Black soldier named Staff Sergeant Lincoln Osiris. \n\n**2. The Joke**\n*   **The Setup:** A Twitter user asks a hypothetical casting question: If the character of Iron Man were Black, which actor would be best suited to play him? The expectation is that people will suggest famous Black actors. \n*   **The Punchline/Inversion:** The second user replies, \"Robert Downey JR.\"\n*   **The Mechanism:** The joke subverts the expectation of fan-casting a Black actor by referencing Robert Downey Jr.'s role in *Tropic Thunder*. The underlying joke is that because Robert Downey Jr. has successfully played *both* Iron Man and a Black character on screen, he is ironically still the best choice to play a Black Iron Man. \n\n**3. Visual Elements**\nThe meme is presented as a standard screenshot of a Twitter (X) interaction. The humor is entirely text-based, relying on the reader's pop culture knowledge to connect the dots between the original question and the actor named in the reply.",
           "judges": [
             {
@@ -836,8 +805,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "The meme is a fake/real-looking Twitter/X exchange.\n\n- The first tweet asks: “If Iron Man was black, who could pull off that character on screen?”\n- The reply says: “Robert Downey JR.”\n\nThe joke is that Robert Downey Jr. already played Iron Man/...",
+          "text": "The meme is a fake/real-looking Twitter/X exchange.\n\n- The first tweet asks: “If Iron Man was black, who could pull off that character on screen?”\n- The reply says: “Robert Downey JR.”\n\nThe joke is that Robert Downey Jr. already played Iron Man/Tony Stark i...",
           "fullText": "The meme is a fake/real-looking Twitter/X exchange.\n\n- The first tweet asks: “If Iron Man was black, who could pull off that character on screen?”\n- The reply says: “Robert Downey JR.”\n\nThe joke is that Robert Downey Jr. already played Iron Man/Tony Stark in the Marvel movies, so at first the answer seems like a dumb or literal response.\n\nBut the deeper reference is to *Tropic Thunder* (2008), where Robert Downey Jr. plays an Australian method actor who undergoes a procedure to appear Black for a movie role. It’s a famous, controversial blackface-related role, though the film is satirizing Hollywood actors and method acting rather than simply presenting it straight.\n\nSo the punchline is: if Iron Man were Black, Robert Downey Jr. could “still” play him because he has already played both Iron Man and, infamously, a character pretending to be Black.\n\nThe humor comes from the unexpected answer and the edgy callback to RDJ’s *Tropic Thunder* role.",
           "judges": [
             {
@@ -860,8 +828,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This is a screenshot of a viral exchange on X / Twitter.\n\n**What you're looking at:**\nTop tweet: \"If Iron Man was black, who could pull off that character on screen\"\nReply underneath: \"Robert Downey JR\"\n\n**The references:**\n\n1.  **Iron Man = Rob...",
+          "text": "This is a screenshot of a viral exchange on X / Twitter.\n\n**What you're looking at:**\nTop tweet: \"If Iron Man was black, who could pull off that character on screen\"\nReply underneath: \"Robert Downey JR\"\n\n**The references:**\n\n1.  **Iron Man = Robert Downey J...",
           "fullText": "This is a screenshot of a viral exchange on X / Twitter.\n\n**What you're looking at:**\nTop tweet: \"If Iron Man was black, who could pull off that character on screen\"\nReply underneath: \"Robert Downey JR\"\n\n**The references:**\n\n1.  **Iron Man = Robert Downey Jr.** Tony Stark / Iron Man was played by Robert Downey Jr. in the MCU from 2008 to 2019. He IS Iron Man to most viewers, so any question about who could play Iron Man has an obvious answer.\n\n2.  **Tropic Thunder [2008].** In the Ben Stiller comedy *Tropic Thunder*, Robert Downey Jr. plays Kirk Lazarus, a white Australian method actor who has his skin surgically darkened to play a Black soldier, Sgt. Lincoln Osiris. It's a satire of extreme method acting and Hollywood's history of blackface. It was Oscar-nominated and is famous as the one modern instance where a white actor doing blackface was seen as acceptable because the joke was *on* the actor doing it.\n\n3.  **The bait question.** \"If X character was Black, who should play him?\" is common engagement bait on X / TikTok. It usually invites serious fancasting of Black actors or arguments about race-swapping superheroes. The expected serious answer here would be Don Cheadle - who actually plays Rhodey / War Machine, essentially the \"Black Iron Man\" in the MCU.\n\n**The joke:**\n\nIt's a double-punchline that deliberately violates expectation.\n\nThe setup asks you to think of a Black actor. The reply answers with a white actor, which is absurd and surprising — but then it clicks as technically logical for two reasons:\n\n1.  Literally, Robert Downey Jr. can pull off Iron Man because he already did for 11 years.\n2.  Meta, he can also \"pull off\" playing a Black character, because he famously already did that in *Tropic Thunder*.\n\nSo the answer satisfies both halves of the prompt at once: \"who can play Iron Man\" + \"who can play a Black character.\" It defuses a normally heated casting debate with a film-nerd in-joke.\n\nThe humor comes from incongruity and intertextuality — using RDJ's controversial but acclaimed film history to give a wrong answer that is also right.",
           "judges": [
             {
@@ -884,8 +851,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a screenshot of a Twitter/X exchange that plays on absurdist humor and a callback to a famous movie reference.\n\n**The setup:** The original tweet asks, \"If Iron Man was black, who could pull off that character on screen?\" The poster...",
+          "text": "This meme is a screenshot of a Twitter/X exchange that plays on absurdist humor and a callback to a famous movie reference.\n\n**The setup:** The original tweet asks, \"If Iron Man was black, who could pull off that character on screen?\" The poster is genuinel...",
           "fullText": "This meme is a screenshot of a Twitter/X exchange that plays on absurdist humor and a callback to a famous movie reference.\n\n**The setup:** The original tweet asks, \"If Iron Man was black, who could pull off that character on screen?\" The poster is genuinely asking who could play a Black version of Iron Man/Tony Stark.\n\n**The punchline:** The reply simply says \"Robert Downey JR\" — who is the white actor who actually played Iron Man in the Marvel Cinematic Universe.\n\n**Why it's funny:**\n1. The joke references *Tropic Thunder* (2008), in which Robert Downey Jr. played a white actor who underwent controversial \"blackface\" surgery to play a Black character. This is a famous, edgy gag from that movie.\n2. The reply is deadpan and unexpected — instead of naming an actual Black actor, it suggests Robert Downey Jr., implying he could \"pull off\" being Black, nodding directly to the *Tropic Thunder* role.\n3. There's added irony because RDJ already *is* Iron Man, so the answer is technically circular/absurd while also being a sharp pop-culture callback.\n\nThe humor comes from the clever, layered reference and the dry, one-line delivery that catches people off guard.",
           "judges": [
             {
@@ -908,8 +874,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a screenshot of a tweet and its reply.\n\n**The original tweet** poses a hypothetical: \"If Iron Man was black, who could pull off that character on screen?\" This is a common style of question in online discussions about race-swapping chara...",
+          "text": "This is a screenshot of a tweet and its reply.\n\n**The original tweet** poses a hypothetical: \"If Iron Man was black, who could pull off that character on screen?\" This is a common style of question in online discussions about race-swapping characters in mov...",
           "fullText": "This is a screenshot of a tweet and its reply.\n\n**The original tweet** poses a hypothetical: \"If Iron Man was black, who could pull off that character on screen?\" This is a common style of question in online discussions about race-swapping characters in movies/TV.\n\n**The reply** (\"Robert Downey JR\") is the punchline. It completely ignores the \"if he was black\" premise and names the actual (white) actor who played the role in the MCU.\n\n**The joke** works through subversion: instead of playing along with the racial hypothetical and suggesting a Black actor, the reply gives a blunt, literal answer that undercuts the question. It's a classic \"troll reply\" format meant to mock the premise itself by implying that Robert Downey Jr. is the only one who could play Iron Man, race discussion notwithstanding.\n\nThe humor relies on the contrast between the loaded setup and the deadpan, non-participating answer.",
           "judges": [
             {
@@ -945,14 +910,13 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The meme refers to the **Russo-Japanese War (1904–1905)**. This conflict occurred when the Russian Empire and the Empire of Jap...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The meme refers to the **Russo-Japanese War (1904–1905)**. This conflict occurred when the Russian Empire and the Empire of Japan fought ov...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The meme refers to the **Russo-Japanese War (1904–1905)**. This conflict occurred when the Russian Empire and the Empire of Japan fought over rival imperial ambitions in Manchuria and Korea. \n*   **Internet/Meme Reference:** It uses variations of the **Wojak** meme format. Wojaks are simple line-drawing faces used to express specific emotions or represent archetypes.\n\n**2. The Joke**\n*   **The Setup:** Imperial Russia engaged in the war largely expecting an easy victory. Because Japan was an Asian nation, European powers at the time often assumed they would be technologically and militarily inferior, akin to the indigenous populations fought in European \"colonial wars.\"\n*   **The Inversion/Irony:** The joke highlights Russia's shocking realization that Japan had rapidly industrialized and modernized its military. Instead of an easy conquest, Japan fought a modern, peer-level war. \n*   **The Punchline:** \"Trenches and artillery work both ways.\" Japan used the exact same modern warfare tactics and technology as the Europeans, resulting in a devastating and humiliating defeat for the Russian Empire.\n\n**3. Visual Elements**\n*   **Top Panel (Russia):** The Wojak is dressed in a historical Imperial Russian military uniform. He has a battered face and a bloody nose, visually representing Russia getting heavily beaten and shocked by the reality of the war.\n*   **Bottom Panel (Japan):** The Wojak is dressed in an Imperial Japanese Army uniform. He wears a smug, confident smirk, representing Japan's successful modernization and military prowess. \n*   **The Background:** The background of the bottom panel is a historical illustration of a battlefield covered in smoke from modern artillery, emphasizing the brutal, modern nature of the conflict.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "correct",
-              "reasoning": "The model correctly identifies the Russo-Japanese War and the core irony: Imperial Russia underestimated Japan as an inferior Asian power, but Japan was modernized and defeated Russia humiliatingly. It also captures the subverted expectation and the overconfidence-to-loss contrast that the ground truth emphasizes. Although it adds extra detail about Wojak and specific battlefield imagery not mentioned in the ground truth, it does not contradict the main joke and includes the key reference and mechanism. "
+              "reasoning": "The model correctly identifies the Russo-Japanese War and the core irony: Imperial Russia underestimated Japan as an inferior Asian power, but Japan was modernized and defeated Russia humiliatingly. It also captures the subverted expectation and the overconfidence-to-loss contrast that the ground truth emphasizes. Although it adds extra detail about Wojak and specific battlefield imagery not mentioned in the ground truth, it does not contradict the main joke and includes the key reference and mechanism."
             },
             {
               "model": "claude-sonnet-4-6",
@@ -969,8 +933,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is about the **Russo-Japanese War (1904–1905)** and Russia being surprised that Japan was not an easy “colonial” opponent.\n\n- **Top panel:** A sad/bleeding Wojak in an **Imperial Russian uniform** represents Russia. The caption says Ru...",
+          "text": "This meme is about the **Russo-Japanese War (1904–1905)** and Russia being surprised that Japan was not an easy “colonial” opponent.\n\n- **Top panel:** A sad/bleeding Wojak in an **Imperial Russian uniform** represents Russia. The caption says Russia is “dis...",
           "fullText": "This meme is about the **Russo-Japanese War (1904–1905)** and Russia being surprised that Japan was not an easy “colonial” opponent.\n\n- **Top panel:** A sad/bleeding Wojak in an **Imperial Russian uniform** represents Russia. The caption says Russia is “discovering this isn’t another colonial war,” meaning Russia expected a one-sided conflict like imperial wars against less industrialized peoples.\n\n- **Bottom panel:** A stern Wojak in a **Japanese imperial-style uniform** represents Japan. The caption “Trenches and artillery work both ways” points out that Japan was also a modernized military power with artillery, rifles, fortifications, and industrial-era tactics.\n\nThe joke is that Russia went into the war assuming it could dominate Japan like a traditional empire fighting a weaker colonial enemy, but Japan fought back using the same modern tools of war. Historically, Japan defeated Russia, including major battles like **Port Arthur** and the naval disaster for Russia at **Tsushima**.\n\nThe visual humor comes from the contrast: the Russian figure looks wounded and dismayed, while the Japanese figure looks calm and unimpressed, basically saying, “You’re not the only one with modern weapons.”",
           "judges": [
             {
@@ -993,8 +956,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a historical meme about the Russo-Japanese War of 1904-1905, using the **Crying Soyjak vs. Smug Chad / Yes Chad** Wojak template.\n\n**1. The references:**\n\n*   **Top panel - Russia:** A Wojak in the khaki uniform of a Russian Imperial Arm...",
+          "text": "This is a historical meme about the Russo-Japanese War of 1904-1905, using the **Crying Soyjak vs. Smug Chad / Yes Chad** Wojak template.\n\n**1. The references:**\n\n*   **Top panel - Russia:** A Wojak in the khaki uniform of a Russian Imperial Army officer fr...",
           "fullText": "This is a historical meme about the Russo-Japanese War of 1904-1905, using the **Crying Soyjak vs. Smug Chad / Yes Chad** Wojak template.\n\n**1. The references:**\n\n*   **Top panel - Russia:** A Wojak in the khaki uniform of a Russian Imperial Army officer from ~1904-05. The cockade on his cap, red shoulder boards, and the bloody nose/mouth show he is beaten.\n*   **Bottom panel - Japan:** A smug Wojak in the dark blue uniform of an Imperial Japanese Army officer, with the yellow cap band and star insignia. The background is a contemporary illustration of Japanese troops fighting from trenches - likely the Siege of Port Arthur.\n*   The war itself: Russia wanted to expand into Manchuria and Korea and assumed Japan, a non-European nation, would be an easy opponent.\n\n**2. The joke:**\n\nRussia went into 1904 thinking it would be another easy **colonial war**. In the 19th century, Russia had expanded across Central Asia and the Far East against opponents who didn't have modern armies. In those wars, Russian advantages in artillery and entrenched positions meant one-sided slaughter.\n\nJapan was not a colonial tribe. By 1904 it was a fully industrialized great power with its own modern artillery, machine guns, and trenches.\n\nThe punchline is **\"Trenches and artillery work both ways.\"**\n\nThe joke is that Russia discovered what happens when the enemy can do the same thing you do. Instead of Russia shelling poorly armed natives, both sides dug in and shelled each other. The result was horrific casualties and a humiliating Russian defeat at battles like Port Arthur and Mukden, and at sea at Tsushima. It was one of the first times a European power was defeated by an Asian power in the modern era, and it foreshadowed the trench warfare of WWI.\n\nThe contrast in the Wojaks is the mechanism: the cocky, expectant imperialist on top becomes the bloodied, shocked loser, while the underestimated Japanese officer on the bottom is smug because the tables have turned.\n\nThe meme is also frequently re-used as a parallel for the current Russo-Ukrainian War - Russia expecting a quick colonial-style victory, then finding Ukraine also has trenches and artillery.\n\n**3. Visual elements:**\n\n*   The top Wojak's swollen face and bleeding nose show physical defeat and shock.\n*   The bottom Wojak is yellow-tinted to signal Japanese, drawn with a smug, squinting Chad expression, and placed over a grainy battlefield photo to show he is actually in that kind of warfare and winning it.",
           "judges": [
             {
@@ -1017,8 +979,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "# Meme Explanation\n\n## Historical Reference\nThis meme references the **Russo-Japanese War (1904-1905)**, depicted through two \"Wojak\" characters (a popular meme art style featuring expressive cartoon faces).\n\n- **Top panel**: A Wojak dressed as...",
+          "text": "# Meme Explanation\n\n## Historical Reference\nThis meme references the **Russo-Japanese War (1904-1905)**, depicted through two \"Wojak\" characters (a popular meme art style featuring expressive cartoon faces).\n\n- **Top panel**: A Wojak dressed as a **Russian...",
           "fullText": "# Meme Explanation\n\n## Historical Reference\nThis meme references the **Russo-Japanese War (1904-1905)**, depicted through two \"Wojak\" characters (a popular meme art style featuring expressive cartoon faces).\n\n- **Top panel**: A Wojak dressed as a **Russian Imperial soldier**, looking distressed with a bloody nose, representing Russia.\n- **Bottom panel**: A yellow-skinned Wojak dressed as a **Japanese soldier** (note the star insignia and the yellow coloring), looking confident/smug, standing in front of a battlefield scene.\n\n## The Joke\nThe humor comes from a historical \"expectations vs. reality\" situation:\n\n- Russia, as a major European empire, was used to fighting **colonial wars** against technologically inferior or disorganized opponents, expecting an easy victory against Japan.\n- Instead, Japan was a **rapidly modernizing industrial power** with a well-trained, well-equipped military. The war featured modern **trench warfare and artillery** (notably at the Siege of Port Arthur and Battle of Mukden).\n- The punchline \"**Trenches and artillery work both ways**\" mocks Russia's surprise that their opponent was an equal, modern military force—not a \"colonial pushover.\"\n\nJapan shocked the world by winning this war, marking the first time an Asian power decisively defeated a European empire in modern times.\n\n## Visual Elements\n- The **bloody nose** on the Russian conveys defeat and suffering.\n- The **smug expression** on the Japanese Wojak emphasizes confidence and the \"surprise\" reversal.\n- The **yellow skin** of the Japanese figure is a (somewhat racially-tinged) shorthand commonly used in these meme formats to denote East Asian characters.",
           "judges": [
             {
@@ -1041,8 +1002,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme contrasts Russia's expectations for its invasion of Ukraine with the actual situation on the ground.\n\n**Top panel**  \n- The character (a shocked Wojak in an early Soviet-style uniform) represents Russia.  \n- The caption mocks the Russi...",
+          "text": "This meme contrasts Russia's expectations for its invasion of Ukraine with the actual situation on the ground.\n\n**Top panel**  \n- The character (a shocked Wojak in an early Soviet-style uniform) represents Russia.  \n- The caption mocks the Russian leadershi...",
           "fullText": "This meme contrasts Russia's expectations for its invasion of Ukraine with the actual situation on the ground.\n\n**Top panel**  \n- The character (a shocked Wojak in an early Soviet-style uniform) represents Russia.  \n- The caption mocks the Russian leadership's assumption that the war would be another easy \"colonial\" campaign — a quick victory over a much weaker opponent with minimal resistance.\n\n**Bottom panel**  \n- The smirking character is Ukraine (or the defending side), set against a real WWI photo of trench warfare.  \n- The caption “Trenches and artillery work both ways” flips the script: Ukraine is using the same old-school attrition tactics (trenches, heavy artillery, fortified defensive lines) that Russia expected to dominate with, turning the war into a bloody stalemate instead of a rapid conquest.\n\nThe humor comes from the irony that Russia, expecting a lopsided imperial-style win, is instead facing the same grinding WWI-style warfare it thought it could avoid.",
           "judges": [
             {
@@ -1078,8 +1038,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media:** The character in the image is Asuka Langley Soryu from the popular anime series *Neon Genesis Evangelion*. \n*   **Cultural/Historical:** The meme...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media:** The character in the image is Asuka Langley Soryu from the popular anime series *Neon Genesis Evangelion*. \n*   **Cultural/Historical:** The meme references A...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Media:** The character in the image is Asuka Langley Soryu from the popular anime series *Neon Genesis Evangelion*. \n*   **Cultural/Historical:** The meme references Adolf Hitler, Nazi Germany, and the \"Nazi salute\" (a straight arm raised with a flat hand). Additionally, within the lore of the anime, Asuka is of German descent and was raised in Germany, which adds a specific layer of dark humor to her involvement in this specific historical joke.\n\n**2. The Joke**\n*   **The Setup:** In the first panel, the teacher asks the class, \"Who started World War II?\" Asuka enthusiastically throws her hand straight up in the air to volunteer the answer. \n*   **The Mechanism/Implication:** In the second panel, the teacher immediately says \"Correct!\" before Asuka even speaks. The joke is that the teacher mistook Asuka's raised arm for a Nazi salute. By doing the salute, the teacher implies Asuka visually answered the question (Nazi Germany/Hitler) without needing to use her words.\n*   **The Irony:** Asuka was just trying to be a good student participating in class, but accidentally performed an offensive historical gesture, leading to an incredibly awkward moment.\n\n**3. Visual Elements**\n*   **Panel 1:** Asuka’s arm is raised straight and stiff with her palm facing forward (a typical, if overly enthusiastic, way a child raises their hand in class). However, this specific angle looks identical to a Nazi salute.\n*   **Panel 2:** Once the teacher says \"Correct!\", Asuka realizes what it looked like. Her facial expression changes from eager to uncomfortable/annoyed. Crucially, she drops her arm slightly and flattens her hand into a slightly bent pose, mimicking the realization of how she looked and trying to play it off awkwardly.",
           "judges": [
             {
@@ -1102,8 +1061,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This meme uses **Asuka Langley Soryu** from *Neon Genesis Evangelion*, an anime character strongly associated with **Germany**.\n\n- **Reference:** The teacher asks, “Who started World War II?” The expected school answer is **Nazi Germany / Adolf...",
+          "text": "This meme uses **Asuka Langley Soryu** from *Neon Genesis Evangelion*, an anime character strongly associated with **Germany**.\n\n- **Reference:** The teacher asks, “Who started World War II?” The expected school answer is **Nazi Germany / Adolf Hitler**.\n-...",
           "fullText": "This meme uses **Asuka Langley Soryu** from *Neon Genesis Evangelion*, an anime character strongly associated with **Germany**.\n\n- **Reference:** The teacher asks, “Who started World War II?” The expected school answer is **Nazi Germany / Adolf Hitler**.\n- **Joke:** Asuka raises her hand like a student volunteering an answer, but in the next panel, after being told “Correct!”, her arm/hand position resembles a **Nazi salute**. So the humor is a dark visual pun: her gesture itself becomes the “answer.”\n- **Why Asuka matters:** Asuka is German or German-Japanese depending on the version/context, so putting her in this WWII/Germany joke adds another layer.\n- **Visual element:** The transition from an innocent classroom hand-raise to a salute-like pose is the key gag. Her serious expression in the second panel makes it feel like she has “committed” to the implication.",
           "judges": [
             {
@@ -1126,8 +1084,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is an edgy historical / nationality joke using characters from *Neon Genesis Evangelion*.\n\n**References:**\n* The main girl is Asuka Langley Soryu - the half-German pilot of Evangelion Unit-02. She is famously proud of being German.\n* The ot...",
+          "text": "This is an edgy historical / nationality joke using characters from *Neon Genesis Evangelion*.\n\n**References:**\n* The main girl is Asuka Langley Soryu - the half-German pilot of Evangelion Unit-02. She is famously proud of being German.\n* The other students...",
           "fullText": "This is an edgy historical / nationality joke using characters from *Neon Genesis Evangelion*.\n\n**References:**\n* The main girl is Asuka Langley Soryu - the half-German pilot of Evangelion Unit-02. She is famously proud of being German.\n* The other students in the background are Shinji Ikari, Rei Ayanami, and Kaworu Nagisa.\n* World War II was started by Nazi Germany under Adolf Hitler when it invaded Poland in 1939.\n\n**What happens in the meme:**\nPanel 1: Teacher asks \"Who started World War II?\" Asuka, who is an enthusiastic student, throws her hand up high to answer. On her desk is an open textbook with a photo of Hitler on it, indicating the answer is Hitler / Germany.\n\nPanel 2: The teacher says \"Correct!!\" - meaning Asuka correctly answered Germany/Hitler. Asuka's arm is now lowered into a stiff, angled position that looks exactly like a Nazi / Hitler salute, and her expression has gone from happy and excited to annoyed and embarrassed. In the background, Shinji and Rei are face-down / hiding their faces in second-hand embarrassment.\n\n**The joke:**\nThe humor is dark and based on national stereotype. The correct answer to the question is her own country. For a German person to enthusiastically answer that Germany started WWII is already awkward. The punchline is visual: her normal raised hand in class, after being told she is correct, becomes a Nazi salute, as if she is celebrating Nazi Germany. It plays on the offensive stereotype that Germans are all Nazis, and the irony that the proud German character has to admit a shameful part of German history.",
           "judges": [
             {
@@ -1150,8 +1107,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "**Character reference:** The girl depicted is Asuka Langley Soryu from the anime *Neon Genesis Evangelion*. She's recognizable by her distinctive orange/red hair, blue eyes, twin hair clips (her \"interface headset\" piece), and the school uniform...",
+          "text": "**Character reference:** The girl depicted is Asuka Langley Soryu from the anime *Neon Genesis Evangelion*. She's recognizable by her distinctive orange/red hair, blue eyes, twin hair clips (her \"interface headset\" piece), and the school uniform with the re...",
           "fullText": "**Character reference:** The girl depicted is Asuka Langley Soryu from the anime *Neon Genesis Evangelion*. She's recognizable by her distinctive orange/red hair, blue eyes, twin hair clips (her \"interface headset\" piece), and the school uniform with the red ribbon. This appears to be fan art placing her in a typical anime classroom setting.\n\n**The joke:** The humor relies on the fact that Asuka is canonically **German** (she's half-German, raised in Germany). \n\n- **Left panel:** The teacher asks \"Who started World War II?\" and Asuka eagerly raises her hand, excited and smiling.\n- **Right panel:** The teacher simply responds **\"Correct!\"** before she even answers—implying that *she* (as a German) is the answer to \"who started World War II,\" referencing Nazi Germany's role in starting the war.\n\n**Visual elements that support the humor:**\n- Her transition from cheerful enthusiasm (left) to an annoyed, embarrassed, slightly blushing frown (right) sells the punchline. She's offended/exasperated at being singled out for her nationality.\n- The lowering hand and irritated expression show her realizing the implication and being unhappy about it.\n\nThe comedy comes from the absurd national stereotype joke combined with her signature tsundere (easily irritated) personality, which fans of the character recognize.",
           "judges": [
             {
@@ -1174,8 +1130,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme uses two panels of Asuka Langley Soryu (Neon Genesis Evangelion) in a classroom setting.\n\n- **Left panel**: Asuka is the eager, overconfident student with her hand raised, excited to answer a straightforward history question.\n- **Right...",
+          "text": "The meme uses two panels of Asuka Langley Soryu (Neon Genesis Evangelion) in a classroom setting.\n\n- **Left panel**: Asuka is the eager, overconfident student with her hand raised, excited to answer a straightforward history question.\n- **Right panel**: Aft...",
           "fullText": "The meme uses two panels of Asuka Langley Soryu (Neon Genesis Evangelion) in a classroom setting.\n\n- **Left panel**: Asuka is the eager, overconfident student with her hand raised, excited to answer a straightforward history question.\n- **Right panel**: After blurting out her answer, the teacher immediately validates it (“Correct!”). Asuka’s expression shifts to annoyed/frustrated exasperation (with the classic “anger vein” visual), as if she’s bothered that the simplistic textbook answer was accepted.\n\nThe joke’s mechanism is the classic “eager student gets the expected answer right, but immediately realizes how reductive or unsatisfying it is.” The implied punchline is that the “correct” classroom answer to “Who started WWII?” is Germany (the standard Western-textbook response), yet Asuka reacts as though she knows the full historical picture is more complicated. The open textbook on her desk reinforces the “official narrative vs. reality” contrast.",
           "judges": [
             {
@@ -1211,8 +1166,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Here is an explanation of the meme:\n\n**The Reference**\nThe phrase \"what does Ja Rule think about this?\" is a direct reference to a famous stand-up comedy routine by Dave Chappelle from his 2004 special *For What It's Worth*. \n\nIn the bit, Chappe...",
+          "text": "Here is an explanation of the meme:\n\n**The Reference**\nThe phrase \"what does Ja Rule think about this?\" is a direct reference to a famous stand-up comedy routine by Dave Chappelle from his 2004 special *For What It's Worth*. \n\nIn the bit, Chappelle mocked t...",
           "fullText": "Here is an explanation of the meme:\n\n**The Reference**\nThe phrase \"what does Ja Rule think about this?\" is a direct reference to a famous stand-up comedy routine by Dave Chappelle from his 2004 special *For What It's Worth*. \n\nIn the bit, Chappelle mocked the media (specifically MTV News) for interviewing rapper Ja Rule to get his thoughts immediately following the tragedy of 9/11. The joke highlights the absurdity of seeking profound insight on heavy, real-world issues from an unqualified celebrity. \"Where is Ja?\" subsequently became a popular internet catchphrase.\n\n**The Joke**\nThe humor relies on **deflation and contrast**. \n* **The Setup:** The first user (Cassie) posts a highly earnest, serious, and absolutist socio-political statement about feminism and sexism. \n* **The Interruption:** The second user (Steven) completely ignores her argument and deploys the Chappelle reference. By asking what Ja Rule thinks, he is subtly mocking her post, implying that her serious societal declaration is exactly the kind of thing that requires the absurd, unqualified opinion of an early-2000s rapper to make sense of.\n* **The Punchline:** The joke is finalized by Cassie's response of \"What??\". She completely misses the cultural reference.\n\n**Visual/Structural Elements**\nThe standard Twitter/X thread format is vital here, as it naturally paces the joke. The viewer reads the self-important setup, the absurd derailment of the conversation in the middle, and is ultimately rewarded by the original poster's sincere confusion at the bottom, which acts as the final punchline.",
           "judges": [
             {
@@ -1235,8 +1189,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a Twitter-style meme built around an absurd pop-culture reference.\n\n- **Main reference:** The line “what does Ja Rule think about this?” refers to a famous **Dave Chappelle joke** from the early 2000s. Chappelle mocked the media for aski...",
+          "text": "This is a Twitter-style meme built around an absurd pop-culture reference.\n\n- **Main reference:** The line “what does Ja Rule think about this?” refers to a famous **Dave Chappelle joke** from the early 2000s. Chappelle mocked the media for asking rapper **...",
           "fullText": "This is a Twitter-style meme built around an absurd pop-culture reference.\n\n- **Main reference:** The line “what does Ja Rule think about this?” refers to a famous **Dave Chappelle joke** from the early 2000s. Chappelle mocked the media for asking rapper **Ja Rule** for his opinion after major events like 9/11, joking: *“Where is Ja? I need to make sense of all this!”* The joke is that Ja Rule is obviously not the person whose opinion you’d need on a serious issue.\n\n- **What’s happening:** Cassie makes a serious political/social point: instead of labeling people as “feminists,” we should treat feminism as normal and label non-feminists as “sexist.” Steven replies with the Ja Rule line, completely derailing the discussion with a ridiculous question.\n\n- **Why it’s funny:** The humor comes from the mismatch between Cassie’s sincere, ideological statement and Steven’s irrelevant meme response. He acts like the “more important question” is Ja Rule’s opinion, which is intentionally absurd. Cassie’s confused “What??” makes it funnier because she either doesn’t get the reference or is baffled by the sudden non sequitur.\n\n- **Important visual element:** The screenshot format shows a sequence of tweets, with Steven’s reply sandwiched between Cassie’s serious post and her confused response, emphasizing the abrupt tonal shift.",
           "judges": [
             {
@@ -1259,8 +1212,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a screenshot of a Twitter exchange and the joke is a famous cultural reference.\n\n**The setup:**\n\n* The first tweet by Cassie is an earnest, slightly self-righteous take: instead of labeling feminists as a special group, we should treat f...",
+          "text": "This is a screenshot of a Twitter exchange and the joke is a famous cultural reference.\n\n**The setup:**\n\n* The first tweet by Cassie is an earnest, slightly self-righteous take: instead of labeling feminists as a special group, we should treat feminism as t...",
           "fullText": "This is a screenshot of a Twitter exchange and the joke is a famous cultural reference.\n\n**The setup:**\n\n* The first tweet by Cassie is an earnest, slightly self-righteous take: instead of labeling feminists as a special group, we should treat feminism as the default and call everyone else \"sexist.\" It's a common type of profound-sounding Twitter activism post.\n\n* The second tweet by Steven replies: \"The more important question is: what does Ja Rule think about this?\"\n\nJa Rule is a rapper who was huge in the early 2000s. The line is a reference to a famous Dave Chappelle joke.\n\nAfter 9/11, MTV News, in an attempt to be relevant to young people, interviewed Ja Rule about the terrorist attacks and the War on Terror. Chappelle mocked this in his stand-up and on *Chappelle's Show* circa 2004 with a bit that goes: \"Who gives a fuck what Ja Rule thinks at a time like this? ... When 9/11 happened I didn't go 'Where's Ja?'\"\n\nSince then, \"What does Ja Rule think about this?\" became a snowclone for dismissing something. It means: \"Your take is so self-important, but actually no one cares what you — or any random celebrity — thinks about this serious topic. It's the equivalent of asking Ja Rule about foreign policy.\"\n\nSo Steven isn't engaging with her argument about feminism at all. He's puncturing it by implying it's Twitter pseudo-philosophy that doesn't deserve a serious debate.\n\n**The punchline:**\n\nCassie's reply \"What??\" is what makes the screenshot funny as a meme. She clearly doesn't get the 20-year-old Chappelle reference and thinks he's literally deferring to Ja Rule as an authority on feminism. Her confusion proves his point — the conversation went nowhere — and adds bathos / anti-climax.",
           "judges": [
             {
@@ -1283,8 +1235,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a screenshot of a Twitter exchange that plays on a famous comedy reference.\n\n**The setup:**\n- Cassie makes a sincere, somewhat earnest political statement about reframing the language around feminism—suggesting we drop the label \"fe...",
+          "text": "This meme is a screenshot of a Twitter exchange that plays on a famous comedy reference.\n\n**The setup:**\n- Cassie makes a sincere, somewhat earnest political statement about reframing the language around feminism—suggesting we drop the label \"feminist\" and...",
           "fullText": "This meme is a screenshot of a Twitter exchange that plays on a famous comedy reference.\n\n**The setup:**\n- Cassie makes a sincere, somewhat earnest political statement about reframing the language around feminism—suggesting we drop the label \"feminist\" and instead call non-feminists \"sexist,\" framing people as either \"normal\" or \"sexist.\"\n\n**The joke (Ja Rule reference):**\n- Steven responds with: \"The more important question is: what does Ja Rule think about this?\"\n- This is a direct reference to a famous **Dave Chappelle** bit from \"Chappelle's Show.\" After the September 11th attacks, news outlets were absurdly asking celebrities—including rapper **Ja Rule**—for their opinions on serious world events. Chappelle mocked this by joking, \"I want to get Ja Rule's perspective... where's Ja? I need his help to make sense of all this.\"\n- The line became a popular meme used to **mock the idea of seeking a random celebrity's opinion on a serious or complex topic**, or to humorously deflect/derail an earnest conversation.\n\n**Why it's funny:**\n- Steven uses the Ja Rule line as a non-sequitur to undercut Cassie's serious statement, treating her political opinion as if it needs celebrity validation to matter.\n- Cassie's confused reply—\"What??\"—shows she **doesn't get the reference**, which makes it funnier. The humor relies on the gap between people who recognize the Chappelle joke and those who don't.\n\nThe comedy comes from both the absurdist deflection and Cassie's genuine bewilderment at an out-of-left-field response.",
           "judges": [
             {
@@ -1307,8 +1258,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "This meme is a screenshot of a Twitter exchange that plays on a recurring internet joke format.\n\n**References**  \n- Ja Rule (the early-2000s rapper) is the key reference. After 9/11, during the 2001 MTV VMAs, Ja Rule gave a rambling, out-of-plac...",
+          "text": "This meme is a screenshot of a Twitter exchange that plays on a recurring internet joke format.\n\n**References**  \n- Ja Rule (the early-2000s rapper) is the key reference. After 9/11, during the 2001 MTV VMAs, Ja Rule gave a rambling, out-of-place interview...",
           "fullText": "This meme is a screenshot of a Twitter exchange that plays on a recurring internet joke format.\n\n**References**  \n- Ja Rule (the early-2000s rapper) is the key reference. After 9/11, during the 2001 MTV VMAs, Ja Rule gave a rambling, out-of-place interview about the attacks. This spawned a long-running meme in which people reply to serious or overwrought online opinions with “What does Ja Rule think about this?” The line is used to mock the original speaker by suggesting their take is so unimportant that only a random, irrelevant celebrity’s opinion could matter.\n\n**The joke**  \nCassie posts a very online, binary political take (“you’re either a normal person or a sexist”). Steven replies with the classic Ja Rule non-sequitur, which undercuts her statement by treating it as frivolous. Cassie’s confused “What??” is the punchline — she doesn’t get the reference, which makes the derailment even funnier.\n\n**Visual/text elements**  \nThe meme is just a plain screenshot of a Twitter thread in dark mode. The humor lives entirely in the text exchange; there are no additional edited images or captions needed.\n\nIn short, it’s an example of absurdist derailing humor aimed at self-serious online discourse.",
           "judges": [
             {
@@ -1344,8 +1294,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural & Internet References**\n*   **Hennessy (\"Henny\"):** A brand of cognac that has a massive footprint in Black American and hip-hop culture. It is frequently referenced...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural & Internet References**\n*   **Hennessy (\"Henny\"):** A brand of cognac that has a massive footprint in Black American and hip-hop culture. It is frequently referenced in rap musi...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. Cultural & Internet References**\n*   **Hennessy (\"Henny\"):** A brand of cognac that has a massive footprint in Black American and hip-hop culture. It is frequently referenced in rap music and carries a cultural stereotype as a strong liquor that leads to wild, rowdy, or chaotic behavior.\n*   **The CIA Reference:** The caption \"These have to been created by the CIA\" is a dark, hyperbolic joke referencing conspiracy theories and historical allegations (such as the connection between the CIA and the crack epidemic in the 1980s) that the US government intentionally introduced destructive substances into Black communities to destabilize them. \n\n**2. The Joke**\n*   **The Setup:** A news post from *Complex* (a youth and hip-hop culture media outlet) announces that Hennessy is releasing sweet, colorful, pre-mixed cocktails (like \"Henny Berry\" and \"Henny Rita\").\n*   **The Implication & Hyperbole:** Because straight Hennessy is already notoriously associated with wild nights and bad decisions, mixing it into a sugary, easy-to-drink format (similar to Four Loko or BuzzBallz) implies these drinks will be dangerously deceptive. They hide the taste of the strong liquor, making it easy for people to drink too much, too fast. \n*   **The Punchline:** The user is using hyperbole to state that these pre-mixed drinks are so potent and destined to cause absolute chaos in the community, they must be a malicious government plot (a CIA operation) meant to destroy public order, rather than just a simple beverage release.\n\n**3. Visual Elements**\n*   The contrast between the traditional, premium image of Hennessy and the bright red, green, and yellow labeling of these sweet \"Ready to Serve\" bottles is key. They visually resemble cheap \"alcopops,\" which adds to the comedic dread the poster feels about how easily these will be consumed.",
           "judges": [
             {
@@ -1368,8 +1317,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This meme is joking that Hennessy’s new pre-mixed cocktails are so dangerously appealing that they must be a government psyop.\n\n**References:**\n- **Hennessy** is a cognac brand with a strong association in hip-hop, nightlife, and Black American...",
+          "text": "This meme is joking that Hennessy’s new pre-mixed cocktails are so dangerously appealing that they must be a government psyop.\n\n**References:**\n- **Hennessy** is a cognac brand with a strong association in hip-hop, nightlife, and Black American pop culture....",
           "fullText": "This meme is joking that Hennessy’s new pre-mixed cocktails are so dangerously appealing that they must be a government psyop.\n\n**References:**\n- **Hennessy** is a cognac brand with a strong association in hip-hop, nightlife, and Black American pop culture.\n- **Complex** is a media outlet that often covers music, fashion, streetwear, and youth culture.\n- The line **“These have to been created by the CIA”** is playing off conspiracy-style jokes about the CIA secretly introducing harmful drugs/substances into communities, especially the long-running belief that the CIA was involved in bringing crack cocaine into Black neighborhoods in the 1980s.\n- “Psyop” humor online often frames ordinary products or trends as if they were engineered by the government to destabilize people.\n\n**The joke:**\nThe post is advertising Hennessy pre-mixed cocktails — sweet, ready-to-drink versions like “Henny Berry,” “Henny Rita,” and “Henny Iced Tea.” The person reacting is basically saying: *These are too powerful. People are going to drink way too many of these. This has to be a CIA plot.*\n\nIt’s funny because it takes a normal alcohol product launch and exaggerates it into a sinister government operation. The implication is that pre-mixed, flavored Hennessy would cause chaos because it combines a culturally popular liquor with easy-drinking cocktail flavors.\n\n**Important visual elements:**\n- The bottles look colorful, fruity, and harmless, which contrasts with the reputation of Hennessy as strong liquor.\n- The text says **“THE INTERNET IS GOING CRAZY”**, which makes it feel like a hype-driven product rollout.\n- The “CIA” comment turns that hype into a paranoid/conspiratorial punchline.",
           "judges": [
             {
@@ -1392,14 +1340,13 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a Black Twitter / Hip-Hop culture joke about Hennessy.\n\n**The reference:**\n\n1.  **Hennessy:** The cognac has huge cultural status in Black American and hip-hop culture - it's premium, brown liquor, usually drunk neat or mixed by hand. In...",
+          "text": "This is a Black Twitter / Hip-Hop culture joke about Hennessy.\n\n**The reference:**\n\n1.  **Hennessy:** The cognac has huge cultural status in Black American and hip-hop culture - it's premium, brown liquor, usually drunk neat or mixed by hand. In 2024-2025 H...",
           "fullText": "This is a Black Twitter / Hip-Hop culture joke about Hennessy.\n\n**The reference:**\n\n1.  **Hennessy:** The cognac has huge cultural status in Black American and hip-hop culture - it's premium, brown liquor, usually drunk neat or mixed by hand. In 2024-2025 Hennessy actually launched a line of Ready-To-Drink pre-mixed cocktails: Henny Iced Tea, Henny Berry - a berry mojito-inspired cocktail - and Henny-Rita - a margarita-inspired cocktail. They are bright yellow / red / green and very sweet.\n\n2.  **\"Created by the CIA\":** This is a long-running joke / conspiracy reference. After the 1980s crack epidemic, journalist Gary Webb's *Dark Alliance* series alleged the CIA helped funnel crack cocaine into Black neighborhoods in LA. Whether you believe it literally or not, on Black Twitter any product that seems perfectly engineered to cause chaos, addiction, or health problems in the Black community is jokingly blamed on the CIA as a psyop.\n\n**What the joke is:**\n\nThe setup is the image from Complex - Hennessy, a respected luxury brand, turned into what looks like a cheap, candy-colored alcopop like Four Loko. The incongruity is funny on its own.\n\nThe implication from the poster `siranaba` is: These will be *too* effective. They're sweet, easy to drink, low barrier to getting very drunk. Hennessy already has a meme reputation for making people fight / act wild - \"Hennessy makes you want to fight.\" A sugary, portable, ready-to-serve version will lead to more drunkenness, fights, hangovers, health issues.\n\nSo the punchline is hyperbolic escalation: This can't just be a dumb corporate product - it's so perfectly destructive and so perfectly targeted at Hennessy's core Black audience that it *has to* be an intentional government plot to sabotage the community. \n\nHe's not being literal. It's a way of saying \"this is going to cause absolute mayhem.\"",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "correct",
-              "reasoning": "The model identifies the key references correctly: Hennessy as a Black/hip-hop stereotype and the CIA/crack epidemic conspiracy/psyop framing. It also captures the intended joke that the product is being treated as a deliberately harmful move aimed at Black Americans, causing addiction/chaos and legal trouble. Although it adds extra detail about specific RTD products and corporate branding, the core mechanism matches the ground truth: the CIA is humorously framed as running another psyop against Black people via Hennessy. "
+              "reasoning": "The model identifies the key references correctly: Hennessy as a Black/hip-hop stereotype and the CIA/crack epidemic conspiracy/psyop framing. It also captures the intended joke that the product is being treated as a deliberately harmful move aimed at Black Americans, causing addiction/chaos and legal trouble. Although it adds extra detail about specific RTD products and corporate branding, the core mechanism matches the ground truth: the CIA is humorously framed as running another psyop against Black people via Hennessy."
             },
             {
               "model": "claude-sonnet-4-6",
@@ -1416,8 +1363,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "**What's being shown:** This is a screenshot of a tweet/repost reacting to a Complex Instagram post. The Complex post advertises Hennessy's new pre-mixed cocktail line — flavored versions like \"Henny Iced T,\" \"Henny Berry,\" and \"Henny Rita\" (a m...",
+          "text": "**What's being shown:** This is a screenshot of a tweet/repost reacting to a Complex Instagram post. The Complex post advertises Hennessy's new pre-mixed cocktail line — flavored versions like \"Henny Iced T,\" \"Henny Berry,\" and \"Henny Rita\" (a margarita-sty...",
           "fullText": "**What's being shown:** This is a screenshot of a tweet/repost reacting to a Complex Instagram post. The Complex post advertises Hennessy's new pre-mixed cocktail line — flavored versions like \"Henny Iced T,\" \"Henny Berry,\" and \"Henny Rita\" (a margarita-style drink) — with the caption \"The internet is going crazy over Hennessy's pre-mixed cocktails.\"\n\n**The joke:** The user \"siranaba\" comments: *\"These have to been created by the CIA.\"*\n\nThis taps into a long-running cultural reference, especially within Black American communities, about conspiracy theories that the CIA deliberately introduced harmful substances (most famously the alleged role in the crack cocaine epidemic of the 1980s) into Black neighborhoods. Hennessy (cognac) has a strong association with Black culture and is heavily marketed toward that demographic.\n\nThe humor comes from suggesting that turning Hennessy into sugary, easy-to-drink, pre-mixed cocktails is so blatantly designed to encourage overconsumption that it must be a deliberate plot to harm the community — framing it as another \"CIA scheme.\" It's exaggerated, cynical humor commenting on predatory marketing of alcohol.\n\n**Why it lands:** The combination of the genuinely real product line (which many felt watered down a respected liquor brand) plus the over-the-top conspiratorial reaction makes it funny. It's the kind of hyperbolic distrust people jokingly express when a beloved brand does something they find questionable.",
           "judges": [
             {
@@ -1440,8 +1386,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a screenshot of a tweet reacting to an Instagram post about Hennessy’s new line of premixed, ready-to-drink cocktails.\n\n**Key elements:**\n- The three bottles are real products: “Henny Iced T,” “Henny Berry,” and “Henny Rita” (cognac-...",
+          "text": "The meme is a screenshot of a tweet reacting to an Instagram post about Hennessy’s new line of premixed, ready-to-drink cocktails.\n\n**Key elements:**\n- The three bottles are real products: “Henny Iced T,” “Henny Berry,” and “Henny Rita” (cognac-based versio...",
           "fullText": "The meme is a screenshot of a tweet reacting to an Instagram post about Hennessy’s new line of premixed, ready-to-drink cocktails.\n\n**Key elements:**\n- The three bottles are real products: “Henny Iced T,” “Henny Berry,” and “Henny Rita” (cognac-based versions of an iced tea, berry mojito, and margarita).\n- They come in brightly colored caps with prominent “Ready to Serve” stickers, making them look like mass-market alcopops rather than the usual Hennessy bottle.\n- The tweet caption (“These have to have been created by the CIA”) is the punchline.\n\n**The joke:**\nIt uses the common internet meme format of jokingly attributing anything that feels culturally off, suspiciously corporate, or “psyop-like” to the CIA. Here, the products are seen as so aggressively mainstream, fruity, and “gentrified” compared to Hennessy’s traditional image (especially its longstanding association with Black and hip-hop culture) that the only plausible explanation offered is that a government agency must be behind them. It’s hyperbolic sarcasm, not a literal claim.\n\nThe visual contrast between the flashy premixed bottles and classic Hennessy branding is what makes the “this feels wrong” reaction land.",
           "judges": [
             {
@@ -1477,8 +1422,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References:**\n*   **The Actor:** The man in both pictures is actor Paul Marcarelli.\n*   **The Left Image:** In the early 2000s, Marcarelli became culturally ubiquitous as...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References:**\n*   **The Actor:** The man in both pictures is actor Paul Marcarelli.\n*   **The Left Image:** In the early 2000s, Marcarelli became culturally ubiquitous as the \"Test M...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References:**\n*   **The Actor:** The man in both pictures is actor Paul Marcarelli.\n*   **The Left Image:** In the early 2000s, Marcarelli became culturally ubiquitous as the \"Test Man\" for **Verizon Wireless**. He walked around in a grey jacket and horn-rimmed glasses, followed by a crowd representing the \"network,\" repeatedly asking his famous catchphrase: *\"Can you hear me now? Good.\"*\n*   **The Right Image:** In 2016, a rival telecom company, **Sprint**, hired Marcarelli as their new spokesperson. The image on the right is from a Sprint commercial where he announced he had switched carriers. \n\n**2. The Joke:**\nThe joke uses **hyperbolic exaggeration**. The setup is the text claiming this event is \"Arguably one of the greatest Betrayals to ever occur in human history.\" \n\nThe humor comes from the extreme contrast between the mundane reality of the situation (an actor simply taking a new job with a rival corporation) and the dramatic, historical weight the caption assigns to it, treating it on par with Judas betraying Jesus or Brutus betraying Caesar. Because Marcarelli was so deeply associated with Verizon's brand identity, his move to a direct competitor felt mildly jarring to audiences, which the meme exaggerates for comedic effect.\n\n**3. Visual Elements:**\n*   **The Outfits:** On the left, he is wearing his iconic Verizon uniform (the grey jacket over a white shirt) and holding an older-style cell phone. On the right, he is wearing a dark jacket over a bright yellow t-shirt—yellow being the primary brand color for Sprint. \n*   **Aging:** The visible aging of the actor between the two photos emphasizes the passage of time between his legendary Verizon run and his eventual \"betrayal\" by moving to Sprint.",
           "judges": [
             {
@@ -1501,8 +1445,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is about **Paul Marcarelli**, the actor known as Verizon’s “Can you hear me now?” guy.\n\n- **Left image:** Marcarelli in Verizon ads from the 2000s, where he walked around testing cell reception and repeatedly said, **“Can you hear me n...",
+          "text": "This meme is about **Paul Marcarelli**, the actor known as Verizon’s “Can you hear me now?” guy.\n\n- **Left image:** Marcarelli in Verizon ads from the 2000s, where he walked around testing cell reception and repeatedly said, **“Can you hear me now? Good.”**...",
           "fullText": "This meme is about **Paul Marcarelli**, the actor known as Verizon’s “Can you hear me now?” guy.\n\n- **Left image:** Marcarelli in Verizon ads from the 2000s, where he walked around testing cell reception and repeatedly said, **“Can you hear me now? Good.”** He became strongly associated with Verizon’s network reliability.\n- **Right image:** Years later, he appeared in ads for **Sprint**, a rival phone carrier, essentially saying he had switched sides.\n\nThe joke is that this was a “betrayal” because he was one of Verizon’s most recognizable advertising figures, so seeing him promote Sprint felt like a dramatic act of treason—obviously exaggerated as “one of the greatest betrayals in human history.”\n\nThe humor comes from treating a corporate ad spokesperson switching phone companies like it’s a massive historical betrayal. The visual contrast of him in his old Verizon role vs. his later Sprint role is the key part.",
           "judges": [
             {
@@ -1525,8 +1468,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is the **Verizon guy switching to Sprint** meme.\n\nThe man in both photos is actor Paul Marcarelli. He was Verizon's famous \"Test Man\" from 2002-2011 - the guy in the gray Verizon jacket who would walk around testing reception and ask \"Can y...",
+          "text": "This is the **Verizon guy switching to Sprint** meme.\n\nThe man in both photos is actor Paul Marcarelli. He was Verizon's famous \"Test Man\" from 2002-2011 - the guy in the gray Verizon jacket who would walk around testing reception and ask \"Can you hear me n...",
           "fullText": "This is the **Verizon guy switching to Sprint** meme.\n\nThe man in both photos is actor Paul Marcarelli. He was Verizon's famous \"Test Man\" from 2002-2011 - the guy in the gray Verizon jacket who would walk around testing reception and ask \"Can you hear me now?\"\n\nIn 2016, he became the spokesman for **Sprint**, Verizon's direct competitor. In the Sprint ads he wore a yellow shirt - Sprint's brand color - and told viewers Sprint was better / cheaper than Verizon.\n\n**The joke:**\n\nThe text says \"Still arguably one of the greatest Betrayals to ever occur in human history smh [shaking my head]\"\n\nIt's hyperbolic irony. The setup treats a commercial actor changing jobs as if it's on the level of Judas betraying Jesus or Brutus betraying Caesar in human history. For a lot of Americans who grew up seeing him as the face of Verizon for almost a decade, it *felt* like a personal betrayal when he started advertising for the other team.\n\n**Visuals that matter:**\n\n* It's the same guy with the same glasses in both images, so you can tell it's not two similar people.\n* Left: gray work shirt with a Verizon logo / name tag, he's on a flip phone, with a crowd of network technicians behind him - his classic Verizon look.\n* Right: black jacket over a bright yellow t-shirt - Sprint's yellow and black branding.",
           "judges": [
             {
@@ -1549,8 +1491,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "## The Reference\n\nThis meme refers to the **\"Can you hear me now?\" guy** — actor Paul Marcarelli, who became famous as the spokesperson for **Verizon Wireless** in commercials throughout the 2000s. His catchphrase \"Can you hear me now? Good.\" wa...",
+          "text": "## The Reference\n\nThis meme refers to the **\"Can you hear me now?\" guy** — actor Paul Marcarelli, who became famous as the spokesperson for **Verizon Wireless** in commercials throughout the 2000s. His catchphrase \"Can you hear me now? Good.\" was iconic and...",
           "fullText": "## The Reference\n\nThis meme refers to the **\"Can you hear me now?\" guy** — actor Paul Marcarelli, who became famous as the spokesperson for **Verizon Wireless** in commercials throughout the 2000s. His catchphrase \"Can you hear me now? Good.\" was iconic and ran for nearly a decade.\n\nThe image on the **left** shows him in the classic Verizon ads (glasses, holding a phone to his ear, testing network coverage).\n\nThe image on the **right** shows him in **Sprint commercials** that aired starting in 2016, where he announced he had switched to Verizon's competitor.\n\n## The Joke\n\nThe humor comes from the dramatic, over-the-top framing. Switching cell phone carriers is a completely mundane, trivial event — but the caption treats it as **\"one of the greatest betrayals to ever occur in human history,\"** complete with the exasperated \"smh\" (shaking my head).\n\nFor people who grew up watching those Verizon ads, the spokesperson defecting to Sprint felt like a comic act of disloyalty — as if he was a beloved figure who switched sides. The meme exaggerates this for ironic effect.\n\n## Visual Elements\n\n- The **left photo** establishes his Verizon identity (corporate jacket, phone to ear).\n- The **right photo** shows him relaxed and casual in the Sprint ad, almost shrugging — which reads as a smug \"what are you gonna do about it?\" expression that adds to the \"betrayal\" framing.\n\nThe contrast between the two images visually tells the \"before and after\" story of his corporate switch.",
           "judges": [
             {
@@ -1573,8 +1514,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme shows two photos of Korean-American actor Randall Park.\n\n- **Left panel**: Park in professional/business-casual attire (with a name tag reading “Randall”), standing in a construction/engineering-style environment with hard hats and safe...",
+          "text": "The meme shows two photos of Korean-American actor Randall Park.\n\n- **Left panel**: Park in professional/business-casual attire (with a name tag reading “Randall”), standing in a construction/engineering-style environment with hard hats and safety vests vis...",
           "fullText": "The meme shows two photos of Korean-American actor Randall Park.\n\n- **Left panel**: Park in professional/business-casual attire (with a name tag reading “Randall”), standing in a construction/engineering-style environment with hard hats and safety vests visible in the background. This visually codes him as a stereotypical Asian-American “good son” STEM or white-collar professional.\n- **Right panel**: Park in a loud yellow T-shirt and jacket, looking animated and expressive while holding pencils—clearly in full comedic-actor mode (from a film/TV shoot).\n\nThe caption treats his shift from the first image to the second as a mock “historic betrayal.” The joke rests on the common Asian-parent stereotype that children are expected to pursue respectable, high-status careers (engineer, doctor, etc.) rather than the “frivolous” choice of becoming an actor/comedian. The over-the-top phrasing (“greatest betrayal in human history… smh”) is deliberately hyperbolic and ironic.\n\nSo the meme is just playfully roasting the career choice through that cultural lens.",
           "judges": [
             {
@@ -1610,8 +1550,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References:**\n*   **The People:** The image features two prominent American politicians: former US President Donald Trump (left) and US Senator Marco Rubio (right...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References:**\n*   **The People:** The image features two prominent American politicians: former US President Donald Trump (left) and US Senator Marco Rubio (right). \n*   **Th...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References:**\n*   **The People:** The image features two prominent American politicians: former US President Donald Trump (left) and US Senator Marco Rubio (right). \n*   **The Grammar Rule:** The setup relies on a common grammatical rule. \"Less\" is typically used for uncountable quantities (e.g., \"less water\"), while \"fewer\" is used for countable items (e.g., \"fewer people\" or \"fewer immigrants\"). Correcting someone's use of \"less\" to \"fewer\" is a common trope, most famously popularized in internet culture by the character Stannis Baratheon from *Game of Thrones*.\n*   **The Historical Reference:** The punchline relies on the phonetic similarity between the English word \"Fewer\" and the German word \"Führer,\" which translates to \"leader\" or \"guide.\" However, \"Führer\" is universally associated with Adolf Hitler and totalitarian dictatorship. \n\n**2. The Joke (Setup, Wordplay, and Implication):**\n*   **The Setup:** In the top panel, Trump states a common position of his political platform (\"I want less immigrants\"). Rubio acts as the straight man, correcting Trump's grammar by simply saying, \"Fewer.\"\n*   **The Wordplay:** In the bottom panel, the punchline is delivered through a misunderstanding. Trump mishears the grammatical correction \"Fewer\" as the title \"Führer.\" \n*   **The Implication:** Trump's response, \"I told you, don't call me that yet,\" is the core of the joke. It satirizes Trump by implying that he harbors ambitions to become a dictator (a \"Führer\"), and implies that politicians like Rubio are already acting as submissive underlings ready to use that title. The joke is that Trump isn't rejecting the authoritarian title; he is just saying the timing isn't right *yet*.\n\n**3. Visual Elements:**\n*   The meme uses a simple two-panel format using the exact same photo, relying entirely on the pacing of the speech bubbles to create a comedic beat between the setup (grammar correction) and the punchline (the dark misunderstanding). \n*   Rubio's stoic, slightly side-eyeing expression adds to the deadpan delivery of his grammatical correction.",
           "judges": [
             {
@@ -1634,8 +1573,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme shows Donald Trump and Marco Rubio with fake speech bubbles.\n\n- **Reference/joke setup:** Trump says, “I want less immigrants.” Rubio corrects him: **“Fewer.”** This is a grammar correction: because “immigrants” are countable, the stan...",
+          "text": "This meme shows Donald Trump and Marco Rubio with fake speech bubbles.\n\n- **Reference/joke setup:** Trump says, “I want less immigrants.” Rubio corrects him: **“Fewer.”** This is a grammar correction: because “immigrants” are countable, the standard phrasin...",
           "fullText": "This meme shows Donald Trump and Marco Rubio with fake speech bubbles.\n\n- **Reference/joke setup:** Trump says, “I want less immigrants.” Rubio corrects him: **“Fewer.”** This is a grammar correction: because “immigrants” are countable, the standard phrasing is “fewer immigrants,” not “less immigrants.”\n\n- **Punchline:** Trump replies, “I told you, don’t call me that yet.” The joke is that **“fewer” sounds like “Führer,”** the German title used for Adolf Hitler. So Trump pretends Rubio called him “Führer,” not “fewer.”\n\n- **Why it’s funny/dark:** It combines:\n  1. A grammar-pedant correction,\n  2. Trump’s anti-immigration rhetoric,\n  3. A political insult implying authoritarian or fascist tendencies,\n  4. The “yet” implying he hasn’t become a dictator-type figure *yet*, but might want to.\n\n- **Visual element:** Rubio’s skeptical side-eye makes him look like he’s judging or quietly correcting Trump, which fits the dry grammar-correction setup.",
           "judges": [
             {
@@ -1658,8 +1596,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a political grammar-joke meme featuring Donald Trump and Marco Rubio.\n\n**The reference:**\nTop panel is Trump saying \"I want less immigrants\" - a reference to Trump's hardline anti-immigration politics. Bottom figure is Marco Rubio, who i...",
+          "text": "This is a political grammar-joke meme featuring Donald Trump and Marco Rubio.\n\n**The reference:**\nTop panel is Trump saying \"I want less immigrants\" - a reference to Trump's hardline anti-immigration politics. Bottom figure is Marco Rubio, who is Trump's Se...",
           "fullText": "This is a political grammar-joke meme featuring Donald Trump and Marco Rubio.\n\n**The reference:**\nTop panel is Trump saying \"I want less immigrants\" - a reference to Trump's hardline anti-immigration politics. Bottom figure is Marco Rubio, who is Trump's Secretary of State in his second term and himself the son of Cuban immigrants.\nRubio correcting him is in character as the more traditionally polished politician.\n\n**The setup and the joke is in two parts:**\n\n1.  **Grammar correction:** In English, you use `less` for uncountable things - less water, less money. You use `fewer` for countable things - fewer bottles, fewer people. \"Immigrants\" is countable, so it should be \"fewer immigrants.\" Rubio is doing the pedantic grammar correction.\n\n2.  **The pun / mishearing:** \"Fewer\" is pronounced almost identically to \"Führer\" - the German word for \"Leader\" and the title used by Adolf Hitler.\n\nIn the second panel, Trump ignores the grammar lesson and thinks Rubio is calling him \"Führer.\" His reply \"I told you, don't call me that yet\" is the punchline. It implies:\n\n*   Trump doesn't understand the grammar correction, and\n*   He *does* want to be a dictator-like Führer eventually, just not publicly yet.\n\nIt's dark satire mocking Trump's grammar and playing on accusations that he has authoritarian ambitions.\n\n**Visual elements:**\nIt's a two-panel meme using the same photo duplicated. Speech bubbles are edited in. Rubio's deadpan, slightly annoyed side-eye expression makes the grammar-nerd correction funnier.",
           "judges": [
             {
@@ -1682,8 +1619,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "## Explanation\n\nThis is a two-panel meme featuring **Donald Trump** and **Marco Rubio** (his Secretary of State).\n\n**The joke works on a double pun:**\n\n1. **The grammar correction setup:** Trump says \"I want less immigrants.\" Rubio corrects him...",
+          "text": "## Explanation\n\nThis is a two-panel meme featuring **Donald Trump** and **Marco Rubio** (his Secretary of State).\n\n**The joke works on a double pun:**\n\n1. **The grammar correction setup:** Trump says \"I want less immigrants.\" Rubio corrects him with \"Fewer\"...",
           "fullText": "## Explanation\n\nThis is a two-panel meme featuring **Donald Trump** and **Marco Rubio** (his Secretary of State).\n\n**The joke works on a double pun:**\n\n1. **The grammar correction setup:** Trump says \"I want less immigrants.\" Rubio corrects him with \"Fewer\" — this is a common grammar rule, where \"fewer\" is used for countable things (immigrants) while \"less\" is used for uncountable quantities. So at face value, Rubio is just being a grammar pedant.\n\n2. **The actual punchline:** In the second panel, Trump responds \"I told you, don't call me that yet.\" This works because \"**Fewer**\" sounds like \"**Führer**\" — the title used by Adolf Hitler. The joke implies Trump *misheard* the grammar correction as someone calling him \"Führer,\" and his response (\"don't call me that **yet**\") suggests he aspires to that kind of dictatorial authority but feels it's premature to use the title openly.\n\n**Why it's funny/pointed:** It's political satire that plays on critics' accusations that Trump has authoritarian/fascist tendencies, particularly tied to his hardline immigration rhetoric. The \"yet\" is the key word that makes it cutting rather than just a simple pun.\n\n**Visual elements:** The deadpan, serious expressions on both men's faces enhance the absurdist humor, as does the realistic photo styling that makes the fabricated exchange feel like a genuine interview moment.",
           "judges": [
             {
@@ -1706,8 +1642,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is a grammar/wordplay joke built around the common “less vs. fewer” distinction.\n\n**Setup and joke**  \n- Top panel: Trump says “I want less immigrants.” Rubio (positioned as the pedantic grammar stickler) corrects him with the single w...",
+          "text": "This meme is a grammar/wordplay joke built around the common “less vs. fewer” distinction.\n\n**Setup and joke**  \n- Top panel: Trump says “I want less immigrants.” Rubio (positioned as the pedantic grammar stickler) corrects him with the single word “Fewer,”...",
           "fullText": "This meme is a grammar/wordplay joke built around the common “less vs. fewer” distinction.\n\n**Setup and joke**  \n- Top panel: Trump says “I want less immigrants.” Rubio (positioned as the pedantic grammar stickler) corrects him with the single word “Fewer,” because “immigrants” is a countable noun and the prescriptive rule calls for “fewer.”  \n- Bottom panel: Trump completely misses the correction and assumes Rubio has just given him a new nickname (“Fewer”), replying “I told you, don’t call me that yet.”  \n\nThe humor comes from the inversion: Rubio’s grammatical nitpick is misinterpreted as an informal nickname or title, the kind Trump often gets (“The Donald,” etc.). It’s a classic “missed the point” punchline.\n\n**Visuals**  \nThe two nearly identical photos of Trump (left) and Rubio (right) let the speech bubbles carry the entire joke; the only change is the added bottom caption and the slight shift in Rubio’s expression. The format is a simple two-panel “dialogue escalation” meme.",
           "judges": [
             {
@@ -1743,8 +1678,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference:**\nThe chair in the image is a real-life replica of the **\"Thinking Chair\"** from the long-running, highly popular Nickelodeon children's television show ***Blu...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference:**\nThe chair in the image is a real-life replica of the **\"Thinking Chair\"** from the long-running, highly popular Nickelodeon children's television show ***Blue's Clues***...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference:**\nThe chair in the image is a real-life replica of the **\"Thinking Chair\"** from the long-running, highly popular Nickelodeon children's television show ***Blue's Clues*** (which premiered in 1996). On the show, the human host (originally Steve) would sit in this exact chair at the end of every episode to piece together the clues they had found. \n\n**2. The Joke:**\nThe humor relies on **nostalgia and dramatic irony**. \n* **The Setup:** The caption is written from the perspective of someone completely oblivious to a major piece of pop culture. He sees his girlfriend having a visceral, excited reaction to what he assumes is just an ugly, weird-looking chair at a yard sale.\n* **The Mechanism:** The joke is an \"If You Know, You Know\" (IYKYK) scenario. The viewer of the meme instantly recognizes this iconic piece of childhood history. The humor comes from the contrast between the boyfriend's complete cluelessness and the shared cultural knowledge of the audience (and the girlfriend), who instantly understand why finding this chair would be thrilling. \n\n**3. Visual Elements:**\nThe joke works because the chair is an incredibly accurate, unmistakable replica of the television prop. Important visual cues include:\n* The oversized, slightly cartoonish proportions.\n* The bright red fabric featuring a distinct, darker patterned swirl.\n* The thick black piping/trim that outlines the chair, specifically ending in tight, rolled spirals on the front of the armrests.",
           "judges": [
             {
@@ -1767,8 +1701,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a reference to **the “Thinking Chair” from *Blue’s Clues***, the children’s TV show from Nickelodeon.\n\nThe red armchair with the swirl pattern and rolled arms is iconic because the host, originally **Steve** and later **Joe**, would sit...",
+          "text": "This is a reference to **the “Thinking Chair” from *Blue’s Clues***, the children’s TV show from Nickelodeon.\n\nThe red armchair with the swirl pattern and rolled arms is iconic because the host, originally **Steve** and later **Joe**, would sit in it near t...",
           "fullText": "This is a reference to **the “Thinking Chair” from *Blue’s Clues***, the children’s TV show from Nickelodeon.\n\nThe red armchair with the swirl pattern and rolled arms is iconic because the host, originally **Steve** and later **Joe**, would sit in it near the end of each episode to “think” through the clues and solve what Blue wanted.\n\nThe joke is that the person posting supposedly doesn’t understand why his girlfriend is “freaking out,” but anyone who grew up watching *Blue’s Clues* would instantly recognize it as a nostalgic, almost holy-grail piece of childhood TV furniture.\n\nImportant visual details:\n- Bright **red upholstery**\n- Swirly pattern all over it\n- Big rounded back\n- Curled/spiral armrests  \nThese make it look exactly like the *Blue’s Clues* Thinking Chair.",
           "judges": [
             {
@@ -1791,8 +1724,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is the Thinking Chair from ***Blue's Clues***.\n\nThe show was a hugely popular Nick Jr. / Nickelodeon kids show from 1996-2006. In every episode, host Steve [and later Joe] would sit in a big red armchair to think about Blue's clues and figu...",
+          "text": "This is the Thinking Chair from ***Blue's Clues***.\n\nThe show was a hugely popular Nick Jr. / Nickelodeon kids show from 1996-2006. In every episode, host Steve [and later Joe] would sit in a big red armchair to think about Blue's clues and figure out the p...",
           "fullText": "This is the Thinking Chair from ***Blue's Clues***.\n\nThe show was a hugely popular Nick Jr. / Nickelodeon kids show from 1996-2006. In every episode, host Steve [and later Joe] would sit in a big red armchair to think about Blue's clues and figure out the puzzle. For Millennials / older Gen Z who grew up with the show, the chair is instantly recognizable and very nostalgic.\n\nThe joke is the boyfriend being completely clueless about an obvious pop-culture artifact.\n\nThe text \"My girl started freaking out about this chair at a yard sale and, what's special about it?\" sets up that contrast. To him it just looks like an ugly, small, old red armchair. To her - and to most of the internet - it's THE chair from her childhood, suddenly appearing in real life at a random yard sale. Finding one is considered a rare thrift-store grail and they often go viral when found.\n\nVisually, it's unmistakable if you know the show:\n* small scale - it's a kid's chair, not a full-size adult armchair\n* bright red velour with a lighter pink swirl pattern\n* thick black piping around all the edges\n* big rolled arms that end in a flat spiral / swirl\n\nThat's why she's freaking out.\n\n> Side note: This exact cheap red swirly chair model was also mass-produced for kids' rooms, and because of that distinctive pattern, it became a running in-joke online that it appears in a LOT of amateur porn / OnlyFans shoots too, so you'll often see comments like \"if you know, you know\" under this picture.",
           "judges": [
             {
@@ -1815,8 +1747,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme references the iconic **\"Thinking Chair\"** from the classic children's TV show **Blue's Clues** (which aired on Nickelodeon starting in 1996).\n\n**The reference:**\nThe red armchair with the swirly pattern and black spiral armrests is an...",
+          "text": "This meme references the iconic **\"Thinking Chair\"** from the classic children's TV show **Blue's Clues** (which aired on Nickelodeon starting in 1996).\n\n**The reference:**\nThe red armchair with the swirly pattern and black spiral armrests is an instantly r...",
           "fullText": "This meme references the iconic **\"Thinking Chair\"** from the classic children's TV show **Blue's Clues** (which aired on Nickelodeon starting in 1996).\n\n**The reference:**\nThe red armchair with the swirly pattern and black spiral armrests is an instantly recognizable replica of the big comfy chair that the host (Steve, and later Joe) would sit in during each episode to \"think\" and solve clues with Blue, the animated dog.\n\n**Why it's funny:**\nThe humor comes from the **generational gap** between the person posting and their girlfriend:\n- The girlfriend \"freaked out\" because she immediately recognized the chair as a beloved piece of her childhood—the Thinking Chair is deeply nostalgic for millennials and older Gen Z who grew up watching Blue's Clues.\n- Meanwhile, the boyfriend is completely clueless (pun intended), asking \"what's special about it?\" because he apparently didn't watch the show or doesn't share that nostalgia.\n\nThe joke plays on the relatable experience of being baffled by your partner's intense emotional reaction to something that seems ordinary to you—in this case, just a worn-out red chair at a yard sale.\n\n**Visual element:**\nThe chair's distinctive swirl-patterned upholstery and curled spiral armrests are the key visual cues that trigger instant recognition for anyone familiar with the show.",
           "judges": [
             {
@@ -1839,8 +1770,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme shows an ordinary red armchair at a yard sale, but with thick black outlines crudely added around its entire silhouette and edges.\n\nThis is a reference to *Among Us* (the 2018 game), where crewmates/impostors are simple colored bean-sha...",
+          "text": "The meme shows an ordinary red armchair at a yard sale, but with thick black outlines crudely added around its entire silhouette and edges.\n\nThis is a reference to *Among Us* (the 2018 game), where crewmates/impostors are simple colored bean-shaped figures...",
           "fullText": "The meme shows an ordinary red armchair at a yard sale, but with thick black outlines crudely added around its entire silhouette and edges.\n\nThis is a reference to *Among Us* (the 2018 game), where crewmates/impostors are simple colored bean-shaped figures with bold black borders. Red is the color most associated with the \"impostor\" in memes, and \"sus\" (short for suspicious) became the game's signature slang.\n\nThe joke is the absurd visual pun: the edited chair now looks like a giant red Among Us character sitting in the yard, so the girlfriend's reaction is the typical over-the-top \"it's sus!\" freakout that the meme format parodies. The black outlines are the only thing that makes the otherwise normal chair \"special.\"\n\n(The background items like the old Murray lawn tractor are just random yard-sale clutter and have no relevance to the joke.)",
           "judges": [
             {
@@ -1879,8 +1809,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The References**\n*   **Polymarket:** The inner tweet is from a real website called Polymarket, a prediction market where people place financial bets on the outcomes of future re...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The References**\n*   **Polymarket:** The inner tweet is from a real website called Polymarket, a prediction market where people place financial bets on the outcomes of future real-world eve...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The References**\n*   **Polymarket:** The inner tweet is from a real website called Polymarket, a prediction market where people place financial bets on the outcomes of future real-world events.\n*   **First-Person Video Games:** The joke relies on the visual language of first-person video games (like shooters) and video game streaming/spectating.\n\n**The Joke**\nThe joke relies on **visual misinterpretation and recontextualization**. The user (@Username123) is pretending that the layout of the Polymarket tweet is actually a screenshot of someone livestreaming a very bizarre first-person video game. \n\nThey are commenting that \"whoever is playing... is genuinely so ass\" (meaning they are playing terribly), because if you view the image as a game, the \"player\" is failing.\n\n**Important Visual Elements**\nTo understand the joke, you have to look at the bottom image the way a gamer would look at a screen:\n*   **The \"Weapon\" (First-Person View):** The stock photo on the left shows a gloved hand holding a syringe in the foreground. In the context of the joke, this looks exactly like a player's first-person \"view model\" holding a weapon or a \"stim\" (healing item) in a video game.\n*   **The \"Target\":** The blurry baby in the background looks like an NPC (non-player character) or the objective the player is supposed to interact with.\n*   **The \"Poor Aim\":** The player is \"so ass\" because the syringe is pointed off to the side, not at the baby.\n*   **The \"HUD\" (Heads-Up Display):** The Polymarket graph and text on the right side of the image closely resemble an in-game UI. The title \"Hantavirus vaccine run in 2026?\" looks like a current quest objective. The line graph tracking probabilities looks like a health bar, a stamina meter, or a live stat-tracker. The \"Yes\" and \"No\" boxes look like prompt buttons. \n\nUltimately, the humor comes from taking a dry, slightly dystopian financial betting post and pretending it represents gameplay footage of the worst gamer in the world trying to vaccinate a baby.",
           "judges": [
             {
@@ -1903,8 +1832,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is joking that real life is like a game of **Plague Inc.** or some “world simulation” where someone is controlling a disease outbreak.\n\n- The embedded post is from **Polymarket**, a prediction/betting market, showing odds on whether a...",
+          "text": "This meme is joking that real life is like a game of **Plague Inc.** or some “world simulation” where someone is controlling a disease outbreak.\n\n- The embedded post is from **Polymarket**, a prediction/betting market, showing odds on whether a **hantavirus...",
           "fullText": "This meme is joking that real life is like a game of **Plague Inc.** or some “world simulation” where someone is controlling a disease outbreak.\n\n- The embedded post is from **Polymarket**, a prediction/betting market, showing odds on whether a **hantavirus vaccine** will be approved.\n- **Hantavirus** is a real rodent-borne virus that can cause serious illness, but it’s generally not a highly contagious human-to-human pandemic virus.\n- The caption says: “holy crap whoever is playing right now is genuinely so ass,” meaning “whoever is controlling this game is really bad.”\n\nThe joke is that if someone were “playing” as a disease, choosing **hantavirus** and already letting humans get close to a vaccine would be terrible strategy. In games like **Plague Inc.**, the disease player wants to spread widely before humanity develops a cure. Here, the “player” seems to have picked an awkward, hard-to-spread virus and is already facing vaccine development.\n\nImportant visual elements:\n- The Polymarket card makes the vaccine sound like a serious upcoming event.\n- The syringe/vaccine image adds to the “humanity is curing the disease” vibe.\n- The low “11% chance” still makes the topic feel oddly game-like, as if viewers are watching stats update in a strategy game.",
           "judges": [
             {
@@ -1927,8 +1855,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a doomposting / simulation meme using a Polymarket screenshot.\n\n**The references:**\n\n*   **Polymarket** is a real-money prediction / betting market. People bet on anything - elections, sports, and morbid public health events. It has beco...",
+          "text": "This is a doomposting / simulation meme using a Polymarket screenshot.\n\n**The references:**\n\n*   **Polymarket** is a real-money prediction / betting market. People bet on anything - elections, sports, and morbid public health events. It has become a meme to...",
           "fullText": "This is a doomposting / simulation meme using a Polymarket screenshot.\n\n**The references:**\n\n*   **Polymarket** is a real-money prediction / betting market. People bet on anything - elections, sports, and morbid public health events. It has become a meme to use its odds as a barometer for how bad the world is doing.\n*   **Hantavirus** is a rare, often fatal virus spread by rodents. It made the news in early 2025 because Gene Hackman's wife Betsy Arakawa died of it. There is no approved vaccine for it in the US. So a market asking \"Hantavirus vaccine in 2026?\" implies something would have to go very wrong - a major outbreak or mutation - for a vaccine to be fast-tracked and approved this year.\n*   **\"whoever is playing right now is so ass\"** - \"so ass\" = slang for extremely bad. The joke format is that reality is a video game / simulation being played by someone - God, a higher power, or a literal player. When terrible world events happen, you insult the \"player\" like you would a bad teammate in an online game.\n\n**The joke:**\n\nThe punchline is that the mere *existence* of this market, and the fact that it has $78,019 in volume and an 11% chance - which is shockingly high for a disease that has never had a vaccine - is evidence that the simulation is going off the rails.\n\nNormally you would never need a hantavirus vaccine in 2026. The fact that traders think there's an 11% chance we *will* need one, up 2%, means the person \"playing\" Earth is playing so badly that they're creating a new plague scenario. It's like watching someone play Plague Inc. on noob mode.\n\nIt's dark humor/coping. Instead of saying \"wow we're about to have another pandemic,\" it frames it as \"lol the guy controlling reality sucks at the game.\"\n\n**Visuals:**\n\nThe quote-tweet format is key. A random user `@Username123` on X/Twitter screenshots the official, verified Polymarket account to react to it. The embedded image of a gloved hand holding a syringe in front of a blurry baby makes it feel even more dystopian and urgent, which contrasts with the casual gamer-speak of \"holy crap... so ass\".",
           "judges": [
             {
@@ -1951,8 +1878,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "## Explanation\n\n**The setup:** This is a quote-tweet reacting to a **Polymarket** post. Polymarket is a real prediction/betting market where people wager on the likelihood of real-world events happening. This particular market is betting on whet...",
+          "text": "## Explanation\n\n**The setup:** This is a quote-tweet reacting to a **Polymarket** post. Polymarket is a real prediction/betting market where people wager on the likelihood of real-world events happening. This particular market is betting on whether a **hant...",
           "fullText": "## Explanation\n\n**The setup:** This is a quote-tweet reacting to a **Polymarket** post. Polymarket is a real prediction/betting market where people wager on the likelihood of real-world events happening. This particular market is betting on whether a **hantavirus vaccine** will be approved, showing an \"11% chance\" with \"Yes 11¢ / No 89¢\" odds.\n\n**The joke:** The person quote-tweeting says *\"holy crap whoever is playing right now is genuinely so ass.\"*\n\nThis applies **video game slang to real life**. In gaming culture:\n- \"whoever is playing right now\" treats reality as if it's a video game with a player controlling it\n- \"so ass\" is slang meaning \"really bad / playing terribly\"\n\nSo the humor comes from reframing the depressing/dystopian state of the real world (low odds of a useful vaccine getting approved, general bad news on prediction markets) as if life is a game and the person \"at the controls\" is doing an awful job — like watching a teammate play badly.\n\n**Why it lands:** It's a relatable, nihilistic-but-funny way of expressing \"the world is going poorly right now.\" Prediction markets like Polymarket essentially turn current events into a measurable \"scoreboard,\" which makes the gaming metaphor feel natural — you can literally see how badly \"the game\" is going via the betting odds.\n\nThis fits into a broader internet meme format where people joke that we're all NPCs or characters in a simulation, and whoever's controlling the simulation is incompetent.",
           "judges": [
             {
@@ -1975,8 +1901,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a screenshot of a Twitter reply reacting to a Polymarket prediction market.\n\n**References:**\n- Polymarket: A popular crypto-based prediction market platform where people bet on real-world events (e.g., elections, news, approvals).\n-...",
+          "text": "The meme is a screenshot of a Twitter reply reacting to a Polymarket prediction market.\n\n**References:**\n- Polymarket: A popular crypto-based prediction market platform where people bet on real-world events (e.g., elections, news, approvals).\n- Hantavirus:...",
           "fullText": "The meme is a screenshot of a Twitter reply reacting to a Polymarket prediction market.\n\n**References:**\n- Polymarket: A popular crypto-based prediction market platform where people bet on real-world events (e.g., elections, news, approvals).\n- Hantavirus: A real but relatively rare rodent-borne virus; there is no widely discussed or advanced vaccine candidate for it in current news.\n\n**The joke:**\nThe top tweet (\"holy crap whoever is playing right now is genuinely so ass\") is expressing shock/disgust that anyone is even participating in (or has created) this particular market. The \"setup\" is the absurdly niche, low-stakes bet (only 11% chance of a hantavirus vaccine being approved this year, with tiny volume), and the punchline is calling the participants terrible (\"so ass\") for wasting time/money on something this random and pointless.\n\n**Visual elements:**\n- The embedded Polymarket post shows the syringe + blurred baby photo (stock vaccine imagery) next to the laughably specific 11% odds and \"Yes/No\" betting buttons.\n- The contrast between the serious medical graphic and the almost comically obscure topic is part of what makes the market look ridiculous.\n\nIn short, it's mocking how hyper-specific and low-effort some Polymarket bets get.",
           "judges": [
             {
@@ -2012,8 +1937,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe meme references the famous 1981 hit pop song **\"867-5309/Jenny\"** by the band Tommy Tutone. The phone number chanted in the chorus of the song is a well-k...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe meme references the famous 1981 hit pop song **\"867-5309/Jenny\"** by the band Tommy Tutone. The phone number chanted in the chorus of the song is a well-known piece o...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe meme references the famous 1981 hit pop song **\"867-5309/Jenny\"** by the band Tommy Tutone. The phone number chanted in the chorus of the song is a well-known piece of American pop culture trivia.\n\n**2. The Visual Element**\nThe joke relies entirely on looking closely at the vehicle's odometer (the milage counter) at the bottom of the image. The mileage reads **867530.9**. If you ignore the decimal point, the digits spell out the famous phone number from the song: **8675309**. \n\n*(Note: Because of the font and slight blur, the '7' initially looks a bit like a '0', but comparing it to the actual '0' later in the sequence reveals it is a 7).*\n\n**3. The Joke**\n*   **The Setup:** The text describes the driver abruptly pulling over on a dangerous freeway and desperately demanding their phone from their wife. \n*   **The Contrast/Absurdity:** The wife logically assumes there must be a serious mechanical emergency to justify stopping on a freeway. However, the punchline is that the driver has risked their safety purely to take a picture of a mildly amusing, fleeting pop-culture coincidence on their dashboard before the car drives another tenth of a mile and ruins the number sequence. The humor comes from the extreme misalignment of priorities.",
           "judges": [
             {
@@ -2036,8 +1960,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is about the number on the odometer: **867530.9**, which visually reads like **867-5309**.\n\nThat’s a reference to the famous 1981 song **“867-5309/Jenny”** by Tommy Tutone. The chorus repeats the phone number:\n\n> “Jenny, I got your num...",
+          "text": "This meme is about the number on the odometer: **867530.9**, which visually reads like **867-5309**.\n\nThat’s a reference to the famous 1981 song **“867-5309/Jenny”** by Tommy Tutone. The chorus repeats the phone number:\n\n> “Jenny, I got your number… 867-530...",
           "fullText": "This meme is about the number on the odometer: **867530.9**, which visually reads like **867-5309**.\n\nThat’s a reference to the famous 1981 song **“867-5309/Jenny”** by Tommy Tutone. The chorus repeats the phone number:\n\n> “Jenny, I got your number… 867-5309”\n\nThe joke is that the driver notices their mileage has reached that iconic number and urgently wants their phone to take a picture before it changes. His wife is alarmed because they’re **on the freeway**, so pulling over just for an odometer photo seems reckless and ridiculous.\n\nImportant visual detail: the speedometer/odometer display is the punchline—the mileage matching the famous “Jenny” phone number is why he’s acting so intense.",
           "judges": [
             {
@@ -2060,32 +1983,30 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "",
-          "fullText": "",
+          "text": "It's a \"car guy stops for the odometer photo\" meme.\n\n**The visual:**\nBottom is a truck speedometer - the orange W is Western Star. The needle is at 0 mph. That means they *did* pull over and stop on the shoulder of the freeway. The digital odometer says **8...",
+          "fullText": "It's a \"car guy stops for the odometer photo\" meme.\n\n**The visual:**\nBottom is a truck speedometer - the orange W is Western Star. The needle is at 0 mph. That means they *did* pull over and stop on the shoulder of the freeway. The digital odometer says **860530.9 Miles** - 860 thousand miles, which is an insane, brag-worthy mileage for a vehicle.\n\nTop is the setup dialogue:\nWife thinks there's an emergency. Husband is urgently demanding his phone for a totally trivial reason.\n\n**The joke mechanism:**\n\nCar / truck culture has a long-running joke of taking a photo the instant your odometer hits something funny or milestone - 69,420, 100,000, 123456, or the classic school-calculator joke where **80085 upside down spells BOOBS**.\n\nIf you flip a seven-segment display upside down:\n0=O, 3=E, 5=S, 6=g, 8=B, 9=G\n\n5309 upside down = GOES, 58008 = BOOBS, etc. People will do stupid things like stop on the freeway to get the picture before the number clicks over by a tenth.\n\nThis odometer is that joke on steroids. Flipped and read right-to-left it reads roughly as `g.OESOgB` - `GOES O gB` - which in meme-logic is a \"lewd\" calculator spelling, and even if you don't decode it, it's just a super high / specific funny number he wants to document. The humor is the contrast / priorities: wife is panicked about safety / legality - \"WE ARE ON THE FREEWAY!\" - and he's yelling like it's life-or-death because car culture tells him he *must* get a picture of this odo reading for the internet.\n\nThe escalation in the text - `Hand me my phone` -> `Hand. Me. My. PHONE!` - sells how disproportionately important this is to him.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "incorrect",
-              "reasoning": "The model did not provide any explanation at all, so it does not identify the key reference to Tommy Tutone’s song \"867-5309/Jenny\" or the mileage joke. Since the ground truth hinges on that specific number reference and the absurd high-mileage absurdity, the response fails to demonstrate understanding."
+              "reasoning": "The ground truth says the meme is specifically about the odometer reading 867,530.9, a nod to Tommy Tutone’s song \"867-5309/Jenny.\" The model instead interprets it as a generic car-guy odometer milestone joke and even misreads the number as 860530.9. It never identifies the Jenny/867-5309 reference, which is the key point of the meme. Therefore it misses the specific joke and is not correct."
             },
             {
               "model": "claude-sonnet-4-6",
               "verdict": "incorrect",
-              "reasoning": "The model provided an empty explanation, so it cannot be evaluated as correct."
+              "reasoning": "The ground truth states the meme jokes about the odometer reading 867,530.9 as a reference to the famous Tommy Tutone song '867-5309/Jenny.' The model reads the odometer as '860530.9' (misreading it) and completely misses the '867-5309/Jenny' reference. Instead, the model goes into an elaborate explanation about calculator spelling, upside-down seven-segment displays, and general car culture odometer milestones. The model never mentions Tommy Tutone, the song '867-5309/Jenny,' or Jenny at all. This is a specific cultural reference that the model entirely missed."
             },
             {
               "model": "z-ai/glm-5.2",
               "verdict": "incorrect",
-              "reasoning": "The model provided no explanation at all. Since it failed to identify the reference to Tommy Tutone's song '867-5309/Jenny' or explain the humor behind the mileage reading, it completely misses the ground truth."
+              "reasoning": "The ground truth identifies the core joke as the mileage reading 867,530.9 being a visual reference to the famous phone number 867-5309 from Tommy Tutone's song '867-5309/Jenny.' The model completely misses this reference. Instead, the model invents an elaborate explanation about flipping seven-segment displays upside down to spell words, which is not the joke the ground truth identifies. The model fails to mention the song, the phone number, or Jenny at all."
             }
           ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme combines a text conversation with a photo of a car's odometer to create a relatable joke about witnessing something rare and wanting to document it.\n\n**The text exchange:**\nThe husband suddenly pulls over on the freeway and urgently, r...",
+          "text": "This meme combines a text conversation with a photo of a car's odometer to create a relatable joke about witnessing something rare and wanting to document it.\n\n**The text exchange:**\nThe husband suddenly pulls over on the freeway and urgently, repeatedly de...",
           "fullText": "This meme combines a text conversation with a photo of a car's odometer to create a relatable joke about witnessing something rare and wanting to document it.\n\n**The text exchange:**\nThe husband suddenly pulls over on the freeway and urgently, repeatedly demands his phone (\"Hand. Me. My. PHONE!\"), suggesting something extremely important or once-in-a-lifetime is happening that he MUST capture.\n\n**The punchline (the image):**\nThe speedometer/odometer reveals the \"emergency\" — the mileage reading shows **860530.9**, but the joke is really about catching the odometer at a special, rare numerical moment. The implication is that the driver was so excited to photograph this odometer milestone (a satisfying or unusual number sequence) that he pulled over on a busy freeway to do it.\n\n**Why it's funny:**\n- It plays on the **anticlimax** — the buildup suggests a genuine emergency, but the \"crisis\" is just wanting a photo of the odometer.\n- It pokes fun at a very **relatable, mildly obsessive behavior**: people genuinely get excited about catching their car's odometer at round numbers, palindromes, or satisfying sequences (like 123456 or 99999→100000).\n- The escalating urgency in the husband's tone contrasted with the trivial reason creates the comedic gap.\n\nIt's part of a broader genre of \"odometer milestone\" memes that celebrate the small, quirky joy of catching a satisfying mileage number.",
           "judges": [
             {
@@ -2108,8 +2029,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme depicts a driver refusing to continue on the freeway until his wife hands him his phone. The bottom image shows why: the odometer reads **860530.9**, a calculator-speak / upside-down number joke meant to evoke “BOOBIES” (a common varian...",
+          "text": "The meme depicts a driver refusing to continue on the freeway until his wife hands him his phone. The bottom image shows why: the odometer reads **860530.9**, a calculator-speak / upside-down number joke meant to evoke “BOOBIES” (a common variant of the cla...",
           "fullText": "The meme depicts a driver refusing to continue on the freeway until his wife hands him his phone. The bottom image shows why: the odometer reads **860530.9**, a calculator-speak / upside-down number joke meant to evoke “BOOBIES” (a common variant of the classic 5318008-style gag).  \n\nHe’s pulling over specifically to photograph or admire the lewd odometer reading, hence the escalating demand for the phone despite being on a highway.\n\nVisuals that complete the joke:\n- Needle pinned at ~0 mph confirms he has already stopped.\n- Dual km/h–MPH dial and VW logo are just flavor; the punchline is the odometer digits.\n\n(The top text sets up the relatable “I need my phone RIGHT NOW” husband vs. alarmed wife dynamic; the image delivers the absurd reason.)",
           "judges": [
             {
@@ -2146,8 +2066,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **Jodie Foster:** The woman in the photograph is the famous American actress Jodie Foster.\n*   **The Assassination Attempt on Ronald Reagan (1981):** The joke...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **Jodie Foster:** The woman in the photograph is the famous American actress Jodie Foster.\n*   **The Assassination Attempt on Ronald Reagan (1981):** The joke references J...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**References:**\n*   **Jodie Foster:** The woman in the photograph is the famous American actress Jodie Foster.\n*   **The Assassination Attempt on Ronald Reagan (1981):** The joke references John Hinckley Jr., who attempted to assassinate U.S. President Ronald Reagan in 1981. Hinckley's stated motive was that he was obsessed with Jodie Foster (after seeing her in the film *Taxi Driver*) and wanted to commit a historic act to impress her and win her affection. \n\n**The Joke:**\n*   **The Mechanism:** This is an example of dark historical humor and implication. \n*   **The Setup:** The poster shares a mundane paparazzi photo of an older Jodie Foster looking somewhat tired or sad while walking with a cane, suggesting she needs cheering up.\n*   **The Implication:** By suggesting \"somebody should do something impressive to cheer her up,\" the poster is playfully (and darkly) hinting that someone should attempt to assassinate a president again, referencing the extreme lengths Hinckley went to in order to \"impress\" her in the past. \n\n**Visual Elements:**\n*   The actual visual is just a recent, candid photo of Jodie Foster going about her day. Her slightly weary expression and use of a cane are used by the poster as the fictional excuse (she looks sad) to trigger the dark historical reference in the caption. The melting face emoji (🫠) at the end signals that the poster knows they are making a morbid or inappropriate joke.",
           "judges": [
             {
@@ -2170,8 +2089,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a dark historical/pop-culture joke about **Jodie Foster** and **John Hinckley Jr.**\n\n- The photo shows actress **Jodie Foster** walking with a cane, looking a bit down or vulnerable.\n- The caption says: “Somebody should do something...",
+          "text": "This meme is a dark historical/pop-culture joke about **Jodie Foster** and **John Hinckley Jr.**\n\n- The photo shows actress **Jodie Foster** walking with a cane, looking a bit down or vulnerable.\n- The caption says: “Somebody should do something impressive...",
           "fullText": "This meme is a dark historical/pop-culture joke about **Jodie Foster** and **John Hinckley Jr.**\n\n- The photo shows actress **Jodie Foster** walking with a cane, looking a bit down or vulnerable.\n- The caption says: “Somebody should do something impressive to cheer her up.”\n\nThe joke is that in 1981, **John Hinckley Jr. attempted to assassinate President Ronald Reagan** partly because he was obsessively fixated on Jodie Foster and believed doing something dramatic would get her attention or “impress” her. His obsession was connected to Foster’s role in *Taxi Driver*.\n\nSo the meme is not literally asking someone to cheer her up—it’s making a very dark, ironic reference to Hinckley’s attempted assassination. The humor comes from the innocent-sounding phrase “do something impressive” being understood by people familiar with the history as an alarming allusion to that event.\n\nThe important visual element is simply Jodie Foster with a cane, framed as “sad,” which sets up the caption’s fake concern.",
           "judges": [
             {
@@ -2194,8 +2112,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a dark history joke about Jodie Foster and the 1981 assassination attempt on Ronald Reagan.\n\n**1. The reference:**\n\n* The woman in the photo is actress Jodie Foster. In 1976, at age 14, she starred in *Taxi Driver*.\n* John Hinckley Jr. b...",
+          "text": "This is a dark history joke about Jodie Foster and the 1981 assassination attempt on Ronald Reagan.\n\n**1. The reference:**\n\n* The woman in the photo is actress Jodie Foster. In 1976, at age 14, she starred in *Taxi Driver*.\n* John Hinckley Jr. became obsess...",
           "fullText": "This is a dark history joke about Jodie Foster and the 1981 assassination attempt on Ronald Reagan.\n\n**1. The reference:**\n\n* The woman in the photo is actress Jodie Foster. In 1976, at age 14, she starred in *Taxi Driver*.\n* John Hinckley Jr. became obsessed with Foster after seeing that film. On March 30, 1981, he tried to assassinate President Ronald Reagan, shooting Reagan and three other people. He later said he did it to impress Foster and get her attention. Reagan survived.\n\nIt's a famous piece of true crime / American political trivia.\n\n**2. What the joke is:**\n\nThe post says: \"Jodie is looking so sad with her cane. Somebody should do something impressive to cheer her up 🥲\"\n\nThe setup sounds like innocent sympathy for an older woman walking with a cane and shopping bags.\n\nThe punchline is only funny if you know the Hinckley story. The last person who tried to do \"something impressive\" to cheer up / impress Jodie Foster was Hinckley attempting to assassinate the President of the United States.\n\nSo \"do something impressive\" is a massive understatement / euphemism for a presidential assassination attempt. The humor comes from the contrast between the wholesome, concerned tone of the caption and the extreme, violent, criminal historical event it's actually referencing. It's shock-value, edgelord dark humor.\n\n**3. Visual elements that matter:**\n\n* It's Jodie Foster herself, now in her 60s, walking with a cane, looking a bit tired/grumpy. That makes her look vulnerable and sympathetic, which sets up the caption.\n* The fact that so much time has passed - she's older with a cane vs. the young actress from 1981 - makes the throwback to 1981 even more jarring.\n* The format is a screenshot of a social media story/post from the account `blankxxpage`, which posts that kind of morbid, ironic humor as if it were a genuine concerned thought.",
           "judges": [
             {
@@ -2218,8 +2135,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a dark humor meme that references a real and disturbing historical event.\n\n**The reference:** The photo shows actress **Jodie Foster** walking with a cane while carrying groceries (a candid paparazzi-style shot). The caption jokingly sug...",
+          "text": "This is a dark humor meme that references a real and disturbing historical event.\n\n**The reference:** The photo shows actress **Jodie Foster** walking with a cane while carrying groceries (a candid paparazzi-style shot). The caption jokingly suggests someon...",
           "fullText": "This is a dark humor meme that references a real and disturbing historical event.\n\n**The reference:** The photo shows actress **Jodie Foster** walking with a cane while carrying groceries (a candid paparazzi-style shot). The caption jokingly suggests someone should \"do something impressive to cheer her up.\"\n\n**The joke:** This is a reference to **John Hinckley Jr.**, who attempted to assassinate President Ronald Reagan in 1981. Hinckley was obsessed with Jodie Foster (specifically her role in the film *Taxi Driver*) and carried out the assassination attempt in a deluded effort to \"impress\" her and gain her attention.\n\nSo the line \"somebody should do something impressive to cheer her up\" is a deeply morbid allusion to that event—implying that the way to impress Jodie Foster, historically, was through an act of political violence. It's an extremely dark inside-joke that relies on the viewer knowing about the Hinckley-Foster connection.\n\n**Why it works as a meme:** The contrast between the gentle, sympathetic-sounding caption (with the crying emoji) and the horrifying real-world implication is what creates the shock/dark comedy. The mundane image of Foster simply going about her day adds to the deadpan irony.\n\nThis is \"edgy\" or gallows humor that some find funny and others find tasteless, given it trivializes an assassination attempt.",
           "judges": [
             {
@@ -2242,8 +2158,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a screenshot of a shitpost-style social media caption overlaid on a paparazzi photo of actress Jodie Foster walking with a cane (she was photographed with one in 2023–2024, apparently due to an injury or mobility issue).\n\n**Reference...",
+          "text": "The meme is a screenshot of a shitpost-style social media caption overlaid on a paparazzi photo of actress Jodie Foster walking with a cane (she was photographed with one in 2023–2024, apparently due to an injury or mobility issue).\n\n**References**: \n- Jodi...",
           "fullText": "The meme is a screenshot of a shitpost-style social media caption overlaid on a paparazzi photo of actress Jodie Foster walking with a cane (she was photographed with one in 2023–2024, apparently due to an injury or mobility issue).\n\n**References**: \n- Jodie Foster (the Oscar-winning actress from *The Silence of the Lambs*, *Contact*, *Taxi Driver*, etc.).\n- Typical celebrity “concern trolling” / thirst-trap posting style common on meme accounts.\n\n**Joke mechanism**: Straightforward absurdity + fake sincerity. The caption pretends to be emotionally devastated by the sight of Foster looking tired or downbeat (“so sad with her cane”), then pivots to the random, over-the-top suggestion that a random person should “do something impressive” to cheer her up. The crying emoji sells the mock pity. The humor is in the disproportionate, slightly thirsty reaction to a mundane photo of a celebrity.\n\n**Visuals that matter**: Foster’s neutral/slightly weary expression + the cane are deliberately read as “sad,” while the grocery tote and everyday clothes contrast with the dramatic caption.\n\nIt’s low-effort meme-page humor relying on exaggerated fake empathy.",
           "judges": [
             {
@@ -2280,8 +2195,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a multi-layered visual puzzle that combines three different pop culture and internet references to deliver its punchline. \n\nHere is the breakdown of how it works:\n\n**1. The References:**\n*   **The \"Roses are Red\" meme format:** A po...",
+          "text": "This meme is a multi-layered visual puzzle that combines three different pop culture and internet references to deliver its punchline. \n\nHere is the breakdown of how it works:\n\n**1. The References:**\n*   **The \"Roses are Red\" meme format:** A popular intern...",
           "fullText": "This meme is a multi-layered visual puzzle that combines three different pop culture and internet references to deliver its punchline. \n\nHere is the breakdown of how it works:\n\n**1. The References:**\n*   **The \"Roses are Red\" meme format:** A popular internet joke format where a user starts the classic poem but replaces the final line with an image that implies a rhyming phrase.\n*   **The \"It's Gonna Be May\" meme:** Every year at the end of April, internet users post memes of Justin Timberlake from the *NSYNC music video for \"It's Gonna Be Me.\" Because of his vocal styling in the song, he pronounces the word \"me\" so it sounds exactly like \"May.\"\n*   **Justin Timberlake's 1990s hair:** During the peak of *NSYNC's popularity, Justin Timberlake had tightly curled, heavily bleached blonde hair that became a long-running internet joke because it looked exactly like a block of uncooked instant ramen noodles.\n\n**2. The Joke (The Setup and Implication):**\nThe joke relies on the viewer completing the rhyme scheme (AABB or ABCB) in their head. \n*   **Setup:** \"Roses are red / April is grey / but in a few weeks...\"\n*   **Mechanism:** The viewer knows the missing final line must rhyme with \"grey,\" but they are looking at a picture of noodles. \n*   **The Implication:** The viewer must connect the noodles to Justin Timberlake, and then connect Justin Timberlake to the month of May. \n\nTherefore, the implied punchline that fits the rhyme and the image is: **\"...It's gonna be May.\"**\n\n**3. The Visual Elements:**\nThe block of dry, wavy instant ramen noodles is the crux of the joke. Without the prior internet-culture knowledge that \"Ramen Noodles = Justin Timberlake,\" the implied punchline is impossible to guess.",
           "judges": [
             {
@@ -2304,8 +2218,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a riff on the classic **“It’s gonna be May”** meme.\n\n- The text is a “roses are red” poem setup:  \n  **“roses are red / april is grey / but in a few weeks…”**\n- The expected punchline is: **“it’s gonna be May.”**\n- That references the *N...",
+          "text": "This is a riff on the classic **“It’s gonna be May”** meme.\n\n- The text is a “roses are red” poem setup:  \n  **“roses are red / april is grey / but in a few weeks…”**\n- The expected punchline is: **“it’s gonna be May.”**\n- That references the *NSYNC song **...",
           "fullText": "This is a riff on the classic **“It’s gonna be May”** meme.\n\n- The text is a “roses are red” poem setup:  \n  **“roses are red / april is grey / but in a few weeks…”**\n- The expected punchline is: **“it’s gonna be May.”**\n- That references the *NSYNC song **“It’s Gonna Be Me,”** where Justin Timberlake famously pronounces “me” like **“May.”** Every late April, people post memes about it becoming May.\n\nThe visual joke is the block of dry ramen noodles. In the late ’90s/early 2000s, Justin Timberlake had blond curly hair that people often compare to **ramen noodles**. So instead of showing Justin Timberlake or writing “May,” the meme shows ramen as a visual stand-in for him and the *NSYNC meme.\n\nSo the joke is basically: “In a few weeks, it’s gonna be May,” but represented through Justin Timberlake’s infamous “ramen hair.”",
           "judges": [
             {
@@ -2328,32 +2241,30 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "",
-          "fullText": "",
+          "text": "This is a subverted / anti-joke version of the classic \"Roses are red, violets are blue\" poem meme.\n\n**The reference:**\nThe format sets up a rhyming love poem: \"Roses are red / Violets are blue / etc.\" Here it's \"roses are red / april is grey / but in a few...",
+          "fullText": "This is a subverted / anti-joke version of the classic \"Roses are red, violets are blue\" poem meme.\n\n**The reference:**\nThe format sets up a rhyming love poem: \"Roses are red / Violets are blue / etc.\" Here it's \"roses are red / april is grey / but in a few weeks...\" - you expect a rhyme and a sweet / clever punchline. April being grey is a reference to late-winter / spring gloom, and for students it's often finals season.\n\n**The joke / mechanism:**\nThe punchline never comes. Instead it's replaced by a block of uncooked instant ramen, and the humor is mostly visual and anti-climactic.\n\nIt's built as a color-matching gag:\n\n1.  `roses are red` - written in black, but on a solid red/pink background. The background is red.\n2.  `april is grey` - written in a washed-out greyish blue/purple. The text color IS grey.\n3.  `but in a few weeks` - written in a yellowy-orange, the exact same yellow as the block of ramen noodles sitting next to it.\n\nSo the third line's color matches the ramen. The expectation of a rhyme is broken for a literal visual association: grey time + yellow text = yellow ramen.\n\nThe secondary implication, very common on student / depression meme pages, is: April is miserable now and I'm broke / stressed / studying, so in a few weeks I'll be living off cheap instant ramen. Or simply that the poem is left absurdly unfinished, which is the shitpost humor itself.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "incorrect",
-              "reasoning": "The model did not provide any explanation at all, so it cannot be assessed as correctly identifying the meme. The ground truth specifically refers to the recurring 'It's gonna be May' joke tied to Justin Timberlake and *NSYNC's 'It's Gonna Be Me,' plus the pronunciation pun and the late-April/May repost tradition. None of that is present in the model response."
+              "reasoning": "The model does not identify the actual meme reference. The ground truth is about the recurring 'It's gonna be May' joke tied to Justin Timberlake and *NSYNC's song 'It's Gonna Be Me,' where 'me' sounds like 'May,' often paired with ramen/noodle hair jokes. The model instead explains it as a 'Roses are red' anti-joke with April/finals/ramen visual color matching, which is a completely different meme and misses the specific Timberlake/NSYNC 'It's gonna be May' setup entirely."
             },
             {
               "model": "claude-sonnet-4-6",
               "verdict": "incorrect",
-              "reasoning": "The model provided no explanation at all - the response is empty. Therefore, it cannot be evaluated as correct since it fails to identify any aspect of the meme."
+              "reasoning": "The ground truth explains the meme is the classic 'It's gonna be May' joke referencing Justin Timberlake and *NSYNC's song 'It's Gonna Be Me,' where 'me' sounds like 'May,' and is traditionally reposted in late April with ramen/noodle hair jokes about Timberlake's hairstyle. The model completely misses this reference and instead interprets it as a 'Roses are red, violets are blue' anti-joke meme about depression and ramen as cheap student food. The model fails to identify Justin Timberlake, *NSYNC, the song 'It's Gonna Be Me,' or the 'It's gonna be May' punchline. The core joke mechanism is entirely missed."
             },
             {
               "model": "z-ai/glm-5.2",
               "verdict": "incorrect",
-              "reasoning": "The model did not provide an explanation, so it cannot be considered to have correctly identified the joke, the specific reference to Justin Timberlake and *NSYNC's song 'It's Gonna Be Me,' the pronunciation of 'me' as 'May,' or the late April timing of the meme."
+              "reasoning": "The ground truth identifies the meme as the 'It's gonna be May' joke based on Justin Timberlake and *NSYNC's song 'It's Gonna Be Me,' where 'me' sounds like 'May,' reposted every late April. The model's explanation completely misses this reference, instead describing a 'Roses are red' poem with ramen noodles and color-matching gags. The model fails to mention Justin Timberlake, *NSYNC, the song, or the pronunciation joke entirely. This is a clear miss of the specific reference and core joke."
             }
           ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**Format:** This is a \"Roses are red\" poem meme. These memes set up the classic poem structure (\"Roses are red, violets are blue...\") but subvert it with an unexpected or absurd punchline, often using an image as part of the joke.\n\n**The text:**...",
+          "text": "**Format:** This is a \"Roses are red\" poem meme. These memes set up the classic poem structure (\"Roses are red, violets are blue...\") but subvert it with an unexpected or absurd punchline, often using an image as part of the joke.\n\n**The text:** \n- \"roses a...",
           "fullText": "**Format:** This is a \"Roses are red\" poem meme. These memes set up the classic poem structure (\"Roses are red, violets are blue...\") but subvert it with an unexpected or absurd punchline, often using an image as part of the joke.\n\n**The text:** \n- \"roses are red\"\n- \"april is grey\"\n- \"but in a few weeks...\"\n\nThe poem is left incomplete, with the next line/punchline being represented by the **image itself**.\n\n**The image:** A block of dried instant ramen noodles, which are wavy, crinkly, and yellowish—strongly resembling a head of curly, frizzy hair.\n\n**The joke:** The humor comes from the visual pun. The dried ramen looks like messy, curly hair. The implication of \"but in a few weeks\" combined with this image suggests something like:\n- A bad/frizzy haircut or hairstyle you'll end up with\n- Or humidity/summer weather making someone's hair look like a block of ramen\n\nThe comedy relies on you \"reading\" the noodle block as the final line of the poem, recognizing the resemblance to unruly hair. It's a low-effort, absurdist visual gag typical of this meme genre—deliberately random and a bit nonsensical, which is part of the charm.",
           "judges": [
             {
@@ -2376,8 +2287,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a subversion of two things: the classic \"Roses are red, violets are blue...\" poem template, and the proverb \"April showers bring May flowers.\"\n\n- Setup: \"Roses are red, April is grey\" evokes rainy/spring gloom and sets up the expecta...",
+          "text": "The meme is a subversion of two things: the classic \"Roses are red, violets are blue...\" poem template, and the proverb \"April showers bring May flowers.\"\n\n- Setup: \"Roses are red, April is grey\" evokes rainy/spring gloom and sets up the expectation that fl...",
           "fullText": "The meme is a subversion of two things: the classic \"Roses are red, violets are blue...\" poem template, and the proverb \"April showers bring May flowers.\"\n\n- Setup: \"Roses are red, April is grey\" evokes rainy/spring gloom and sets up the expectation that flowers (or romance) will arrive.\n- Punchline: \"but in a few weeks\" leads the viewer to expect blooming flowers, but the image instead shows a dry block of instant ramen. This is an absurd/non sequitur payoff — replacing expected flowers with cheap noodles for a deadpan, anti-climactic joke (often implying poverty, single life, or just surreal randomness).\n- Visual element: The pale yellow ramen brick is the entire \"reveal,\" placed where flowers or a romantic image would normally appear.\n\nIt's a low-effort shitpost style meme relying on broken expectations and the visual pun of the noodle block.",
           "judges": [
             {
@@ -2414,8 +2324,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is a visual pun based on the well-known proverb, \"Beauty is in the eye of the beholder.\"\n\nHere is a breakdown of how the joke works:\n\n*   **The References:** The image features characters from the 2007 animated film *Bee Movie*. The hu...",
+          "text": "This meme is a visual pun based on the well-known proverb, \"Beauty is in the eye of the beholder.\"\n\nHere is a breakdown of how the joke works:\n\n*   **The References:** The image features characters from the 2007 animated film *Bee Movie*. The human characte...",
           "fullText": "This meme is a visual pun based on the well-known proverb, \"Beauty is in the eye of the beholder.\"\n\nHere is a breakdown of how the joke works:\n\n*   **The References:** The image features characters from the 2007 animated film *Bee Movie*. The human character is Vanessa, and the tiny character resting on her hand is Barry B. Benson, a bee.\n*   **The Visual Elements:** There are two crucial details to notice. First, if you look closely at Vanessa's right eye, the word **\"BEAUTY\"** has been edited into her pupil. Second, her outstretched hand is physically holding the bee. \n*   **The Joke (Wordplay):** Because Vanessa is holding a bee, she is literally a \"bee-holder.\" Since the word \"beauty\" is inside her eye, the image is a literal, visual representation of the phrase: **\"Beauty is in the eye of the bee-holder.\"**\n\nThe caption (\"been angry over this joke for 8 hours now\") is a common internet reaction to clever but deeply silly dad jokes or puns. It expresses mock frustration at how ridiculous the joke is, or perhaps frustration at how long it took the viewer to notice the details and figure it out.",
           "judges": [
             {
@@ -2438,8 +2347,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a visual pun based on the phrase:\n\n**“Beauty is in the eye of the beholder.”**\n\nThe image is from **_Bee Movie_**, showing Vanessa holding Barry the bee in her hand. The joke is that she is literally a **“bee-holder”** — someone holding...",
+          "text": "This is a visual pun based on the phrase:\n\n**“Beauty is in the eye of the beholder.”**\n\nThe image is from **_Bee Movie_**, showing Vanessa holding Barry the bee in her hand. The joke is that she is literally a **“bee-holder”** — someone holding a bee — and...",
           "fullText": "This is a visual pun based on the phrase:\n\n**“Beauty is in the eye of the beholder.”**\n\nThe image is from **_Bee Movie_**, showing Vanessa holding Barry the bee in her hand. The joke is that she is literally a **“bee-holder”** — someone holding a bee — and there’s also a bee/“buzz” detail edited into her eye.\n\nSo the meme becomes:\n\n**“Beauty is in the eye of the bee-holder.”**\n\nIt’s funny/annoying because it’s a deliberately dumb dad-joke pun: the setup is just a normal-looking _Bee Movie_ still, but once you notice the bee in the eye and the fact that she’s holding a bee, the phrase clicks. The caption “been angry over this joke for 8 hours now” is saying the joke is so stupid that it’s infuriating, but also memorable.",
           "judges": [
             {
@@ -2462,32 +2370,30 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "",
-          "fullText": "",
+          "text": "This is a meta-meme about a bad bee pun.\n\n**The reference:**\nThe image is from DreamWorks' *Bee Movie - 2007*. That's Vanessa Bloome holding Barry B. Benson in her hand and looking at him lovingly. The whole plot of a human woman falling in love with a bee...",
+          "fullText": "This is a meta-meme about a bad bee pun.\n\n**The reference:**\nThe image is from DreamWorks' *Bee Movie - 2007*. That's Vanessa Bloome holding Barry B. Benson in her hand and looking at him lovingly. The whole plot of a human woman falling in love with a bee became a huge ironic meme, along with Barry's line \"Ya like jazz?\" The movie is also the source of endless groan-worthy bee puns online.\n\n**The joke: **\nThe caption \"been angry over this joke for 8 hours now\" IS the joke, or is commenting on a joke. \n\nIt's a format on TikTok / Twitter where someone tells a pun so bad you can't stop being mad about it. And \"been\" is pronounced \"bee-n\" - it's a bee pun itself.\n\nThe post implies the author heard a terrible bee dad-joke - like:\n\n> What do you call a bee from America? A USB - as in U.S. Bee\n\nYou can see the Empire State Building in New York in the background, so it's a bee in the US. Or any other terrible \"bees knees / to-bee-or-not-to-be / a-bee-n angry\" pun - and has been furious about how dumb / clever it is for 8 hours straight.\n\n**Visuals:**\nVanessa staring lovingly at a tiny bee is the perfect reaction image for being obsessed with a bee joke. The low-res eye edit where you can see text reflected in her iris - it looks like it says BEA... / BEES - is a common shitpost addition, basically \"she's got bees in her eyes\" / she is so in love with the bee that she sees bees everywhere.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "incorrect",
-              "reasoning": "The model did not provide any explanation at all, so it does not identify the pun on “beauty is in the eye of the beholder” being rewritten as “bee-holder” / “bee holder.” It therefore misses the specific wordplay and reference described in the ground truth."
+              "reasoning": "The ground truth says the meme is specifically a pun on the idiom “beauty is in the eye of the beholder,” rewritten as “beauty is in the eye of the bee-holder.” The model does identify that it’s a bee pun and mentions Bee Movie, but it does not identify the actual idiom being twisted or the exact “beholder” -> “bee holder” wordplay as the core joke. Instead, it invents a different explanation about a bad bee pun, a caption about being angry for 8 hours, and various unrelated details. Since the benchmark requires the specific reference and mechanism from the ground truth, this misses the actual joke."
             },
             {
               "model": "claude-sonnet-4-6",
               "verdict": "incorrect",
-              "reasoning": "The model provided an empty explanation, so it cannot be evaluated as correct."
+              "reasoning": "The ground truth says the meme is a pun on 'beauty is in the eye of the beholder,' rewritten as 'beauty is in the eye of the bee-holder' / 'bee holder.' The model completely misses this specific pun. Instead, the model gives a lengthy but entirely wrong interpretation about someone being 'angry over a bee joke for 8 hours,' USB bee puns, TikTok formats, and text reflected in the eye. The model does correctly identify the Bee Movie reference and Vanessa holding Barry, but fails to identify the core joke, which is the 'beholder'/'bee-holder' wordplay on the idiom 'beauty is in the eye of the beholder.'"
             },
             {
               "model": "z-ai/glm-5.2",
               "verdict": "incorrect",
-              "reasoning": "The model's explanation is empty, so it fails to identify the pun on 'beauty is in the eye of the beholder' or the 'bee holder' wordplay mentioned in the ground truth."
+              "reasoning": "The ground truth identifies the core joke as a specific pun: 'beauty is in the eye of the bee-holder' (a play on 'beholder'). The model's explanation completely misses this specific pun. Instead, the model speculates that the joke is about the caption 'been angry' (pronounced 'bee-n') or other generic bee puns like 'USB'. Because the model fails to identify the specific wordplay and idiom mentioned in the ground truth, it does not correctly understand the meme."
             }
           ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is based on a still from **Bee Movie** (2007), specifically the scene where the human character Vanessa is holding Barry B. Benson (the tiny bee protagonist) in her hand.\n\n**The joke/format:**\nThe humor comes from a small detail embedd...",
+          "text": "This meme is based on a still from **Bee Movie** (2007), specifically the scene where the human character Vanessa is holding Barry B. Benson (the tiny bee protagonist) in her hand.\n\n**The joke/format:**\nThe humor comes from a small detail embedded in the wo...",
           "fullText": "This meme is based on a still from **Bee Movie** (2007), specifically the scene where the human character Vanessa is holding Barry B. Benson (the tiny bee protagonist) in her hand.\n\n**The joke/format:**\nThe humor comes from a small detail embedded in the woman's eye. There's a tiny bit of text written in her iris (it appears to read \"READER\" or a similar word in a small graphic, often resembling a \"bait\" insult). The setup is that the image looks normal at first glance, but contains a hidden message you only notice if you look very closely.\n\n**Why it's funny:**\nThe caption \"been angry over this joke for 8 hours now\" plays on the experience of someone who *finally* noticed the hidden text and is now irrationally annoyed by it—either because it took them so long to spot it, or because the hidden message is a mild insult aimed directly at the viewer (\"reader\"). It's a self-aware bit of humor about being baited into squinting at a meme only to be mildly mocked.\n\nThis belongs to a genre of \"look closely\" bait memes where the payoff is a small, often anticlimactic or teasing detail, and the joke is your reaction to having been tricked into hunting for it.",
           "judges": [
             {
@@ -2510,8 +2416,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme uses a still from *Bee Movie* (Vanessa holding a tiny Barry B. Benson). \n\nThe overlaid caption (“been angry over this joke for 8 hours now”) + the minuscule figure literally labeled “A joke” create the gag: the “joke” is comically small...",
+          "text": "The meme uses a still from *Bee Movie* (Vanessa holding a tiny Barry B. Benson). \n\nThe overlaid caption (“been angry over this joke for 8 hours now”) + the minuscule figure literally labeled “A joke” create the gag: the “joke” is comically small and trivial...",
           "fullText": "The meme uses a still from *Bee Movie* (Vanessa holding a tiny Barry B. Benson). \n\nThe overlaid caption (“been angry over this joke for 8 hours now”) + the minuscule figure literally labeled “A joke” create the gag: the “joke” is comically small and trivial, yet the poster claims to have been genuinely mad about it for hours. The visual contrast between the enormous, calm woman and the tiny bee is what sells the irony.\n\n(Note the deliberate “been”/“bee-n” echo, though the main humor is the scale.)",
           "judges": [
             {
@@ -2547,8 +2452,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** This utilizes the \"Girls vs. Boys\" (or \"Women vs. Men\") format, heavily relying on \"Wojak\" and \"Chad\" internet character archetypes to exaggerate...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** This utilizes the \"Girls vs. Boys\" (or \"Women vs. Men\") format, heavily relying on \"Wojak\" and \"Chad\" internet character archetypes to exaggerate perceived d...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Format:** This utilizes the \"Girls vs. Boys\" (or \"Women vs. Men\") format, heavily relying on \"Wojak\" and \"Chad\" internet character archetypes to exaggerate perceived differences between genders.\n*   **Cultural/Internet:** \n    *   The top panel features modern internet archetypes: a standard \"Doomer Girl\" on the left and an \"Emily/Alt-girl\" character on the right holding a can of Yerba Mate (a common visual shorthand for a specific internet subculture). The phrase \"Forget her queen\" is modern internet slang.\n    *   The bottom panel features historical \"Chad\" archetypes. \n*   **Historical:** The bottom panel specifically references the **Anglo-Portuguese Alliance**. Ratified by the Treaty of Windsor in **1386**, it is the oldest diplomatic alliance in the world that is still in force. The \"Great War\" refers to World War I. Portugal eventually entered WWI on the side of the Allies (including Britain), largely honoring this centuries-old alliance.\n\n**2. The Joke**\n*   **The Contrast & Exaggeration:** The joke relies on a massive, absurd contrast in scale and stakes. It contrasts a modern internet stereotype about female friendships with the geopolitical history of male-dominated nations, presenting the latter as if it were just two bros hanging out.\n*   **The Setup (Top):** It portrays female friendships as fragile and demanding constant maintenance. A mere one-month lapse in texting is enough for a friend to advise cutting ties entirely (\"Forget her queen\").\n*   **The Punchline (Bottom):** It portrays male friendships as stoic, inherently loyal, and capable of enduring literal centuries without \"checking in.\" The British soldier calls upon a 528-year-old promise to ask for help in a massive global conflict (WWI), and the Portuguese ally simply accepts without hesitation (\"I got you\"). \n\n**3. Visual Elements**\n*   The clothing is vital to the joke. The women are dressed in modern, casual alternative fashion, grounding their interaction in a mundane, everyday scenario. \n*   The men are dressed in anachronistic military attire to signify the historical weight of the joke. The character on the left wears a Brodie helmet (worn by British soldiers in WWI), while the character on the right is drawn to look like a Portuguese nobleman or explorer from the 14th/15th century. \n*   The stoic, unchanging facial expressions of the \"Chad\" characters on the bottom are a staple of this format, meant to convey an unquestioning, drama-free sense of duty.",
           "judges": [
             {
@@ -2571,8 +2475,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme contrasts stereotypical “girl friendship” vs “boy friendship” in an exaggerated way.\n\n- **Top panel (“Girl friendship”)**: One woman says “Jessica hasn’t texted me for a month,” and the friend replies “Forget her queen.” The joke is ba...",
+          "text": "This meme contrasts stereotypical “girl friendship” vs “boy friendship” in an exaggerated way.\n\n- **Top panel (“Girl friendship”)**: One woman says “Jessica hasn’t texted me for a month,” and the friend replies “Forget her queen.” The joke is based on a ste...",
           "fullText": "This meme contrasts stereotypical “girl friendship” vs “boy friendship” in an exaggerated way.\n\n- **Top panel (“Girl friendship”)**: One woman says “Jessica hasn’t texted me for a month,” and the friend replies “Forget her queen.” The joke is based on a stereotype that female friendships can involve emotional check-ins, texting frequency, and social drama.\n\n- **Bottom panel (“Boy friendship”)**: Two medieval-looking men talk like rulers or military allies. One says, “We had an alliance in 1386. I expect you to join the Great War,” and the other says, “I got you.” This exaggerates male friendship as absurdly loyal and obligation-based, even centuries later.\n\n- **Historical reference**: This likely alludes to the **Anglo-Portuguese Alliance**, especially the **Treaty of Windsor in 1386** between England and Portugal. It’s often cited as one of the oldest still-existing alliances. Portugal did fight on the Allied side in **World War I**, also called **the Great War**.\n\n- **Why it’s funny**: The humor comes from the huge contrast: in the top, a friendship is threatened by one month of no texting; in the bottom, a friendship/alliance from the 1300s is still being honored in a massive 20th-century war. It treats male friendship like ancient military loyalty.\n\n- **Visual elements**: The women are drawn in modern “Wojak”-style internet characters, while the men are drawn as medieval soldiers/rulers, reinforcing the historical alliance joke.",
           "judges": [
             {
@@ -2595,14 +2498,13 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a \"girl friendship vs. boy friendship\" meme contrasting stereotypes about female friendships being fragile and male friendships being loyal to a fault.\n\n**The setup:**\n\n**Top panel - Girl Friendship:**\nTwo girls in the modern Doomer Girl...",
+          "text": "This is a \"girl friendship vs. boy friendship\" meme contrasting stereotypes about female friendships being fragile and male friendships being loyal to a fault.\n\n**The setup:**\n\n**Top panel - Girl Friendship:**\nTwo girls in the modern Doomer Girl / Wojak art...",
           "fullText": "This is a \"girl friendship vs. boy friendship\" meme contrasting stereotypes about female friendships being fragile and male friendships being loyal to a fault.\n\n**The setup:**\n\n**Top panel - Girl Friendship:**\nTwo girls in the modern Doomer Girl / Wojak art style are talking. One says \"Jessica hasn't texted me for a month\" and the other says \"Forget her queen.\"\n\nThe joke is the stereotype that girl friendships end quickly over minor slights, with performative support - \"forget her queen\" - that actually encourages cutting people off.\n\nVisual details: Both are drawn as trendy alt-girls with chokers, and the girl on the right is holding a can of Guayaki Yerba Mate - a drink that became a visual shorthand for that aesthetic online.\n\n**Bottom panel - Boy Friendship:**\nA British soldier from WWI and a medieval Portuguese King / nobleman are talking. \nThe Brit says: \"We had an alliance in 1386. I expect you to join the Great War\"\nThe Portuguese says: \"I got you\"\n\nThis is a historical reference. In 1386 England and Portugal signed the Treaty of Windsor, creating the Anglo-Portuguese Alliance - the oldest diplomatic alliance in the world still technically in force.\n\nWhen the \"Great War\" - World War I - broke out 530 years later, Britain invoked that alliance and Portugal did join the war on Britain's side in 1916.\n\nThe joke is the opposite stereotype: that boy friendships / male loyalty is so ride-or-die that a man will show up for war because of a 600-year-old agreement, even if they haven't spoken in centuries.\n\nThe contrast is the punchline: girls drop a month-long friendship over not texting, while guys treat a 500+ year gap as no big deal and still honor the alliance.",
           "judges": [
             {
               "model": "gpt-5.4-mini",
               "verdict": "correct",
-              "reasoning": "The model correctly identifies the core 'girls vs boys' structure and the contrast between a friendship ending after a month of silence versus an absurdly durable male alliance. It also names the key historical reference: England and Portugal, the Treaty of Windsor / Anglo-Portuguese Alliance from 1386, and explains that the joke is the longevity of that relationship compared with the fragile girl-friendship stereotype. Although the model adds extra details about WWI and specific visual elements not mentioned in the ground truth, it still captures the same specific reference and the same ironic setup. "
+              "reasoning": "The model correctly identifies the core 'girls vs boys' structure and the contrast between a friendship ending after a month of silence versus an absurdly durable male alliance. It also names the key historical reference: England and Portugal, the Treaty of Windsor / Anglo-Portuguese Alliance from 1386, and explains that the joke is the longevity of that relationship compared with the fragile girl-friendship stereotype. Although the model adds extra details about WWI and specific visual elements not mentioned in the ground truth, it still captures the same specific reference and the same ironic setup."
             },
             {
               "model": "claude-sonnet-4-6",
@@ -2619,8 +2521,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "# Meme Explanation\n\nThis is a **\"Girl friendship vs. Boy friendship\"** comparison meme that humorously contrasts how the two genders are stereotyped to approach friendship and loyalty.\n\n## The References & Visual Elements\n\n**Top panel (Girl frie...",
+          "text": "# Meme Explanation\n\nThis is a **\"Girl friendship vs. Boy friendship\"** comparison meme that humorously contrasts how the two genders are stereotyped to approach friendship and loyalty.\n\n## The References & Visual Elements\n\n**Top panel (Girl friendship):**\n-...",
           "fullText": "# Meme Explanation\n\nThis is a **\"Girl friendship vs. Boy friendship\"** comparison meme that humorously contrasts how the two genders are stereotyped to approach friendship and loyalty.\n\n## The References & Visual Elements\n\n**Top panel (Girl friendship):**\n- Two women drawn in a slightly stereotypical \"alternative/progressive\" art style (one goth-styled, one with the classic short-haired bob and round glasses)\n- The Yerba Mate can is a recurring visual joke associated with a certain \"progressive/Gen Z\" aesthetic\n- The conversation: One complains that \"Jessica hasn't texted me for a month,\" and the friend immediately responds \"Forget her queen\" — mocking the stereotype that women supposedly abandon friendships quickly over minor slights\n\n**Bottom panel (Boy friendship):**\n- Two men drawn in the **\"Yes Chad\"/Nordic Chad** art style, but dressed in historical/medieval military attire (one in WWI-style British Brodie helmet, one in Ottoman or Balkan-style headwear with feather)\n- The conversation references an **alliance from 1386** and joining \"the Great War\" (WWI) — to which the friend simply replies \"I got you\"\n\n## Why It's Funny\n\nThe joke is an **exaggerated stereotype contrast**:\n- **Women** are portrayed as fickle, abandoning friends over a month of no texting\n- **Men** are portrayed as so absurdly loyal they'll honor a 600-year-old military alliance without question and follow each other into a literal world war\n\nThe humor comes from the **historical absurdity** — treating an ancient medieval alliance as a binding bro-code agreement. It plays into the meme trope of male friendships being defined by stoic, unconditional loyalty (\"I got you\") versus the more emotionally reactive female friendship stereotype.\n\nThis is a fairly common \"gender difference\" meme format that leans on humorous exaggeration rather than serious commentary.",
           "judges": [
             {
@@ -2643,8 +2544,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme contrasts stereotypical portrayals of female vs. male friendships through exaggerated, absurd loyalty.\n\n**Setup and joke mechanism**  \n- **Top panel (\"Girl friendship\")**: One woman complains that her friend hasn't texted in a month. T...",
+          "text": "This meme contrasts stereotypical portrayals of female vs. male friendships through exaggerated, absurd loyalty.\n\n**Setup and joke mechanism**  \n- **Top panel (\"Girl friendship\")**: One woman complains that her friend hasn't texted in a month. The other imm...",
           "fullText": "This meme contrasts stereotypical portrayals of female vs. male friendships through exaggerated, absurd loyalty.\n\n**Setup and joke mechanism**  \n- **Top panel (\"Girl friendship\")**: One woman complains that her friend hasn't texted in a month. The other immediately replies \"Forget her queen\" while holding a canned drink. The joke implies female friendships are shallow, disposable, and based on recent contact/drama.  \n- **Bottom panel (\"Boy friendship\")**: One man references a literal 14th-century alliance (\"We had an alliance in 1386\") and expects the other to join \"the Great War.\" The reply is simply \"I got you.\" The humor comes from the ridiculous historical depth and unconditional military loyalty.\n\n**Cultural/internet references**  \n- This is a classic \"boys vs. girls\" meme format that exaggerates gender differences for comedic effect (common on Reddit, Twitter, and Instagram).  \n- The bottom panel specifically spoofs real historical alliances (e.g., the Auld Alliance between Scotland and France or other medieval pacts) by treating them like personal bro-code.  \n- The hats are visual shorthand: one is a 20th-century military helmet, the other a Renaissance-era cap with a feather, showing \"loyalty across centuries.\"\n\nThe overall joke is ironic hyperbole: male friendships are portrayed as comically eternal and ride-or-die, while female ones are shown as flimsy.",
           "judges": [
             {
@@ -2680,8 +2580,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe prominent comment, \"Bro looks like he'd order 500 cigarettes,\" is a direct reference to a popular internet meme originating from the sci-fi comedy televis...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe prominent comment, \"Bro looks like he'd order 500 cigarettes,\" is a direct reference to a popular internet meme originating from the sci-fi comedy television series *...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe prominent comment, \"Bro looks like he'd order 500 cigarettes,\" is a direct reference to a popular internet meme originating from the sci-fi comedy television series ***The Orville***. \n\nIn a specific episode, characters belonging to an alien race called Moclans (specifically the characters Bortus and Klyden) try a cigarette for the first time and become instantly addicted. Later in the episode, Bortus approaches an advanced 3D-printer-like machine (a synthesizer) and in a deep, deadpan, serious voice commands it to synthesize: **\"500 cigarettes.\"** A massive pile of loose cigarettes then drops onto the tray. This specific clip became highly viral on TikTok, Instagram, and Twitter.\n\n**2. Visual Elements**\nThe humor relies entirely on the physical appearance of the man in the selfie. He has a very distinct, somewhat squared-off, and blocky skull shape, along with prominent facial features and a serious expression. \n\n**3. The Joke**\nThe joke is a visual comparison (\"roast\"). The commenter is pointing out that the man's natural head shape and facial features strike an uncanny resemblance to the heavy prosthetic makeup worn by the Moclan aliens in *The Orville*. \n\nInstead of just saying \"You look like the alien from *The Orville*,\" the commenter references the character's most famous viral catchphrase (\"500 cigarettes\"), making it an inside joke for anyone who has seen the circulating meme clip.",
           "judges": [
             {
@@ -2704,8 +2603,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is based on the comment: **“Bro looks like he’d order 500 cigarettes.”**\n\nThe reference is likely to the internet meme/scene from **_The Orville_**, where the alien character **Bortus** discovers cigarettes and, in a very serious deadp...",
+          "text": "This meme is based on the comment: **“Bro looks like he’d order 500 cigarettes.”**\n\nThe reference is likely to the internet meme/scene from **_The Orville_**, where the alien character **Bortus** discovers cigarettes and, in a very serious deadpan way, asks...",
           "fullText": "This meme is based on the comment: **“Bro looks like he’d order 500 cigarettes.”**\n\nThe reference is likely to the internet meme/scene from **_The Orville_**, where the alien character **Bortus** discovers cigarettes and, in a very serious deadpan way, asks for **“500 cigarettes.”** The line became funny online because it’s such an absurdly excessive amount, delivered like a completely normal request.\n\nWhy it’s funny:\n\n- The man in the image has a **very serious, emotionless expression**, which matches the deadpan “alien asking for 500 cigarettes” vibe.\n- His **bald head, broad face, and intense close-up angle** make him look a bit like a sci-fi character or someone from that meme.\n- The comment exaggerates his appearance into a ridiculous character trait: not just “he smokes,” but “he would calmly order 500 cigarettes.”\n\nSo the joke isn’t really about the person literally smoking—it’s saying he has the exact stern, oddly specific energy of someone who would request an absurd bulk order of cigarettes with total seriousness.",
           "judges": [
             {
@@ -2728,8 +2626,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a \"Bro looks like...\" roast meme - a screenshot of a TikTok / Reels comments section where the comment is funnier than the video itself.\n\n**The setup:**\n\nThe video is just a low-angle, close-up selfie of a guy. He's Black, bald with a go...",
+          "text": "This is a \"Bro looks like...\" roast meme - a screenshot of a TikTok / Reels comments section where the comment is funnier than the video itself.\n\n**The setup:**\n\nThe video is just a low-angle, close-up selfie of a guy. He's Black, bald with a goatee, wearin...",
           "fullText": "This is a \"Bro looks like...\" roast meme - a screenshot of a TikTok / Reels comments section where the comment is funnier than the video itself.\n\n**The setup:**\n\nThe video is just a low-angle, close-up selfie of a guy. He's Black, bald with a goatee, wearing a high-vis orange work vest in what looks like a warehouse. The wide-angle lens makes his head look very wide and puffy. He has a tired, deadpan expression.\n\nThe format is super common on TikTok / Instagram Reels: someone posts a video of themselves, and the top comment is a specific, hyper-specific insult about what they *look like* they would do. The likes [4,036 here] are the punchline validation.\n\nIn this case: \"Bro looks like he'd order 500 cigarettes\"\n\n**The joke:**\n\n1.  **The stereotype:** He fits the internet stereotype of a blue-collar / construction worker on break - high-vis vest, tired face, gruff look. That stereotype is heavily associated in meme culture with being a heavy chain-smoker.\n2.  **The hyperbole:** 500 cigarettes is an absurd amount for one person. In the UK where this slang is most popular, you can't normally buy 500 at a time - a carton is 200. Asking for 500 is something only an extreme addict, or a corner shop owner restocking, would do. \n    So the joke is saying he doesn't just look like a smoker, he looks like a *cartoonishly addicted* smoker who would make the cashier's day miserable.\n\nThe humor mechanism is **incongruity + specificity**. It's funny because it's an incredibly specific and oversized number applied to a random guy's face. The more specific and unhinged the roast, the funnier it is.\n\n**Visual elements that help the joke:**\n\n*   **The wide-angle distortion:** The lens close to his face makes his cheeks and head look bloated/puffy, which people associate with the \"smoker's face\" / tired look.\n*   **The high-vis vest / lanyard:** Instantly codes him as a working-class guy on a smoke break, which is the core of the stereotype the comment is playing on.\n*   **The deadpan expression:** He looks unimpressed and exhausted, like someone waiting for an order of 500 cigarettes to be rung up.",
           "judges": [
             {
@@ -2752,8 +2649,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is a screenshot of a social media post (likely TikTok or Instagram) showing a man taking a selfie video. He appears to be a worker wearing a high-visibility orange safety vest and a lanyard, standing in what looks like a warehouse or a...",
+          "text": "This meme is a screenshot of a social media post (likely TikTok or Instagram) showing a man taking a selfie video. He appears to be a worker wearing a high-visibility orange safety vest and a lanyard, standing in what looks like a warehouse or airport facil...",
           "fullText": "This meme is a screenshot of a social media post (likely TikTok or Instagram) showing a man taking a selfie video. He appears to be a worker wearing a high-visibility orange safety vest and a lanyard, standing in what looks like a warehouse or airport facility (the lanyard reads \"BHX,\" which is the code for Birmingham Airport in the UK).\n\n**The humor:**\n\nThe joke is entirely in the comment from user \"professional_fart_inhaler\" which reads: **\"Bro looks like he'd order 500 cigarettes.\"**\n\nThis is an example of a popular comment format where people make absurd, hyper-specific observational jokes about a person's appearance and demeanor. The comment is funny because:\n\n1. **It's oddly specific and nonsensical** - \"ordering 500 cigarettes\" isn't even how you'd typically buy cigarettes, making it absurd.\n2. **It captures a vibe** - The man's serious, tired, no-nonsense expression and overall appearance somehow conjure a very specific (if random) mental image of a hardened, heavy smoker who'd make an outlandishly large request without flinching.\n3. **The \"Bro looks like...\" format** - This is a widely used meme template for roasting someone based on their look in a creative, exaggerated way.\n\n**Visual elements that matter:**\n- The man's stern, deadpan, weary facial expression sells the joke—he genuinely looks like a serious, world-weary character.\n- The unglamorous workplace setting and the username \"professional_fart_inhaler\" add to the comedic absurdity.\n\nThe high like count (4,036) indicates many people found the comparison hilariously accurate or just funny in its randomness.",
           "judges": [
             {
@@ -2776,8 +2672,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme consists of a selfie of a bald Black man wearing a bright orange high-visibility safety vest (with a lanyard), looking directly at the camera with a neutral/slightly stern expression.\n\nThe comment below reads: “Bro looks like he'd order...",
+          "text": "The meme consists of a selfie of a bald Black man wearing a bright orange high-visibility safety vest (with a lanyard), looking directly at the camera with a neutral/slightly stern expression.\n\nThe comment below reads: “Bro looks like he'd order 500 cigaret...",
           "fullText": "The meme consists of a selfie of a bald Black man wearing a bright orange high-visibility safety vest (with a lanyard), looking directly at the camera with a neutral/slightly stern expression.\n\nThe comment below reads: “Bro looks like he'd order 500 cigarettes.”\n\n**Explanation**  \nThe joke is a deadpan, exaggerated appearance-based roast. The man’s shaved head, weathered face, and work vest give off a “no-nonsense, blue-collar, possibly chain-smoking” vibe, so the commenter humorously claims he looks like the kind of person who would casually buy cigarettes in absurd bulk (500 at once). It’s playing on the stereotype of a heavy smoker who buys cartons/packs by the case rather than a normal person buying a single pack.\n\nNo deeper cultural reference or existing meme template is required; it’s just classic internet “this guy looks like he’d…” style humor.",
           "judges": [
             {
@@ -2814,8 +2709,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "This is a wordplay meme that relies on a pun dressed up as a polite conversation. Here is the breakdown:\n\n**The Setup and Wordplay**\n*   **Panel 1:** The man politely asks, \"How's your daughter?\" The woman clarifies which child he means by askin...",
+          "text": "This is a wordplay meme that relies on a pun dressed up as a polite conversation. Here is the breakdown:\n\n**The Setup and Wordplay**\n*   **Panel 1:** The man politely asks, \"How's your daughter?\" The woman clarifies which child he means by asking, \"Henriett...",
           "fullText": "This is a wordplay meme that relies on a pun dressed up as a polite conversation. Here is the breakdown:\n\n**The Setup and Wordplay**\n*   **Panel 1:** The man politely asks, \"How's your daughter?\" The woman clarifies which child he means by asking, \"Henrietta?\" \n*   **The Joke:** The man mishears or misinterprets the name **\"Henrietta\"** as the phrase **\"Hen ate her\"** (meaning a female chicken ate the daughter). \n*   **Panel 2:** Believing the daughter was tragically devoured by poultry, the man skips the small talk and offers his solemn condolences: \"I'm sorry for your loss.\"\n\n**Visual Elements**\nThe meme uses a classic, vintage painting (likely late Victorian or Edwardian era) as its base. The visual joke comes from the contrast between the highly refined, polite, high-society setting and the utterly absurd, cartoonish scenario of a young girl being eaten to death by a chicken. Both characters maintain perfectly straight, dignified faces throughout the ridiculous exchange, adding deadpan humor to the joke.",
           "judges": [
             {
@@ -2838,8 +2732,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "The joke is a pun on the name **“Henrietta.”**\n\n- The man asks: **“How’s your daughter?”**\n- The woman replies: **“Henrietta?”** meaning “Do you mean my daughter Henrietta?”\n- But the man interprets it as **“Henry ate her?”** — as if someone nam...",
+          "text": "The joke is a pun on the name **“Henrietta.”**\n\n- The man asks: **“How’s your daughter?”**\n- The woman replies: **“Henrietta?”** meaning “Do you mean my daughter Henrietta?”\n- But the man interprets it as **“Henry ate her?”** — as if someone named Henry lit...",
           "fullText": "The joke is a pun on the name **“Henrietta.”**\n\n- The man asks: **“How’s your daughter?”**\n- The woman replies: **“Henrietta?”** meaning “Do you mean my daughter Henrietta?”\n- But the man interprets it as **“Henry ate her?”** — as if someone named Henry literally ate the daughter.\n- So he responds: **“I’m sorry for your loss,”** because he thinks the daughter is dead/eaten.\n\nThe humor comes from the absurd misunderstanding and the old-fashioned, serious-looking painting style making the silly wordplay feel overly dramatic.",
           "judges": [
             {
@@ -2862,8 +2755,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a dark humor / awkward conversation meme using a vintage painting.\n\n**The visual:**\nIt's a 2-panel comic made from what looks like a Victorian/Edwardian era painting - a polite man and woman having tea in a field. That genteel, overly po...",
+          "text": "This is a dark humor / awkward conversation meme using a vintage painting.\n\n**The visual:**\nIt's a 2-panel comic made from what looks like a Victorian/Edwardian era painting - a polite man and woman having tea in a field. That genteel, overly polite setting...",
           "fullText": "This is a dark humor / awkward conversation meme using a vintage painting.\n\n**The visual:**\nIt's a 2-panel comic made from what looks like a Victorian/Edwardian era painting - a polite man and woman having tea in a field. That genteel, overly polite setting is the contrast for a very rude/dark line. Modern speech bubbles have been added.\n\n**The joke:**\n\nPanel 1: The man asks \"How's your daughter?\"\nThe woman replies \"Henrietta?\" - as in \"Do you mean Henrietta? / Which daughter?\" It establishes the daughter's name is Henrietta.\n\nPanel 2: The man immediately says \"I'm sorry for your loss.\"\n\nThat is the standard phrase you say when someone has died. So the punchline is that Henrietta is dead - or at least the man believes she is.\n\nThe humor is the abrupt, jarring tonal shift from polite small talk to a death announcement, and the implication that the mother either didn't know, forgot, or was casually asking for clarification about her dead daughter.\n\nThere are two common readings that make it funnier/darker to people online:\n\n1.  **Literal dark reading:** Henrietta died, and the man was offering condolences after being reminded who she was. The mother's \"Henrietta?\" makes it seem like she forgot she had a dead daughter, creating extreme awkwardness.\n\n2.  **Modern/transphobic reading that circulates online:** Henrietta used to be Henry, her son. When she confirms \"Henrietta?\" as her daughter, he says \"sorry for your loss\" meaning he considers her son lost/dead now that she is a daughter. It's also sometimes read more simply as \"Henrietta is such an ugly, old-fashioned name that having it is a loss in itself.\"\n\nIn both cases the joke mechanism is bait-and-switch and anti-humor - you expect a normal update like \"she's doing well,\" but get a funeral condolence instead.",
           "judges": [
             {
@@ -2886,8 +2778,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**What's happening:** This meme uses a vintage Victorian-era painting of a man and woman in conversation, with modern speech bubbles added to create a comedic exchange.\n\n**The joke:**\n- The man asks, \"How's your daughter?\"\n- The woman responds,...",
+          "text": "**What's happening:** This meme uses a vintage Victorian-era painting of a man and woman in conversation, with modern speech bubbles added to create a comedic exchange.\n\n**The joke:**\n- The man asks, \"How's your daughter?\"\n- The woman responds, \"Henrietta?\"...",
           "fullText": "**What's happening:** This meme uses a vintage Victorian-era painting of a man and woman in conversation, with modern speech bubbles added to create a comedic exchange.\n\n**The joke:**\n- The man asks, \"How's your daughter?\"\n- The woman responds, \"Henrietta?\" — presumably trying to clarify *which* daughter he means, or simply confirming the name.\n- The man immediately replies, \"I'm sorry for your loss.\"\n\nThe humor comes from a **comedic misunderstanding**. The man interprets the woman saying her daughter's name in a questioning tone as if she's confused or doesn't remember having a daughter — or he mishears/misreads the situation entirely and assumes the daughter has died. His sudden leap to offering condolences (\"I'm sorry for your loss\") is absurdly inappropriate and abrupt given that the woman was simply asking a clarifying question.\n\n**Why it works:**\n- The dramatic, jarring shift from casual small talk to grief condolences is the punchline.\n- The classy, refined Victorian painting style contrasts with the awkward, modern conversational blunder, making it funnier.\n- The woman's calm, unchanged expression in the second panel adds to the deadpan comedic effect — she hasn't actually lost anyone, making his response even more nonsensical.\n\nThis is part of a broader meme format where old paintings are paired with witty, anachronistic dialogue to create absurd or relatable humor.",
           "judges": [
             {
@@ -2910,8 +2801,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme uses a split-panel edit of a polite Victorian-era painting (a formal outdoor tea scene) to stage an awkward misunderstanding.\n\n**Joke mechanism**:  \nThe man asks a normal, caring question (“How’s your daughter?”). The woman replies with...",
+          "text": "The meme uses a split-panel edit of a polite Victorian-era painting (a formal outdoor tea scene) to stage an awkward misunderstanding.\n\n**Joke mechanism**:  \nThe man asks a normal, caring question (“How’s your daughter?”). The woman replies with just the na...",
           "fullText": "The meme uses a split-panel edit of a polite Victorian-era painting (a formal outdoor tea scene) to stage an awkward misunderstanding.\n\n**Joke mechanism**:  \nThe man asks a normal, caring question (“How’s your daughter?”). The woman replies with just the name “Henrietta?” (implying “Which daughter? Do you mean Henrietta?” or simply confirming the name). The man instantly interprets the bare name as evidence that the daughter has died (a common dark-humor trope: living people get status updates; dead people are referred to by name only). He therefore offers condolences.\n\n**Key contrast**: A harmless clarification is read as tragic news, turning a polite conversation into an unintentionally grim faux pas. The prim, upper-class painting style heightens the comedy by making the blunder feel especially mortifying.",
           "judges": [
             {
@@ -2949,8 +2839,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Visuals:** The image shows Yeonmi Park, a North Korean defector, speaking on *The Joe Rogan Experience* podcast. Her appearances on podcasts genera...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Visuals:** The image shows Yeonmi Park, a North Korean defector, speaking on *The Joe Rogan Experience* podcast. Her appearances on podcasts generated a meme f...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The Visuals:** The image shows Yeonmi Park, a North Korean defector, speaking on *The Joe Rogan Experience* podcast. Her appearances on podcasts generated a meme format where people lay absurd, exaggerated, and horrific fictional claims over her image, mocking the idea that her stories about life in North Korea are sometimes embellished. Those memes typically start with \"In North Korea...\"\n*   **The Event:** The text references a real, highly publicized news story from August 2024 involving The Walt Disney Company. A man sued Disney for wrongful death after his wife died from a severe allergic reaction at a restaurant in Disney Springs. Initially, Disney's lawyers attempted to have the lawsuit dismissed and sent to forced arbitration, arguing that the man had waived his right to sue the company in court because he had agreed to the Terms of Service years earlier when signing up for a free trial of the streaming service **Disney+** (the exclusive home of the *Star Wars* show ***The Mandalorian***). \n\n**2. The Joke**\n*   **The Setup:** The meme sets the viewer up to expect another classic Yeonmi Park meme format, which usually features an unbelievable, terrifying, and fabricated story about living under a totalitarian dictatorship. \n*   **The Inversion:** Instead of starting with \"In North Korea,\" the text starts with \"In America.\" \n*   **The Irony:** The punchline is that the absurd, dystopian horrors usually reserved for these \"North Korea\" memes are being applied to a real American corporation. The statement \"if you watch an episode of the Mandalorian, they get to kill your wife\" sounds incredibly fake and exaggerated, but the joke is that it is essentially an accurate summary of an actual legal defense Disney used in an American court. \n\n*Note: Following massive public backlash to this legal strategy, Disney reversed course and waived their right to arbitration, allowing the wrongful death lawsuit to proceed in court.*",
           "judges": [
             {
@@ -2973,8 +2862,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "This meme is joking about the Disney wrongful-death lawsuit controversy.\n\n- **Main reference:** In 2024, Disney was criticized for arguing that a man could not sue them over his wife’s death from an allergic reaction at a Disney Springs restaura...",
+          "text": "This meme is joking about the Disney wrongful-death lawsuit controversy.\n\n- **Main reference:** In 2024, Disney was criticized for arguing that a man could not sue them over his wife’s death from an allergic reaction at a Disney Springs restaurant because h...",
           "fullText": "This meme is joking about the Disney wrongful-death lawsuit controversy.\n\n- **Main reference:** In 2024, Disney was criticized for arguing that a man could not sue them over his wife’s death from an allergic reaction at a Disney Springs restaurant because he had previously agreed to Disney’s terms of service when signing up for a **Disney+** trial.  \n- **“The Mandalorian” reference:** *The Mandalorian* is one of Disney+’s flagship shows, so the tweet exaggerates this into: “If you watch one episode, Disney gets legal permission to kill your wife.”\n- **Why it’s funny:** It’s dark absurdist humor. Obviously watching *The Mandalorian* doesn’t literally let Disney kill someone, but the joke mocks how ridiculous and dystopian Disney’s legal argument sounded: a streaming-service agreement being used to block a lawsuit about a real-life death.\n- **Visual element:** The woman in the podcast setup appears to be used like a “serious interview/confession” format, similar to clips where someone describes shocking conditions in another country. The caption flips that style into “In America…” as if describing America as a bizarre oppressive place.",
           "judges": [
             {
@@ -2997,8 +2885,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a meme about a real Disney lawsuit, using a popular reaction image.\n\n**1. The image:**\nThe woman is Yeonmi Park, a North Korean defector turned conservative commentator. She became a meme template after her 2023 appearance on Joe Rogan's...",
+          "text": "This is a meme about a real Disney lawsuit, using a popular reaction image.\n\n**1. The image:**\nThe woman is Yeonmi Park, a North Korean defector turned conservative commentator. She became a meme template after her 2023 appearance on Joe Rogan's podcast, wh...",
           "fullText": "This is a meme about a real Disney lawsuit, using a popular reaction image.\n\n**1. The image:**\nThe woman is Yeonmi Park, a North Korean defector turned conservative commentator. She became a meme template after her 2023 appearance on Joe Rogan's podcast, where she tells sensational horror stories about North Korea. The format is always a screenshot of her on Rogan with a caption like \"In North Korea, if you [do something normal], they execute you / your whole family.\" She's been widely mocked/criticized for exaggerating stories for an American audience.\n\n**2. The reference:**\nIn 2024, a man named Jeffrey Piccolo sued Disney after his wife died from an allergic reaction after eating at a restaurant in Disney Springs. Disney's lawyers tried to get the case thrown out and forced into private arbitration, arguing that Piccolo had agreed to Disney's terms of service when he signed up for a free trial of Disney+ years earlier to watch *The Mandalorian*.\n\nThe argument was real, went viral, and was widely summarized as: \"If you subscribe to Disney+, Disney is allowed to kill your wife and you can't sue.\"\n\nDisney eventually dropped that argument after massive backlash.\n\n**3. The joke:**\nThe tweet puts those two things together. It writes the caption as if Yeonmi Park is saying it on the podcast, but flips her usual script:\n\nShe usually says: \"In *North Korea*, if you watch an American movie, they kill you.\"\n\nThis says: \"In *America*, if you watch an episode of The Mandalorian [a Disney+ show], they get to kill your wife.\"\n\nThe humor is the inversion and irony. A story about dystopian corporate power in America sounds so absurd and horrific it could be one of her exaggerated North Korea stories — except this one actually happened in America.",
           "judges": [
             {
@@ -3021,8 +2908,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "## Explanation\n\n**The Reference:**\nThe woman pictured is **Yeonmi Park**, a North Korean defector who became famous for her appearances on podcasts (including the Joe Rogan Experience — note the studio setup with the headphones, microphone, and...",
+          "text": "## Explanation\n\n**The Reference:**\nThe woman pictured is **Yeonmi Park**, a North Korean defector who became famous for her appearances on podcasts (including the Joe Rogan Experience — note the studio setup with the headphones, microphone, and red curtain...",
           "fullText": "## Explanation\n\n**The Reference:**\nThe woman pictured is **Yeonmi Park**, a North Korean defector who became famous for her appearances on podcasts (including the Joe Rogan Experience — note the studio setup with the headphones, microphone, and red curtain background, which matches Rogan's set). She gained a reputation for making increasingly bizarre, exaggerated, or implausible claims about life in North Korea and her comparisons between North Korea and the West.\n\n**The Meme Format:**\nBecause of her questionable storytelling, an entire meme genre developed where people put **absurd, obviously false statements** into her mouth, mimicking her tendency to make wild claims. The joke is always that the statement is something no reasonable person could believe, parodying how detached some of her real claims seemed.\n\n**Why It's Funny:**\nThe text — *\"In America, if you watch an episode of the Mandalorian, they get to kill your wife\"* — is complete nonsense. It's structured like a fake \"cultural fact\" or punishment system, as if watching a Disney+ Star Wars show grants the showrunners the right to murder your spouse. The humor comes from:\n- The total randomness and non-sequitur logic\n- The mock-serious \"in America, [insane thing happens]\" framing typical of these memes\n- The deadpan delivery implied by her serious facial expression in the photo\n\n**Visual Elements:**\nHer earnest, slightly bewildered expression while speaking into the mic makes the ridiculous caption funnier, as it looks like she's genuinely explaining this fake \"fact\" with total sincerity.",
           "judges": [
             {
@@ -3045,8 +2931,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**This meme is an absurd quote presented as factual.**\n\n**References:** \n- *The Mandalorian* (the Star Wars Disney+ series).\n- The format is a screenshot of a tweet, with the embedded video clip serving as the “source” of the claim.\n\n**The joke:...",
+          "text": "**This meme is an absurd quote presented as factual.**\n\n**References:** \n- *The Mandalorian* (the Star Wars Disney+ series).\n- The format is a screenshot of a tweet, with the embedded video clip serving as the “source” of the claim.\n\n**The joke:**  \nThe hum...",
           "fullText": "**This meme is an absurd quote presented as factual.**\n\n**References:** \n- *The Mandalorian* (the Star Wars Disney+ series).\n- The format is a screenshot of a tweet, with the embedded video clip serving as the “source” of the claim.\n\n**The joke:**  \nThe humor is pure absurdity + implied bad translation. The tweet states, as if it’s a real rule, that simply watching one episode of *The Mandalorian* in America legally entitles “them” (whoever “they” are) to kill your wife. It’s nonsense, so the comedy comes from the deadpan delivery of an insane cultural “fact” about the U.S., the same style as over-the-top “In America…” or “in Soviet Russia…” jokes. The exaggeration also mocks how foreign commentary or auto-translated clips sometimes mangles American pop culture and laws into something ridiculous.\n\n**Visual element:**  \nThe woman in the recording booth (headphones, microphone, neutral/professional expression) is framed as the person making the statement. Her calm, instructional demeanor makes the wildly incorrect claim even funnier by contrast.\n\nIn short: “America is so crazy that watching Baby Yoda means your wife is fair game” — the joke is how stupid that sounds.",
           "judges": [
             {
@@ -3082,8 +2967,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the visual elements and context, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference (The Image):** The image is a still from Quentin Tarantino’s 2009 film *Inglourious Basterds*. In this famous scene, a Bri...",
+          "text": "Based on the visual elements and context, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference (The Image):** The image is a still from Quentin Tarantino’s 2009 film *Inglourious Basterds*. In this famous scene, a British spy dis...",
           "fullText": "Based on the visual elements and context, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference (The Image):** The image is a still from Quentin Tarantino’s 2009 film *Inglourious Basterds*. In this famous scene, a British spy disguised as a German officer tries to order three drinks. He holds up his index, middle, and ring fingers. The Gestapo officer sitting across from him instantly identifies him as a spy, because a native German would indicate \"three\" by raising their thumb, index, and middle fingers. On the internet, this image is used to represent **someone trying to blend in but exposing themselves as a foreign imposter through a very subtle, unnatural habit or phrase.**\n*   **Geopolitical Reference:** A \"warm water port\" is a port where the water does not freeze in winter. Historically and currently, securing a warm water port has been one of the primary, defining strategic obsessions of **Russia** (and previously the Soviet Union), because most of their coastline freezes over. \n\n**2. The Joke**\nThe joke implies that the account advocating for Texas secession (\"TEXIT NOW!\") is actually run by a foreign troll or state-sponsored propagandist (likely Russian), and they just accidentally exposed their true nationality.\n\n*   **The Setup:** The bottom account is listing reasons why Texas could be an independent superpower, listing its economy, population, and having a \"warm water port.\"\n*   **The Implication (The Punchline):** To a native Texan (or any American), calling a Gulf Coast port a \"warm water port\" makes no sense. Texas is far south; *all* of its ports are warm year-round, and freezing is not a strategic concern. However, to a Russian geopolitical thinker, securing a \"warm water port\" is a top tier political talking point. \n*   **The Connection:** Just like the spy in the movie who gave himself away by using a British hand gesture to order drinks in Germany, this \"Texan\" gave themselves away as a likely Russian agent by using uniquely Russian geographic concerns to describe Texas. \n\n**3. Visual Elements**\nThe focal point of the movie still is the **hand holding up three fingers**. Without understanding that specific movie scene—where a tiny cultural mistake results in a spy's cover being blown—the connection between the phrase \"warm water port\" and the accusation of being a foreign troll isn't visible.",
           "judges": [
             {
@@ -3106,8 +2990,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme is saying that the phrase **“warm water port”** is a suspicious “tell.”\n\n- The screenshot shows a pro–Texas secession account, **“TEXIT NOW!”**, arguing that Texas could be a superpower because it has a large economy, population, oil/g...",
+          "text": "This meme is saying that the phrase **“warm water port”** is a suspicious “tell.”\n\n- The screenshot shows a pro–Texas secession account, **“TEXIT NOW!”**, arguing that Texas could be a superpower because it has a large economy, population, oil/gas, and **“a...",
           "fullText": "This meme is saying that the phrase **“warm water port”** is a suspicious “tell.”\n\n- The screenshot shows a pro–Texas secession account, **“TEXIT NOW!”**, arguing that Texas could be a superpower because it has a large economy, population, oil/gas, and **“a warm water port.”**\n- The reply by Quantian just quotes **“warm water port”** and pairs it with a GIF from **_Inglourious Basterds_**.\n\nThe GIF reference: in _Inglourious Basterds_, an undercover British officer gives himself away in a German tavern by ordering “three” drinks using the wrong hand gesture. Germans typically indicate three with the thumb plus two fingers, while he uses the British/American-style three fingers. That tiny cultural slip exposes him as not really German.\n\nSo the joke is:\n\n> Calling Texas’s Gulf ports “warm water ports” sounds like the kind of phrase a Russian geopolitics person would use, not a normal Texan/American political pitch.\n\n“Warm-water port” is heavily associated with Russian history/geopolitics, because Russia has long sought ice-free ports for trade and naval power. Texas, being on the Gulf of Mexico, obviously has ports that don’t freeze, but Americans would more naturally say “Gulf ports,” “deepwater ports,” “Houston Ship Channel,” etc.\n\nSo Quantian is implying that the Texas secession post accidentally reveals itself as foreign/Russian-style geopolitical LARPing or propaganda — just like the spy in _Inglourious Basterds_ accidentally reveals himself with the three-finger gesture.",
           "judges": [
             {
@@ -3130,8 +3013,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a geopolitics Twitter joke about accidentally revealing you're Russian.\n\n**1. The references:**\n\n*   **\"Warm water port\"** - A 300-year-old cliché of Russian geopolitics. Because most of Russia's northern coastline freezes in winter, Rus...",
+          "text": "This is a geopolitics Twitter joke about accidentally revealing you're Russian.\n\n**1. The references:**\n\n*   **\"Warm water port\"** - A 300-year-old cliché of Russian geopolitics. Because most of Russia's northern coastline freezes in winter, Russian history...",
           "fullText": "This is a geopolitics Twitter joke about accidentally revealing you're Russian.\n\n**1. The references:**\n\n*   **\"Warm water port\"** - A 300-year-old cliché of Russian geopolitics. Because most of Russia's northern coastline freezes in winter, Russian history from Peter the Great through the Soviet Union to Putin has been framed as a search for a port that stays open year-round for trade and its navy. Taking Crimea for Sevastopol is the classic example. On Geopolitics / History Twitter, obsessing over a \"warm water port\" is shorthand for thinking like a Russian imperialist. Since 2022 it's been everywhere because of Russia's war in Ukraine.\n\n*   **TEXIT** - Texas + Exit, the Texas secession movement, modeled on Brexit. This screenshot is a pro-TEXIT account arguing Texas could be a superpower because: 8th largest economy, 50th largest population if it were a country, has oil/gas/tech, and \"A warm water port.\"\n\n*   **The GIF** - From Quentin Tarantino's *Inglourious Basterds* [2009]. In a tavern scene, British spy Archie Hicox, played by Michael Fassbender, is hiding as a German officer. He orders three drinks holding up three fingers the British way - index, middle, ring finger. Germans count with thumb, index, middle. The German officer in the GIF notices the mistake, realizes Hicox is a spy, and it ends in a shootout. The clip is a hugely popular reaction meme for \"you just revealed your true identity with a tiny detail\" / \"you've blown your cover.\"\n\n**2. The joke:**\n\nQuantian quote-tweets the TEXIT post with just the phrase \"warm water port\" and that GIF.\n\nThe setup is that listing a \"warm water port\" as a requirement for becoming a superpower is weird. Almost every country except Russia takes it for granted. Texas already has 367 miles of Gulf Coast - of course it has warm water ports.\n\nThe only country / political tradition where you would seriously list \"we have a warm water port!\" as a brag / strategic prerequisite is Russia.\n\nSo by including it, the Texas nationalist accidentally sounds exactly like a Russian nationalist justifying empire. The GIF is Quantian saying: \"You just outed yourself.\"\n\nThe implied punchline is two-fold:\n- You sound like you are LARPing as a 19th-century Russian strategist\n- And, since TEXIT is often accused of being amplified by Russian bots trying to divide the US, you sound like you're literally a Russian influence op who forgot to change his talking points.",
           "judges": [
             {
@@ -3154,8 +3036,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**What's happening:** This is a quote tweet by @quantian1 mocking a tweet from \"Jason Dorman – TEXIT NOW!\", an account advocating for Texas secession (\"TEXIT,\" modeled on \"Brexit\").\n\n**The original tweet** lists reasons Texas could supposedly be...",
+          "text": "**What's happening:** This is a quote tweet by @quantian1 mocking a tweet from \"Jason Dorman – TEXIT NOW!\", an account advocating for Texas secession (\"TEXIT,\" modeled on \"Brexit\").\n\n**The original tweet** lists reasons Texas could supposedly be a \"Superpow...",
           "fullText": "**What's happening:** This is a quote tweet by @quantian1 mocking a tweet from \"Jason Dorman – TEXIT NOW!\", an account advocating for Texas secession (\"TEXIT,\" modeled on \"Brexit\").\n\n**The original tweet** lists reasons Texas could supposedly be a \"Superpower\" if independent, including being the 8th largest economy, and notably bragging about having \"a warm water port, oil/natural gas and major te[ch]...\"\n\n**The reference:** The GIF is from *The Wolf of Wall Street* (2013), showing a dismissive \"talk to the hand\" gesture. It's a classic reaction GIF used to wave away or mock something someone said.\n\n**Why it's funny:**\n- The quote-tweeter zeroes in on the phrase **\"warm water port\"** and isolates it in quotes, then pairs it with the dismissive hand GIF.\n- \"Warm water port\" is a term loaded with geopolitical seriousness — historically it's associated with great powers like Russia, which famously obsessed over gaining year-round ice-free ports. Listing it as a credential for \"superpower\" status is treated as pompous and self-important.\n- The humor comes from deflating the grandiose secessionist rhetoric. The TEXIT account is framing Texas as a would-be world power, and the response essentially says \"yeah, sure\" with a mocking hand-wave, treating the whole superpower fantasy as laughably overblown.\n\nIn short, it's poking fun at Texas-secession enthusiasts for overhyping the state's geopolitical importance using fancy-sounding terminology.",
           "judges": [
             {
@@ -3178,8 +3059,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "The meme mocks a pro-Texas tweet that lists reasons why Texas qualifies as a \"superpower,\" one of which is its possession of a \"warm water port.\"\n\n**Key references:**\n- \"Warm water port\" is a classic geopolitical/historical trope, especially ass...",
+          "text": "The meme mocks a pro-Texas tweet that lists reasons why Texas qualifies as a \"superpower,\" one of which is its possession of a \"warm water port.\"\n\n**Key references:**\n- \"Warm water port\" is a classic geopolitical/historical trope, especially associated with...",
           "fullText": "The meme mocks a pro-Texas tweet that lists reasons why Texas qualifies as a \"superpower,\" one of which is its possession of a \"warm water port.\"\n\n**Key references:**\n- \"Warm water port\" is a classic geopolitical/historical trope, especially associated with Russian/Soviet strategy. Russia has long sought year-round ice-free ports (e.g., Sevastopol, Tartus) because most of its coastline freezes in winter. The phrase is often used ironically online to evoke outdated or exaggerated strategic obsessions.\n- The GIF is a reaction clip (commonly used in meme formats) of a character making an emphatic or pointed gesture in response to the quoted phrase.\n\n**The joke:**\nThe Texas tweet treats \"has a warm water port\" as a major flex on par with being an 8th-largest economy. The meme isolates that one bullet point and reacts to it with exaggerated skepticism, implying the claim is comically weak, niche, or out-of-place—like something only a historically port-obsessed power would highlight as impressive. The GIF's visual emphasis (the raised hand and intense expression) underscores the sarcasm.\n\n**Visual note:** The quoted text sits above the GIF like a subtitle, making the reaction appear to be directly aimed at the words \"warm water port.\"",
           "judges": [
             {
@@ -3215,8 +3095,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme combines the classic television trope of \"coming home to catch a cheating spouse\" with the mechanics of the Nintendo Wii gaming console.\n\nHere is a breakdown of the joke:\n\n**1. The References:**\n*   **The Character:** The character is...",
+          "text": "This meme combines the classic television trope of \"coming home to catch a cheating spouse\" with the mechanics of the Nintendo Wii gaming console.\n\nHere is a breakdown of the joke:\n\n**1. The References:**\n*   **The Character:** The character is an anthropom...",
           "fullText": "This meme combines the classic television trope of \"coming home to catch a cheating spouse\" with the mechanics of the Nintendo Wii gaming console.\n\nHere is a breakdown of the joke:\n\n**1. The References:**\n*   **The Character:** The character is an anthropomorphized Nintendo Wii Remote (often called a Wiimote).\n*   **Wii Mechanics:** When a Wiimote connects to a Wii console, the four square LED lights at the bottom indicate which player number is assigned to that remote (Player 1, 2, 3, or 4). Additionally, Wii remotes have a \"rumble\" feature that makes them vibrate during gameplay action.\n\n**2. Visual Elements:**\n*   **Panel 1:** The \"husband\" Wiimote arrives home from work (indicated by the hat and briefcase).\n*   **Panel 2:** As he enters, we see a close-up of his indicator lights. The **third** light from the left turns on. He drops his briefcase in shock. \n*   **Panel 3:** Action lines appear around his buttons, indicating that the controller has instantly started vibrating (rumbling).\n\n**3. The Joke:**\nThe joke relies on the implication of him being assigned as **Player 3**. \n\nWhen he arrives home and connects to the \"house\" (the console), his remote lights up the third slot. For him to be Player 3, it means Player 1 and Player 2 are *already connected and active*. \n\nHe realizes that his \"wife\" is already engaged in a two-player \"game\" with someone else. The immediate vibration (rumble) of his controller confirms that the illicit \"gameplay\" is actively happening right at that exact moment.",
           "judges": [
             {
@@ -3239,8 +3118,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme anthropomorphizes Nintendo Wii controllers as a married couple.\n\n- The tall controller is a **Wii Remote**, wearing a hat like a husband coming home.\n- The smaller red-haired controller is treated like the “wife.”\n- The phrase **“Honey...",
+          "text": "This meme anthropomorphizes Nintendo Wii controllers as a married couple.\n\n- The tall controller is a **Wii Remote**, wearing a hat like a husband coming home.\n- The smaller red-haired controller is treated like the “wife.”\n- The phrase **“Honey, I’m home!”...",
           "fullText": "This meme anthropomorphizes Nintendo Wii controllers as a married couple.\n\n- The tall controller is a **Wii Remote**, wearing a hat like a husband coming home.\n- The smaller red-haired controller is treated like the “wife.”\n- The phrase **“Honey, I’m home!”** is a classic sitcom/TV cliché said by someone entering the house.\n\nThe joke is a **button pun plus mild innuendo**:\n\n- When he says “I’m Home,” the smaller controller’s **Home button** lights up, as if the word “home” activates/arouses it.\n- In the last panel, the Wii Remote’s **A button** lights up while the red-haired controller is close to him, implying she’s pressing/touching his button in an intimate way.\n- His “Honey?!” reaction is surprise at her suddenly getting “excited” or acting affectionate.\n\nSo the humor comes from treating game controller buttons like body parts/emotional reactions, especially the glowing **Home** and **A** buttons.",
           "judges": [
             {
@@ -3263,8 +3141,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a lewd / absurd joke using anthropomorphized Nintendo Wii Remotes.\n\n**The references:**\n* Both characters are Wii Remotes - or Wiimotes. You can tell by the + D-pad, the big A button, the 1 and 2 buttons, and the 4 blue player lights at...",
+          "text": "This is a lewd / absurd joke using anthropomorphized Nintendo Wii Remotes.\n\n**The references:**\n* Both characters are Wii Remotes - or Wiimotes. You can tell by the + D-pad, the big A button, the 1 and 2 buttons, and the 4 blue player lights at the bottom....",
           "fullText": "This is a lewd / absurd joke using anthropomorphized Nintendo Wii Remotes.\n\n**The references:**\n* Both characters are Wii Remotes - or Wiimotes. You can tell by the + D-pad, the big A button, the 1 and 2 buttons, and the 4 blue player lights at the bottom.\n* The artist uses the Wiimote's wrist-strap as arms/hands and draws on a hat, bag, and big red blob as hair / mustache / crotch covering.\n\n**What you are seeing:**\n\n**Panel 1:** A male-coded Wiimote - brown fedora, big red mustache, holding a briefcase with his strap-hand - walks in the door and says \"Honey im Home!!!\"\n\n**Panel 2:** The camera cuts to a second Wiimote coded as the wife, with a big red hairstyle / bun. But we only see the *bottom half* of the controller - the 1, 2 and the player lights. It's framed so the top of the frame where her waist would be is cut off by the red hair / skirt, and her backside is sticking up at the viewer. Her strap-arm is also holding a briefcase.\n\nIt's a classic sitcom setup: husband comes home from work and walks in on his wife in a sexually suggestive, bent-over pose.\n\n**Panel 3:** The husband goes \"Honey?!\" and his A button is flashing / glowing. \n\nThe joke is the visual innuendo:\n\n1.  The pose in panel 2 is meant to read as the wife presenting herself sexually.\n2.  The husband's reaction is not shock, but instant sexual arousal - the glowing A button is the punchline, a stand-in for an erection / getting turned on.\n\nIt's a cheap, absurd horny joke that works by mapping human body parts onto controller parts.",
           "judges": [
             {
@@ -3287,8 +3164,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**Format:** This uses a popular wholesome/surreal comic template originally featuring a stick-figure character in a hat who walks in saying \"Honey I'm Home!!!\" then finds the house empty and worriedly calls out \"Honey?!\" The template is widely u...",
+          "text": "**Format:** This uses a popular wholesome/surreal comic template originally featuring a stick-figure character in a hat who walks in saying \"Honey I'm Home!!!\" then finds the house empty and worriedly calls out \"Honey?!\" The template is widely used to swap...",
           "fullText": "**Format:** This uses a popular wholesome/surreal comic template originally featuring a stick-figure character in a hat who walks in saying \"Honey I'm Home!!!\" then finds the house empty and worriedly calls out \"Honey?!\" The template is widely used to swap in different characters or absurd punchlines.\n\n**The twist here:** Instead of stick figures, the characters are drawn as **Nintendo Wii Remotes** (Wiimotes), recognizable by the signature features—the D-pad cross, the circular \"A\" button, the row of small buttons, the power and \"1/2\" buttons, and the wrist strap. They've been anthropomorphized with arms, brown cowboy-style hats, and little faces.\n\n**Why it's funny:** The humor is mostly in the absurdity and the \"cursed\"/surreal nature of the image. There's no deep wordplay—the joke is simply that the recognizable everyday object (a Wii controller) has been turned into a married couple living in a home. The familiar emotional \"Honey, I'm home... Honey?\" beat is undercut by the fact that you're looking at video game controllers acting out a domestic drama.\n\nThis is part of a broader meme trend of taking the \"Honey I'm Home\" template and replacing the characters with random recognizable objects for a surreal, low-effort comedic effect.",
           "judges": [
             {
@@ -3311,8 +3187,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a three-panel comic anthropomorphizing Nintendo Wii remotes as a domestic couple.\n\n**References**  \n- Classic “Honey, I’m home!” sitcom trope (the returning husband).  \n- Visual design of official Wii Remote (“Wiimote”) hardware, inc...",
+          "text": "The meme is a three-panel comic anthropomorphizing Nintendo Wii remotes as a domestic couple.\n\n**References**  \n- Classic “Honey, I’m home!” sitcom trope (the returning husband).  \n- Visual design of official Wii Remote (“Wiimote”) hardware, including the A...",
           "fullText": "The meme is a three-panel comic anthropomorphizing Nintendo Wii remotes as a domestic couple.\n\n**References**  \n- Classic “Honey, I’m home!” sitcom trope (the returning husband).  \n- Visual design of official Wii Remote (“Wiimote”) hardware, including the A-button, D-pad, speaker grille, wrist-strap nub, and the glowing blue player-LEDs that light up when the console is active/paired.\n\n**Joke mechanism**  \nIt is an infidelity/cuckold gag (sometimes called an NTR meme).  \n- Panel 1: Husband-Wiimote arrives cheerfully.  \n- Panel 2: “Wife” is shown locked (padlock + chain) and actively “on” (blue LED lit, red sensor-bar dome raised). The implication is that she is busy having sex with someone else.  \n- Panel 3: Husband-Wiimote is now worried and calling out, realizing something is wrong.\n\nThe humor comes from the absurd visual pun of treating the Wiimote’s physical features (lockable wrist strap, glowing LEDs, red IR cover) as literal signs of an affair.\n\n**Key visual cues**  \n- The padlock and glowing LED in the middle panel are the only clues that the situation has changed.  \n- The bottom panel’s downward angle and question-mark speech bubble signal the husband’s dawning suspicion.\n\n(The meme is deliberately crude and relies on the viewer instantly recognizing the “arriving husband finds wife occupied” setup.)",
           "judges": [
             {
@@ -3348,8 +3223,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference:** The image features the character Omni-Man from the Amazon Prime animated superhero series *Invincible*. \n*   **Context of the Image:...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference:** The image features the character Omni-Man from the Amazon Prime animated superhero series *Invincible*. \n*   **Context of the Image:** In this s...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Media Reference:** The image features the character Omni-Man from the Amazon Prime animated superhero series *Invincible*. \n*   **Context of the Image:** In this specific scene from the show, Omni-Man is delivering a solemn public eulogy at the funeral for the \"Guardians of the Globe\" (the world's premiere superhero team). The crucial plot point is that **Omni-Man is the one who brutally murdered them**. He is publicly pretending to mourn the victims he secretly assassinated.\n*   **Historical/Cultural Reference:** The text references the FBI (Federal Bureau of Investigation) and MLK Day (Martin Luther King Jr. Day). Historically, under director J. Edgar Hoover, the FBI actively surveilled, harassed, and attempted to destroy Dr. King's life and reputation (most notably through COINTELPRO and the infamous \"suicide letter\" they sent him). \n\n**2. The Joke**\nThe joke relies on dark irony and hypocrisy. Every year on MLK Day, the FBI's official social media accounts post messages honoring Martin Luther King Jr. \n\nThe meme compares the FBI publicly honoring Dr. King today to Omni-Man delivering a eulogy for the heroes he murdered. The implication is that the FBI paying tribute to MLK is incredibly hypocritical and performative, given the agency's severe historical persecution of him.\n\n**3. Visual Elements**\n*   **The Somber Expression:** Omni-Man is shown looking down with an expression of solemn grief (or perhaps hidden guilt/awkwardness), perfectly capturing the \"performative mourning\" the meme attributes to the FBI.\n*   **The Podium and Screen:** The podium and the massive screen behind him projecting his face highlight that this is a highly publicized, official public relations event, mirroring how government agencies post official public tributes on holidays.",
           "judges": [
             {
@@ -3372,8 +3246,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is joking about the FBI’s awkward relationship with Martin Luther King Jr. Day.\n\n- **Reference:** The image shows **Omni-Man** from *Invincible*, a superhero who publicly appears noble but is secretly responsible for terrible violence...",
+          "text": "This meme is joking about the FBI’s awkward relationship with Martin Luther King Jr. Day.\n\n- **Reference:** The image shows **Omni-Man** from *Invincible*, a superhero who publicly appears noble but is secretly responsible for terrible violence and betrayal...",
           "fullText": "This meme is joking about the FBI’s awkward relationship with Martin Luther King Jr. Day.\n\n- **Reference:** The image shows **Omni-Man** from *Invincible*, a superhero who publicly appears noble but is secretly responsible for terrible violence and betrayal. Here he’s placed at a podium with an **FBI-style seal**, as if giving an official MLK Day statement.\n\n- **Historical context:** The FBI, especially under J. Edgar Hoover, heavily **surveilled, harassed, and tried to discredit Martin Luther King Jr.** The agency wiretapped him, collected personal information, and even sent him an infamous anonymous letter widely interpreted as encouraging him to kill himself.\n\n- **The joke:** Every MLK Day, government agencies and institutions often post respectful tributes to King. The meme imagines the FBI doing that too, despite its own history of targeting him. So the humor comes from the hypocrisy/awkwardness: the FBI honoring someone it once treated as an enemy.\n\n- **Visual humor:** Omni-Man’s stern, guilty-looking expression at an official podium makes it look like he’s reluctantly giving a fake solemn speech while knowing he did something terrible. The superhero imagery emphasizes the contrast between public “hero” branding and dark hidden actions.",
           "judges": [
             {
@@ -3396,8 +3269,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "This is a meme about hypocrisy, using the character Omni-Man from the animated series *Invincible*.\n\n**1. The references:**\n\n*   **MLK Day and the FBI:** Martin Luther King Jr. Day is a US federal holiday in January honoring the civil rights lea...",
+          "text": "This is a meme about hypocrisy, using the character Omni-Man from the animated series *Invincible*.\n\n**1. The references:**\n\n*   **MLK Day and the FBI:** Martin Luther King Jr. Day is a US federal holiday in January honoring the civil rights leader. It's hi...",
           "fullText": "This is a meme about hypocrisy, using the character Omni-Man from the animated series *Invincible*.\n\n**1. The references:**\n\n*   **MLK Day and the FBI:** Martin Luther King Jr. Day is a US federal holiday in January honoring the civil rights leader. It's historically documented that under J. Edgar Hoover, the FBI surveilled, harassed, and tried to discredit MLK through its COINTELPRO program. This included wiretapping, spreading rumors about his personal life, and sending him an anonymous letter attempting to blackmail him into suicide.\n*   **The FBI's modern tweets:** Every MLK Day, the FBI's official social media account posts a tribute honoring MLK's life and legacy. On Twitter / X, this has become an annual ritual where people call out the hypocrisy.\n*   **Omni-Man:** The character in the image is Nolan Grayson / Omni-Man. He is a Superman-like hero who is secretly a mass-murdering villain. This specific still is from a press conference scene and is used as a template for someone giving a fake, insincere, guilty public statement.\n\n**2. What the joke is:**\n\nThe caption \"The FBI every MLK Day:\" is the setup. The image is the punchline.\n\nThe joke is dark irony. The FBI is shown as acting like a two-faced person forced to publicly mourn and honor a man the organization itself tried to destroy. It's mocking the FBI for performative remembrance that ignores its own history with King.\n\n**3. Visual elements that matter:**\n\n*   Omni-Man is at a formal government-style podium with microphones, presenting as an official authority figure — matching the FBI.\n*   His expression is not proud or sincere. He is looking off to the side, tense and sweaty, like someone who is lying and knows the audience knows he's lying.\n*   The fact that it's Omni-Man specifically adds a layer — a character who pretends to be a heroic savior while secretly being a killer, mirroring the perceived two-faced nature of the tribute.",
           "judges": [
             {
@@ -3420,8 +3292,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "## Explanation\n\n**The reference:** This image is from the animated series **Invincible**, showing the character **Omni-Man (Nolan Grayson)** standing at a podium looking uncomfortable and tense. This specific shot has become a popular reaction/m...",
+          "text": "## Explanation\n\n**The reference:** This image is from the animated series **Invincible**, showing the character **Omni-Man (Nolan Grayson)** standing at a podium looking uncomfortable and tense. This specific shot has become a popular reaction/meme template...",
           "fullText": "## Explanation\n\n**The reference:** This image is from the animated series **Invincible**, showing the character **Omni-Man (Nolan Grayson)** standing at a podium looking uncomfortable and tense. This specific shot has become a popular reaction/meme template, often used to depict a character who is being publicly hypocritical or forced to say something they don't actually mean.\n\n**The joke:** The humor relies on a piece of real history. The **FBI, under J. Edgar Hoover, extensively surveilled, harassed, and targeted Martin Luther King Jr.** during his lifetime. They wiretapped him and even sent him an anonymous letter encouraging him to commit suicide.\n\nSo the joke is that **MLK Day** is now a federal holiday that government institutions—including the FBI—publicly celebrate and post tributes about. The meme implies the FBI has to put on a fake, awkward smile and praise MLK every year, despite having actively worked against him while he was alive. The discomfort and tension on Omni-Man's face perfectly captures this sense of **forced, hypocritical celebration**.\n\n**Why the visual works:** Omni-Man's strained expression and stiff posture at an official-looking podium (complete with an emblem) make him look like he's begrudgingly giving an obligatory public statement—exactly the vibe the joke is going for.\n\nIt's dark humor pointing out institutional hypocrisy.",
           "judges": [
             {
@@ -3444,8 +3315,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme uses a still from the animated series *Invincible* featuring the character Omni-Man (Nolan Grayson). Two nearly identical versions appear: one at the podium (as if delivering remarks) and the other watching from nearby.\n\n**Reference**:...",
+          "text": "The meme uses a still from the animated series *Invincible* featuring the character Omni-Man (Nolan Grayson). Two nearly identical versions appear: one at the podium (as if delivering remarks) and the other watching from nearby.\n\n**Reference**: The FBI’s we...",
           "fullText": "The meme uses a still from the animated series *Invincible* featuring the character Omni-Man (Nolan Grayson). Two nearly identical versions appear: one at the podium (as if delivering remarks) and the other watching from nearby.\n\n**Reference**: The FBI’s well-documented surveillance of Martin Luther King Jr. (authorized wiretaps, blackmail attempts, and a massive secret file maintained under J. Edgar Hoover). MLK Day is the federal holiday honoring him.\n\n**Joke mechanism**: Ironic contrast between public commemoration and the Bureau’s intrusive history. The visual gag of the duplicate Omni-Man suggests the FBI “is” MLK in their own records—they monitored him so thoroughly that the file/observer and the subject have effectively merged into one.\n\nThe caption frames it as an annual ritual the FBI performs, highlighting the hypocrisy.",
           "judges": [
             {
@@ -3481,8 +3351,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References**\n*   **The Coat Hanger Reference:** In certain gun enthusiast and tactical communities online, taking a wire coat hanger and twisting it into a specif...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References**\n*   **The Coat Hanger Reference:** In certain gun enthusiast and tactical communities online, taking a wire coat hanger and twisting it into a specific \"weird sh...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. Context and References**\n*   **The Coat Hanger Reference:** In certain gun enthusiast and tactical communities online, taking a wire coat hanger and twisting it into a specific \"weird shape\" is a known DIY method for creating an illegal \"auto-sear\" (sometimes called a \"lightning link\" or \"swift link\"). When dropped into an AR-15 style rifle, this bent wire converts the semi-automatic weapon into a fully automatic machine gun. Doing this without proper, heavily restricted licensing is a major federal felony in the United States, prosecuted by the ATF (Bureau of Alcohol, Tobacco, Firearms and Explosives).\n*   **The Character:** The image features Kermit the Frog, a classic Muppet often used in memes as an everyman character reacting to uncomfortable or extreme situations. \n\n**2. The Joke (Setup and Implication)**\n*   **The Setup:** The wife is innocently making small talk with the neighbors, thinking her husband just has a quirky, clumsy, or annoying habit of ruining household coat hangers for no reason. \n*   **The Implication/Punchline:** The husband isn't clumsily ruining hangers; he is using them to illegally manufacture machine guns. \n*   **The Contrast:** The humor comes from the extreme contrast between the wife’s innocent, lighthearted neighborhood gossip and the husband’s sheer, cold panic. He tells her to \"lower your voice\" because she is inadvertently, loudly confessing to the neighbors that he is committing serious federal firearms felonies.\n\n**3. Visual Elements**\n*   **The Gun:** Crucially, if you look over Kermit's left shoulder (the left side of the image), you can see the barrel and handguard of an AR-style rifle strapped to his back. This visual clue is what confirms for the viewer *why* he is twisting the hangers. \n*   **The Expression:** Kermit’s wide-eyed, tight-lipped expression perfectly captures the feeling of sudden panic and the urgent desire to shut a conversation down immediately before the police are called.",
           "judges": [
             {
@@ -3505,8 +3374,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is built on an implied “don’t say that out loud” joke.\n\n- **Text setup:** The wife casually tells the neighbors that the husband has been ruining clothes hangers by bending them into weird shapes.\n- **Punchline:** The husband says, “Fi...",
+          "text": "This meme is built on an implied “don’t say that out loud” joke.\n\n- **Text setup:** The wife casually tells the neighbors that the husband has been ruining clothes hangers by bending them into weird shapes.\n- **Punchline:** The husband says, “First of all,...",
           "fullText": "This meme is built on an implied “don’t say that out loud” joke.\n\n- **Text setup:** The wife casually tells the neighbors that the husband has been ruining clothes hangers by bending them into weird shapes.\n- **Punchline:** The husband says, “First of all, lower your voice,” implying that the reason he’s bending hangers is something suspicious or embarrassing that he doesn’t want the neighbors hearing about.\n- **Likely implication:** Bent wire hangers are commonly associated with improvised tools—like trying to unlock car doors, break into places, fish something out of a drain, or generally do sketchy DIY “criminal” stuff. The joke doesn’t spell it out, but the secrecy makes it sound incriminating.\n- **Visual humor:** The image of Kermit looking intense/alarmed, with what looks like a gun or weapon near him, heightens the “this is serious, stop talking” reaction. It makes the husband’s response feel comically dramatic compared to the wife’s harmless gossip.\n\nSo the humor is that the wife thinks it’s a funny domestic complaint, while the husband reacts like she’s accidentally exposing his shady activities.",
           "judges": [
             {
@@ -3529,8 +3397,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a dark joke built on a well-known cultural symbol.\n\n**1. The reference:**\n\n*   **The coat hanger:** In popular culture in the US and other countries, a wire clothes hanger that has been straightened and twisted into a weird shape is a wi...",
+          "text": "This is a dark joke built on a well-known cultural symbol.\n\n**1. The reference:**\n\n*   **The coat hanger:** In popular culture in the US and other countries, a wire clothes hanger that has been straightened and twisted into a weird shape is a widely recogni...",
           "fullText": "This is a dark joke built on a well-known cultural symbol.\n\n**1. The reference:**\n\n*   **The coat hanger:** In popular culture in the US and other countries, a wire clothes hanger that has been straightened and twisted into a weird shape is a widely recognized symbol for an illegal / self-induced abortion. It's a symbol of unsafe abortions performed before legal abortion was available.\n*   **Kermit:** Kermit the Frog from The Muppets is used in countless memes. This specific edited image of a wide-eyed, sweaty-looking Kermit with a rifle slung over his shoulder is used for the \"nervous criminal / paranoid\" reaction.\n\n**2. The joke:**\n\nSetup: The wife thinks she's telling a funny, innocent domestic story to the neighbors - her husband is clumsy and ruined all their hangers by bending them.\n\nPunchline / Implication: The husband panics and says \"First of all, lower your voice.\"\n\nThe humor comes from the contrast in interpretation. The wife thinks it's about laundry. Anyone who hears \"ruined all the hangers by twisting them into weird shapes\" and knows the symbol will immediately think he's used them to perform a large number of illegal abortions. That's a serious, incriminating crime.\n\nHe's not denying it, he's just terrified the neighbors will figure it out. The fact he ruined *all* of them makes it sound like he did it many times, which makes his need to be quiet even funnier in a dark, shock-value way.\n\nThis uses the common meme format \"My [person] loudly talking about [innocent thing] / Me: Lower your voice\" where the innocent thing secretly sounds like a confession to something terrible.\n\n**3. Visuals:**\n\nKermit's bulging eyes, awkward tight smile, and shifty look convey pure anxiety and paranoia. The rifle edited onto his back reinforces the idea that he is involved in illegal / violent activity and is on edge about being caught.",
           "judges": [
             {
@@ -3553,8 +3420,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "## Explanation\n\n**The reference:** The image shows Kermit the Frog with a wide-eyed, nervous/panicked expression and crossed eyes. This is a popular reaction-image format used to convey anxiety, guilt, or \"caught off guard\" feelings.\n\n**The joke...",
+          "text": "## Explanation\n\n**The reference:** The image shows Kermit the Frog with a wide-eyed, nervous/panicked expression and crossed eyes. This is a popular reaction-image format used to convey anxiety, guilt, or \"caught off guard\" feelings.\n\n**The joke:** The humo...",
           "fullText": "## Explanation\n\n**The reference:** The image shows Kermit the Frog with a wide-eyed, nervous/panicked expression and crossed eyes. This is a popular reaction-image format used to convey anxiety, guilt, or \"caught off guard\" feelings.\n\n**The joke:** The humor comes from the disproportionate reaction. The wife is *joking* with the neighbors about something completely trivial and harmless—the husband twisting clothes hangers into weird shapes. But the husband's response, *\"First of all, lower your voice,\"* is the classic phrasing of someone who has a serious, incriminating secret they don't want exposed.\n\nThe comedy lies in the implication that:\n1. He's treating a totally mundane quirk as if it's a dangerous secret that could get him in trouble.\n2. The phrase \"lower your voice\" combined with Kermit's terrified expression suggests he's *guiltier* than the situation warrants—as if those bent hangers were used for something nefarious (picking locks, breaking into cars, etc.), even though it's probably nothing.\n\n**Visual element:** Kermit's panicked, paranoid expression sells the joke—he looks genuinely alarmed and shifty, perfectly matching the over-the-top defensive reaction of someone with something to hide.",
           "judges": [
             {
@@ -3577,8 +3443,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme uses a classic \"over-the-top reaction\" format.\n\n**Setup and joke:**\n- The wife is casually telling the neighbors an embarrassing but harmless story about her husband (he bent all their clothes hangers into weird shapes).\n- The husband...",
+          "text": "This meme uses a classic \"over-the-top reaction\" format.\n\n**Setup and joke:**\n- The wife is casually telling the neighbors an embarrassing but harmless story about her husband (he bent all their clothes hangers into weird shapes).\n- The husband immediately...",
           "fullText": "This meme uses a classic \"over-the-top reaction\" format.\n\n**Setup and joke:**\n- The wife is casually telling the neighbors an embarrassing but harmless story about her husband (he bent all their clothes hangers into weird shapes).\n- The husband immediately shuts it down with “First of all, lower your voice,” as if she just revealed classified information or committed a serious social violation.\n- The humor comes from the massive overreaction: treating something trivial and goofy like a dangerous secret that mustn’t be spoken in public.\n\n**Visual element:**\nThe image of Kermit the Frog (from *The Muppets*) with wide, intense eyes and holding a gun amplifies the threatening/paranoid tone. It turns what should be a mild “stop embarrassing me” into something comically sinister, as if he’s ready to silence the conversation by force.\n\nIt’s a husband-wife meme trope where one partner treats mundane domestic quirks like matters of national security.",
           "judges": [
             {
@@ -3614,8 +3479,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Fantasy Taxonomy:** In fantasy lore and tabletop games like *Dungeons & Dragons*, a true \"Dragon\" has four legs and two independent wings (six limbs total)...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Fantasy Taxonomy:** In fantasy lore and tabletop games like *Dungeons & Dragons*, a true \"Dragon\" has four legs and two independent wings (six limbs total). A creature...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References**\n*   **Fantasy Taxonomy:** In fantasy lore and tabletop games like *Dungeons & Dragons*, a true \"Dragon\" has four legs and two independent wings (six limbs total). A creature with only two hind legs and wings that act as forelimbs (like a bat) is technically called a **Wyvern**. People on the internet frequently (and pedantically) correct others on this distinction.\n*   **Ancient Greek Philosophy:** The Greek philosopher Plato famously defined a human being as a \"featherless biped\" (an animal that walks on two legs and has no feathers). In response, the philosopher Diogenes the Cynic famously plucked the feathers off a chicken, brought it into Plato's academy, and declared, \"Behold! I've brought you a man.\"\n\n**2. The Joke**\n*   **The Setup:** The meme is formatted like a typical, pedantic internet guide meant to teach people the visual difference between a Dragon and a Wyvern. \n*   **The Subversion:** The viewer expects the bottom text to say \"Wyvern.\" Instead, it says \"A Man.\" \n*   **The Mechanism:** The joke relies on applying Plato's ancient definition of a human to a fantasy creature. Because a wyvern has scales (is featherless) and walks on two hind legs (is rot biped), it technically fits Plato's definition of a human being. Therefore, following Diogenes' logic, a wyvern is \"a man.\"\n\n**3. Visual Elements**\n*   **Top Image:** The red dragon is clearly shown with four distinct legs resting on the rock, plus wings on its back.\n*   **Bottom Image:** The flying creature is a wyvern. It only has two hind legs dangling, using its wings as its primary front appendages. Recognizing that this creature only has two legs is essential to understanding why the philosophical joke applies to it.",
           "judges": [
             {
@@ -3638,8 +3502,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a dumb visual pun.\n\n- The meme pretends to be an educational guide: “How to tell them apart.”\n- The first image is labeled **“Dragon”** and shows a normal fantasy dragon.\n- The second image also shows a dragon-like creature, but the labe...",
+          "text": "This is a dumb visual pun.\n\n- The meme pretends to be an educational guide: “How to tell them apart.”\n- The first image is labeled **“Dragon”** and shows a normal fantasy dragon.\n- The second image also shows a dragon-like creature, but the label says **“A...",
           "fullText": "This is a dumb visual pun.\n\n- The meme pretends to be an educational guide: “How to tell them apart.”\n- The first image is labeled **“Dragon”** and shows a normal fantasy dragon.\n- The second image also shows a dragon-like creature, but the label says **“A Man.”**\n\nThe joke is that if you read the bottom panel as **“dragon + a man,”** it sounds like **“draggin’ a man”** — as in “dragging a man.” So it’s not actually teaching you how to distinguish anything; it’s just using “dragon” as a homophone for “draggin’.”\n\nThe humor comes from the deliberately misleading format: it looks like a serious comparison chart, but the punchline is a silly wordplay/anti-joke. The big bold meme font and the obvious fantasy dragon art make the mismatch between the image and the label even more absurd.",
           "judges": [
             {
@@ -3662,8 +3525,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a shitpost / anti-humor version of the \"How to tell them apart\" educational diagram meme.\n\n**The setup:**\nThe format pretends it's going to teach you how to distinguish two similar-looking things with visual examples. You expect a real d...",
+          "text": "This is a shitpost / anti-humor version of the \"How to tell them apart\" educational diagram meme.\n\n**The setup:**\nThe format pretends it's going to teach you how to distinguish two similar-looking things with visual examples. You expect a real distinction,...",
           "fullText": "This is a shitpost / anti-humor version of the \"How to tell them apart\" educational diagram meme.\n\n**The setup:**\nThe format pretends it's going to teach you how to distinguish two similar-looking things with visual examples. You expect a real distinction, like \"Dragon vs Wyvern\" - a common debate in fantasy fandom about 4-legged vs 2-legged dragons.\n\n**What you actually get:**\nBoth pictures are obviously dragons.\n\n* Top: A classic red, 4-legged Western dragon standing on a rock.\n* Bottom: A black / gold dragon in flight over mountains.\n\nThe top one is labeled correctly **\"Dragon\"**. The bottom one, which is also clearly a dragon, is labeled **\"A Man.\"**\n\n**The joke:**\nThere is no real guide. The humor is the absurd, deadpan mislabeling. It subverts your expectation of useful information by giving you something useless and obviously wrong. It's funny because a dragon looks nothing like a man, and because the two images are essentially the same thing.\n\nSome versions of the joke get extra mileage from:\n\n1.  **The wyvern debate.** People argue endlessly if a 2-legged dragon is a \"real\" dragon. This meme mocks that argument by not calling it a wyvern, but calling it \"A Man.\"\n2.  **A visual pun.** \"Dragon\" = \"drag on\" -> a man in drag. So a man in drag is a \"dragon.\" Or reading it as \"drag-on-a-man.\"\n3.  **A hidden detail.** In the bottom image the dragon is carrying something small in its hind claws that can look like a tiny person, so the label is technically pointing at the tiny figure, not the dragon - but it's so hard to see you think they mean the dragon.\n\nUltimately it's deliberately nonsensical.",
           "judges": [
             {
@@ -3686,8 +3548,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**Format:** This uses the classic \"How to tell them apart\" meme template, which normally shows two genuinely similar-looking things side by side with labels pointing out their differences (e.g., \"Alligator vs. Crocodile\").\n\n**The joke:** Both im...",
+          "text": "**Format:** This uses the classic \"How to tell them apart\" meme template, which normally shows two genuinely similar-looking things side by side with labels pointing out their differences (e.g., \"Alligator vs. Crocodile\").\n\n**The joke:** Both images are ver...",
           "fullText": "**Format:** This uses the classic \"How to tell them apart\" meme template, which normally shows two genuinely similar-looking things side by side with labels pointing out their differences (e.g., \"Alligator vs. Crocodile\").\n\n**The joke:** Both images are very obviously dragons—a red dragon perched on a cliff (top) and a flying dragon over snowy mountains (bottom). The template sets you up to expect a meaningful distinction. Instead, the top is correctly labeled \"Dragon,\" while the bottom—equally, unmistakably a dragon—is labeled \"A Man.\"\n\n**Why it's funny:** It's an absurdist/anti-joke. The humor comes from the complete nonsense of the second label. There is no possible way to mistake either of these for a man, so confidently declaring one to be \"A Man\" subverts the entire premise of a \"how to tell them apart\" guide. The deadpan confidence of the obviously wrong label is the punchline.\n\nIt belongs to a family of ironic memes that mock overly literal \"spot the difference\" content by giving a wildly incorrect answer with a straight face.",
           "judges": [
             {
@@ -3710,8 +3571,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is split vertically under the header \"How to tell them apart.\"\n\n- **Left column**: two dragon illustrations (a classic red quadrupedal Western dragon perched on a cliff above, a slimmer black/gold flying wyvern-style dragon over snowy p...",
+          "text": "The meme is split vertically under the header \"How to tell them apart.\"\n\n- **Left column**: two dragon illustrations (a classic red quadrupedal Western dragon perched on a cliff above, a slimmer black/gold flying wyvern-style dragon over snowy peaks below)....",
           "fullText": "The meme is split vertically under the header \"How to tell them apart.\"\n\n- **Left column**: two dragon illustrations (a classic red quadrupedal Western dragon perched on a cliff above, a slimmer black/gold flying wyvern-style dragon over snowy peaks below).\n- **Right column**: the labels \"Dragon\" (top) and \"A Man\" (bottom).\n\nThe joke relies on absurdity + mislabeling: both images are clearly dragons, yet the bottom one is deliberately captioned \"A Man,\" creating an ironic \"guide\" that offers no actual distinction. The visual contrast (grounded bulky dragon vs. sleek flying one) sets up an expectation of a real differentiator (e.g., species, wyvern vs. dragon) that is deliberately subverted by the nonsensical label.\n\nNo specific media reference or deeper pun; it is pure surreal/absurdist humor.",
           "judges": [
             {
@@ -3749,8 +3609,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThis meme references the popular Disney animated television series ***Phineas and Ferb***, specifically the character **Perry the Platypus** and his nemesis,...",
+          "text": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThis meme references the popular Disney animated television series ***Phineas and Ferb***, specifically the character **Perry the Platypus** and his nemesis, Dr. Doofens...",
           "fullText": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThis meme references the popular Disney animated television series ***Phineas and Ferb***, specifically the character **Perry the Platypus** and his nemesis, Dr. Doofenshmirtz. \n\n**2. The Visual Elements**\nThe image uses a highly minimalist, abstract Lego build to represent the character:\n*   **Top image:** The light blue Lego brick resting on the orange brick represents a normal platypus (blueish-teal body, orange beak and tail/feet). \n*   **Bottom image:** A brown Lego fedora is placed on top of the blue brick. \n\n**3. The Joke**\nThe meme is a physical recreation of a long-running gag from the show. In the cartoon, Perry is a secret agent. Whenever he encounters Dr. Doofenshmirtz without his hat, the doctor is completely fooled and simply says, **\"A platypus?\"** \n\nHowever, the moment Perry puts on his fedora, Doofenshmirtz is shocked and yells, **\"PERRY the platypus?!\"** \n\nThe humor relies on the viewer’s ability to recognize this specific piece of pop culture using only two colored bricks and a tiny hat. The caption (\"If you don't get this we can't be friends\") acts as a playful gatekeeping mechanism, rewarding those who instantly hear the joke in their heads upon seeing the hat.",
           "judges": [
             {
@@ -3773,8 +3632,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "This is a reference to **Perry the Platypus** from the Disney cartoon **_Phineas and Ferb_**.\n\n- The **teal/blue LEGO plate** represents Perry’s body.\n- The **orange LEGO plate** sticking out represents his **orange bill/beak**.\n- When the **bro...",
+          "text": "This is a reference to **Perry the Platypus** from the Disney cartoon **_Phineas and Ferb_**.\n\n- The **teal/blue LEGO plate** represents Perry’s body.\n- The **orange LEGO plate** sticking out represents his **orange bill/beak**.\n- When the **brown fedora**...",
           "fullText": "This is a reference to **Perry the Platypus** from the Disney cartoon **_Phineas and Ferb_**.\n\n- The **teal/blue LEGO plate** represents Perry’s body.\n- The **orange LEGO plate** sticking out represents his **orange bill/beak**.\n- When the **brown fedora** is added, it becomes **Agent P**, Perry’s secret-agent alter ego.\n\nThe joke is that the LEGO pieces are extremely simple and abstract, but fans immediately recognize the shape/color combo once the hat is added. In the show, Perry is just the family pet platypus until he puts on his fedora, at which point characters often recognize him as “Agent P.”  \n\nSo the meme is basically saying: “If you don’t instantly see Perry the Platypus/Agent P here, we don’t share the same childhood references.”",
           "judges": [
             {
@@ -3797,8 +3655,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This is a reference to **Perry the Platypus / Agent P from *Phineas and Ferb***.\n\nThe Disney Channel cartoon *Phineas and Ferb* [2007-2015] is about two stepbrothers. Their pet platypus Perry is secretly a spy. As just a pet, he's a teal platypu...",
+          "text": "This is a reference to **Perry the Platypus / Agent P from *Phineas and Ferb***.\n\nThe Disney Channel cartoon *Phineas and Ferb* [2007-2015] is about two stepbrothers. Their pet platypus Perry is secretly a spy. As just a pet, he's a teal platypus with an or...",
           "fullText": "This is a reference to **Perry the Platypus / Agent P from *Phineas and Ferb***.\n\nThe Disney Channel cartoon *Phineas and Ferb* [2007-2015] is about two stepbrothers. Their pet platypus Perry is secretly a spy. As just a pet, he's a teal platypus with an orange bill who lays around doing nothing. When he puts on his brown fedora, he becomes Agent P.\n\n**What you're seeing:**\n\n* **Top panel:** A teal 2x3 Lego brick placed half-over an orange 2x4 brick. The offset, the colors, and the shape looks like Perry lying flat - teal body, orange bill.\n* **Bottom panel:** The same bricks with a Lego fedora hat piece put on the teal brick. That's Perry in his secret agent form, Agent P. His fedora is his iconic accessory.\n\nIt's an example of pareidolia - seeing a character in very minimal, abstract objects. Perry's design is so simple that two bricks are enough to recognize him.\n\nThe joke mechanism is the nostalgia / gatekeeping test in the caption \"If you don't get this we can't be friends.\" If you watched the show as a kid, you instantly see Perry. If you didn't, you just see two Lego bricks. It's saying only people who share that specific childhood memory pass the friendship test.",
           "judges": [
             {
@@ -3821,8 +3678,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**What's shown:** Two LEGO photos. On top, a blue 2x4 brick sits offset on top of an orange 1x4 plate. On the bottom, the same arrangement but with a small brown LEGO fedora/hat piece placed on the blue brick.\n\n**The \"joke\" / format:** The capti...",
+          "text": "**What's shown:** Two LEGO photos. On top, a blue 2x4 brick sits offset on top of an orange 1x4 plate. On the bottom, the same arrangement but with a small brown LEGO fedora/hat piece placed on the blue brick.\n\n**The \"joke\" / format:** The caption *\"If you...",
           "fullText": "**What's shown:** Two LEGO photos. On top, a blue 2x4 brick sits offset on top of an orange 1x4 plate. On the bottom, the same arrangement but with a small brown LEGO fedora/hat piece placed on the blue brick.\n\n**The \"joke\" / format:** The caption *\"If you don't get this we can't be friends\"* is a very common meme template. It's normally used to share a niche nostalgic reference (an old cartoon, toy, game, snack, etc.) that only people of a certain age or fandom would recognize — a form of gatekeeping bonding.\n\n**Why it's funny:** This is essentially an **anti-meme / bait meme**. The image is just random LEGO pieces with a hat on top — there is no hidden reference or deeper meaning to \"get.\" The humor comes from subverting the format: people are conditioned to feel like they *should* recognize something profound, but there's genuinely nothing to understand. It mocks the self-important \"if you don't get this we can't be friends\" gatekeeping trend by attaching it to a completely meaningless image.\n\nSo if you \"don't get it,\" that's the point — there's nothing to get.",
           "judges": [
             {
@@ -3845,8 +3701,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a two-panel reveal.\n\n**Reference:** Indiana Jones (specifically his iconic brown fedora hat).\n\n**Joke mechanism:** Visual pun / recognition test. The top panel shows two offset Lego bricks that look like random pieces. The bottom pan...",
+          "text": "The meme is a two-panel reveal.\n\n**Reference:** Indiana Jones (specifically his iconic brown fedora hat).\n\n**Joke mechanism:** Visual pun / recognition test. The top panel shows two offset Lego bricks that look like random pieces. The bottom panel adds the...",
           "fullText": "The meme is a two-panel reveal.\n\n**Reference:** Indiana Jones (specifically his iconic brown fedora hat).\n\n**Joke mechanism:** Visual pun / recognition test. The top panel shows two offset Lego bricks that look like random pieces. The bottom panel adds the brown fedora hat element, instantly turning the arrangement into a tiny Lego version of Indiana Jones. The caption is the classic “if you don’t recognize this obscure reference, we can’t be friends” gatekeeping line.\n\n**Visual cue:** The brown hat piece is the only thing that completes the reference; without it the build is meaningless.",
           "judges": [
             {
@@ -3882,8 +3737,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The underlying image is a heavily edited version of **\"Migrant Mother,\"** an iconic 1936 photograph taken by Dorothea Lange. Th...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The underlying image is a heavily edited version of **\"Migrant Mother,\"** an iconic 1936 photograph taken by Dorothea Lange. The original p...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Reference:** The underlying image is a heavily edited version of **\"Migrant Mother,\"** an iconic 1936 photograph taken by Dorothea Lange. The original photo shows Florence Owens Thompson, a destitute pea picker in California during the Great Depression, looking weary and worried while her children bury their faces in her shoulders. It is one of the most famous symbols of historical poverty and despair in American history.\n*   **Internet Culture Reference:** The edit uses AI manipulation or a beauty filter (often called **\"yassification\"** in meme culture), where subjects in photos are given hyper-glamorous, modern, influencer-style makeovers, regardless of the original context.\n\n**2. The Joke**\nThe humor is based on **absurdity, dark irony, and extreme contrast**. The joke is the sheer inappropriateness of the edit. Someone has taken a universal, poignant symbol of historical suffering and used digital tools to alter *only* the mother's face, turning her into a beaming, modern, conventionally attractive woman who looks like she is posing for an Instagram selfie. \n\n**3. Visual Elements to Notice**\n*   **The Contrast:** The central face has perfect teeth, modern makeup, and styled hair, projecting pure joy and glamour.\n*   **The Clinging Children:** If you look at the background behind the woman's face (what initially might pass as voluminous 1990s-style hair), you can still see the original children from the 1936 photograph burying their faces into her shoulders in distress. \n\nThe Twitter user is laughing at the jarring, morbid dissonance of a mother looking incredibly happy and highly edited while completely ignoring the historical tragedy and the destitute children literally clinging to her.",
           "judges": [
             {
@@ -3906,8 +3760,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a Twitter/X joke about someone using a very suggestive/NSFW-looking photo as if it were a normal classy profile picture.\n\nThe attached image has been cropped into a circular “profile photo” and made black-and-white, so at first glance it...",
+          "text": "This is a Twitter/X joke about someone using a very suggestive/NSFW-looking photo as if it were a normal classy profile picture.\n\nThe attached image has been cropped into a circular “profile photo” and made black-and-white, so at first glance it looks like...",
           "fullText": "This is a Twitter/X joke about someone using a very suggestive/NSFW-looking photo as if it were a normal classy profile picture.\n\nThe attached image has been cropped into a circular “profile photo” and made black-and-white, so at first glance it looks like a glamorous headshot of a smiling woman. But if you look closer, there are other people’s heads/hair/arms pressed in around her on both sides, suggesting the original image had a much more adult or sexual context. The funny part is that the crop/filter almost disguises it as an innocent professional portrait.\n\nSo the joke is the contrast:\n\n- **Looks like:** elegant black-and-white profile pic.\n- **Actually seems to be:** a cropped frame from a suggestive/possibly pornographic group scene.\n- **Why it’s funny:** someone “hid” the outrageous context in plain sight, and the tweeter is overreacting with “I fell on the floor and can’t breathe.”\n\nThe important visual detail is the circular crop: it hides most of the scene while leaving just enough weird side elements to make the source look suspicious.",
           "judges": [
             {
@@ -3930,8 +3783,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a dark / absurd edit of a very famous historical photo.\n\n**1. The reference:**\n\nThe image is Dorothea Lange's **\"Migrant Mother\" 1936**. It's one of the most famous photos of the Great Depression - it shows Florence Owens Thompson, a des...",
+          "text": "This is a dark / absurd edit of a very famous historical photo.\n\n**1. The reference:**\n\nThe image is Dorothea Lange's **\"Migrant Mother\" 1936**. It's one of the most famous photos of the Great Depression - it shows Florence Owens Thompson, a destitute pea-p...",
           "fullText": "This is a dark / absurd edit of a very famous historical photo.\n\n**1. The reference:**\n\nThe image is Dorothea Lange's **\"Migrant Mother\" 1936**. It's one of the most famous photos of the Great Depression - it shows Florence Owens Thompson, a destitute pea-picker in California, looking worried with her children huddled around her. It's a symbol of poverty, hunger, and hardship.\n\nWhat you are seeing here is a photoshopped version. The mother's anxious face has been replaced with a smiling, heavily made-up, glamour-model / influencer-type face. Her hair is styled, she's grinning with white teeth, hand on her chin in a cute pose.\n\nThe circular crop on a black background is a screenshot of a profile picture - someone on X / Twitter was actually using this edited version as their pfp, as if it were a wholesome family photo.\n\n**2. The joke:**\n\nThe humor is pure incongruity and inappropriateness.\n\n* The original is serious, sad, and iconic. Turning it into a cheerful, hot-girl family portrait is completely tone-deaf.\n* The children are still in their original distressed, dirty, turned-away pose, while the mother is now beaming like she's doing a lifestyle shoot. That clash makes it creepy and absurd.\n* It's funny because it's so wrong. The idea that someone would either do this edit as a joke, or worse, do it unknowingly and think \"what a cute mom with her kids\" and make it their avatar, is ridiculous.\n\nThe tweet text \"im laughing so hard that someone did this i fell on the floor and can't breathe\" is a hyperbolic reaction to how cursed and audacious the edit is.",
           "judges": [
             {
@@ -3954,8 +3806,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "**What's happening:** This is a screenshot of a tweet from \"bfa agonistes\" (@superloafcat), with the caption \"im laughing so hard that someone did this i fell on the floor and can't breathe.\"\n\n**The joke:** The humor comes from the circular crop...",
+          "text": "**What's happening:** This is a screenshot of a tweet from \"bfa agonistes\" (@superloafcat), with the caption \"im laughing so hard that someone did this i fell on the floor and can't breathe.\"\n\n**The joke:** The humor comes from the circular cropping of the...",
           "fullText": "**What's happening:** This is a screenshot of a tweet from \"bfa agonistes\" (@superloafcat), with the caption \"im laughing so hard that someone did this i fell on the floor and can't breathe.\"\n\n**The joke:** The humor comes from the circular cropping of the black-and-white photo. The image appears to be of a smiling woman leaning against a man (possibly a couple's portrait), but the circular crop frames it in a way that creates a confusing, almost \"cursed\" optical illusion. \n\nThe crop merges the woman's face with the surrounding elements — the man's body, arms, and hair on either side — making the composition read as one strange, distorted figure at first glance. Your brain struggles to parse where one person ends and the other begins, and the woman's smiling face seems to float oddly within a jumble of body parts.\n\n**Why it's funny:** The poster is reacting to how someone deliberately cropped a perfectly normal photo into this disorienting shape, finding the simple visual trick absurdly hilarious. The over-the-top reaction (\"I fell on the floor and can't breathe\") to a relatively subtle visual gag is part of the comedy — it's the kind of accidental/intentional image distortion that becomes funnier the longer you stare at it.\n\n**Detail:** The profile picture is Chandler Bing (Matthew Perry) from *Friends* in his iconic \"drinking through a straw\" pose, which adds to the casual comedic vibe of the account.",
           "judges": [
             {
@@ -3978,8 +3829,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is an ironic shitpost.\n\n**Setup + joke mechanism:**\n- The tweet text uses a classic hyperbolic \"I'm literally on the floor dying\" reaction (common on Twitter since ~2012). \n- It is paired with a completely random, serene black-and-white...",
+          "text": "The meme is an ironic shitpost.\n\n**Setup + joke mechanism:**\n- The tweet text uses a classic hyperbolic \"I'm literally on the floor dying\" reaction (common on Twitter since ~2012). \n- It is paired with a completely random, serene black-and-white portrait of...",
           "fullText": "The meme is an ironic shitpost.\n\n**Setup + joke mechanism:**\n- The tweet text uses a classic hyperbolic \"I'm literally on the floor dying\" reaction (common on Twitter since ~2012). \n- It is paired with a completely random, serene black-and-white portrait of a smiling woman in a circular crop. The extreme laughter reaction is wildly disproportionate to the image, which looks like a generic stock photo or modeling headshot.\n\n**The actual joke:**\nThe humor comes from the deliberate mismatch/absurdity. There's nothing inherently funny in the photo, so the tweet is mocking the very format of \"over-the-top reaction + unrelated image\" posts. It's the visual equivalent of someone saying \"I'm screaming\" under a picture of a stock photo of a chair.\n\nThe circular crop and soft, aesthetic black-and-white filter are deliberate stylistic choices that make the image look even more like an unrelated Tumblr/Instagram portrait, heightening the randomness.",
           "judges": [
             {
@@ -4015,8 +3865,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on your instructions, here is an explanation of the meme:\n\n**The Setup and Visuals**\nThe image consists of a generic, romantic pencil sketch of a couple hugging. The caption gives a dramatic warning (\"Never trust anyone\") followed by a spe...",
+          "text": "Based on your instructions, here is an explanation of the meme:\n\n**The Setup and Visuals**\nThe image consists of a generic, romantic pencil sketch of a couple hugging. The caption gives a dramatic warning (\"Never trust anyone\") followed by a specific instru...",
           "fullText": "Based on your instructions, here is an explanation of the meme:\n\n**The Setup and Visuals**\nThe image consists of a generic, romantic pencil sketch of a couple hugging. The caption gives a dramatic warning (\"Never trust anyone\") followed by a specific instruction (\"turn this picture upside down\"). \n\nThis setup plays on a common internet trope: images that contain clever optical illusions or hidden faces that reveal themselves only when rotated 180 degrees.\n\n**The Joke (The Trap/Irony)**\nIf you follow the instructions and turn the picture upside down, there is no hidden image or illusion to be found. It is simply an upside-down drawing of a couple hugging. \n\nThe joke is a prank played directly on the viewer. The text told you: **\"Never trust anyone.\"** By trusting the meme's instructions, taking the time to turn your screen or tilt your head, and expecting a payoff, you proved the meme's opening statement right. You shouldn't have trusted it.",
           "judges": [
             {
@@ -4039,8 +3888,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is an optical-illusion/shock meme.\n\n- **Upright**, the drawing looks like a romantic sketch of a man and woman kissing.\n- The caption says **“Never trust anyone, turn this picture upside down”** because the image is “deceiving” you.\n- **Whe...",
+          "text": "This is an optical-illusion/shock meme.\n\n- **Upright**, the drawing looks like a romantic sketch of a man and woman kissing.\n- The caption says **“Never trust anyone, turn this picture upside down”** because the image is “deceiving” you.\n- **When rotated 18...",
           "fullText": "This is an optical-illusion/shock meme.\n\n- **Upright**, the drawing looks like a romantic sketch of a man and woman kissing.\n- The caption says **“Never trust anyone, turn this picture upside down”** because the image is “deceiving” you.\n- **When rotated 180 degrees**, the same lines can be reinterpreted as a much more explicit sexual scene, commonly read as someone performing oral sex rather than a wholesome kiss.\n\nThe humor comes from the bait-and-switch: it starts as a sentimental couple image, then the instruction reveals a hidden NSFW interpretation. The important visual trick is that the man’s face/ear, the woman’s hair, and their arms/shoulders are drawn ambiguously enough to become different body parts when flipped.",
           "judges": [
             {
@@ -4063,8 +3911,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a \"hidden dirty picture\" / ambiguous optical illusion meme.\n\n**What you see at first:**\nA black-and-white pencil drawing of a romantic couple hugging. A man in a t-shirt, seen from behind, and a woman with long hair with her eyes closed,...",
+          "text": "This is a \"hidden dirty picture\" / ambiguous optical illusion meme.\n\n**What you see at first:**\nA black-and-white pencil drawing of a romantic couple hugging. A man in a t-shirt, seen from behind, and a woman with long hair with her eyes closed, her arm dra...",
           "fullText": "This is a \"hidden dirty picture\" / ambiguous optical illusion meme.\n\n**What you see at first:**\nA black-and-white pencil drawing of a romantic couple hugging. A man in a t-shirt, seen from behind, and a woman with long hair with her eyes closed, her arm draped around his shoulder and her hand on his back. It looks sweet and innocent.\n\n**The trick:**\nThe text says \"Never trust anyone, turn this picture upside down\" - it's telling you not to trust appearances.\n\nIf you rotate the image 180 degrees, the shading and shapes flip into a completely different reading. What was the romantic hug now looks like a crude, sexually explicit image of a naked couple having sex. \n\nThe illusion works because the drawing is low-detail and high-contrast, so your brain reinterprets the shapes:\n\n* The woman's arm around the man's shoulder becomes a woman's leg in the air\n* The man's back/shirt becomes a woman's torso\n* The long hair, the ear, the closed eye / eyebrow become other body parts in the new NSFW reading\n\nThe joke is the bait-and-switch and shock value. You expect a sweet couples drawing, you are instructed to flip it, and you get porn. That's the punchline to \"Never trust anyone\" - even an innocent-looking picture is deceiving you. It's part of a whole genre of internet memes that use pareidolia to hide a dirty image inside an innocent one to trick people into staring at it.",
           "judges": [
             {
@@ -4087,8 +3934,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is an example of an **optical illusion / ambiguous image** combined with a humorous, ironic caption.\n\n**What's happening:**\n- The image shows a sketch of a romantic couple in a loving embrace—a man and a woman with long hair appearing...",
+          "text": "This meme is an example of an **optical illusion / ambiguous image** combined with a humorous, ironic caption.\n\n**What's happening:**\n- The image shows a sketch of a romantic couple in a loving embrace—a man and a woman with long hair appearing to kiss or h...",
           "fullText": "This meme is an example of an **optical illusion / ambiguous image** combined with a humorous, ironic caption.\n\n**What's happening:**\n- The image shows a sketch of a romantic couple in a loving embrace—a man and a woman with long hair appearing to kiss or hug tenderly.\n- The caption reads \"Never trust anyone, turn this picture upside down.\"\n\n**The joke:**\nThe illusion is designed so that when you flip the picture 180 degrees, the same drawing transforms into a completely different scene. Typically in these reversible illusion drawings, what looked like a sweet, loving embrace becomes something darker, sadder, or more sinister (in many versions, an intimate moment turns into a depiction of someone crying or being mistreated/heartbroken).\n\nThe humor and message work together: the caption tells you \"never trust anyone,\" and the visual trick reinforces that idea—what appears to be one thing (a happy, trusting relationship) reveals a hidden, opposite truth when you change your perspective (literally by rotating it). It's a clever metaphor about how appearances can be deceiving and people aren't always what they seem.\n\n**Why it's clever:**\nThe meme delivers its cynical \"trust no one\" message through interactive participation—you have to physically engage by flipping the image (or your phone) to \"discover\" the hidden truth, making the punchline a hands-on reveal rather than just a text joke.",
           "judges": [
             {
@@ -4111,8 +3957,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme shows an apparently wholesome drawing of a mother (long hair) tenderly hugging and kissing a baby on the head. The caption instructs the viewer to rotate the image 180°, which flips the scene into a man receiving oral sex from a woman (...",
+          "text": "The meme shows an apparently wholesome drawing of a mother (long hair) tenderly hugging and kissing a baby on the head. The caption instructs the viewer to rotate the image 180°, which flips the scene into a man receiving oral sex from a woman (her long hai...",
           "fullText": "The meme shows an apparently wholesome drawing of a mother (long hair) tenderly hugging and kissing a baby on the head. The caption instructs the viewer to rotate the image 180°, which flips the scene into a man receiving oral sex from a woman (her long hair now positioned at the bottom, the “baby’s” body and the hand placement reinterpreted as a different act).\n\nThe joke relies on the visual double-meaning and the bait-and-switch: the “never trust anyone” line sets up the expectation that the image is innocent until the rotation reveals something explicit and deceptive. This is a classic “secret upside-down image” internet meme format.",
           "judges": [
             {
@@ -4148,8 +3993,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on your image, here is an explanation of the meme:\n\n**1. The Reference**\nThe objects in the image are a pop culture reference to the 1997 sci-fi action movie ***The Fifth Element*** (starring Bruce Willis and Milla Jovovich). In the film's...",
+          "text": "Based on your image, here is an explanation of the meme:\n\n**1. The Reference**\nThe objects in the image are a pop culture reference to the 1997 sci-fi action movie ***The Fifth Element*** (starring Bruce Willis and Milla Jovovich). In the film's lore, these...",
           "fullText": "Based on your image, here is an explanation of the meme:\n\n**1. The Reference**\nThe objects in the image are a pop culture reference to the 1997 sci-fi action movie ***The Fifth Element*** (starring Bruce Willis and Milla Jovovich). In the film's lore, these four engraved stone pillars are the \"elemental stones\" representing Earth, Wind, Fire, and Water. They are key plot devices used to save the universe from absolute evil. \n\n**2. The Joke**\nThe meme uses a classic **\"nostalgia gatekeeping\" setup**. By stating, \"If he/she doesn't know what these are, they're too young for you,\" the creator is using recognition of a 1990s movie prop as an exaggerated age test for dating. \n\nThe implication is that *The Fifth Element* is such a millennial/Gen X cultural touchstone that if a potential romantic partner doesn't recognize these stones, they must belong to a significantly younger generation (like Gen Z). The humor comes from using an obscure, somewhat nerdy sci-fi movie reference as a strict standard for relationship compatibility. \n\n**3. Visual Elements**\nThe joke relies entirely on the visual of the **four cracked, clay-like bricks with distinct carvings** (wavy lines, straight lines, curved lines). To someone who hasn't seen the movie, they just look like strange bricks or pieces of ancient pottery. Because there is no text or context clues in the image itself identifying them as movie props, it acts as a perfect \"if you know, you know\" visual password for people of a certain age.",
           "judges": [
             {
@@ -4172,8 +4016,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a nostalgia/age-test meme referencing **_The Fifth Element_**, the 1997 sci‑fi movie starring Bruce Willis and Milla Jovovich.\n\nThe objects in the image are the **four elemental stones** from the movie. In the climax, they’re used to rep...",
+          "text": "This is a nostalgia/age-test meme referencing **_The Fifth Element_**, the 1997 sci‑fi movie starring Bruce Willis and Milla Jovovich.\n\nThe objects in the image are the **four elemental stones** from the movie. In the climax, they’re used to represent the c...",
           "fullText": "This is a nostalgia/age-test meme referencing **_The Fifth Element_**, the 1997 sci‑fi movie starring Bruce Willis and Milla Jovovich.\n\nThe objects in the image are the **four elemental stones** from the movie. In the climax, they’re used to represent the classical elements — **earth, air, fire, and water** — and must be activated to help the “fifth element” save the world.\n\nThe joke is based on the common meme format:\n\n> “If they don’t know what this is, they’re too young for you.”\n\nIt implies that someone who doesn’t recognize these props is probably too young to have grown up with or remember the movie. It’s a playful gatekeeping/nostalgia joke for people who watched late-90s sci-fi.\n\nThe visual humor comes from how the stones look like random cracked clay blocks with grooves unless you know the reference. To fans of _The Fifth Element_, though, they’re instantly recognizable.",
           "judges": [
             {
@@ -4196,8 +4039,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a nostalgia-gatekeeping meme using **Avatar: The Last Airbender**.\n\nThe four brown, cracked stone slabs are fan-made sculptures of the four bending symbols / the four nations from the Nickelodeon cartoon *Avatar: The Last Airbender* [200...",
+          "text": "This is a nostalgia-gatekeeping meme using **Avatar: The Last Airbender**.\n\nThe four brown, cracked stone slabs are fan-made sculptures of the four bending symbols / the four nations from the Nickelodeon cartoon *Avatar: The Last Airbender* [2005-2008]:\n\n*...",
           "fullText": "This is a nostalgia-gatekeeping meme using **Avatar: The Last Airbender**.\n\nThe four brown, cracked stone slabs are fan-made sculptures of the four bending symbols / the four nations from the Nickelodeon cartoon *Avatar: The Last Airbender* [2005-2008]:\n\n* **Rightmost with vertical wavy lines = Water**\n* **Second from right with straight horizontal lines = Fire**\n* **Second from left with curved horizontal lines = Air**\n* **Leftmost with horizontal wavy lines = Earth**\n\nIn the show's intro and throughout the series, those 4 stylized symbols are used to represent the Water Tribe, Earth Kingdom, Fire Nation and Air Nomads. Fans recreate them as weathered tablets to look like ancient bending scrolls/artifacts from the show.\n\nThe text on top \"IF HE/SHE DOESN'T KNOW WHAT THESE ARE, THEY'RE TOO YOUNG FOR YOU\" is a common format.\n\n**The joke / mechanism:**\n1.  **Setup:** It frames knowing this object as a test of age and dating eligibility.\n2.  **Implication:** If you grew up watching Avatar as a kid in the mid-2000s, you will instantly recognize these 4 symbols. If someone doesn't recognize them, they are Gen Alpha / too young to have been in that cultural cohort, so you shouldn't date them.\n3.  **Visual trick:** Out of context they just look like four cracked bricks with scratch marks, so only someone with the Avatar context will read them as Water, Earth, Fire, Air.",
           "judges": [
             {
@@ -4220,8 +4062,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "## Explanation\n\n**The Meme Format:**\nThis uses a popular nostalgia meme template: *\"If he/she doesn't know what these are, they're too young for you.\"* This format normally shows an obsolete piece of technology or an old-school item (like a cass...",
+          "text": "## Explanation\n\n**The Meme Format:**\nThis uses a popular nostalgia meme template: *\"If he/she doesn't know what these are, they're too young for you.\"* This format normally shows an obsolete piece of technology or an old-school item (like a cassette tape, f...",
           "fullText": "## Explanation\n\n**The Meme Format:**\nThis uses a popular nostalgia meme template: *\"If he/she doesn't know what these are, they're too young for you.\"* This format normally shows an obsolete piece of technology or an old-school item (like a cassette tape, floppy disk, rotary phone, or a pencil used to rewind a tape). The implied joke is about age and generational gaps—suggesting that only \"older\" people would recognize the object.\n\n**The Actual Joke (The Twist):**\nThe humor here is a **bait-and-switch / troll**. The objects pictured aren't some forgotten retro gadget at all—they're simply **bricks with decorative grooved patterns** (the kind of textured construction or landscaping bricks). \n\nThe punchline is that there's nothing nostalgic or generational about them. They're just *bricks*. So no matter what age someone is, they wouldn't \"know what these are\" in any meaningful nostalgic sense, making the entire premise absurd.\n\n**Why It's Funny:**\n- It subverts expectations by mimicking a sentimental, age-gatekeeping format and then revealing a completely mundane object.\n- It mocks the overuse of these \"you had to be there\" nostalgia memes.\n- The serious, artistic photography of the bricks (clean white background, dramatic lighting) adds to the comedic contrast—they're presented like precious antique artifacts when they're just construction material.\n\nIt's essentially an anti-joke that pokes fun at the meme genre itself.",
           "judges": [
             {
@@ -4244,8 +4085,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "The meme is a classic \"nostalgia/generational gap\" format.\n\n**What the objects are:** These are vintage rubber erasers (specifically art/drafting erasers, often called \"gum erasers\" or \"Pink Pearl\"-style erasers). Before widespread use of whiteb...",
+          "text": "The meme is a classic \"nostalgia/generational gap\" format.\n\n**What the objects are:** These are vintage rubber erasers (specifically art/drafting erasers, often called \"gum erasers\" or \"Pink Pearl\"-style erasers). Before widespread use of whiteboards, digit...",
           "fullText": "The meme is a classic \"nostalgia/generational gap\" format.\n\n**What the objects are:** These are vintage rubber erasers (specifically art/drafting erasers, often called \"gum erasers\" or \"Pink Pearl\"-style erasers). Before widespread use of whiteboards, digital tablets, and modern plastic click erasers, these brown rubber blocks (with different ridge/groove patterns for controlled erasing, shading, or detail work) were common school and office supplies. The visible aging/cracking emphasizes how old they are.\n\n**The joke:** It's playing on the idea that recognizing these now-obsolete items is a marker of being a certain age (roughly Millennials and older). The caption uses a dating/age-gap trope: if your potential partner doesn't even know what these are, the generational/cultural disconnect is too big. The humor comes from the exaggerated implication that knowledge of random old stationery is a compatibility test.\n\nNo deeper references or wordplay — it's straightforward \"kids these days wouldn't know\" bait.",
           "judges": [
             {
@@ -4281,8 +4121,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThe background and the car are a direct screenshot from the classic 1991 arcade/console fighting video game, *Street Fighter II*. Specifically, this is the f...",
+          "text": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThe background and the car are a direct screenshot from the classic 1991 arcade/console fighting video game, *Street Fighter II*. Specifically, this is the famous \"bonus...",
           "fullText": "Based on the image provided, here is the explanation of the meme:\n\n**1. The Reference**\nThe background and the car are a direct screenshot from the classic 1991 arcade/console fighting video game, *Street Fighter II*. Specifically, this is the famous \"bonus stage\" where the player's character is tasked with destroying a parked car within a strict time limit. \n\n**2. The Joke**\nThe joke relies on **dramatic irony** and nostalgia. The text creates a setup where the imaginary owner of the car believes they have found a peaceful, secure place to park by the water. However, the viewer—assuming they are familiar with the video game—knows that this is the absolute worst place to park. The implication is that moments after the owner walks away, a martial artist (like Ryu, Ken, or Guile) is going to arrive and violently beat the car into a pile of scrap metal using punches, kicks, and fireballs.\n\n**3. Visual Elements**\n*   **The 16-bit pixel art:** The retro graphics immediately signal to the viewer that this is from a vintage video game rather than real life.\n*   **The specific setting:** The distinct brownish-tiled dock, the blue water, and the distant boat flying an American flag are iconic visual cues that immediately trigger the memory of that specific level for gamers of that era. \n*   **The pristine car:** The vehicle is shown in perfect condition, heightening the contrast between its current state and the imminent destruction the viewer knows is coming.",
           "judges": [
             {
@@ -4305,8 +4144,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This meme references the **car-smashing bonus stage from *Street Fighter II***.\n\nIn that classic fighting game, between matches the player gets a bonus round where they have to **destroy a parked car by punching and kicking it** within a time li...",
+          "text": "This meme references the **car-smashing bonus stage from *Street Fighter II***.\n\nIn that classic fighting game, between matches the player gets a bonus round where they have to **destroy a parked car by punching and kicking it** within a time limit. The ima...",
           "fullText": "This meme references the **car-smashing bonus stage from *Street Fighter II***.\n\nIn that classic fighting game, between matches the player gets a bonus round where they have to **destroy a parked car by punching and kicking it** within a time limit. The image shows that recognizable scene: a car sitting on a dock/harbor background with the ocean behind it.\n\nThe joke is that the caption imagines the car’s owner thinking:\n\n> “This place looks safe. I’ll just park here.”\n\n…but viewers who know *Street Fighter II* understand that this is actually one of the **least safe places possible**, because a martial artist is about to show up and obliterate the car for bonus points.\n\nImportant visual elements:\n- The **gray car** centered like a target\n- The **pixel-art/arcade-game style**\n- The **dock and ocean background**, matching the Street Fighter bonus stage\n- The innocent parking caption creating dramatic irony: we know the car is doomed.",
           "judges": [
             {
@@ -4329,8 +4167,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a reference to the bonus game from **Street Fighter II, 1991**.\n\nIn that arcade game, after every few fights you get a bonus stage called \"Destroy The Car\" where you have to smash up a parked car for points. The stage is iconic: a single...",
+          "text": "This is a reference to the bonus game from **Street Fighter II, 1991**.\n\nIn that arcade game, after every few fights you get a bonus stage called \"Destroy The Car\" where you have to smash up a parked car for points. The stage is iconic: a single car parked...",
           "fullText": "This is a reference to the bonus game from **Street Fighter II, 1991**.\n\nIn that arcade game, after every few fights you get a bonus stage called \"Destroy The Car\" where you have to smash up a parked car for points. The stage is iconic: a single car parked alone on a wooden pier / harbor, with the ocean directly behind it and the bow of a large ship with an American flag visible on the right side. The image in the meme is a screenshot of that stage before any damage has been done.\n\nThe joke is dramatic irony using the format **\"This looks like a safe place to park.\"**\n\nThe top text is the imagined thought of the car's owner. In real life, an empty pier by the sea might seem quiet and safe - no traffic, no other cars. \n\nGamers instantly recognize it as the *least* safe place to park, because the entire purpose of that location in the game is for that car to be completely destroyed by martial artists within seconds. The owner thinks he found a good spot, but the audience knows the car is doomed.\n\nVisual cues that sell it:\n* **16-bit pixel art / PS1-era graphics** - tells you it's not a real photo, it's a video game location.\n* **The isolated pier + ocean + ship on the right** - that's the exact layout of the Street Fighter II car crusher stage.\n* **The pristine car centered in the frame** - it's posed exactly like it is at the start of the bonus round, right before it gets wrecked.",
           "judges": [
             {
@@ -4353,8 +4190,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme uses a pixel-art video game image (the retro 16-bit style is reminiscent of classic SNES-era games) showing a car parked on a dock or pier right at the edge of the water.\n\n**The joke:**\nThe text reads \"This place looks safe. I'll just...",
+          "text": "This meme uses a pixel-art video game image (the retro 16-bit style is reminiscent of classic SNES-era games) showing a car parked on a dock or pier right at the edge of the water.\n\n**The joke:**\nThe text reads \"This place looks safe. I'll just park here.\"...",
           "fullText": "This meme uses a pixel-art video game image (the retro 16-bit style is reminiscent of classic SNES-era games) showing a car parked on a dock or pier right at the edge of the water.\n\n**The joke:**\nThe text reads \"This place looks safe. I'll just park here.\" The humor comes from the obvious irony and danger of the situation. The car is parked precariously close to the edge of a dock, with deep ocean water right behind it. There's also a large ship/boat on the right side that appears to be approaching or docking.\n\n**Why it's funny:**\n- The location is clearly *not* safe at all—it's a terrible spot to park, sitting at the very edge where the slightest movement could send the car into the water.\n- The incoming ship adds to the danger, suggesting a collision or accident is imminent.\n- The relaxed, confident tone of \"This place looks safe\" contrasts sharply with the visibly hazardous reality, creating comedic irony.\n\n**Visual elements:**\n- The car positioned at the very edge of the wooden dock\n- The vast open water directly behind it\n- The approaching ship with an American flag, hinting at imminent danger\n- The calm, oblivious tone of the caption clashing with the precarious scene\n\nIt's a classic \"famous last words\" style meme, where someone makes a poor decision while being completely unaware of the obvious danger.",
           "judges": [
             {
@@ -4377,8 +4213,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme depicts a car parked directly at the edge of a wooden pier/dock, with ocean waves immediately in front of it and a large ship visible to the right.\n\n**The joke**: A driver confidently declares a parking spot \"safe\" in the caption, but...",
+          "text": "This meme depicts a car parked directly at the edge of a wooden pier/dock, with ocean waves immediately in front of it and a large ship visible to the right.\n\n**The joke**: A driver confidently declares a parking spot \"safe\" in the caption, but the image re...",
           "fullText": "This meme depicts a car parked directly at the edge of a wooden pier/dock, with ocean waves immediately in front of it and a large ship visible to the right.\n\n**The joke**: A driver confidently declares a parking spot \"safe\" in the caption, but the image reveals an absurdly dangerous choice. The car is inches from rolling into the sea (or being hit by waves/the departing ship), creating irony through the massive gap between the character's assessment and reality.\n\n**Key visual cue**: The perspective makes the \"ground\" appear solid at first glance, but the framing with open water right in front of the bumper delivers the punchline. The pixel-art style is incidental and doesn't reference a specific game or media.",
           "judges": [
             {
@@ -4414,8 +4249,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Reference:**\nThe meme references the cultural difference in how comic panels are formatted and read. In Japan, manga is traditionally read from **right to left**. In Western...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Reference:**\nThe meme references the cultural difference in how comic panels are formatted and read. In Japan, manga is traditionally read from **right to left**. In Western countries (...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Reference:**\nThe meme references the cultural difference in how comic panels are formatted and read. In Japan, manga is traditionally read from **right to left**. In Western countries (\"overseas\"), comic panels are read from **left to right**. \n\n**The Joke:**\nThe humor comes from the accidental reversal of a story based entirely on the reader's cultural reading habits, turning a wholesome scene into a cruel one:\n\n*   **The Artist's Intent (Right-to-Left):** As indicated by the red arrow, the artist intended for the right panel to be read first. A child's balloon is stuck in a tree, making him cry. The tall woman reaches up, rescues the balloon, and hands it to the child in the left panel, making him happy. This is the \"heartwarming scene.\"\n*   **The Western Interpretation (Left-to-Right):** As indicated by the blue arrow, Western readers instinctively look at the left panel first. In this order, the woman crouches down, takes the balloon away from a happy child, and in the next panel, places it high up in a tree where he can't reach it, leaving him crying. This turns the woman into a bully, which is why it ended up \"scaring overseas readers.\"\n\n**Important Visual Elements:**\n*   The two separate panels showing the progression of time.\n*   The emotional state of the child in each panel (crying vs. smiling).\n*   The red and blue arrows added to the image directly highlight the conflicting reading directions that create the joke.",
           "judges": [
             {
@@ -4438,8 +4272,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This meme is about **manga reading direction**.\n\nIn Japanese manga, panels are usually read **right-to-left**. Many overseas readers, especially English-speaking ones, instinctively read comics **left-to-right**.\n\nIn the image, the intended orde...",
+          "text": "This meme is about **manga reading direction**.\n\nIn Japanese manga, panels are usually read **right-to-left**. Many overseas readers, especially English-speaking ones, instinctively read comics **left-to-right**.\n\nIn the image, the intended order is:\n\n1. **...",
           "fullText": "This meme is about **manga reading direction**.\n\nIn Japanese manga, panels are usually read **right-to-left**. Many overseas readers, especially English-speaking ones, instinctively read comics **left-to-right**.\n\nIn the image, the intended order is:\n\n1. **Right panel first**: A child’s balloon is stuck in a tree. The tall woman reaches up to get it.\n2. **Left panel second**: She kneels down and returns the balloon to the child. The older woman bows gratefully.\n\nThat’s a sweet, heartwarming scene.\n\nBut if you read it the Western way, left-to-right, it becomes:\n\n1. The woman gives or shows the child a balloon.\n2. Then she takes it away and puts it up in a tree while the child cries.\n\nSo instead of being kind, she looks like a creepy or cruel woman tormenting a child.\n\nThe joke is that the artist meant to draw a wholesome moment, but because overseas readers read the panels in the opposite direction, it accidentally looked disturbing. The red and blue arrows emphasize the two possible reading directions.",
           "judges": [
             {
@@ -4462,8 +4295,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a viral tweet from Japanese manga artist Kaz Kitashima about reading direction.\n\n**The reference:**\nJapanese manga is read **right-to-left**, while Western comics are read left-to-right. The image has two panels with arrows added to show...",
+          "text": "This is a viral tweet from Japanese manga artist Kaz Kitashima about reading direction.\n\n**The reference:**\nJapanese manga is read **right-to-left**, while Western comics are read left-to-right. The image has two panels with arrows added to show the correct...",
           "fullText": "This is a viral tweet from Japanese manga artist Kaz Kitashima about reading direction.\n\n**The reference:**\nJapanese manga is read **right-to-left**, while Western comics are read left-to-right. The image has two panels with arrows added to show the correct order: the blue arrow on the bottom says start on the right and go to the left, the red arrow on top confirms it.\n\n**The intended heartwarming story - read right to left:**\n\n1.  **Right panel:** A ball is stuck in a tree. A very tall woman in a white dress reaches up to get it. A little boy is covering his eyes / crying and his mother looks on.\n2.  **Left panel:** The woman has crouched down and is kindly giving the ball back to the boy.\n\nIt's a classic \"kind big sister helps kid in the park\" scene.\n\n**The joke when read by overseas readers - read left to right:**\n\n1.  **Left panel:** The nice tall lady gives a ball to a little boy.\n2.  **Right panel:** Then she takes it back, puts it up in the tree where he can't reach it, while he starts crying and his mother watches in shock.\n\nRead that way, she goes from helpful to cruel and terrifying. She suddenly looks like a bully, or even a horror character - she's unnaturally tall, has very long black hair, a white dress, and is looming over a crying child. That aesthetic is very close to Japanese horror archetypes like Sadako from *The Ring*.\n\nSo the joke is the complete inversion of the story caused by a cultural formatting difference. What the artist meant to be wholesome became a horror story because overseas readers read it backwards.",
           "judges": [
             {
@@ -4486,8 +4318,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This meme plays on the **difference in reading direction between Japanese manga and Western comics**.\n\n**The cultural reference / setup:**\nJapanese manga is read **right-to-left**, while most Western readers instinctively read **left-to-right**....",
+          "text": "This meme plays on the **difference in reading direction between Japanese manga and Western comics**.\n\n**The cultural reference / setup:**\nJapanese manga is read **right-to-left**, while most Western readers instinctively read **left-to-right**. The artist...",
           "fullText": "This meme plays on the **difference in reading direction between Japanese manga and Western comics**.\n\n**The cultural reference / setup:**\nJapanese manga is read **right-to-left**, while most Western readers instinctively read **left-to-right**. The artist (@kazkitashima) drew a two-panel comic intended to be read in the Japanese order (indicated by the red arrow pointing left).\n\n**The two panels:**\n- **Right panel** (first in Japanese order): A child is covering their face crying, while a woman holds a ball up high.\n- **Left panel** (second in Japanese order): The woman is now crouching down, happily handing/giving the ball to the smiling child.\n\n**Why it's funny:**\nThe reading direction completely changes the emotional story:\n\n- **In Japanese order (right→left):** The child is sad/crying → the kind woman comes and gives them the ball → child cheers up. This is a *heartwarming* scene of comfort.\n\n- **In Western order (left→right):** The woman happily gives the ball → then she's holding it away while the child cries. This makes it look like she **took the ball away and made the child cry**, turning her into a \"villain\" — a confusing or even \"scary\" scene.\n\nThe humor comes from the artist realizing that the exact same drawings tell **opposite stories** depending on the audience's cultural reading habits, accidentally making a sweet scene look cruel to foreign readers.",
           "judges": [
             {
@@ -4510,8 +4341,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is a screenshot of a Japanese artist's tweet (by きたしま / @kazkitashima) showing one of their own illustrations and the unexpected reaction it got.\n\n**What the image shows:**\n- Two side-by-side panels of the same scene.\n- Left: A woman i...",
+          "text": "This meme is a screenshot of a Japanese artist's tweet (by きたしま / @kazkitashima) showing one of their own illustrations and the unexpected reaction it got.\n\n**What the image shows:**\n- Two side-by-side panels of the same scene.\n- Left: A woman in a white dr...",
           "fullText": "This meme is a screenshot of a Japanese artist's tweet (by きたしま / @kazkitashima) showing one of their own illustrations and the unexpected reaction it got.\n\n**What the image shows:**\n- Two side-by-side panels of the same scene.\n- Left: A woman in a white dress and hat kneels at normal human size, smiling while offering a pink ball to a small child. An older woman watches nearby.\n- Right: The same woman is now drawn enormously tall (towering over the trees and people), casually reaching up to place the ball high on a tree branch while the child cowers and covers their face and the older woman looks alarmed.\n\n**The joke:**\nThe artist intended a wholesome, heartwarming moment (a mother/aunt figure kindly retrieving or storing the ball for the child). However, because of the extreme height difference and perspective in the right panel, many non-Japanese viewers interpreted it as a horror scene: the woman has suddenly become a giant monster, and the terrified child is hiding from her.\n\nThis is a classic \"lost in translation\" / cultural perception gap gag common in Japanese illustration circles—exaggerated proportions that read as cute or dynamic to Japanese audiences read as monstrous or uncanny to Western ones. The red and blue arrows highlight the \"scary\" panel the artist is referring to.",
           "judges": [
             {
@@ -4547,8 +4377,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "**Explanation:**\n\n*   **References:** The meme references the distinctive logo style of extreme heavy metal subgenres, specifically Death Metal, Black Metal, and Grindcore. Bands in these genres frequently use highly stylized, spiky, root-like,...",
+          "text": "**Explanation:**\n\n*   **References:** The meme references the distinctive logo style of extreme heavy metal subgenres, specifically Death Metal, Black Metal, and Grindcore. Bands in these genres frequently use highly stylized, spiky, root-like, and intentio...",
           "fullText": "**Explanation:**\n\n*   **References:** The meme references the distinctive logo style of extreme heavy metal subgenres, specifically Death Metal, Black Metal, and Grindcore. Bands in these genres frequently use highly stylized, spiky, root-like, and intentionally illegible fonts for their logos.\n*   **The Joke:** The joke is an observational comparison. The creator has taken a photo of random, chaotic marker scribbles on a wall—likely literal vandalism or someone testing out a pen. The text overlay (\"Didn't you see them in concert last year?\") ironically treats these meaningless scratches as if they are the actual logo of an indie or underground metal band. \n*   **Crucial Visual Elements:** The sharp, intersecting, jagged black lines clustered together perfectly mimic the \"spiky branch\" aesthetic that extreme metal bands use. The absurdity comes from the fact that real band logos in those genres are often just as unreadable as these literal random scratches.",
           "judges": [
             {
@@ -4571,8 +4400,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This is a pun/visual joke.\n\nThe image shows a metalworking/machine-shop area: a metal wall and work surface covered with little dark curled bits and scratches. Those bits are likely **metal shavings/chips** from machining.\n\nThe caption says: **“...",
+          "text": "This is a pun/visual joke.\n\nThe image shows a metalworking/machine-shop area: a metal wall and work surface covered with little dark curled bits and scratches. Those bits are likely **metal shavings/chips** from machining.\n\nThe caption says: **“Didn’t you s...",
           "fullText": "This is a pun/visual joke.\n\nThe image shows a metalworking/machine-shop area: a metal wall and work surface covered with little dark curled bits and scratches. Those bits are likely **metal shavings/chips** from machining.\n\nThe caption says: **“Didn’t you see them in concert last year?”**\n\nThe joke is treating the metal shavings like they’re a **band**, probably a “metal” band — as in **heavy metal music**. So “them in concert” refers not to people, but to literal pieces of metal. It’s a dad-joke-style pun: *metal shavings* → *metal band playing a concert*.\n\nImportant visual elements:\n- The scattered black curls and marks look like metal debris from a shop.\n- The industrial metal surface reinforces the “metal” part of the joke.\n- The caption makes the viewer reinterpret the debris as if it were a musical act.",
           "judges": [
             {
@@ -4595,8 +4423,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "The image is a joke about extreme metal band logos.\n\n**1. The reference:**\nIn black metal / death metal / grindcore, band logos are famously designed to be almost completely illegible - just a dense thicket of spiky, scratchy, overlapping lines....",
+          "text": "The image is a joke about extreme metal band logos.\n\n**1. The reference:**\nIn black metal / death metal / grindcore, band logos are famously designed to be almost completely illegible - just a dense thicket of spiky, scratchy, overlapping lines. To anyone n...",
           "fullText": "The image is a joke about extreme metal band logos.\n\n**1. The reference:**\nIn black metal / death metal / grindcore, band logos are famously designed to be almost completely illegible - just a dense thicket of spiky, scratchy, overlapping lines. To anyone not deeply into the genre, they just look like random scribbles. There's a long-running internet joke where any illegible handwriting, scratch, or piece of vandalism is called a \"brutal death metal logo.\"\n\n**2. The joke:**\nThe photo shows what is clearly just random vandalism - black and blue marker scribbles scratched on the metal wall of what looks like a bus/train/elevator.\n\nThe caption \"Didn't you see them in concert last year?\" is the punchline. It frames the scribbles *as if* they are the name of a cool, obscure band that you should recognize.\n\nThe humor comes from the contrast / irony:\n* Setup: a picture of meaningless, unreadable scratches.\n* Implication: it's actually a band's logo written in that unreadable metal style.\n* The irony: the speaker is pretending to be a pretentious music fan who can effortlessly read it and is surprised you don't know the band, when in reality no one can read it.\n\n**3. Visuals that matter:**\nThe scribbles themselves are key - thin, sharp, jagged, overlapping, with no discernible letters, exactly like a stereotypical black metal logo. The fact it's on a dirty public surface makes it look like authentic tag vandalism, which makes the idea that it's a legitimate promotional band logo even funnier.",
           "judges": [
             {
@@ -4619,8 +4446,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "missed",
-          "score": "0C / 3I",
-          "text": "This meme is a visual/text joke that relies on a clever comparison.\n\n**What's in the image:** The photo shows messy, scribbled graffiti/scratches on a metal wall, likely on a train, subway, or public transit vehicle (the metal panels, bolts, and...",
+          "text": "This meme is a visual/text joke that relies on a clever comparison.\n\n**What's in the image:** The photo shows messy, scribbled graffiti/scratches on a metal wall, likely on a train, subway, or public transit vehicle (the metal panels, bolts, and textured an...",
           "fullText": "This meme is a visual/text joke that relies on a clever comparison.\n\n**What's in the image:** The photo shows messy, scribbled graffiti/scratches on a metal wall, likely on a train, subway, or public transit vehicle (the metal panels, bolts, and textured anti-slip floor suggest this). The scribbles are chaotic, illegible black and blue marker scrawls.\n\n**The joke:** The caption \"Didn't you see them in concert last year?\" reframes the illegible scribbles as if they were **autographs/signatures from a band or musical artist**. \n\nThe humor works on a couple of levels:\n1. **Celebrity autographs are notoriously illegible** — famous musicians and artists often sign their names in messy, indecipherable scrawls. The chaotic graffiti genuinely resembles a wall covered in such \"signatures.\"\n2. **Mistaking vandalism for memorabilia** — The joke implies the person is treating random graffiti/vandalism as if it were a treasured collection of autographs from a concert, asking the absurd question as if the scribbles are recognizable signatures.\n\n**Why it's funny:** It's an unexpected, witty reinterpretation of something mundane and ugly (graffiti) as something glamorous (celebrity signatures), poking fun at how messy and unreadable real autographs tend to be. The Snapchat-style caption format adds to the casual, relatable delivery.",
           "judges": [
             {
@@ -4643,8 +4469,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "The meme image shows a close-up of a heavily worn metallic surface (likely the edge of an escalator step, elevator floor, or similar industrial metal) covered in chaotic black scratches, scuffs, and gouges.\n\n**Joke mechanism**: The caption treat...",
+          "text": "The meme image shows a close-up of a heavily worn metallic surface (likely the edge of an escalator step, elevator floor, or similar industrial metal) covered in chaotic black scratches, scuffs, and gouges.\n\n**Joke mechanism**: The caption treats the random...",
           "fullText": "The meme image shows a close-up of a heavily worn metallic surface (likely the edge of an escalator step, elevator floor, or similar industrial metal) covered in chaotic black scratches, scuffs, and gouges.\n\n**Joke mechanism**: The caption treats the random scratches as if they were a deliberate band logo/name carved into the surface by fans (or left as “damage” after a rowdy show). The rhetorical question implies the viewer should recognize the “logo,” creating a visual pun: the marks coincidentally resemble stylized band lettering or the jagged/chaotic aesthetic common to certain rock/metal logos. It’s an observational/absurdist joke relying on pareidolia.\n\nNo specific band is definitively referenced (the scratches are too abstract), but the scribbled, angular style loosely evokes the look of 2000s–2010s post-hardcore/metalcore logos (e.g., Bring Me the Horizon, Pierce the Veil, or similar). The perforated metal texture at the bottom reinforces the “venue/stage-adjacent” vibe.\n\n(The image was likely taken in a mundane public/industrial setting and turned into a Snapchat meme.)",
           "judges": [
             {
@@ -4680,8 +4505,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Mechanism (The Trick):**\nThis image relies on a classic optical illusion known as **figure-ground organization** (similar to the famous Rubin vase illusion where you see eit...",
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Mechanism (The Trick):**\nThis image relies on a classic optical illusion known as **figure-ground organization** (similar to the famous Rubin vase illusion where you see either a vase o...",
           "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Mechanism (The Trick):**\nThis image relies on a classic optical illusion known as **figure-ground organization** (similar to the famous Rubin vase illusion where you see either a vase or two faces). It is presented in the format of typical social media \"engagement bait\" that challenges the viewer to spot something hidden. \n\n**Visual Elements and How It Works:**\n*   **What you likely see first:** Because of the vivid color and interesting contours, the eye is drawn to the magenta/pink, textured shapes. Many people initially perceive intricate, spindle-like \"objects\" made of towel material.\n*   **What is actually there:** The image is simply a close-up of four metal **forks** placed side-by-side on a pink towel. \n*   **The Illusion:** The handles of the forks have a scalloped, wavy edge. When placed close together, the negative space (the towel visible *between* the forks) forms distinct, symmetrical shapes. \n\n**The \"Joke\":**\nThe payoff is the realization itself. The dramatic caption (\"This picture will break your brain\") sets the viewer up to expect something mind-blowing or terrifying. The \"punchline\" is the sudden shift in perspective when the viewer finally notices the tines at the top and realizes they have been staring in confusion at perfectly mundane silverware.",
           "judges": [
             {
@@ -4704,8 +4528,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is an optical-illusion / “once you see it” meme.\n\nThe image is actually a close-up of several metal forks laid side by side on a bright pink textured surface, likely a towel or cloth. At first, your brain focuses on the obvious objects: the...",
+          "text": "This is an optical-illusion / “once you see it” meme.\n\nThe image is actually a close-up of several metal forks laid side by side on a bright pink textured surface, likely a towel or cloth. At first, your brain focuses on the obvious objects: the silver fork...",
           "fullText": "This is an optical-illusion / “once you see it” meme.\n\nThe image is actually a close-up of several metal forks laid side by side on a bright pink textured surface, likely a towel or cloth. At first, your brain focuses on the obvious objects: the silver forks.\n\nBut the “brain-breaking” part is the negative space between the forks. The pink gaps form repeated shapes that look like separate objects — kind of like long purple carrots, tongues, or even vaguely phallic shapes. Once your brain switches from seeing “forks on a pink background” to seeing “pink objects between silver shapes,” the whole image becomes hard to look at normally again.\n\nWhy it’s funny:\n\n- It uses a classic figure-ground illusion: your brain can flip between seeing the silver forks as the main objects or the pink spaces as the main objects.\n- The caption overhypes it in typical internet style: “This will break your brain.”\n- The humor comes from the moment of realization, especially because the pink negative spaces look weirdly organic compared to the ordinary forks.\n\nImportant visual detail: the fork handles create mirrored outlines, so the background between them accidentally becomes a repeating pattern of strange pink shapes.",
           "judges": [
             {
@@ -4728,8 +4551,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I",
-          "text": "This is a classic clickbait / negative-space illusion meme.\n\nThe format is: \"This will BREAK YOUR BRAIN / you can't unsee it\" with a totally normal photo of an object. You stare at it looking for something shocking or scary.\n\nWhat you are actual...",
+          "text": "This is a classic clickbait / negative-space illusion meme.\n\nThe format is: \"This will BREAK YOUR BRAIN / you can't unsee it\" with a totally normal photo of an object. You stare at it looking for something shocking or scary.\n\nWhat you are actually looking a...",
           "fullText": "This is a classic clickbait / negative-space illusion meme.\n\nThe format is: \"This will BREAK YOUR BRAIN / you can't unsee it\" with a totally normal photo of an object. You stare at it looking for something shocking or scary.\n\nWhat you are actually looking at is just **4 silver forks lined up on a magenta / pink towel.** That's it.\n\nThe \"can't unsee it\" part is **pareidolia in the negative space** - the pink towel BETWEEN the forks.\n\nIf you look at the 3 pink gaps between the 4 forks:\n\n1.  The top rounded part where the fork heads meet\n2.  The narrow neck where the fork stems are closest\n3.  The wider, wavy bottom where the ornate handles flare out\n\n...the gaps read like silhouettes of figures. It's the same idea as Rubin's Vase [the vase / two faces illusion]. The wavy edge of the handles makes the pink shape look like a person in a long dress, or an hourglass figure / cartoon ghost body.\n\nOnce your brain flips from \"I'm looking at forks\" to \"I'm looking at 3 pink figures with the forks as the background,\" you keep seeing both and it becomes hard to just see forks again.\n\nThere's no monster or hidden dirty image - the joke is that the caption hypes up a very mundane perceptual flip, and wastes your time making you search the forks for a secret.",
           "judges": [
             {
@@ -4752,8 +4574,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "2C / 1I",
-          "text": "This is an **optical illusion / figure-ground perception meme**.\n\n**What's actually in the image:**\nThe photo shows several silver forks lying on top of a fuzzy, textured pink towel or fabric. The forks are spaced so their tines appear at the to...",
+          "text": "This is an **optical illusion / figure-ground perception meme**.\n\n**What's actually in the image:**\nThe photo shows several silver forks lying on top of a fuzzy, textured pink towel or fabric. The forks are spaced so their tines appear at the top of the ima...",
           "fullText": "This is an **optical illusion / figure-ground perception meme**.\n\n**What's actually in the image:**\nThe photo shows several silver forks lying on top of a fuzzy, textured pink towel or fabric. The forks are spaced so their tines appear at the top of the image and their handles run down the picture.\n\n**The \"brain break\" trick:**\nThe illusion relies on **figure-ground reversal**. Most people first see the *silver metal* as the forks (the figure) sitting on the pink background. But because the forks are evenly spaced, your brain can flip the interpretation and suddenly see the **pink fabric shapes between the forks as if they were the \"forks\"** instead. The textured pink strips form their own fork-like silhouettes (wide tops, tapering handles), so the metal and the fabric compete for which one is the \"object\" and which is the \"background.\"\n\nOnce you notice the pink shapes as distinct objects, it becomes hard to go back to only seeing the silver forks — hence \"you can't unsee it.\"\n\n**Why it's shared:**\nThe caption (\"This picture will break your brain\") and the screaming-face emoji 😱 are typical clickbait-style framing used for these perception puzzles. They spread widely on social media because they invite people to comment about what they see first and whether they \"got it.\"\n\nIt's a fairly mild illusion — more of a curiosity than a truly mind-bending one — but it works on the classic principle of ambiguous figure-ground images (similar to the famous Rubin's Vase illusion).",
           "judges": [
             {
@@ -4776,8 +4597,7 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Grok 4.3",
           "verdict": "missed",
-          "score": "1C / 2I",
-          "text": "The meme image shows four ordinary metal forks (tines pointing up) whose handles have been coated in thick purple flocking/velvet-like material, giving them a fuzzy, organic texture.\n\n**What it “breaks your brain” with:**  \nAt first glance the f...",
+          "text": "The meme image shows four ordinary metal forks (tines pointing up) whose handles have been coated in thick purple flocking/velvet-like material, giving them a fuzzy, organic texture.\n\n**What it “breaks your brain” with:**  \nAt first glance the fuzzy purple...",
           "fullText": "The meme image shows four ordinary metal forks (tines pointing up) whose handles have been coated in thick purple flocking/velvet-like material, giving them a fuzzy, organic texture.\n\n**What it “breaks your brain” with:**  \nAt first glance the fuzzy purple shapes read as strange, living, caterpillar- or larva-like creatures lined up in a row; only after a moment does your brain register that they are simply forks with the handles artificially thickened and textured. Once noticed, the everyday utensil interpretation becomes impossible to ignore—hence the “can’t unsee it” caption.\n\nThe humor is classic pareidolia + unexpected transformation: mundane objects turned into something vaguely biological or alien-looking.",
           "judges": [
             {
@@ -4815,27 +4635,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Here is an explanation of the meme:\n\n**1. References**\n*   **The Image:** The image is a still from the music video for the song \"Heartless\" by The Weeknd. It features producer Metro Boomin (left) and The Weeknd (right) looking up at the lights in Las Vegas...",
+          "fullText": "Here is an explanation of the meme:\n\n**1. References**\n*   **The Image:** The image is a still from the music video for the song \"Heartless\" by The Weeknd. It features producer Metro Boomin (left) and The Weeknd (right) looking up at the lights in Las Vegas.\n*   **The Context:** In the context of the video, they are intoxicated/tripping, resulting in two very different reactions to their surroundings. \n\n**2. The Joke**\n*   **The Setup:** The meme describes a scenario in a courtroom where the judge begins speaking in a way that sounds sympathetic or favorable to the defendant (the client). \n*   **The Implication:** In legal battles, lawyers know that when a judge starts validating a defendant's point or expressing sympathy, it is almost always a rhetorical setup. It is usually followed by a massive \"HOWEVER...\" right before the judge hands down a guilty verdict, a harsh sentence, or rules against them. \n*   **The Contrast:** The humor lies in the contrasting levels of understanding between the required parties. The naive client takes the judge's words at face value; the experienced lawyer knows it is the calm before the storm.\n\n**3. Visual Elements**\n*   **The \"Lawyer\" (Metro Boomin):** He has an expression of pure dread and horror. He understands the legal subtext and realizes they are about to lose the case.\n*   **The \"Stupid Client\" (The Weeknd):** He is grinning widely and oblivious, blinded by the reflection of the lights in his glasses. He falsely believes they are winning because the judge is being nice.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: a judge sounding supportive is actually a bad sign, and the humor comes from the ironic contrast between kind-sounding words and an impending loss/ruling against the defendant. It also identifies the courtroom setup and the lawyer/client contrast. However, it adds irrelevant and incorrect visual references (The Weeknd, Metro Boomin, 'Heartless') that are not in the ground truth, but those do not change the fact that it understood the meme's main mechanism. Since the benchmark requires matching the ground truth's specific references only when they are part of the joke, and here the ground truth is about the judge's supportive tone signaling a bad ruling, the model gets that correctly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: when a judge sounds sympathetic or complimentary, it's actually a bad sign because it typically precedes an unfavorable ruling ('however...'). The model captures the ironic contrast between the judge's kind words and the impending bad outcome. The model also correctly identifies the visual contrast between the knowing/horrified lawyer and the naive/happy client. This matches the ground truth's core explanation about the ironic contrast between kind words and losing. The model goes further by identifying the specific image (Metro Boomin and The Weeknd from the 'Heartless' music video), which is additional information not in the ground truth but doesn't contradict it."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the ironic contrast between a judge's kind or sympathetic words and the impending bad ruling. It explains the setup (judge sounds supportive) and the implication (a 'HOWEVER' and a loss is coming), which matches the ground truth. The model also adds context about the image source (Metro Boomin and The Weeknd in the 'Heartless' music video) and the contrast between the lawyer's dread and the client's obliviousness, which supplements but does not contradict the core joke identified in the ground truth. The model fully captures the intended humor and mechanism described in the ground truth."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme jokes about the difference between how a lawyer and their client interpret a judge’s comments in court.\n\n- **Text setup:** “When the Judge starts to speak as if he is on your side”\n- **Labels:**  \n  - **Lawyer** = the worried-looking man on the le...",
+          "fullText": "This meme jokes about the difference between how a lawyer and their client interpret a judge’s comments in court.\n\n- **Text setup:** “When the Judge starts to speak as if he is on your side”\n- **Labels:**  \n  - **Lawyer** = the worried-looking man on the left  \n  - **Stupid client** = the happy, excited man on the right\n\nThe joke is that a **client who doesn’t understand courtroom dynamics** might hear the judge sounding sympathetic and think, “We’re winning!” But the **lawyer knows better**: judges often phrase things in a seemingly friendly or agreeable way right before delivering a bad ruling, asking a trap question, or explaining why they’re about to reject your argument.\n\nSo the client is smiling because they think the case is going well, while the lawyer is panicking because they can sense disaster coming.\n\nThe visual contrast is key: the left person looks tense and horrified, while the right person looks delighted and confident, matching the lawyer’s legal awareness versus the client’s clueless optimism.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core irony correctly: a judge sounding supportive or on your side is actually a bad sign, and the humor comes from the contrast between the reassuring tone and the impending unfavorable ruling. It also identifies the courtroom context and the lawyer/client contrast. Although it adds extra detail about the client being clueless and the lawyer anticipating a trap, that does not conflict with the ground truth. The essential joke matches the ground truth exactly: kind words from the judge precede the defendant losing."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: when a judge sounds supportive or complimentary, it usually signals a bad ruling is coming. The model correctly identifies the ironic contrast between the judge's kind words and the impending negative outcome. The model adds additional framing about a lawyer vs. client dynamic (which is an interpretation of the image labels), but the core joke mechanism is the same - the judge sounding supportive actually means bad news is coming. The ground truth focuses on the ironic contrast between kind words and bad ruling, which the model correctly captures."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a judge sounding sympathetic or supportive usually signals a bad ruling is coming. This matches the ground truth's explanation of the ironic contrast between kind words and an impending loss. The model also correctly explains the visual setup (lawyer panicking vs. client smiling), which is consistent with the meme's structure. The model captures the same humor mechanism as the ground truth."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a legal Twitter joke using a popular reaction image template.\n\n**1. The references / image:**\n\nThe image at the bottom shows two men looking up from a low angle, as if they are looking up at a judge's bench. \n* On the right is singer The Weeknd in h...",
+          "fullText": "This is a legal Twitter joke using a popular reaction image template.\n\n**1. The references / image:**\n\nThe image at the bottom shows two men looking up from a low angle, as if they are looking up at a judge's bench. \n* On the right is singer The Weeknd in his *Blinding Lights* era persona - with the glittery, light-reflecting sunglasses and a big, toothy grin.\n* On the left is another man with his mouth open in a worried / tense / horrified expression.\n\nThe image is widely used as a \"knowledgeable vs. clueless\" reaction template. The poster has labeled the left man \"Lawyer.\" and the right man \"Stupid client\".\n\n**2. The joke:**\n\nThe setup text is: \"*when the Judge starts to speak as if he is on your side\"\n\nIn court, when a judge starts being very understanding and friendly to a defendant - like \"You seem like a good person, you have a bright future, I understand why you did it...\" - inexperienced people think they are about to be let off.\n\nAn experienced lawyer knows the opposite is true. That tone almost always comes before a harsh lecture and a severe sentence. It's rhetorical: \"I have sympathy for you, BUT...\"\n\nSo the joke is the contrast in reaction:\n\n* The **Lawyer** knows what's actually happening and is anxious / bracing for the bad news.\n* The **Stupid client** has no legal literacy, takes the judge's nice words at face value, and is smiling happily thinking he just won the case.\n\nIt's dramatic irony - the audience knows the client is misreading the situation completely.\n\n**3. Visual elements that make it work:**\n\nThe low-angle shot sells the idea that they are both sitting and looking up at the judge. The expressions do all the work: the lawyer's face is tight, eyes wide with dread, while the client's face is ecstatic, oblivious, and even blindingly lit by the reflection of lights in his glasses, which emphasizes his clueless joy at the worst possible moment.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: a judge sounding supportive is actually a bad sign, and the humor comes from the contrast between the kind-sounding judge and the impending unfavorable ruling. It also identifies the lawyer/client reaction contrast in the image. Although it adds extra specifics about the reaction image and The Weeknd that are not in the ground truth, it still correctly understands the meme’s main setup and irony."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The ground truth says the joke is about the ironic contrast between a judge's kind/complimentary words and the fact that a bad ruling is coming next. The model correctly identifies this core mechanism - that when a judge sounds supportive, experienced people (the lawyer) know a harsh outcome is coming, while inexperienced people (the client) mistakenly think they're winning. The model correctly identifies the ironic contrast between the judge's apparent sympathy and the actual bad outcome. The model goes further in describing the image template and specific people, but the core joke interpretation matches the ground truth exactly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: when a judge sounds supportive or complimentary, it usually precedes a bad ruling or harsh sentence. The model captures the ironic contrast between the judge's kind words and the negative outcome, which matches the ground truth. The model adds extra details about the image template (The Weeknd, lawyer vs. client labels) that are not in the ground truth but do not contradict it. The essential understanding of the humor and setup aligns with the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "## Explanation\n\n**The format:** This is a popular two-person reaction meme contrasting different emotional responses to the same situation. The left person looks **nervous/cautious/worried** (looking up with a tense, anxious expression), while the right per...",
+          "fullText": "## Explanation\n\n**The format:** This is a popular two-person reaction meme contrasting different emotional responses to the same situation. The left person looks **nervous/cautious/worried** (looking up with a tense, anxious expression), while the right person looks **excited and joyful** (big smile, wearing flashy sunglasses, looking up happily).\n\n**The joke:** The caption sets up a courtroom scenario: *\"when the Judge starts to speak as if he is on your side.\"*\n\n- **The Lawyer** (left, worried face) knows from experience that this is often a trap. Judges sometimes appear sympathetic right before delivering a bad ruling, or are leading toward an unfavorable conclusion. The lawyer recognizes the danger.\n\n- **The Stupid client** (right, ecstatic face) naively interprets the judge's friendly-sounding words as a sign they're winning, and gets prematurely excited without understanding the legal nuance.\n\n**Why it's funny:** The humor comes from the contrast between **experience vs. naivety**. The professional reads the situation accurately and panics, while the inexperienced person celebrates something that may actually be bad news. The labels \"Lawyer\" and \"Stupid client\" directly spell out the dynamic, with \"Stupid\" adding bluntness for comedic effect.\n\nThis meme format is widely used to depict situations where two people interpret the same event in opposite ways based on their level of insight.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: a judge sounding supportive is actually a bad sign, and the humor comes from the ironic contrast between kind-sounding words and an impending unfavorable ruling. It also correctly identifies that one character is worried while the other is excited. Although it adds extra framing about a lawyer vs. client and a generic meme format, it still matches the ground truth’s main setup and implication."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The ground truth says the joke is about the ironic contrast between a judge's kind/supportive words and the fact that a bad ruling is about to follow - the judge sounds complimentary but the defendant is about to lose. The model correctly identifies this core setup: that when a judge appears to be on your side, it's actually a bad sign. The model adds the layer of contrasting the lawyer (who understands this irony) vs. the naive client (who doesn't), which is consistent with the meme format. The model correctly identifies the ironic contrast between the judge's kind words and the impending bad outcome, which is the core of the joke. The model gets the essential joke right - sympathetic-sounding judges often precede bad rulings."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a judge sounding supportive or sympathetic usually signals a bad ruling is coming. It captures the ironic contrast between the judge's kind words and the unfavorable outcome. The model also correctly explains the two-person dynamic (experienced lawyer worried vs. naive client excited), which is consistent with the meme's labels and setup. The ground truth's central point is fully covered."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme contrasts reactions to a judge appearing to favor the defense.\n\n**References:** The bottom image is a still from *The Wolf of Wall Street* (Jonah Hill and Leonardo DiCaprio). The top text is a trope/common legal joke about courtroom dynamics.\n\n**Jo...",
+          "fullText": "The meme contrasts reactions to a judge appearing to favor the defense.\n\n**References:** The bottom image is a still from *The Wolf of Wall Street* (Jonah Hill and Leonardo DiCaprio). The top text is a trope/common legal joke about courtroom dynamics.\n\n**Joke mechanism:** Classic contrast/inversion. The experienced lawyer (left) looks anxious because a judge suddenly sounding supportive is often a red flag (they may be setting up a harsh ruling, noticing fatal flaws in the case, or being sarcastic). The “stupid client” (right) is naively ecstatic, misreading basic judicial courtesy or questions as a guaranteed win.\n\nThe visual pairing (worried face vs. money-glasses celebration) drives the humor by showing the exact same moment through two very different levels of legal sophistication.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: a judge sounding supportive is actually a bad sign, and the humor comes from the ironic contrast between kind-sounding words and an impending loss. It also identifies the courtroom/legal trope correctly. Although it adds extra detail about a lawyer/client split and a Wolf of Wall Street reference that are not in the ground truth, it still understands the same underlying setup and punchline."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke mechanism: when a judge sounds supportive/complimentary, it's actually a red flag signaling a bad ruling is coming. The model identifies this ironic contrast between the judge's kind words and the impending loss. The model also correctly identifies the visual elements (The Wolf of Wall Street reference with Jonah Hill and Leonardo DiCaprio) and the contrast between the experienced lawyer's worry and the naive client's excitement. This matches the ground truth's core explanation about the ironic contrast between kind words and a bad ruling."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke mechanism described in the ground truth: a judge sounding supportive or complimentary is actually a red flag that a bad ruling is about to follow. The model explicitly states that the experienced lawyer looks anxious because 'a judge suddenly sounding supportive is often a red flag (they may be setting up a harsh ruling...).' This perfectly matches the ground truth's explanation of the ironic contrast between the judge's kind words and the defendant about to lose. The model also correctly identifies the visual format as a contrast between an experienced lawyer and a naive client, which fits the meme's presentation without contradicting the ground truth."
+            }
+          ]
         }
       ]
     },
@@ -4853,27 +4763,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the provided image, here is an explanation of the meme:\n\n**1. Context and References:**\n*   **Historical Reference:** The images at the top show a museum model of an early application of steam power. Specifically, it references a 16th-century inven...",
+          "fullText": "Based on the provided image, here is an explanation of the meme:\n\n**1. Context and References:**\n*   **Historical Reference:** The images at the top show a museum model of an early application of steam power. Specifically, it references a 16th-century invention by the Ottoman polymath **Taqi al-Din**. In 1551, he described a steam turbine designed to turn a roasting spit. \n*   **Meme Format:** The bottom half uses a variation of the **\"Crying Girl vs. Chad\"** (or Wojak vs. Chad) meme format. \n    *   The crying girl on the left represents an emotional, rational, or modern perspective pleading for a broader view.\n    *   The \"Chad\" on the right represents a stoic, single-minded individual whose incredibly specific or simple priorities override the pleading.\n*   **Cultural Reference:** The \"Chad\" is wearing a red fez and talking about \"kebab,\" acting as internet shorthand for a historical Ottoman/Turkish person. \n\n**2. The Joke:**\nThe humor relies on **historical irony and extreme anticlimax**. \n\n*   **The Setup:** We view this early steam technology through a modern lens. Because we know that steam power eventually caused the Industrial Revolution—leading to trains, factories, mass transportation, and radical global change—the crying girl begs the inventor to realize the world-changing potential of his machine.\n*   **The Punchline/Contrast:** The Ottoman inventor completely ignores the earth-shattering technological implications of harnessing steam energy. He is solely focused on a culinary priority: ensuring his meat (kebab) cooks evenly over a fire without someone having to turn it by hand. \n\n**3. Important Visual Elements:**\n*   **The Artifact (Top):** The physical representation of a simple boiler/turbine is necessary to establish that this is real, primitive steam technology.\n*   **Facial Expressions (Bottom):** The stark contrast between the desperate, tearful face of the girl and the completely unbothered, blank expression of the Ottoman inventor highlights how little he cares about \"revolutionizing power.\"",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device from the Ottoman/Turkish context is being used for the trivial task of rotating a kebab, which is funny because steam power later became associated with trains, factories, and the Industrial Revolution. It also correctly names Taqi al-Din and the Ottoman/Constantinople context, which matches the ground truth’s specific reference. Although it adds extra meme-format interpretation that is not necessary, it does not contradict the main joke and captures the same ironic contrast and absurdly mundane use of a major technology."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: early steam technology being used only to rotate kebabs rather than for something world-changing like the Industrial Revolution. The model identifies the same setup (steam power with huge potential), the same punchline (used trivially for cooking kebabs), and the same irony/anticlimax. The model also correctly identifies the Ottoman/Turkish context. The ground truth mentions 'Turkey/Constantinople' and the model mentions Taqi al-Din and Ottoman context. The core mechanism - absurdly trivial use of technology that became central to the Industrial Revolution - is correctly identified by the model."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the absurdly trivial use of early steam power (rotating kebabs) instead of its grand potential (Industrial Revolution, trains, factories). It also correctly identifies the specific historical context (Ottoman/Turkish inventor, Taqi al-Din, steam turbine for roasting spit) and the meme format (Crying Girl vs. Chad). The model's understanding aligns perfectly with the ground truth, which highlights the subversion of expectations regarding steam power's grand uses versus its use for kebabs in Turkey/Constantinople."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme jokes about an early steam-powered device being used for something extremely mundane: rotating meat.\n\n- **Reference:** The object at the top appears to be an early steam-turbine/steam-jack style invention, often associated in memes with Ottoman/Tu...",
+          "fullText": "This meme jokes about an early steam-powered device being used for something extremely mundane: rotating meat.\n\n- **Reference:** The object at the top appears to be an early steam-turbine/steam-jack style invention, often associated in memes with Ottoman/Turkish engineer **Taqi al-Din** or similar early steam devices. The idea is that steam pressure could make a spit rotate.\n- **Historical joke:** Steam power eventually became world-changing: engines, trains, factories, electricity generation, etc. The crying person says, “Your invention can change the world!” because they recognize its huge potential.\n- **Punchline:** The calm man in a fez replies, essentially: “That’s nice, but the kebab needs to cook evenly.” He only cares about using the invention to rotate meat for roasting.\n- **Visual humor:** The bottom uses the “crying wojak vs. calm Chad” meme format. The crying figure represents modern hindsight/panic about wasted technological potential, while the stoic Ottoman/Turkish “Chad” represents someone confidently prioritizing kebab perfection.\n\nSo the humor comes from the contrast between a potentially civilization-changing invention and its practical use as a fancy kebab rotisserie.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered invention associated with Turkey/Ottoman/Constantinople is being used for the trivial task of rotating kebabs/meat, which is funny because steam power later became important for trains, factories, and the Industrial Revolution. It also captures the contrast between grand technological potential and mundane culinary use. The specific historical reference is slightly broadened to Taqi al-Din/steam-jack style devices, but it still matches the ground truth’s Turkish/Constantinople steam engine setup and the kebab rotisserie punchline."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device being used to rotate kebabs/meat instead of being used for something civilization-changing. The model correctly identifies the contrast between steam power's world-changing potential and its trivially mundane actual use (rotating meat). The model also correctly identifies the Ottoman/Turkish context and references the crying vs. calm meme format. The ground truth mentions the device being from Turkey/Constantinople, and the model references Ottoman/Turkish context. The core mechanism of the joke - the absurdly trivial use of a technology that became central to the Industrial Revolution - is correctly identified by the model."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device (associated with Ottoman/Turkish context) being used merely to rotate meat/kebabs, contrasting with its world-changing potential. It mentions the Turkish/Ottoman connection, the kebab rotisserie use, and the absurd triviality of the application. This matches the ground truth's explanation of the subversion of expectations regarding steam power's grand uses."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a meme about **Hero of Alexandria's aeolipile - the first steam engine.**\n\n**The references:**\n\n*  **Top image:** The device in the museum case is a reconstruction of one of Hero's inventions from the 1st century AD. It's a steam boiler on the left...",
+          "fullText": "This is a meme about **Hero of Alexandria's aeolipile - the first steam engine.**\n\n**The references:**\n\n*  **Top image:** The device in the museum case is a reconstruction of one of Hero's inventions from the 1st century AD. It's a steam boiler on the left connected to a rotating spit on the right. Hero described using steam power to automatically rotate meat so it roasts evenly. It's the world's first recorded steam turbine.\n*  **Bottom panel:** This is an exploitable meme format. On the left is a screaming/crying anime girl reaction image - representing the modern viewer yelling about the missed potential. On the right is the \"Turk in a fez / Arab Chad\" character, representing the ancient/middle-eastern inventor. His fez and beard + the word \"kebab\" codes him as Turkish/Ottoman.\n\n**The joke:**\n\nHero invented workable steam power 1,600 years before the Industrial Revolution.\n\nA modern person knows steam power could have revolutionized power generation, transportation, factories, pumps, and saved millions of lives if developed further. So she begs him to use it for that.\n\nHe doesn't care. In his context, the big problem he solved was making his doner kebab / roast meat rotate automatically so it cooks evenly on all sides. It's bathos / anticlimax - world-changing technology used for the most mundane culinary quality-of-life improvement.\n\nThe irony is historically grounded - Hero's engine *was* actually used as a novelty and as an automatic rotisserie, never for industrial work, partly because the metallurgy and economy of antiquity wasn't ready for a full industrial revolution.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device is being used for something trivial—rotating kebabs/roast meat—instead of for grand industrial purposes like trains or factories. That matches the ground truth’s contrast between the expected revolutionary use of steam power and the absurdly mundane actual use. The model also names Hero of Alexandria’s aeolipile, which is a specific reference consistent with the meme’s historical setup. Although the ground truth frames it as an early steam engine invented in Turkey/Constantinople, the model’s explanation still captures the same specific historical steam-device reference and the same anticlimactic punchline about kebabs."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation captures the core joke: ancient steam power technology being used only for rotating kebabs/meat instead of for grander industrial purposes. The model correctly identifies the setup (steam engine used as a rotisserie), the contrast (world-changing technology used for trivial culinary purposes), and the historical irony. \n\nHowever, there are some differences: The ground truth mentions Turkey/Constantinople specifically, while the model attributes it to Hero of Alexandria (a Greek inventor working in Roman Egypt). The model does note the Turkish/Ottoman coding of the character (fez, kebab). \n\nDespite this geographic/historical discrepancy, the core joke is correctly identified: the absurdly trivial use of steam power (rotating kebabs) when it could have been used for the Industrial Revolution. The model gets the fundamental setup and punchline right - steam engine technology used only to rotate meat. The model actually provides more accurate historical context than the ground truth (which says Turkey/Constantinople rather than Hero of Alexandria), and correctly identifies the bathos/anticlimax joke mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam engine being used merely to rotate kebabs/meat, subverting the expectation that it would be used for grand purposes like the Industrial Revolution, trains, or factories. The model also correctly identifies the Turkish/Ottoman context (mentioning the 'Turk in a fez' and 'doner kebab') which aligns with the ground truth's mention of Turkey/Constantinople. Although the model specifically names Hero of Alexandria (who was from Egypt) rather than explicitly stating it was invented in Turkey/Constantinople, it captures the exact same humor, contrast, and cultural references (kebabs, Turkey, Industrial Revolution) as the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "## Explanation\n\n**The reference:** The device shown in the top images appears to be an **aeolipile** (or \"Hero's engine\"), an ancient steam-powered device. This is essentially the earliest known steam turbine, demonstrating steam power potentially millennia...",
+          "fullText": "## Explanation\n\n**The reference:** The device shown in the top images appears to be an **aeolipile** (or \"Hero's engine\"), an ancient steam-powered device. This is essentially the earliest known steam turbine, demonstrating steam power potentially millennia before the Industrial Revolution.\n\n**The format:** This uses the **\"crying soyjak vs. chad/yes wojak\"** meme template:\n- The **crying anime girl** (left) represents pleading desperation — begging the inventor to use their creation to advance civilization.\n- The **stoic \"Chad\" figure** (right), here wearing a **fez** to represent a Middle Eastern/Ottoman or ancient inventor, calmly dismisses the plea with an unbothered, confident expression.\n\n**The joke:** It plays on the historical \"what if\" idea that ancient civilizations had the basic technology for steam power but never developed it into an industrial revolution. The humor is the absurd anticlimax: instead of revolutionizing transportation, energy, and saving millions of lives, the inventor only cares about using the rotating steam mechanism to **evenly roast a kebab on a spit**.\n\n**Why it's funny:** It contrasts a world-changing potential with a mundane, food-related application — mocking the idea that someone had revolutionary technology in their hands and used it for something delightfully trivial. The fez and reference to kebab also lean into a lighthearted Middle Eastern/Turkish stereotype tied to the food.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device (aeolipile/Hero's engine) associated with ancient steam technology is being used for the trivial purpose of rotating a kebab instead of for grand industrial uses like trains or factories. This matches the ground truth's absurdly mundane use of steam power and the contrast with its later historical importance. The model also mentions Turkey/Ottoman/Constantinople-style context and the kebab spit, which aligns with the reference in the ground truth. Although it adds extra template interpretation (soyjak/chad) not mentioned in the ground truth, it does not contradict the main joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a steam-powered device being used only to rotate kebabs instead of for grand industrial purposes. The model mentions the trivial use (kebab roasting) contrasted with the revolutionary potential of steam power. The model also correctly notes the Turkish/Ottoman connection (mentioning the fez and Middle Eastern/Turkish stereotype). The model does make an error by calling it an 'aeolipile' (which is Greek/ancient) rather than specifically a Turkish/Constantinople steam engine, but the core joke about steam technology being used only for rotating kebabs is correctly identified. The model captures the same setup and punchline as the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an early steam-powered device being used for the trivial purpose of roasting a kebab instead of sparking an Industrial Revolution or revolutionizing transportation. It also correctly identifies the Turkish/Ottoman context (referenced by the fez and the kebab) which aligns with the ground truth's mention of Turkey/Constantinople. The model captures the exact contrast and absurdity described in the ground truth."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "This meme mocks the gap between grandiose expectations for an invention and its actual mundane use.\n\n**References:**\n- The top images show an early prototype of the vertical rotisserie (döner kebab machine), invented in the 19th century in the Ottoman Empir...",
+          "fullText": "This meme mocks the gap between grandiose expectations for an invention and its actual mundane use.\n\n**References:**\n- The top images show an early prototype of the vertical rotisserie (döner kebab machine), invented in the 19th century in the Ottoman Empire (often credited to Iskender Efendi). It is now typically displayed in Turkish museums.\n- The woman on the bottom left is a common meme format (often called “crying liberal girl” or “white woman yelling at cat” adjacent) used to represent over-the-top, idealistic hype.\n- The man on the bottom right is a stereotypical Turkish character wearing a fez, representing the inventor.\n\n**The joke:**\nThe setup builds up the device as a potentially revolutionary engine that could transform power, transport, and save lives. The punchline inverts this by revealing the creator only cares about the practical food application—ensuring meat roasts evenly on all sides for kebabs. The humor comes from the absurdity of world-changing potential being reduced to street food.\n\n**Key visual elements:**\n- Side-by-side museum photos emphasize the device’s metallic, engine-like appearance to sell the “misused technology” premise.\n- The woman’s dramatic, emotional pose contrasts with the man’s deadpan, unimpressed expression to highlight the mismatch in priorities.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: an early steam-engine-like invention is used for something trivial and mundane rather than grand industrial purposes, and the humor comes from that contrast. It also correctly identifies the Ottoman/Turkish context and the kebab/rotisserie use. However, the ground truth specifically says the engine was invented in Turkey/Constantinople and used only to rotate kebabs, with the joke being the absurdly trivial use of a technology that later became central to the Industrial Revolution. The model adds extra speculative details about meme formats and character identities that are not necessary, but it does not contradict the main point. Overall, it understands the same setup and punchline."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: that a potentially revolutionary steam-powered technology was used only for rotating kebabs (döner kebab machine), subverting expectations of grand technological use. The model identifies the Ottoman/Turkish origin, the trivial use of the technology, and the humor coming from the contrast between world-changing potential and street food application. This matches the ground truth's core explanation about the absurdly trivial use of technology that could have been used for something grand. The model gets the setup, the punchline, and the mechanism of the joke correctly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "incorrect",
+              "reasoning": "The ground truth specifically identifies the device as an 'early steam engine' and frames the humor around the irony that steam power—central to the Industrial Revolution—was used merely to rotate kebabs. The model, however, describes the device as a 'vertical rotisserie (döner kebab machine)' and frames it as merely looking engine-like, completely missing that it is a steam engine and omitting any mention of steam power or the Industrial Revolution. While the model captures the general structure of the joke (grand expectations vs. mundane food use, Ottoman context), it misses the specific core mechanism that the ground truth identifies: the absurdly trivial use of steam power, a technology that later became central to the Industrial Revolution. This is a critical omission of the specific reference that makes the joke work."
+            }
+          ]
         }
       ]
     },
@@ -4891,27 +4891,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Here is an explanation of the meme:\n\n**The Joke / Cultural Reference**\nThis meme jokes about the stereotypical differences in residential building construction between the United States and Europe. \n\n*   **The Setup:** It compares what happens when an angry...",
+          "fullText": "Here is an explanation of the meme:\n\n**The Joke / Cultural Reference**\nThis meme jokes about the stereotypical differences in residential building construction between the United States and Europe. \n\n*   **The Setup:** It compares what happens when an angry person punches a wall in both places. \n*   **The Contrast:** In the US, houses are frequently built using wood framing covered by drywall (plasterboard). Because drywall is thin and relatively fragile, an angry person can easily punch a hole right through it. In Europe, homes are much more commonly built with solid masonry (brick, stone, cinderblock, or concrete). \n*   **The Punchline:** Punching an American wall breaks the wall. Punching a European wall breaks your hand. \n\n**Visual Elements**\n*   **Top Panel:** The anime-style character punches the wall, and their fist goes straight through it, leaving a jagged hole. The character appears casually surprised but completely uninjured. \n*   **Bottom Panel:** The character is shown crying in intense agony. The crucial visual detail is their right hand, which is heavily bruised, bloody, and scraped—the direct result of punching a solid brick or concrete wall that did not break.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between punching a soft American drywall wall versus punching a hard brick/concrete wall, with the resulting difference that drywall gets damaged while the puncher gets hurt on the solid wall. This matches the ground truth’s setup and punchline about the subverted expectation that both are just 'walls' but one is much softer than the other. No specific reference was missed that the ground truth required."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (which is easy to punch through) and European/solid masonry walls (brick, concrete) which will break your hand instead. The model gets the setup, the punchline, and the visual elements correctly. This matches the ground truth explanation about punching drywall being a costly but harmless tantrum versus punching a real wall breaking your hand. The model adds the US vs Europe framing, which is a common way this meme is presented, and correctly identifies the mechanism of the joke."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation perfectly aligns with the ground truth. It identifies the core joke: the contrast between punching American drywall (which breaks) and punching a European brick/concrete wall (which breaks your hand). It captures the specific setup, the subverted expectation, and the exact punchline mentioned in the ground truth, while also accurately describing the visual elements."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme jokes about differences in typical home construction:\n\n- **“When Americans punch their wall”**: In many U.S. homes, interior walls are often **drywall over wooden studs**, which is relatively thin and easy to dent or punch through. The top image s...",
+          "fullText": "This meme jokes about differences in typical home construction:\n\n- **“When Americans punch their wall”**: In many U.S. homes, interior walls are often **drywall over wooden studs**, which is relatively thin and easy to dent or punch through. The top image shows the anime character punching the wall with little apparent injury, implying the wall gives way.\n\n- **“When Europeans punch their wall”**: In many European homes, walls are more often **brick, concrete, plaster over masonry, or otherwise much more solid**. The bottom image shows the character crying and injured, implying that punching the wall hurt them badly instead of damaging the wall.\n\nThe humor comes from exaggerating a stereotype: American walls are “paper-thin,” while European walls are “actual stone.” The anime visuals make it funnier by dramatizing the contrast—confident punch in the first panel, painful regret in the second.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: a contrast between punching a soft American drywall wall versus a much harder brick/concrete wall, with the humor coming from the expectation that both are just 'walls' but one is far easier to damage and the other injures the puncher. It also correctly identifies the American vs European construction stereotype, which matches the setup in the ground truth. No key reference is missed, and the explanation aligns with the intended irony/contrast."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (soft, easy to punch through) and European walls (brick/concrete/masonry, much harder and will hurt your hand). The model correctly explains that punching American drywall is mostly harmless to the person while punching a European wall hurts the puncher. This matches the ground truth's explanation about drywall being easy to damage vs. a real wall breaking your hand. The model also correctly identifies the subverted expectation that both are 'walls' but one is much softer. The model adds the American vs. European dimension which is the specific framing of this meme, which is consistent with the ground truth's general explanation about drywall vs. brick/concrete walls."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (easy to damage) and European brick/concrete walls (solid, will injure you). It captures the subverted expectation and the humor in the difference between the two types of walls. This matches the ground truth's explanation of the contrast and the implication that punching a real wall breaks your hand while drywall gives way."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a joke about construction differences between American and European houses.\n\n**The reference / setup:**\nIn the US, most interior walls are made of drywall - thin gypsum board over a hollow wooden frame. It's cheap and easy to build, but also very ea...",
+          "fullText": "This is a joke about construction differences between American and European houses.\n\n**The reference / setup:**\nIn the US, most interior walls are made of drywall - thin gypsum board over a hollow wooden frame. It's cheap and easy to build, but also very easy to punch a hole through. In Europe, interior walls are much more commonly solid brick, concrete block, or stone, with plaster over masonry.\n\n\"Guy punches a hole in the wall when angry\" is a very common trope in American movies / TV, which reinforced the stereotype.\n\n**The joke:**\nThe meme is a 2-panel American vs European comparison:\n\n*   **Top - \"When Americans punch their wall\":** The anime character punches the wall and her fist goes straight through it, leaving a hole. The wall lost.\n*   **Bottom - \"When Europeans punch their wall\":** The same character tries it, but the solid wall doesn't give. She ends up with a badly bruised / bloody hand, holding her head and crying. She lost.\n\nThe humor is the contrast and implied consequence. The expectation that you can dramatically punch a wall like in American media fails in Europe, where the wall is harder than you are.\n\n**Visual elements that matter:**\n*   The top image shows cracks and the fist actually embedded in the wall, showing how flimsy it is.\n*   The bottom image shows the result on the person instead of the wall - a purple bruise on her knuckles, tears, pained expression, no damage to the wall.\n*   It's drawn in an anime-style as a reaction image, which is typical for this exaggerated physical comedy - using the same red-haired character in both panels makes it a direct before/after cause-and-effect.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the broad contrast between a flimsy American drywall wall and a much sturdier European brick/concrete wall, and it explains the punch-through-vs-hand-injury consequence. However, the ground truth is specifically about contrasting punching American drywall with punching an actual brick/concrete wall, not about a broader US-vs-Europe house construction joke. The model adds extra context about European interiors and media tropes, but it still identifies the core joke: one wall is soft and easy to damage, the other is hard and will break your hand. That matches the intended setup and irony."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the contrast between punching American drywall (easy to punch through, wall loses) versus European solid brick/concrete walls (breaks your hand, you lose). The model correctly identifies the setup, the visual elements, the humor mechanism (subverted expectation, contrasting outcomes), and the cultural reference about construction differences. The ground truth mentions the same core contrast - drywall being easy to damage vs. real walls breaking your hand. The model goes into more detail but captures the same essential joke."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (easy to punch through) and European brick/concrete walls (which will break your hand). It captures the subverted expectation and the physical consequence, matching the ground truth's explanation of the humor."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme uses an anime-style comparison format to joke about differences in building construction between the United States and Europe.\n\n**The Reference/Joke:**\nThe humor is based on a well-known stereotype about construction differences:\n- **American home...",
+          "fullText": "This meme uses an anime-style comparison format to joke about differences in building construction between the United States and Europe.\n\n**The Reference/Joke:**\nThe humor is based on a well-known stereotype about construction differences:\n- **American homes** are often built with drywall (gypsum board/sheetrock), which is relatively soft and easy to punch through. This is referenced in many memes about people punching holes in their walls during fits of anger or frustration.\n- **European homes** are more commonly built with brick, concrete, or stone, which are much harder and denser materials.\n\n**The Visual Setup:**\n- **Top panel (\"When Americans punch their wall\")**: The anime character punches the wall and easily creates a hole, with cracks spreading outward. The pose looks confident and angry, suggesting it was effortless.\n- **Bottom panel (\"When Europeans punch their wall\")**: The same character is now crying, clutching an injured/bruised hand with what appears to be an ice pack. Punching the hard masonry wall resulted in personal injury rather than wall damage.\n\n**Why It's Funny:**\nThe joke lands on the role reversal of consequences. The American \"wins\" against their flimsy wall but damages their house, while the European \"loses\" against their sturdy wall and damages themselves. It plays on the trope of someone dramatically punching a wall in anger, with reality (construction materials) determining who actually gets hurt.\n\nThis is part of a broader genre of online jokes comparing American vs. European living, infrastructure, and culture.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a contrast between punching an American drywall wall versus a real brick/concrete wall, with the humor coming from the different outcomes (wall damage vs. broken hand). This matches the ground truth’s setup and irony about one wall being soft and the other hard. Although the model adds extra framing about American vs. European construction, it still captures the same specific comparison and punchline mechanism."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the contrast between punching American drywall (soft, easy to punch through) versus European walls made of brick/concrete/stone (hard, results in injury to the hand). The model correctly identifies that drywall is easy to damage while masonry walls will hurt your hand. The ground truth focuses on the same contrast - drywall is mostly harmless to your hand but damages the wall, while real brick/concrete walls break your hand. The model accurately describes both the setup and the punchline, including the visual elements (character punching successfully vs. crying with injured hand). The model also correctly notes this fits into a broader meme genre about American vs. European construction. While the ground truth is slightly more concise, the model captures the same core joke and mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (soft, easy to punch through) and European brick/concrete walls (hard, will injure your hand). It captures the subverted expectation and the role reversal of consequences. The model also correctly describes the visual setup and the broader context of American vs. European construction differences. This matches the ground truth explanation."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme contrasts American vs. European home construction through an anime character (a red-haired girl, likely Rin Kagamine from Vocaloid).\n\n**Top panel (\"When Americans punch their wall\")**:  \nThe character punches straight through the wall/door with no...",
+          "fullText": "This meme contrasts American vs. European home construction through an anime character (a red-haired girl, likely Rin Kagamine from Vocaloid).\n\n**Top panel (\"When Americans punch their wall\")**:  \nThe character punches straight through the wall/door with no visible injury. This references the common stereotype that American interior walls are made of weak drywall (plasterboard over wood studs), which is easy to break through.\n\n**Bottom panel (\"When Europeans punch their wall\")**:  \nThe same character is shown in pain, crying, with bleeding knuckles. This plays on the idea that European walls are typically solid brick, concrete, or thick plaster, making punching them self-destructive.\n\nThe humor is the exaggerated national contrast in building materials and the resulting outcome, a running internet joke about how flimsy American homes supposedly are compared to European ones.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a contrast between weak American drywall and much harder European-style brick/concrete walls, with the punch landing harmlessly through drywall but injuring the puncher on a real wall. This matches the ground truth’s setup and irony about both being 'walls' but having very different durability. The model adds extra specifics about an anime character and national stereotypes, but those do not conflict with the ground truth and the main mechanism is the same."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between punching American drywall (easy to damage, harmless to the puncher) versus punching a European/brick wall (hurts the puncher). The model correctly identifies that American walls are made of weak drywall while European walls are solid brick/concrete. The ground truth explanation focuses on this same contrast. The model adds the specific framing of 'American vs. European' which is the specific setup of this meme. The model correctly captures the subverted expectation - both are 'walls' but with very different outcomes. The core mechanism matches."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between American drywall (easy to punch through) and European brick/concrete walls (will hurt your hand). It captures the subverted expectation and the national contrast in building materials, matching the ground truth's explanation of the humor mechanism."
+            }
+          ]
         }
       ]
     },
@@ -4929,27 +5019,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe image features **Plymouth Rock**, located in Plymouth, Massachusetts. The \"1620\" carved into the stone represents the year the Mayflower Pilgrims arrived in North Ame...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe image features **Plymouth Rock**, located in Plymouth, Massachusetts. The \"1620\" carved into the stone represents the year the Mayflower Pilgrims arrived in North America. In American culture and education, Plymouth Rock holds a massive, mythic status as the symbolic stepping stone upon which the founders of the colony first set foot. \n\n**2. The Joke**\nThe joke relies on the stark **contrast between expectation and reality**. \n\nBecause of its heavy emphasis in history classes, tourists often expect Plymouth Rock to be a massive, grand, and awe-inspiring monument—perhaps a towering cliff face or a giant boulder. The reality, however, is that it is a relatively small, cracked rock sitting at the bottom of a sandy pit, causing it to be widely considered one of the most underwhelming and disappointing tourist attractions in the United States.\n\nThe meme uses hyperbole and self-deprecating humor to deliver the punchline: it comforts the viewer by joking that no matter how much of a failure they might feel they are to their parents, their personal shortcomings will never match the massive letdown tourists feel when they finally see Plymouth Rock in person.\n\n**3. Visual Elements**\n*   **The Rock Itself:** It is visibly small, cracked in half (held together by mortar), and generally looks like a completely ordinary rock, which is exactly why it is disappointing. \n*   **The Enclosure:** You can see the metal bars of the fence and the sandy pit looking down at the rock. This highlights how tourists have to lean over a railing just to look down at a rock sitting in the dirt, adding to the anti-climactic nature of the visit.\n*   **The Coins:** The scattered coins indicate it is indeed an attraction people throw change at, cementing its status as an underwhelming tourist trap.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock and the core joke: the contrast between its huge historical reputation and its small, ordinary, underwhelming appearance. It also mentions the Mayflower Pilgrims and the 1620 landing, which matches the ground truth reference. Although the model adds extra commentary about tourists and parents that is not in the ground truth, it still captures the same essential setup and punchline: a famous landmark that turns out to be just a small rock."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock as the subject of the meme, correctly identifies that the humor comes from the contrast between its legendary historical reputation and its actual underwhelming appearance as a small, ordinary rock. The model gets the core joke right - the huge gap between reputation and reality. The model even adds extra context about it being a disappointing tourist attraction, which aligns with the ground truth's explanation. The specific reference (Plymouth Rock, 1620, Mayflower Pilgrims) is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock, the 1620 Mayflower Pilgrims reference, and the core joke: the contrast between the rock's grand historical reputation and its underwhelming, small, ordinary appearance. The model matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is about **Plymouth Rock**, the famous stone in Plymouth, Massachusetts that supposedly marks where the Pilgrims landed in **1620** after arriving on the Mayflower.\n\nThe joke is that Plymouth Rock is a major historical tourist attraction, but in p...",
+          "fullText": "This meme is about **Plymouth Rock**, the famous stone in Plymouth, Massachusetts that supposedly marks where the Pilgrims landed in **1620** after arriving on the Mayflower.\n\nThe joke is that Plymouth Rock is a major historical tourist attraction, but in person it’s famously **underwhelming**: it’s just a relatively small, plain rock with “1620” carved into it, sitting behind bars near the water. Many tourists expect something grand or dramatic because of its historical reputation, then feel disappointed when they see it.\n\nThe text says:\n\n> “You’ll never disappoint your mom as much as this stone disappoints tourists.”\n\nThat’s a self-deprecating joke: even if you feel like you’ve let your mother down, you still haven’t disappointed people as badly as Plymouth Rock does when tourists finally see it.\n\nImportant visual elements:\n- The rock is small and ordinary-looking.\n- It has “1620” carved into it, identifying it as Plymouth Rock.\n- It’s fenced off like an important monument, which makes the actual plainness of the rock funnier.\n- The contrast between its huge historical reputation and its unimpressive appearance is the whole punchline.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock as the subject, including the Mayflower Pilgrims and the 1620 landing reference. It also captures the core joke from the ground truth: the humor comes from the contrast between Plymouth Rock’s major historical significance and its actually small, ordinary, underwhelming appearance. This matches the intended setup and punchline. The extra details about tourists and the carved date are consistent with the meme and do not conflict with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the meme as being about Plymouth Rock, the supposed landing site of the Pilgrims in 1620, and correctly identifies the core joke: the huge gap between its historical reputation and its unimpressive actual appearance. The model also adds detail about the specific text of the meme ('You'll never disappoint your mom as much as this stone disappoints tourists') which aligns with the ground truth's explanation of the humor coming from the discrepancy between reputation and reality. The model's explanation matches all the key elements from the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock, the 1620 Mayflower Pilgrim landing, and the core joke: the contrast between the rock's grand historical reputation and its small, underwhelming appearance. It matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The stone in the image is **Plymouth Rock** in Plymouth, Massachusetts.\n\nIt's one of the most famous historical landmarks in the US - it's supposed to be the exact spot where the Pilgrims landed the Mayflower in 1620. That's the \"1620\" carved into it. It's...",
+          "fullText": "The stone in the image is **Plymouth Rock** in Plymouth, Massachusetts.\n\nIt's one of the most famous historical landmarks in the US - it's supposed to be the exact spot where the Pilgrims landed the Mayflower in 1620. That's the \"1620\" carved into it. It's enshrined in a portico right on the water.\n\nThe joke is that it is famously one of the most disappointing tourist attractions in America.\n\nPeople expect a majestic monument, but in reality it's just a small, cracked, ordinary-looking boulder sitting in sand behind iron bars. It has been moved, broken in half, and chipped away at over the years, and historians don't even think it's really the landing spot - it was identified as such 121 years after the landing.\n\nThe text \"You'll never disappoint your mom as much as this stone disappoints tourists\" uses hyperbolic comparison for comedy:\n\n1.  **Setup:** It teases you with a common insecurity - disappointing your parents.\n2.  **Punchline / Contrast:** It says you could never be as big of a disappointment as this rock. The rock is the ultimate letdown because tourists travel specifically to see it and are met with extreme anticlimax.\n\nThe visual is essential to the joke - you can see how underwhelming it is. It's small, plain, sitting in dirt and seaweed, caged in like it's in jail, with just a number carved in. That visual proof of how un-impressive it is makes the caption funny.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock and the core joke: a famous historical landmark associated with the Pilgrims/Mayflower landing in 1620 is actually just a small, ordinary, underwhelming rock, creating humor from the contrast between its reputation and its appearance. It also captures the tourist-disappointment angle that matches the ground truth. Although it adds extra details, it does not miss the specific reference or the main mechanism of the joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock as the subject, mentions the Mayflower Pilgrims landing in 1620, and correctly identifies the core joke: the huge gap between Plymouth Rock's reputation as a major historical landmark and its actual appearance as a small, ordinary, disappointing rock. The model goes into extensive detail about the specific joke mechanism and even adds additional context about its history. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the subject as Plymouth Rock, the supposed landing site of the Mayflower Pilgrims in 1620. It also correctly identifies the core joke: the huge gap between the rock's reputation as a major historical landmark and its actual underwhelming, ordinary appearance. The model captures the same humor mechanism as the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "**What it shows:** This is **Plymouth Rock**, the famous landmark in Plymouth, Massachusetts, traditionally said to mark where the Pilgrims first stepped ashore in 1620 (hence the \"1620\" carved into it). It sits in a sandy enclosure behind iron bars, partia...",
+          "fullText": "**What it shows:** This is **Plymouth Rock**, the famous landmark in Plymouth, Massachusetts, traditionally said to mark where the Pilgrims first stepped ashore in 1620 (hence the \"1620\" carved into it). It sits in a sandy enclosure behind iron bars, partially buried.\n\n**The reference/joke:** Plymouth Rock is notorious among visitors for being underwhelming. People expect a grand, impressive monument, but in reality it's just a fairly ordinary, smallish boulder sitting in a pit. It's frequently cited on \"most disappointing tourist attractions\" lists.\n\n**Why it's funny:** The meme uses a familiar \"motivational/encouragement\" format—the kind of supportive message you'd tell someone struggling with self-doubt (\"You'll never be as bad as X\"). But instead of being genuinely uplifting, it leans on the well-known reputation of Plymouth Rock as a letdown. The humor comes from:\n- The wholesome, reassuring tone clashing with the self-deprecating subject matter\n- The relatable anxiety about disappointing one's parents\n- The hyperbole that no matter how badly you mess up, you can't possibly disappoint anyone as much as this famously anticlimactic rock disappoints the tourists who travel to see it\n\n**Visual elements:** The actual photo reinforces the joke—the rock genuinely looks plain, half-sunk in sand behind a barrier, which visually confirms exactly why tourists feel let down.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock and the core joke: a historically famous landmark associated with the Pilgrims/Mayflower is actually just a small, ordinary, underwhelming rock, creating humor from the gap between its reputation and appearance. It also mentions the tourist disappointment angle, which matches the ground truth’s idea of anticlimax. The extra motivational-format framing is not in the ground truth, but it does not contradict the main joke. Overall, the specific reference and humorous contrast are correctly understood."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock as the subject of the meme, correctly states it's the landing site of the Mayflower Pilgrims in 1620, and correctly identifies the core humor: the huge gap between Plymouth Rock's historical reputation and its actual underwhelming, ordinary appearance. The model also correctly notes that Plymouth Rock is famously disappointing to visitors. The ground truth's core joke is about something treated as a major historical landmark turning out to be just a small, ordinary rock - and the model captures this exactly. The model goes into additional detail about the meme format and structure, but these are supplementary details that don't contradict the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Plymouth Rock, the 1620 Pilgrims landing, and the core joke: the gap between the landmark's reputation and its underwhelming actual appearance. It matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "This meme shows a plain, unremarkable boulder (with \"1820\" crudely carved into it) sitting on sand behind a fence near the water. The overlaid text jokes that the rock is an ultimate disappointment to tourists who go out of their way to see it.\n\nThe humor c...",
+          "fullText": "This meme shows a plain, unremarkable boulder (with \"1820\" crudely carved into it) sitting on sand behind a fence near the water. The overlaid text jokes that the rock is an ultimate disappointment to tourists who go out of their way to see it.\n\nThe humor comes from exaggeration/comparison: disappointing your mom is already considered a high bar for failure, so this rock supposedly exceeds even that by being a worthless tourist trap. The visual setup (the rock fenced off like it's important, the mundane setting) reinforces the \"this is all there is?\" letdown.\n\nIt's playing on the well-known trope of overhyped, underwhelming attractions (e.g. similar to jokes about Plymouth Rock).",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the meme as being about Plymouth Rock and the joke that a famous historical landmark is actually just a small, ordinary rock, creating a contrast between its reputation and its mundane appearance. It also notes the tourist disappointment/underwhelming attraction angle, which matches the ground truth. The extra details about '1820' and the specific wording about disappointing your mom are not in the ground truth, but they do not change the core identification. Since it explicitly references Plymouth Rock and the same setup, it is correct."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies that the rock in the image is Plymouth Rock (noting the date carved into it, though it says 1820 instead of 1620, and the fencing around it). The model understands the core joke - that Plymouth Rock is a famous historical landmark that is deeply underwhelming in person. The model explicitly mentions 'similar to jokes about Plymouth Rock' but seems uncertain, treating it as an example rather than definitively identifying it as Plymouth Rock. However, the model does correctly capture the core mechanism: the gap between the landmark's reputation/importance and its actual unremarkable appearance as a disappointment to tourists. The model gets the setup and the punchline even if it's slightly hedging on the specific identification."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "incorrect",
+              "reasoning": "The ground truth specifically identifies the rock as Plymouth Rock, the landing site of the Mayflower Pilgrims in December 1620. The model fails to identify Plymouth Rock as the actual subject of the meme; it only mentions it as a vague comparative example ('similar to jokes about Plymouth Rock'). The model also misreads the carved date as '1820' instead of '1620'. Because the ground truth names a specific landmark and historical event, the model must identify it to be correct, and it does not."
+            }
+          ]
         }
       ]
     },
@@ -4967,27 +5147,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Figures:** The characters depicted are Founding Fathers of the United States. The speaker in the first two panels is George Washington. The two men in t...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **Historical Figures:** The characters depicted are Founding Fathers of the United States. The speaker in the first two panels is George Washington. The two men in the final panel are Thomas Jefferson and John Adams. \n*   **Historical Context:** In George Washington’s famous 1796 Farewell Address as he left the presidency, he strongly warned the nation against the formation of political parties (which he called \"factions\"), believing they would divide the country. \n*   **Pop Culture Trope:** The comic mimics a classic sitcom or movie trope where a parent leaves rowdy teenagers home alone and firmly warns them, \"No parties while I'm gone.\" \n\n**2. The Joke**\n*   **Double Entendre:** The joke hinges on the double meaning of the word \"parties.\" Frame two treats it like a parent forbidding a social gathering (a house party), but historically, Washington was forbidding *political* parties. \n*   **The Punchline/Irony:** As soon as Washington stepped down, Jefferson and Adams immediately became the figureheads of the first two bitterly opposed political parties in the U.S. (the Democratic-Republicans and the Federalists). They did exactly what Washington told them not to do.\n\n**3. Visual Elements**\n*    Washington is drawn looking stern and parental, leaning in close in the second panel to emphasize his authority. \n*   In the third panel, Jefferson and Adams share mischievous, conspiratorial grins. This visual perfectly captures the trope of rebellious teenagers who fully intend to break the rules the second the parent's car leaves the driveway.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: George Washington’s Farewell Address warning against political parties is phrased like a parent saying “no parties,” creating a double meaning with social parties. It also names the specific historical reference to Washington and the contrast with the everyday meaning of “parties.” The extra details about Jefferson and Adams are consistent with the image and do not conflict with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the double entendre on 'parties' where Washington's farewell address warning against political parties sounds like a parent forbidding social parties/get-togethers. The model identifies George Washington, the farewell address, the pun/double meaning of 'parties,' and the contrast between the political warning and the everyday meaning. The model also correctly identifies Jefferson and Adams as the 'rebellious teenagers' who went on to form political parties despite Washington's warning. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the double entendre on the word 'parties' in the context of George Washington's farewell address. It explicitly mentions Washington's warning against political parties and the contrast with the everyday meaning of a parent saying 'no parties' (social gatherings). The model even adds relevant historical context about Jefferson and Adams, which aligns perfectly with the ground truth's explanation of the pun and contrast."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a historical pun about the early United States.\n\n- The person speaking is **George Washington**, telling **Thomas Jefferson** and **John Adams**: “I’m leaving. And while I’m gone… no parties.”\n- On the surface, “no parties” sounds like a parent...",
+          "fullText": "This meme is a historical pun about the early United States.\n\n- The person speaking is **George Washington**, telling **Thomas Jefferson** and **John Adams**: “I’m leaving. And while I’m gone… no parties.”\n- On the surface, “no parties” sounds like a parent telling kids not to throw a house party while they’re away.\n- But historically, Washington strongly warned against **political parties/factions** in his Farewell Address.\n- After Washington left office, American politics quickly split into rival parties:\n  - **John Adams** became associated with the **Federalists**\n  - **Thomas Jefferson** became associated with the **Democratic-Republicans**\n\nThe joke is that Jefferson and Adams are shown smirking because they are absolutely going to create “parties” anyway—political parties, not social parties.\n\nThe visual humor comes from the comic setup: Washington’s serious warning in the first two panels, then Jefferson and Adams grinning mischievously in the red third panel like kids planning to disobey. The Tumblr caption calls it a great pun because “party” has both meanings.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a pun on \"parties\": George Washington's warning against political parties/factions in his Farewell Address is being phrased like a parent saying \"no parties\" in the social sense. It also correctly names George Washington and explains the double meaning. The extra details about Jefferson and Adams are not in the ground truth, but they do not contradict it. Overall, the model captured the same specific reference and mechanism of the joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun/double entendre: 'no parties' means both political parties (Washington's actual warning in his Farewell Address) and social parties (like a parent telling kids not to have a party while they're away). The model also correctly identifies that Jefferson and Adams went on to create political parties anyway, adding to the humor. The model even adds extra detail about Jefferson (Democratic-Republicans) and Adams (Federalists). The ground truth's core joke is fully captured by the model's explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the pun/double entendre on 'parties' contrasting Washington's warning against political parties/factions with the everyday meaning of a social party. It mentions George Washington's Farewell Address, the warning against political parties, and the parental 'no parties' interpretation. It also adds specific historical context about Jefferson and Adams forming rival parties, which enriches rather than detracts from the explanation. The model's understanding aligns with the ground truth."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a history pun built on a relatable parent-leaving-the-kids-home-alone trope.\n\n**References:**\n\n* The man in the red coat is George Washington, the 1st US President. The two men in the 3rd panel are Thomas Jefferson and John Adams - his vice presiden...",
+          "fullText": "This is a history pun built on a relatable parent-leaving-the-kids-home-alone trope.\n\n**References:**\n\n* The man in the red coat is George Washington, the 1st US President. The two men in the 3rd panel are Thomas Jefferson and John Adams - his vice presidents / successors who became the 2nd and 3rd presidents.\n* In his 1796 Farewell Address, Washington explicitly warned Americans against forming political factions and political parties, fearing they would divide the country.\n* Jefferson and Adams did the exact opposite. They became the leaders of the first two major American political parties - Jefferson led the Democratic-Republicans, Adams led the Federalists - and ran against each other in the bitter elections of 1796 and 1800.\n\n**The joke:**\n\nThe word **\"parties\"** has two meanings.\n\n1.  **Literal party** - a social gathering / house party. In the comic Washington is acting like a strict dad: \"Jefferson, Adams, I'm leaving. And while I'm gone... NO PARTIES.\"\n2.  **Political party** - an organized political group.\n\nThe setup is that Washington tells them not to throw a party while he's gone. The punchline in panel 3 shows Jefferson and Adams grinning and clearly about to disobey. Historically, the second they were left in charge, they immediately created the American two-party system - the exact thing Washington told them not to do.\n\nThat's why the Tumblr caption calls it a great pun.\n\n**Visual elements:**\n\n* Panels 1 and 2 are blue background, stern close-up on Washington to build authority. Panel 3 switches to a red background with both men smiling mischievously, showing the rule is about to be broken the instant he leaves.\n* The art is from Reporrish Comics / Zach Hanson, a series that draws Founding Father history as modern, casual interactions.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun on \"parties\" and connects it to George Washington's Farewell Address warning against political parties versus the everyday meaning of social parties. It also names Washington and the historical context of his anti-faction warning, which matches the ground truth. The extra details about Jefferson and Adams and the broader political history are not necessary, but they do not contradict the main joke. Overall, the explanation captures the same double entendre and contrast as the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun/double entendre on 'parties' (political parties vs. social gatherings), correctly identifies George Washington's farewell address warning against political parties, correctly identifies the two men as Jefferson and Adams who went on to create political parties, and correctly explains the joke mechanism. The model's explanation matches and even expands upon the ground truth. All key elements are present: Washington's farewell address, the pun on 'parties,' and the irony of Jefferson and Adams immediately doing what Washington warned against."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a pun/double entendre on the word 'parties', contrasting Washington's warning against political factions with the everyday meaning of a social gathering. It also accurately identifies George Washington and his Farewell Address, matching the ground truth's explanation of the meme's humor. The model even provides additional relevant historical context about Jefferson and Adams, which supports the joke without contradicting the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "**The reference:** This comic plays on a piece of American history. George Washington (the figure speaking in the first two panels) famously warned against the formation of political parties in his Farewell Address, fearing they would divide the nation.\n\n**...",
+          "fullText": "**The reference:** This comic plays on a piece of American history. George Washington (the figure speaking in the first two panels) famously warned against the formation of political parties in his Farewell Address, fearing they would divide the nation.\n\n**The joke (the pun):** Washington tells Thomas Jefferson and John Adams, \"I'm leaving. And while I'm gone... No parties.\" This mimics the classic line a parent gives kids before leaving the house: *\"No parties!\"* (meaning no wild get-togethers).\n\nThe double meaning is:\n- **\"Parties\"** as in house parties (the parental warning)\n- **\"Parties\"** as in **political parties** (Washington's actual historical warning)\n\n**The visual punchline:** In the final panel, the moment Washington is gone, Jefferson and Adams immediately grin mischievously at each other — like kids about to throw a party the second their parent leaves. The historical irony is that these two men went on to lead **opposing political parties** (Jefferson the Democratic-Republicans, Adams the Federalists), doing exactly the thing Washington told them not to do.\n\nSo the smiling faces represent them about to \"break the rules\" both literally (party) and historically (form political factions).\n\nThe caption at the bottom (\"this is one of the best puns I have ever seen\") is just a Tumblr user reacting, reinforcing how clever the wordplay is.\n\nCredit is given to **reparrishcomics & Zach Hanson**.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: George Washington's Farewell Address warning against political parties is being turned into a pun on 'no parties' meaning no social get-togethers. It explicitly notes the double meaning of 'parties' and the contrast between Washington's anti-faction warning and the everyday 'party' meaning. It also mentions the specific historical figures George Washington, Thomas Jefferson, and John Adams, which aligns with the setup. The extra details about later political parties and the Tumblr caption are not necessary but do not conflict with the ground truth. Overall, it matches the intended reference and wordplay."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation perfectly matches the ground truth. It identifies: (1) George Washington's farewell address warning against political parties, (2) the pun/double entendre on 'parties' meaning both social gatherings and political parties, (3) the contrast between Washington's historical warning and the everyday parental 'no parties' phrase, and (4) the visual punchline of Jefferson and Adams smiling mischievously. The model actually provides more detail than the ground truth, naming the specific political parties involved, but all core elements are correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the pun/double entendre on 'parties' contrasting Washington's warning against political parties with the parental 'no parties' meaning no social get-togethers. It mentions George Washington's Farewell Address and the specific warning against political parties, matching the ground truth. The model also adds additional historical context about Jefferson and Adams, but this does not detract from the correct identification of the joke."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a three-panel comic (by Reparrish Comics & Zach Hanson) playing on a famous moment in early US history.\n\n**References:** \n- George Washington’s 1796 Farewell Address, in which he warned against the dangers of political factions (what became the...",
+          "fullText": "This meme is a three-panel comic (by Reparrish Comics & Zach Hanson) playing on a famous moment in early US history.\n\n**References:** \n- George Washington’s 1796 Farewell Address, in which he warned against the dangers of political factions (what became the two-party system).\n- The two men shown are Thomas Jefferson and John Adams, who went on to lead the opposing Democratic-Republican and Federalist parties after Washington left office.\n\n**The joke:**  \nIt’s a pun on the word “parties.” Washington’s line “No parties” is delivered as a serious political warning, but the punchline in the third panel shows Jefferson and Adams immediately celebrating/forming political parties anyway. The visual contrast (blue-to-red background, scheming expressions) emphasizes the irony that his advice was ignored the moment he turned his back.\n\nThe bottom comment is just a viewer calling out how clean the double meaning is.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun on the word “parties” and the contrast between George Washington’s warning against political parties/factions and the everyday meaning of parties as social celebrations. It also mentions Washington’s Farewell Address, which matches the ground truth’s reference. Although the model adds extra historical specifics about Jefferson and Adams that are not necessary, it still captures the same joke mechanism: a double entendre on “parties” with the anti-faction warning sounding like “no parties.”"
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun/double entendre on 'parties' - that Washington's warning about political parties sounds like a parent saying 'no parties' (no social gatherings). The model identifies George Washington's Farewell Address warning against political factions. However, the model's explanation focuses on the irony that Jefferson and Adams ignored Washington's advice, rather than the parent/child dynamic pun. The ground truth specifically emphasizes the double entendre between 'political parties' and 'social get-togethers/fun parties.' The model does mention 'the double meaning' and acknowledges the pun on 'parties,' and notes the viewer called out 'how clean the double meaning is.' So the model does get the core joke (the pun on 'parties'), even if it also adds additional interpretation about the irony of ignoring the advice. The key mechanic - the double meaning of 'parties' as both political factions and social gatherings - is identified by the model."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the pun/double entendre on 'parties' in George Washington's Farewell Address, contrasting the political warning against factions with the everyday meaning of a fun party. It also correctly references Washington's Farewell Address. The model adds extra historical context (Jefferson and Adams) but still captures the same pun and contrast described in the ground truth."
+            }
+          ]
         }
       ]
     },
@@ -5005,27 +5275,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the visual clues and text, here is an explanation of the comic:\n\n**The Setup and Implication (The Joke)**\nThe joke relies on dramatic irony and an unspoken implication. An older Vietnam veteran named Harold is standing on his porch with his wife wh...",
+          "fullText": "Based on the visual clues and text, here is an explanation of the comic:\n\n**The Setup and Implication (The Joke)**\nThe joke relies on dramatic irony and an unspoken implication. An older Vietnam veteran named Harold is standing on his porch with his wife when a young man arrives from Vietnam. \n\nHarold’s wife naively assumes the young man is an old war buddy coming for a visit, but notes he is entirely \"too young\" to have served in the war. The joke is that the viewer—and a terrified Harold—realize instantly that this is not an old war buddy, but rather Harold's illegitimate son from his time serving overseas, a secret he has clearly kept from his wife. \n\n**Important Visual Elements**\nThe cartoonist uses several visual cues to deliver the punchline without explicitly stating it:\n*   **The Photograph:** The young man is holding a picture of a younger Harold (in a green military uniform) with a young Asian woman, implying a romantic relationship during his deployment.\n*   **The Family Resemblance:** The young man is drawn with an identical prominent nose and large ears as Harold, proving visually that they are father and son.\n*   **Harold's Reaction:** Harold is drawn sweating profusely and looking terrified because his decades-old secret has just shown up on his doorstep. \n*   **The Luggage:** The suitcase has a sticker for \"Ho Chi Minh City\" (the current name for Saigon, Vietnam), establishing where the young man traveled from.\n\n**Cultural and Historical References**\n*   **\"In-Country Vet\":** This term refers to a service member who served physically on the ground in Vietnam during the Vietnam War, as opposed to serving during the Vietnam era but being stationed elsewhere.\n*   **Amerasians:** The comic is referencing a real historical phenomenon. During the Vietnam War, tens of thousands of children were born to American servicemen and Vietnamese women. After the war, many of these children eventually uncovered the identities of their fathers and sought them out in the United States.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran had a relationship with a Vietnamese woman during the war, and the young man’s arrival reveals he is the veteran’s illegitimate son. That matches the ground truth’s surprise paternity/infidelity reveal. The model also explicitly mentions the Vietnam War veteran, the Vietnamese woman, and the illegitimate son, which are the key specific references. Extra details about the photo, resemblance, and historical context are not necessary but do not conflict with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: a Vietnam veteran's illegitimate son from a Vietnamese woman shows up at his doorstep, creating an awkward reveal that surprises his wife. The model correctly identifies the setup (veteran served in Vietnam, had a relationship with a Vietnamese woman, the child is now showing up), the key elements (the photograph showing Harold with a Vietnamese woman, the family resemblance, Harold's terrified reaction), and the historical context (Amerasian children). This matches the ground truth explanation about a Vietnam War veteran who impregnated a Vietnamese woman while serving, with the awkward reveal of the illegitimate son turning it into a paternity/infidelity joke."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran is confronted by a young man from Vietnam who is his illegitimate son from a relationship during the war, creating an awkward paternity reveal in front of his wife. This matches the ground truth explanation precisely."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This cartoon is about an awkward “family reunion” involving the Vietnam War.\n\n- **Reference:** “In-country vet” is military slang for a Vietnam War veteran who actually served in Vietnam. “Ho Chi Minh City” is the modern name for Saigon, a major city in Vie...",
+          "fullText": "This cartoon is about an awkward “family reunion” involving the Vietnam War.\n\n- **Reference:** “In-country vet” is military slang for a Vietnam War veteran who actually served in Vietnam. “Ho Chi Minh City” is the modern name for Saigon, a major city in Vietnam.\n- **What’s happening:** A Vietnamese man shows up at Harold’s house with a suitcase from Ho Chi Minh City and a photo of Harold as a young soldier standing with a Vietnamese woman. The implication is that Harold had a relationship with a Vietnamese woman while serving in Vietnam and fathered a child.\n- **The joke:** Harold’s wife says, “Isn’t he too young to have been in Vietnam with you?” She assumes the man is claiming to be Harold’s fellow war buddy. But the punchline is that he’s probably not a fellow veteran — he’s Harold’s long-lost son from Vietnam.\n- **Visual humor:** Harold looks panicked and guilty, his wife looks shocked, and the visiting man calmly holds the incriminating photo. The suitcase labeled “Ho Chi Minh City” reinforces that he has come from Vietnam.\n\nSo the humor comes from the sudden, uncomfortable reveal of Harold’s secret wartime past coming literally to his doorstep.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered a child with a Vietnamese woman during the war, and the younger Vietnamese man’s visit is the awkward reveal that he is Harold’s illegitimate son. This matches the ground truth’s surprise paternity/infidelity setup and the reunion turning into an uncomfortable reveal. It also correctly notes the Vietnam War context and the implication of the photo and suitcase. Although it adds some extra detail about the wife’s line, it does not change the interpretation and still captures the same specific joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered an illegitimate child with a Vietnamese woman during the war, and now that son has shown up at his doorstep, creating an awkward/uncomfortable situation. The model correctly identifies Harold as the vet, the Vietnamese woman as the mother, and the visiting man as Harold's illegitimate son. The model also notes Harold's guilty expression and the wife's reaction. The ground truth emphasizes the 'paternity/infidelity joke' aspect, and the model captures this by noting the 'secret wartime past' and the illegitimate son reveal. The model gets all the key elements correct."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered a child with a Vietnamese woman during the war, and the younger man at the door is his illegitimate son, creating an awkward paternity/infidelity reveal. This matches the ground truth explanation precisely."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a single-panel gag cartoon, not a viral internet image macro, but the joke works the same way.\n\n**What you are looking at:**\n\nAn older man named Harold and his wife are answering the door. A younger Asian man is at the door with a suitcase that says...",
+          "fullText": "This is a single-panel gag cartoon, not a viral internet image macro, but the joke works the same way.\n\n**What you are looking at:**\n\nAn older man named Harold and his wife are answering the door. A younger Asian man is at the door with a suitcase that says `HO CHI MINH CITY` and is holding up a photo of a young U.S. soldier - Harold - with his arm around a Vietnamese woman. \n\nThe wife says: *\"HAROLD, ISN'T HE TOO YOUNG TO HAVE BEEN IN VIETNAM WITH YOU?\"* \nThe title at the top says `IN-COUNTRY VET` and the caption at the bottom says `FAMILY REUNIONS CAN BE VERY STRESSFUL!`\n\n**References you need to get it:**\n\n*   **\"In-country vet\"** is Vietnam War slang. An \"in-country\" veteran meant someone who actually served inside Vietnam, not just in the military during that era.\n*   **Ho Chi Minh City / Vietnam War:** The U.S. war in Vietnam ended in 1975. Many American servicemen had relationships with Vietnamese women while deployed and fathered children, often called Amerasians. It is not uncommon for those children to seek out their American fathers decades later.\n*   Ho Chi Minh City is the current name of what was Saigon.\n\n**The joke / mechanism:**\n\nIt's dramatic irony and a revealed affair.\n\nThe wife assumes the visitor is one of Harold's old war buddies coming for a veteran reunion - which is what the title `IN-COUNTRY VET` leads you to expect. She points out the age gap: he looks too young to have served with Harold.\n\nThe reader can see the truth from the visual clues: The visitor is not a fellow vet, he is Harold's son from Vietnam. The photo he is holding is proof - young Harold with the boy's mother - and he has inherited Harold's distinctive big ears/nose. He flew in from Ho Chi Minh City for a *family* reunion.\n\nThe humor is the sudden, stressful reveal that Harold had a wartime relationship/affair that produced a child, and that child has just shown up unannounced in front of Harold's American wife.\n\n**Important visual details:**\n\n*   The suitcase sticker `HO CHI MINH CITY` tells you where the man came from.\n*   The photo-within-the-photo shows the connection.\n*   The physical resemblance between Harold and the visitor.\n*   Harold's panicked expression, bulging eyes and sweat drop, clutching his wife/stomach, showing guilt and stress instead of happiness about seeing an old friend.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered a child with a Vietnamese woman during the war, and the younger man arriving from Ho Chi Minh City is that illegitimate son, making the ‘reunion’ an awkward paternity/infidelity reveal. It also mentions the key Vietnam/Ho Chi Minh City reference and the photo proof. Although it adds extra cartoon-specific details not in the ground truth, the central mechanism matches exactly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: Harold is a Vietnam War veteran who fathered an illegitimate child with a Vietnamese woman while serving in Vietnam, and that child has now shown up at Harold's door in front of his American wife. The model identifies the core setup (Vietnam vet + Vietnamese woman = illegitimate Amerasian son), the awkward reveal in front of the wife, and the paternity/infidelity humor. The model goes into extensive detail about the visual clues (suitcase, photo, physical resemblance, Harold's panicked expression) and correctly explains the dramatic irony mechanism. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation fully matches the ground truth. Both identify the core joke: a Vietnam War veteran fathered a child with a Vietnamese woman during the war, and the younger Asian man at the door is his illegitimate son, creating an awkward paternity/infidelity reveal in front of his wife. The model correctly identifies the Vietnam War context, the Ho Chi Minh City reference, the photo as proof of the relationship, and the dramatic irony of the wife thinking it's an old war buddy. The model even adds helpful detail about the 'in-country vet' slang and the physical resemblance, but the core joke understanding is identical to the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a single-panel comic strip built around a **pun and a dark/awkward family secret reveal**.\n\n**The setup:**\n- An older couple (Harold and his wife) answers their door to find a younger Asian man holding a suitcase labeled \"Ho Chi Minh City\" (the majo...",
+          "fullText": "This is a single-panel comic strip built around a **pun and a dark/awkward family secret reveal**.\n\n**The setup:**\n- An older couple (Harold and his wife) answers their door to find a younger Asian man holding a suitcase labeled \"Ho Chi Minh City\" (the major city in Vietnam, formerly Saigon).\n- The man holds up a photograph showing a young soldier (in military uniform) with a Vietnamese woman.\n- The wife exclaims to Harold: *\"Harold, isn't he too young to have been in Vietnam with you?\"*\n- Harold looks horrified/guilty, holding a newspaper, while his wife looks shocked.\n\n**The joke:**\nThe man at the door is implied to be **Harold's secret son**, fathered during Harold's military service in the Vietnam War. The photo shows young Harold (the soldier) with the man's Vietnamese mother. The visitor has traveled from Vietnam to find his father.\n\n**The pun in the title — \"IN-COUNTRY VET\":**\n- \"In-country\" is military slang Vietnam veterans used to refer to being stationed in Vietnam.\n- A \"vet\" can mean a **veteran** (war veteran) — which Harold is.\n- But it plays on the idea that Harold wasn't just *serving* in-country; he was also \"active\" in a more personal way, leading to a child.\n\n**Why it's funny:**\nThe humor comes from the **wife's naive question** — she's confused about the man's age rather than immediately grasping the bigger implication (that her husband had an affair/child during the war). The bottom caption, **\"Family reunions can be very stressful!\"**, is a comedic understatement, since this is an extremely awkward and uncomfortable revelation happening on the doorstep.\n\nThe visual elements (Harold's panicked expression, the suitcase identifying his origin, and the incriminating photo) all reinforce the gag.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered a child with a Vietnamese woman during the war, and the younger man’s arrival reveals him as the veteran’s illegitimate son, creating an awkward paternity/infidelity reunion. It also mentions the Vietnam War and the secret family reveal. Although it adds extra details about a pun/title and specific names not present in the ground truth, the central mechanism matches the ground truth exactly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran (Harold) had an illegitimate child with a Vietnamese woman during his service, and this son has now shown up at the door, creating an awkward paternity/infidelity reveal. The model identifies the same setup (veteran, Vietnamese woman, illegitimate son showing up), the same implication (affair during Vietnam War), and the same comedic mechanism (awkward family revelation). The model even adds additional detail about the pun in the title 'In-Country Vet' and the wife's naive question. This matches the ground truth's core joke perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran fathered an illegitimate son with a Vietnamese woman during the war, and the comic reveals this awkward paternity/infidelity secret when the son arrives at the door. The model matches the ground truth on all key points: the Vietnam War setting, the veteran father, the Vietnamese mother, the younger man being the secret son, and the awkward reveal turning the reunion into a surprise paternity joke. The model also correctly notes the wife's naive reaction and the comedic understatement of the caption. This is a correct understanding."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a single-panel cartoon playing on the awkwardness of family reunions combined with a Vietnam War-era secret.\n\n**References**: \n- The Vietnam War (1960s–1975) and the common trope of American soldiers forming relationships (or having children) w...",
+          "fullText": "This meme is a single-panel cartoon playing on the awkwardness of family reunions combined with a Vietnam War-era secret.\n\n**References**: \n- The Vietnam War (1960s–1975) and the common trope of American soldiers forming relationships (or having children) with Vietnamese women, sometimes resulting in “war brides” or Amerasian kids who later came to the U.S.\n- The suitcase labeled “Ho Chi Minh City” signals a literal arrival from Vietnam.\n\n**The joke**: \nHarold (the middle-aged man on the left) has returned from a trip to Vietnam and brought either his Vietnamese wife or (more likely) his adult son from a wartime relationship. The old photo shows young Harold in uniform with a Vietnamese woman. His parents, seeing the young man in the picture or standing there, innocently assume he must be one of Harold’s fellow soldiers. The mother’s line (“Isn’t he too young to have been in Vietnam with you?”) reveals their cluelessness; the horrified expressions show they’ve just realized the far more scandalous truth.\n\n**Key visual irony**: The contrast between the parents’ shocked faces and Harold’s calm, smiling demeanor underscores the “surprise family member from overseas” gag. The caption simply labels the whole situation as “family reunions can be very stressful.”",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core setup: a Vietnam War veteran, a Vietnamese woman, and the reveal that the younger man is likely the veteran’s son from that relationship, creating an awkward family-reunion/paternity reveal. It also correctly identifies the Vietnam War context and the scandalous implication of an illegitimate child. Although it adds some extra speculative details about the suitcase and family members, those do not contradict the ground truth. The essential joke matches the ground truth’s surprise paternity/infidelity reveal."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran had a relationship with a Vietnamese woman and now has an illegitimate son from that wartime relationship. The model identifies the setting (Vietnam War era), the reveal of the illegitimate/Amerasian son, and the awkward family reunion aspect. The model understands this is a paternity/infidelity joke where the parents are shocked to discover Harold fathered a child during the war. This matches the ground truth's explanation of the awkward reveal turning the reunion into a surprise paternity/infidelity joke. The model gets all the key elements correct."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Vietnam War veteran had a child (illegitimate son) with a Vietnamese woman during the war, and the meme is about the awkward reveal of this secret at a family reunion. The model mentions the Vietnam War, the Vietnamese woman, the wartime relationship resulting in a son, and the awkward/scandalous reveal. These match the ground truth's explanation of the paternity/infidelity joke. The model adds some extra interpretive details about who is shocked and the photo, but the central understanding aligns with the ground truth."
+            }
+          ]
         }
       ]
     },
@@ -5043,27 +5403,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the joke:\n\n**References:**\n*   **\"Mama Bear\":** A popular cultural term for a fiercely protective mother. \n*   **Leetspeak/Letter substitution:** Using numbers in place of letters (like '4' instead of '...",
+          "fullText": "Based on the image provided, here is an explanation of the joke:\n\n**References:**\n*   **\"Mama Bear\":** A popular cultural term for a fiercely protective mother. \n*   **Leetspeak/Letter substitution:** Using numbers in place of letters (like '4' instead of 'A') to get a desired personalized license plate when the original word is already taken.\n*   **Personal Ad Acronyms:** In online dating and personal ads (historically famous on sites like Craigslist), \"M4M\" stands for \"Male for Male\" (gay men seeking gay men). \n*   **Gay Slang:** A \"Bear\" is a slang term in the gay community for a large, robust, and typically hairy gay or bisexual man.\n\n**The Joke:**\n*   **The Setup:** A mother wanted her vanity license plate to say \"MAMABEAR.\" Because that was already taken, she used the number 4 instead of the letter A, resulting in the plate **M4M4BEAR**.\n*   **The Wordplay/Implied Mistake:** While the woman reads the plate as \"Mama Bear,\" the internet-savvy author realizes that the plate can be parsed as **\"M4M 4 BEAR\"**. \n*   **The Punchline:** Instead of coming across as a protective mother, her license plate reads like a personal ad saying: \"Male for Male looking for a Bear.\" The \"terrible mistake\" is that she is unknowingly driving around with a highly specific gay hook-up advertisement on her car.\n\n**Visual Elements:**\nThe joke relies entirely on the visual formatting in the text of the tweet. The capitalized string **M4M4BEAR** forces the reader to look at the letters and numbers exactly as they would appear on a license plate, making the accidental double-meaning obvious.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the key joke: the plate can be read as Craigslist-style gay hookup shorthand, with \"M4M\" meaning man-for-man and \"bear\" being gay slang for a big/hairy gay man. It also captures the accidental-ad implication rather than an innocent message. Although it adds extra framing about \"Mama Bear\" and a vanity plate, that does not conflict with the ground truth and the core reference is correct. The specific shorthand and gay-slang interpretation match the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies all the key elements of the meme: M4M as 'Male for Male' (gay hookup shorthand from sites like Craigslist), 'Bear' as gay slang for a large/hairy gay man, and the core joke that the license plate 'M4M4BEAR' meant to read as 'Mama Bear' accidentally reads as a gay personal ad. The model provides a very detailed and accurate explanation that matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements from the ground truth: the M4M (man-for-man) Craigslist-style shorthand, the gay slang meaning of 'bear', and the joke that the license plate accidentally reads as a gay hookup ad. It matches the ground truth's core interpretation precisely."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a screenshot of a tweet joking about a vanity license plate:\n\n> “Dear 30-something lady with license plate M4M4BEAR: I am sorry MAMABEAR was taken but you have made a terrible mistake.”\n\nThe woman presumably wanted her plate to read **“MAMABEAR”...",
+          "fullText": "The meme is a screenshot of a tweet joking about a vanity license plate:\n\n> “Dear 30-something lady with license plate M4M4BEAR: I am sorry MAMABEAR was taken but you have made a terrible mistake.”\n\nThe woman presumably wanted her plate to read **“MAMABEAR”** — a common “protective mom” nickname — but since that was unavailable, she substituted the letter **A** with the number **4**, making it **M4M4BEAR**.\n\nThe joke is that **M4M** is also a common abbreviation in dating/classified ads meaning **“men for men”** — usually indicating a gay male hookup/dating context. And **“bear”** is a term in gay culture for a large, often hairy gay man.\n\nSo instead of reading as “Mama Bear,” the plate can be interpreted as something like:\n\n> “M4M 4 bear” = “man seeking man for bear”\n\nThe humor comes from the accidental double meaning: what was meant to be a cute mom-themed license plate ends up looking like gay hookup slang.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the key joke and the specific references from the ground truth. It explains that \"M4M\" is gay hookup shorthand for man-for-man and that \"bear\" is gay slang for a big, hairy gay man, making the plate read like an accidental gay ad rather than an innocent message. Although it frames the intended original as \"Mama Bear\" rather than just a generic text/plate, that does not change the core interpretation. The essential setup, wordplay, and implication match the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the meme: the license plate M4M4BEAR was intended to read 'Mama Bear' (with 4 substituting for A), M4M is gay hookup shorthand for 'men for men,' and 'bear' is gay slang for a big, hairy gay man. The model explains the accidental double meaning clearly and matches the ground truth explanation precisely."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the same core joke as the ground truth: the license plate 'M4M4BEAR' was intended to read 'MAMABEAR' but, by substituting '4' for 'A', accidentally resembles Craigslist-style gay hookup shorthand. The model specifically identifies 'M4M' as man-for-man and 'bear' as gay slang for a large, hairy gay man, exactly matching the ground truth's references. The model also correctly explains the accidental double meaning and the contrast between an innocent mom-themed plate and gay hookup slang."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a screenshot of a viral tweet about a vanity license plate fail.\n\n**The reference:**\n\n1.  **MAMA BEAR:** A common self-identifier for a protective mother, especially a 30-something mom. It's a wholesome image often put on minivans, shirts, and licen...",
+          "fullText": "This is a screenshot of a viral tweet about a vanity license plate fail.\n\n**The reference:**\n\n1.  **MAMA BEAR:** A common self-identifier for a protective mother, especially a 30-something mom. It's a wholesome image often put on minivans, shirts, and license plates.\n2.  **Leet / license plate spelling:** Vanity plates are limited to 7-8 characters and \"MAMABEAR\" was likely taken, so this driver substituted `4` for `A` to get `M4M4BEAR` - intended to still read as \"Mama Bear\".\n3.  **Personal ad shorthand:** On Craigslist, newspapers, and hookup sites, `M = Male, F = Female, 4 = for`. So `M4M` means \"Male for Male\" - a man seeking a man for sex.\n4.  **Gay slang - Bear:** A \"bear\" is a large, hairy gay man.\n\n**The joke:**\n\nThe plate has two completely different readings:\n\n*   **Intended:** `MAMA BEAR`\n*   **Actual, in personal-ad language:** `M4M 4 BEAR` = \"Male for Male for Bear\" / \"Man seeking a man who is a bear for sex\"\n\nThe tweeter is pointing out that a woman who wanted to show off her protective mom identity is unknowingly driving around with what looks like a gay male sex ad on her car. That's the \"terrible mistake\" - the wholesome intent vs. the explicit sexual misinterpretation.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke and the specific references from the ground truth. It explains that the plate can be read as Craigslist-style hookup shorthand, specifically that \"M4M\" means man-for-man and \"bear\" is gay slang for a big, hairy gay man. It also captures the implication that the plate looks like an accidental gay hookup ad rather than an innocent message. Although it adds an extra interpretation about \"Mama Bear\" and a vanity plate fail, the essential mechanism matches the ground truth exactly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: the 'M4M' shorthand meaning 'man for man' (male seeking male), the gay slang 'bear' meaning a large hairy gay man, and the contrast between the intended 'Mama Bear' message and the accidental gay hookup ad reading. The model even goes further in detail than the ground truth, explaining the license plate character substitution mechanism. The core joke is fully captured."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the license plate 'M4M4BEAR' can be read as Craigslist-style gay hookup shorthand, where 'M4M' means man-for-man and 'bear' is gay slang for a large, hairy gay man. This matches the ground truth's explanation that the plate looks like an accidental ad for a gay hookup rather than an innocent 'Mama Bear' message. The model also correctly identifies the contrast between the wholesome intended meaning and the sexual misinterpretation."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a screenshot of a tweet by Brian J. White (@talkwordy) making a joke about a vanity license plate.\n\n**The setup:** A woman tried to make her license plate read \"MAMABEAR\" (a common term for a protective mother). Since \"MAMABEAR\" was already taken or...",
+          "fullText": "This is a screenshot of a tweet by Brian J. White (@talkwordy) making a joke about a vanity license plate.\n\n**The setup:** A woman tried to make her license plate read \"MAMABEAR\" (a common term for a protective mother). Since \"MAMABEAR\" was already taken or too many characters, she substituted the letter \"A\" with the number \"4,\" creating **M4M4BEAR**.\n\n**The joke:** Her substitution accidentally created a phrase with a completely different meaning in gay/LGBTQ slang:\n- **\"M4M\"** is shorthand commonly used in personal ads (like Craigslist) meaning \"Male for Male\" (a man seeking another man).\n- **\"Bear\"** in gay culture refers to a larger, hairier, often burly gay man.\n\nSo instead of reading \"Mama Bear,\" the plate reads as **\"M4M, 4 [seeking a] Bear\"** — essentially an advertisement that a man is looking for a bear. Hence the tweet's punchline: *\"I am sorry MAMABEAR was taken but you have made a terrible mistake.\"*\n\n**Visual elements:** The photo of the user shows a surprised/concerned facial expression, which fits the comedic tone of someone pointing out an embarrassing, unintended error.\n\nThe humor comes from the unintentional double meaning created by the letter-to-number substitution, turning a wholesome \"protective mom\" message into a coded gay personals ad.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke and the specific references from the ground truth. It explains that the plate reads like gay hookup shorthand, specifically noting that \"M4M\" means man-for-man and that \"bear\" is gay slang for a big, hairy gay man. That matches the ground truth’s explanation that the text can be read as a Craigslist-style gay hookup ad rather than an innocent message. The model adds extra context about the intended \"Mama Bear\" reading and the tweet, but it still captures the same underlying joke and references."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the meme: M4M as gay hookup shorthand meaning 'male for male' (as used on Craigslist-style ads), 'bear' as gay slang for a big/hairy gay man, and the fact that the license plate was intended to read 'MAMABEAR' but accidentally created a coded gay hookup message. The model even adds specific details like the tweet author's name and the actual tweet text, which aligns perfectly with the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the license plate 'M4M4BEAR' can be read as Craigslist-style gay hookup shorthand, where 'M4M' means man-for-man and 'bear' is gay slang for a big, hairy gay man. It explains the accidental double meaning of turning 'MAMABEAR' into what looks like a gay personals ad, which matches the ground truth exactly."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a screenshot of a 2016 tweet pointing out a vanity license plate fail.\n\n**Key references**  \n- \"Mama bear\" is a common affectionate nickname for a protective mom.  \n- Leetspeak/1337 substitution: the number 4 is routinely used for the letter A....",
+          "fullText": "The meme is a screenshot of a 2016 tweet pointing out a vanity license plate fail.\n\n**Key references**  \n- \"Mama bear\" is a common affectionate nickname for a protective mom.  \n- Leetspeak/1337 substitution: the number 4 is routinely used for the letter A.  \n- M4M is longstanding personal-ad/gay-slang shorthand for “man for man” or “men seeking men.”  \n- In the same subculture, “bear” refers to a large, hairy, masculine gay man.\n\n**The joke**  \nThe driver tried to get MAMABEAR but found it taken, so she settled for the visually similar M4M4BEAR, expecting people to read it as “Mama Bear.”  \nThe plate is instead parsed as **M4M 4BEAR** (“man-for-man for bear”), unintentionally advertising a gay male hookup rather than maternal identity. The humor is the gap between the intended wholesome message and the very different, sexually coded reading the substitution created.\n\nNo other visual gags are present; the meme’s effect comes entirely from the contrast between the caption and the plate text.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke and the specific references in the ground truth: it explains that \"M4M\" means man-for-man and that \"bear\" is gay slang for a big, hairy gay man, and it states that the plate can be read as an accidental gay hookup ad rather than an innocent message. This matches the ground truth’s Craigslist-style gay hookup shorthand interpretation. Although the model adds extra detail about a \"Mama Bear\" vanity plate and leetspeak, those additions do not contradict the main joke and the required specific references are present."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: M4M as gay hookup shorthand for 'man for man', 'bear' as gay slang for a large/hairy gay man, and the contrast between the intended innocent reading ('Mama Bear' with leetspeak substitution) and the unintended sexual/hookup reading. The model matches the ground truth explanation precisely."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the license plate 'M4M4BEAR' can be parsed as 'M4M 4BEAR,' which reads as Craigslist-style gay hookup shorthand ('man-for-man for bear'). It correctly identifies both key references from the ground truth: 'M4M' as man-for-man and 'bear' as gay slang for a large, hairy gay man. It also captures the contrast between the intended wholesome 'Mama Bear' message and the accidental gay hookup ad reading. The model's explanation aligns with the ground truth on all essential points."
+            }
+          ]
         }
       ]
     },
@@ -5081,27 +5531,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Setup and Visual Elements**\nThe top text establishes a scenario: an ice cream truck visited a school, and the vendor gave a student a specific ice cream cone based on his appearance. Th...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Setup and Visual Elements**\nThe top text establishes a scenario: an ice cream truck visited a school, and the vendor gave a student a specific ice cream cone based on his appearance. The visual punchline is the side-by-side image showing the student and the ice cream. The student has bright blue, textured hair styled upward. The ice cream cone is soft-serve covered entirely in bright blue sprinkles, perfectly matching both the color and the shape/texture of the guy's hair. \n\n**The Cultural Reference**\nThe text at the very bottom says, \"I have a song for you, it's from the late 90s.\" This is a direct reference to the famous Eurodance song **\"Blue (Da Ba Dee)\" by Eiffel 65**, which was released in 1998. The chorus famously repeats, \"I'm blue, da ba dee da ba di...\"\n\n**The Joke**\nThe meme works on two levels:\n1.  **Visual Humor:** The situational comedy of an ice cream man noticing a teenager's vibrant, unconventional hairstyle and cheekily handing him a dessert that looks exactly like his head.\n2.  **The Added Punchline:** The bottom caption acts as a secondary joke added by whoever made the meme format. Because everything in the image revolves around the color blue (his hair, the ice cream), the caption implies that the Eiffel 65 song would be this guy's theme song.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65’s 1999 song \"Blue (Da Ba Dee)\" / \"I'm Blue dabba dee dabba die,\" and explains that the joke is a visual pun/callback based on the blue hair/color matching the song’s repeated \"blue\" lyric. Although it adds extra details about an ice cream truck and a student, it still captures the same core mechanism and the named reference from the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference to Eiffel 65's 'Blue (Da Ba Dee)' from the late 90s. It also correctly understands the visual pun connecting the blue hair/ice cream with the song. The model provides a detailed and accurate explanation of the meme, identifying the specific song, the artist, and how the blue color ties everything together. The model even correctly notes the song was from the late 90s (though says 1998 vs ground truth's 1999, which is a minor factual discrepancy but doesn't affect understanding the joke). The core joke mechanism - blue hair/color being matched with the 'Blue' song by Eiffel 65 - is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core reference: Eiffel 65's song 'Blue (Da Ba Dee)'. It explains the visual pun of the blue hair matching the song's repeated 'blue' lyric, which aligns perfectly with the ground truth. The model also adds context about the ice cream matching the hair, but this does not detract from the fact that it identifies the specific song reference and the visual pun/callback that the ground truth highlights."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is referencing the late-’90s song **“Blue (Da Ba Dee)” by Eiffel 65**.\n\nThe setup: an ice cream truck comes to school, and the ice cream man notices the person’s bright blue hair. He says, “I have something for you!” and gives them a very bright b...",
+          "fullText": "This meme is referencing the late-’90s song **“Blue (Da Ba Dee)” by Eiffel 65**.\n\nThe setup: an ice cream truck comes to school, and the ice cream man notices the person’s bright blue hair. He says, “I have something for you!” and gives them a very bright blue ice cream cone that matches their hair.\n\nThe punchline at the bottom — **“I have a song for you, it’s from the late 90s”** — points to the famous lyric:\n\n> “I’m blue, da ba dee da ba die…”\n\nWhy it’s funny:\n- The person is literally “blue” because of their hair.\n- The ice cream is also intensely blue, making the match even more obvious.\n- The caption turns the situation into a setup for the song reference.\n\nImportant visual element:\n- The side-by-side photo shows the blue ice cream and the person’s blue hair looking almost the same color, which makes the joke land visually before the song reference confirms it.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65’s 1999 song “Blue (Da Ba Dee)” and the lyric “I’m blue, da ba dee da ba die,” which is the core of the ground truth. It also explains the visual pun/callback: the blue hair/color in the image matches the repeated “blue” lyric. Although the model adds extra scene details about an ice cream truck and a song caption, those do not contradict the ground truth and the main joke is understood correctly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference: Eiffel 65's 'Blue (Da Ba Dee)' from the late 90s. It correctly names the specific song and artist, and understands that the joke is about connecting the blue visual elements (blue hair, blue ice cream) to the song's lyric 'I'm blue, da ba dee da ba die.' The model gets the visual pun/callback mechanism that the ground truth describes."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the reference to Eiffel 65's 1999 song 'Blue (Da Ba Dee)' and the core visual pun of the blue hair/color matching the song's repeated 'blue' lyric. The model captures the same joke mechanism as the ground truth, including the specific song and artist. The additional details about the ice cream and visual setup are consistent with the meme and do not detract from the correct identification."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a 2-part setup / punchline.\n\n**Top part is the original post:**\nSomeone with bright dyed blue hair got a free ice cream from an ice cream truck that came to their school. The ice cream is vanilla soft-serve covered in bright blue sprinkles, and...",
+          "fullText": "The meme is a 2-part setup / punchline.\n\n**Top part is the original post:**\nSomeone with bright dyed blue hair got a free ice cream from an ice cream truck that came to their school. The ice cream is vanilla soft-serve covered in bright blue sprinkles, and the swirl / shape of the soft-serve is styled in almost the exact same quiff as the person's actual hair. So he got an ice cream that is a perfect match for his hair - both the color and the haircut.\n\n**Bottom part is a comment on it:**\n\"I have a song for you, it's from the late 90s.\"\n\nThe commenter is referencing **Eiffel 65 - Blue (Da Ba Dee) [1998]**, the huge late-90s Eurodance hit where the chorus is just \"I'm blue da ba dee da ba di...\" \n\nEverything in the photo is blue - his hair is blue, the ice cream is blue - so the song fits perfectly. The joke is that the commenter is hearing that song in their head when they see the matching blue-on-blue visual pun.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65’s 'Blue (Da Ba Dee)' / 'I’m Blue dabba dee dabba die' and explains that the humor comes from the blue hair/color matching the song’s repeated 'blue' lyric as a visual pun/callback. It also notes the late-90s song reference and the blue-on-blue match. This matches the ground truth’s core joke and named reference."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Eiffel 65 song 'Blue (Da Ba Dee)' as the reference being made in the meme. It correctly explains that the blue color in the image (blue hair, blue ice cream) is being matched with the song's 'blue' theme. The model gets the core joke - the visual blue elements triggering a reference to the famous late-90s song. The model also provides additional context about the image (blue hair, blue ice cream matching the hairstyle), which is consistent with the ground truth's explanation of it being a visual pun/callback."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference: Eiffel 65's song 'Blue (Da Ba Dee)' from the late 90s. It also correctly explains the joke as a visual pun where the blue hair/color in the image matches the song's repeated 'blue' lyric. The model adds extra detail about the ice cream and hair matching, but this doesn't detract from correctly getting the core joke and reference."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a wholesome/funny post combining a cute story with a music reference punchline.\n\n**The setup:**\nThe text describes someone with bright blue dyed hair getting a blue ice cream cone (covered in blue sprinkles) from an ice cream man because it mat...",
+          "fullText": "This meme is a wholesome/funny post combining a cute story with a music reference punchline.\n\n**The setup:**\nThe text describes someone with bright blue dyed hair getting a blue ice cream cone (covered in blue sprinkles) from an ice cream man because it matched their hair. The two photos show the blue cone and then the person holding it next to their blue hair—the colors match almost perfectly, which is the visual gag.\n\n**The punchline:**\nThe bottom text, *\"I have a song for you, it's from the late 90s,\"* is the joke. This references the 1999 hit song **\"Blue (Da Ba Dee)\" by Eiffel 65**, a famous Eurodance track whose lyrics repeatedly describe a world where everything is blue (\"I'm blue, da ba dee da ba di...\").\n\n**Why it's funny:**\nThe humor comes from the layered relatability and a punchline that lands a beat later. The reader first sees the cute \"matching blue\" moment, then the final line recontextualizes it as a friendly, slightly cheeky joke about the person being *so* blue (hair + ice cream) that they basically embody the Eiffel 65 song. It plays on the universally recognized \"everything is blue\" theme of that song.\n\nIt's a feel-good meme—an example of a stranger making a charming, nerdy joke that's both gentle teasing and a compliment.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65's 1999 song \"Blue (Da Ba Dee)\" / \"I'm Blue dabba dee dabba die\" and explains that the joke is a visual pun/callback to the repeated \"blue\" lyric matching the blue hair/color in the image. This matches the ground truth's core setup and reference. The extra details about the ice cream and wholesome tone are not necessary but do not contradict the intended joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference: Eiffel 65's 1999 song 'Blue (Da Ba Dee)' / 'I'm Blue da ba dee da ba di.' The model names the specific song, the artist, the year, and explains how the visual blue elements (hair and ice cream) connect to the song's repeated 'blue' lyric. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65's 1999 song 'Blue (Da Ba Dee)' and explains the visual pun of the blue hair/color matching the song's repeated 'blue' lyric. This aligns with the ground truth explanation."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme shows a person with bright blue dyed hair holding an ice cream cone whose topping is an identical shade of vivid blue with a shaggy, textured sprinkle coating that deliberately matches the hair. The top caption recounts an ice-cream-truck worker no...",
+          "fullText": "The meme shows a person with bright blue dyed hair holding an ice cream cone whose topping is an identical shade of vivid blue with a shaggy, textured sprinkle coating that deliberately matches the hair. The top caption recounts an ice-cream-truck worker noticing the hair and handing over this matching item as a joke. The bottom caption (“I have a song for you, it’s from the late 90s”) is a deadpan punchline that invokes Eiffel 65’s 1998 hit “Blue (Da Ba Dee),” whose chorus repeats “I’m blue.”  \n\nThe humor is a two-layer visual + audio pun: the ice-cream man’s literal color match, followed by the implied song lyric that also uses “blue” as the punchline.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Eiffel 65’s song “Blue (Da Ba Dee)” / “I’m Blue,” and explains that the joke is a visual pun based on the blue hair/color matching the song’s repeated blue lyric. This matches the ground truth’s core setup and reference. Minor date detail differences (1998 vs 1999) do not affect correctness."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference: Eiffel 65's 'Blue (Da Ba Dee)' from the late 90s. The model mentions the song by name and artist, connects it to the blue hair in the image, and explains the punchline mechanism. The ground truth focuses on the song reference and the visual pun/callback with blue hair. The model captures all of these elements correctly, even adding some additional detail about the ice cream matching the hair color as a 'two-layer' joke. The model does slightly misstate the year (says 1998 vs ground truth's 1999) but this is a minor detail that doesn't affect the core understanding of the joke."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the reference to Eiffel 65's song 'Blue (Da Ba Dee)' and the visual pun of matching the blue hair/color with the song's repeated 'blue' lyric, which is the core joke in the ground truth. The model adds extra details about the ice cream cone and caption, but it captures the same essential humor mechanism."
+            }
+          ]
         }
       ]
     },
@@ -5119,27 +5659,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Here is an explanation of the meme:\n\n**1. The References**\n*   **Visual Format:** This is an edited version of the classic **\"Is this a pigeon?\"** meme (originally featuring a character from a 1990s anime mistaking a butterfly for a pigeon). It is used to m...",
+          "fullText": "Here is an explanation of the meme:\n\n**1. The References**\n*   **Visual Format:** This is an edited version of the classic **\"Is this a pigeon?\"** meme (originally featuring a character from a 1990s anime mistaking a butterfly for a pigeon). It is used to mock utter confusion or the deliberate misidentification of something.\n*   **Text Format:** The \"Nobody:\" setup is a common meme structure used to show that a specific group is doing something bizarre or highly specific completely unprompted. \n*   **Religious/Historical Context:** During the holy season of Lent, observant Catholics abstain from eating \"meat\" (mammals and birds) on Fridays, but they are allowed to eat fish. \n*   **The Capybara Loophole:** In the 16th to 18th centuries, Catholic missionaries in South America encountered the capybara (the large rodent pictured). Because it is semi-aquatic and has webbed feet, they wrote to the Vatican asking if it could be eaten during Lent. The Vatican agreed to classify the capybara as a \"fish\" so the locals could consume it on meat-free days. (The Church made similar rulings for beavers and muskrats in North America).\n\n**2. The Joke**\nThe joke highlights the humorous absurdity of a historical religious loophole. The meme points out how ridiculous it is that the Catholic Church officially classified a giant, furry land mammal as a \"fish\" simply because it swims, all so people could legally eat it while adhering to fasting rules. \n\n**3. Important Visual Elements**\n*   **The Character:** The anime character has been edited to look like a historical Catholic friar/monk, complete with a brown habit and a \"tonsure\" (the traditional monastic haircut with the top of the head shaved).\n*   **The Capybara:** It floats in the air where the butterfly was in the original meme, acting as the object being blatantly misidentified. \n*   **The Book:** The book the monk is holding says *La Santa Biblia* (Spanish for \"The Holy Bible\"). The use of Spanish specifically references the South American origins of both the capybara and this specific Vatican ruling.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: Catholic Lent forbids meat but allows fish, and there was a historical loophole where a semi-aquatic rodent/capybara (chigüire) was classified as fish so Catholics in places like South America could eat it on Fridays during Lent. It also mentions the relevant regions and the fish classification. Although it adds extra meme-format details not needed, it does not miss the specific reference from the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the Catholic Lent rule that bans meat but allows fish, and the historical loophole where the capybara was classified as 'fish' by the Catholic Church so South American Catholics could eat it during Lent. The model also correctly identifies the meme format ('Is this a pigeon?'), the visual elements showing a monk/friar, and the South American connection. The model even adds relevant context about similar rulings for beavers and muskrats in North America. The ground truth mentions Venezuela, Colombia, and Brazil specifically, which the model doesn't name explicitly, but the model does reference South America generally. The core joke mechanism is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the historical loophole where the capybara was classified as a 'fish' so it could be eaten during Lent. It mentions the Vatican's involvement and the South American context, matching the ground truth's reference to places like Venezuela, Colombia, and Brazil. The model also correctly identifies the capybara as the specific animal involved. While the model adds extra context about the meme format (the 'Is this a pigeon?' template), this does not detract from its accurate identification of the joke. All key elements from the ground truth are present."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme jokes about **Catholics trying to follow Lent food rules**.\n\n- **Reference:** During **Lent**, Catholics traditionally abstain from eating meat on Fridays, but **fish is allowed**.\n- **Specific joke:** The animal shown is a **capybara**, a large s...",
+          "fullText": "This meme jokes about **Catholics trying to follow Lent food rules**.\n\n- **Reference:** During **Lent**, Catholics traditionally abstain from eating meat on Fridays, but **fish is allowed**.\n- **Specific joke:** The animal shown is a **capybara**, a large semi-aquatic rodent from South America. There’s a well-known historical/religious anecdote that in parts of Latin America, especially Venezuela, the Catholic Church allowed capybara to be eaten during Lent because it lives in water and was treated similarly to fish for fasting purposes.\n- **Meme format:** It parodies the “**Is this a pigeon?**” anime meme, where someone confidently misidentifies something obvious. Here it becomes “Is this a fish?” because Catholics during Lent are humorously “reclassifying” animals to get around meat restrictions.\n- **Visual humor:** The person looks like a Catholic monk/saint figure, holding a Spanish Bible (“La Santa Biblia”), while gesturing at a floating capybara as if seriously asking whether it counts as fish.\n\nSo the joke is: **Catholics during Lent will stretch the definition of “fish” as far as possible if it means they can eat it.**",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: Catholic Lent forbids meat but allows fish, and the meme hinges on the historical loophole where a capybara/chigüire was treated as 'fish' so it could be eaten on Fridays during Lent. It also mentions the relevant Latin American context (Venezuela, etc.) and the reclassification of the animal as fish. This matches the ground truth’s specific reference and setup. The extra mention of the 'Is this a pigeon?' meme is not in the ground truth, but it does not contradict the main interpretation."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the historical loophole where capybara was classified as 'fish' so Catholics in Latin America (specifically mentioning Venezuela) could eat it during Lent. The model also correctly identifies the 'Is this a pigeon?' meme format being parodied. The model captures all the essential elements: capybara, Lent, fish classification, Latin America. This matches the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the historical loophole where the capybara (a semi-aquatic rodent) was classified as 'fish' so Catholics in places like Venezuela could eat it during Lent. It names the capybara, mentions Venezuela, and accurately describes the reclassification loophole. The additional details about the meme format and visual elements do not detract from the correct interpretation."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a Lent / Catholic loophole joke, using the \"Is this a pigeon?\" meme format.\n\n**References:**\n\n1.  **Catholic Lent fasting:** During Lent, especially on Fridays, practicing Catholics abstain from eating meat - defined as the flesh of mammals and bird...",
+          "fullText": "This is a Lent / Catholic loophole joke, using the \"Is this a pigeon?\" meme format.\n\n**References:**\n\n1.  **Catholic Lent fasting:** During Lent, especially on Fridays, practicing Catholics abstain from eating meat - defined as the flesh of mammals and birds. Fish is allowed.\n2.  **The Capybara exception:** In the 16th-18th century, Catholic missionaries in Venezuela / South America wanted to be able to eat capybara, the world's largest rodent, which is very common there. They wrote to the Vatican arguing that since it spends so much time in water, it should be classified as a fish. The Vatican supposedly granted it, and in Venezuela capybara is still eaten during Lent. Similar loopholes were used for beaver, muskrat, and otter in other regions.\n3.  **\"Nobody:\" format:** A format for pointing out unprompted, stereotypical behavior of a group. \"Nobody asked, but Catholics do this during Lent...\"\n4.  **\"Is this a pigeon?\" template:** The image is a redraw of a famous anime meme where a man looks at a butterfly and says \"Is this a pigeon?\" It's used to mock someone willfully misidentifying something obvious.\n\n**The joke:**\n\nThe setup is that Catholics want to eat meat during Lent without technically breaking the rules, so they use a technicality to claim a mammal is actually a fish.\n\nThe image shows a monk holding a Spanish Bible - \"LA SANTA BIBLIA\" - pointing at a capybara floating in the air and asking \"Is this a fish?\" The humor is the absurd incongruity - a capybara is very obviously a large furry rodent, not a fish at all, but he is trying to classify it as one so he can eat it on a fast day.\n\n**Visual elements:**\n\n* The tonsure haircut and brown habit identify the man as a Catholic monk/friar.\n* The Spanish Bible hints at Latin America, where the capybara-as-fish tradition actually exists.\n* The capybara itself is presented like a miraculous vision, emphasizing how hard the monk is trying to justify it.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a Catholic Lent loophole where meat is banned but fish is allowed, and a semi-aquatic rodent/capybara is treated as 'fish' so it can be eaten during Lent. It also correctly mentions the Latin American context and the historical capybara classification loophole. The extra 'Is this a pigeon?' meme framing is not in the ground truth, but it does not change the main interpretation. Since the specific reference in the ground truth is the capybara/chigüire being classified as fish for Lent, and the model captures that, this matches."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: the Catholic Lent rule banning meat but allowing fish, the historical loophole where capybara was classified as 'fish' by Catholic authorities in South America (specifically mentioning Venezuela), and the 'Is this a pigeon?' meme format being used to illustrate the absurd misidentification. The model even provides additional accurate historical context about the practice and correctly identifies the visual elements (monk's habit, Spanish Bible suggesting Latin America). This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the loophole where capybara was classified as fish so Catholics (specifically in Venezuela/South America) could eat it during Lent. The model also correctly identifies the 'Is this a pigeon?' meme format and the visual elements. The model's explanation matches and even expands on the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme combines two different jokes/references for comedic effect.\n\n**The references:**\n\n1. **\"Is this a butterfly?\" meme format** - The image is based on a famous anime screenshot (from \"The Brave Fighter of Sun Fighbird\") where a character gestures tow...",
+          "fullText": "This meme combines two different jokes/references for comedic effect.\n\n**The references:**\n\n1. **\"Is this a butterfly?\" meme format** - The image is based on a famous anime screenshot (from \"The Brave Fighter of Sun Fighbird\") where a character gestures toward something and asks \"Is this a butterfly?\" The format is used to show someone confidently mislabeling something. Here it's been redrawn with a monk/friar character holding a Bible (labeled \"LA SANTA BIBLIA\" - Spanish for \"The Holy Bible\") asking \"Is this a fish?\"\n\n2. **The capybara** - The floating animal is a capybara, a large South American rodent (definitely not a fish).\n\n**The joke:**\n\nThe humor relies on a real historical quirk of Catholicism. During **Lent**, Catholics traditionally abstain from eating meat on Fridays, but fish/seafood is permitted. Over history, certain Catholic authorities have made convenient classifications declaring some non-fish animals as \"fish\" so they could be eaten during Lent. Notably:\n- **Capybara** was historically classified as \"fish\" by the Catholic Church in parts of South America (Venezuela) because it's semi-aquatic, allowing people to eat it during Lent.\n- Beaver and other semi-aquatic animals have received similar treatment in different regions.\n\n**Why it's funny:**\n\nThe meme mocks how Catholics during Lent will conveniently bend definitions to call clearly-not-fish animals \"fish\" so they can still enjoy meat while technically following the rules. The friar's confident, slightly absurd gesture toward an obvious land mammal—paired with the Bible prop—perfectly captures this selective, loophole-seeking logic.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule that forbids meat but allows fish, and the historical loophole where capybara/chigüire was treated as 'fish' so it could be eaten during Lent. It also mentions the relevant South American context (Venezuela) and the semi-aquatic classification. The extra discussion of the meme format is not in the ground truth, but it does not conflict with it. Since the ground truth's specific reference is captured, the explanation matches."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the historical classification of the capybara as 'fish' by Catholic authorities in South America so it could be eaten during Lent. The model also correctly identifies the meme format ('Is this a butterfly?' from The Brave Fighter of Sun Fighbird), the specific animal (capybara), the religious context (Lent), and the geographic location (South America/Venezuela). This matches all the key elements of the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent meat ban with the fish loophole, and the historical classification of the capybara as 'fish' so it could be eaten during Lent in South America. It mentions the capybara, Lent, the fish exception, and Venezuela specifically, matching the ground truth's key references. It also adds the meme format origin, which is extra but not incorrect. The essential humor mechanism and target are captured."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme mocks a real historical quirk of Catholic dietary rules during Lent (the ~40-day period before Easter when most meat is forbidden, but fish is allowed).\n\n- **The setup**: A tonsured monk/priest (holding a Spanish Bible) gestures at a capybara and a...",
+          "fullText": "The meme mocks a real historical quirk of Catholic dietary rules during Lent (the ~40-day period before Easter when most meat is forbidden, but fish is allowed).\n\n- **The setup**: A tonsured monk/priest (holding a Spanish Bible) gestures at a capybara and asks if it's a fish.\n- **The joke**: During Lent, some Catholic dioceses in South America (especially Venezuela) officially classified the capybara—an enormous rodent that spends lots of time in water—as “fish” or “aquatic,” so people could eat it without breaking the fast. The image exaggerates this loophole as comically absurd.\n- **Visual cues**: The floating capybara, the monk’s hopeful expression, and the Spanish Bible all point to the Latin American context where this actually happened.\n\nIt’s a classic “rule-lawyering” meme: the Church found a way to make a rodent count as seafood.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: Catholic Lent forbids meat but allows fish, and there was a loophole where capybara/chigüire was treated as fish/aquatic so it could be eaten on Fridays during Lent. It also mentions the South American context and the absurdity of classifying a rodent as seafood. This matches the ground truth’s specific reference to the capybara/chigüire loophole in places like Venezuela, Colombia, and Brazil. Minor differences in wording do not change the meaning."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all key elements of the joke: the Catholic Lent rules banning meat but allowing fish, the historical classification of capybara as 'fish' by Catholic authorities, the South American context (specifically mentioning Venezuela), and the absurdity of a rodent being classified as aquatic/fish. The model captures the core setup, the specific loophole, and the relevant references mentioned in the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the Catholic Lent rule banning meat but allowing fish, and the historical loophole where the capybara (a semi-aquatic rodent) was classified as 'fish' so it could be eaten during Lent. It also correctly references the South American context (Venezuela) and the capybara. This matches the ground truth explanation closely."
+            }
+          ]
         }
       ]
     },
@@ -5157,27 +5787,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Here is an explanation of the meme:\n\n**1. References**\n*   **Scientific Concepts:** The meme is a direct satirical reference to astrophysics and cosmology, specifically the concepts of **Dark Matter** and **Dark Energy**. When observational data (like the r...",
+          "fullText": "Here is an explanation of the meme:\n\n**1. References**\n*   **Scientific Concepts:** The meme is a direct satirical reference to astrophysics and cosmology, specifically the concepts of **Dark Matter** and **Dark Energy**. When observational data (like the rotation speeds of galaxies or the expansion rate of the universe) did not match existing gravitational models, physicists hypothesized the existence of invisible, undetectable mass and energy to make the mathematical equations work. \n*   **Internet Culture:** The visual format uses classic \"Rage Comic\" characters from the late 2000s/early 2010s, specifically variations of the **Trollface**. This face is traditionally used to represent \"Troll Physics\" or \"Troll Logic\"—intentionally flawed, absurd arguments presented as factual life hacks.\n\n**2. The Joke**\n*   **The Setup:** The meme presents a blatantly wrong mathematical equation (1+1=3). This represents a physicist's initial calculation failing to match observations.\n*   **The \"Solution\":** Instead of admitting the core theoretical equation is wrong or fundamentally flawed, the \"troll logic\" dictates that you simply invent a placeholder variable—a hypothetical \"dark number\"—to force the math to be correct (changing it to 1+**1**+1=3). \n*   **The Punchline:** The meme compares this absurd cheat to modern physics. It is satirizing physicists, implying that their reliance on \"Dark Matter\" or \"Dark Energy\" is really just them making up fake variables because they don't want to admit their foundational math or understanding of gravity is wrong. \n\n**3. Visual Elements**\n*   **Color coding:** In the second panel, the initial \"1+1=3\" is colored red to represent the original \"flawed\" observation. The inserted \"+1\" is colored black to show it is the artificial \"dark number\" inserted solely to fix the equation. \n*   **Character Expressions:** \n    *   *Top panel:* The Trollface looks distressed and frustrated, representing a scientist whose data isn't working out. \n    *   *Middle panel:* The classic, smug Trollface appears, representing the mischievous \"aha!\" moment of using flawed logic to cheat the system.\n    *   *Bottom panel:* The Trollface is now wearing a tie and giving a thumbs-up, appearing as a \"professional\" scientist who has successfully (but deceitfully) solved the problem.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: it is about astrophysics/cosmology and the use of Dark Matter and Dark Energy as unseen placeholder factors added when observations don’t fit existing equations. It also captures the irony that scientists “fix” the model by introducing invisible components until the math works. Although it adds extra details about trollface/rage comics and a specific 1+1=3 setup that are not in the ground truth, it still matches the main reference and punchline described in the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: that astrophysicists use 'dark matter' and 'dark energy' as placeholder variables to make their models fit observations, similar to inserting a fake variable to make a wrong equation work. The model identifies the same specific concepts (dark matter, dark energy), the same mechanism (adding unseen/hypothetical factors to make math work), and the same satirical implication (science admitting incompleteness by inventing placeholder variables). The model goes into more detail about the visual elements and rage comic format, but the core understanding matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: astrophysicists using 'dark matter' and 'dark energy' as placeholder variables to make their models fit observations when galaxies hold together and the universe's expansion doesn't match gravity equations. The model explicitly names 'Dark Matter' and 'Dark Energy' and explains the subverted expectation that science should have a neat answer, matching the ground truth. The model also adds extra context about the visual format (Trollface/rage comics) and the 1+1=3 analogy, but these additions do not detract from the fact that it correctly identifies the specific scientific references and the intended humor."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is making a joke about **physicists “fixing” equations by inventing unseen quantities**.\n\n- The first panel shows the classic **Trollface** looking upset because the equation says **1 + 1 = 3**, which obviously “doesn’t add up.”\n- In the second pa...",
+          "fullText": "This meme is making a joke about **physicists “fixing” equations by inventing unseen quantities**.\n\n- The first panel shows the classic **Trollface** looking upset because the equation says **1 + 1 = 3**, which obviously “doesn’t add up.”\n- In the second panel, the solution is to change it to **1 + 1 + 1 = 3** by adding a made-up extra term: a hypothetical **“dark number.”**\n- The punchline says: **“Now you’re doing math like a physicist!”**\n\nThe reference is mainly to concepts like **dark matter** and **dark energy** in physics/cosmology. Scientists observed that galaxies and the universe behave in ways that visible matter alone couldn’t explain, so they proposed invisible/unobserved components like dark matter to account for the discrepancy.\n\nThe humor comes from exaggerating this into a dumb arithmetic example: instead of admitting the calculation is wrong, you just invent an unseen extra number to make it work. It’s a bit of a cynical joke that portrays physicists as “patching” equations with hypothetical stuff.\n\nVisually, the use of **Trollface** reinforces the sarcastic, mocking tone: the character goes from distressed to smugly pleased after “solving” the problem by cheating.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: it is about physicists/cosmologists using unseen placeholder entities to make equations/models fit observations, specifically referencing dark matter and dark energy. That matches the ground truth’s point that the humor comes from adding an invisible factor until the math works. The model also mentions galaxies and the universe behaving in ways visible matter alone cannot explain, which aligns with the ground truth. Although it frames the meme with an extra arithmetic/Trollface example and a made-up 'dark number,' it still captures the same underlying reference and irony rather than missing the specific joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: physicists/astrophysicists adding dark matter and dark energy as placeholder variables to make equations fit observations. The model identifies the specific references to dark matter and dark energy, explains the mechanism (inventing unseen quantities to fix discrepancies), and captures the humor about 'patching' equations with hypothetical stuff. The arithmetic analogy (1+1=3 fixed by adding a 'dark number') matches the ground truth's explanation about adding unseen factors until the math works. The model correctly identifies this as a joke about scientific models being incomplete and scientists admitting this by adding placeholder variables."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: physicists inventing unseen quantities like dark matter and dark energy to make their equations fit observations. It mentions the specific references (dark matter, dark energy, galaxies, universe expansion) and captures the humor about scientists patching models with hypothetical factors rather than admitting the model is wrong. This aligns well with the ground truth explanation."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a joke about physics vs. math, using the classic **Trollface / Rage Comic** format from the early 2010s.\n\n**The reference:**\n\nIn cosmology, our observations of the universe didn't \"add up.\" The gravity we see from visible stars and galaxies isn't en...",
+          "fullText": "This is a joke about physics vs. math, using the classic **Trollface / Rage Comic** format from the early 2010s.\n\n**The reference:**\n\nIn cosmology, our observations of the universe didn't \"add up.\" The gravity we see from visible stars and galaxies isn't enough to explain how fast galaxies spin or how the universe expands. \n\nThe mainstream solution is to propose invisible, undetected stuff — **dark matter** and **dark energy** — which make up ~95% of the universe's mass-energy budget. They make the equations work, but we've never directly seen them. Mathematicians and laymen often joke that this is cheating.\n\n**The joke, panel by panel:**\n\n1.  **`1+1=3 Calculations don't add up?`** - You have an equation that is objectively wrong. The trollface looks strained/annoyed.\n\n2.  **`1+1+1=3 Add a hypothetical \"dark number\" to account for inaccuracy.`** - Instead of admitting the math is wrong, you just invent an extra, invisible `1` and add it in. The trollface is now smug, like he solved it. Notice the middle `1` is colored black while the other numbers are red — that's the \"dark\" number, a pun on dark matter.\n\n3.  **`Now you're doing math like a physicist!`** - Punchline. The stereotype is that a mathematician would insist 1+1=2, but a physicist will just add a new invisible entity to make the theory fit the data. The trollface gives a thumbs up.\n\nThe humor is the inversion: what would be considered fraud in pure math is presented as clever problem-solving in physics.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: it is about cosmology/physics using unseen entities like dark matter and dark energy to make observations fit the equations. It also captures the idea that the model is incomplete and scientists add a hypothetical invisible factor until the math works. However, the ground truth specifically frames the meme around astrophysicists using 'dark matter' and 'dark energy' as placeholder variables for galaxies holding together and the universe's expansion not matching gravity equations. The model adds extra details about Trollface, rage comics, and a specific panel-by-panel 1+1 example that are not in the ground truth, but these do not contradict the main interpretation. Overall, it gets the same joke and references."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: that physicists invented 'dark matter' and 'dark energy' as placeholder variables to make their models fit observations, similar to adding an arbitrary invisible number to make an equation work. The model accurately describes the setup, the panel-by-panel joke structure, and the punchline. It correctly identifies that the humor comes from the subverted expectation that science should have neat answers, and instead scientists add unseen factors until the math works. The model also correctly notes the visual pun of the 'dark' colored number representing dark matter. This matches the ground truth explanation well."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: astrophysicists/cosmologists use 'dark matter' and 'dark energy' as unseen, hypothetical factors to make their equations fit observations when the math doesn't add up. It names both 'dark matter' and 'dark energy' specifically, matching the ground truth. It also captures the humor mechanism: the subversion where instead of admitting the model is wrong, scientists invent an invisible entity to make the theory fit the data. The model's additional details about the Trollface format and panel-by-panel breakdown are supplementary and do not conflict with the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "# Meme Explanation\n\nThis is a classic **Troll Face** meme, using the iconic black-and-white \"trollface\" character (originally from Rage Comics, popular on 4chan and Reddit around 2008-2012). The meme uses a three-panel format showing an evolving expression...",
+          "fullText": "# Meme Explanation\n\nThis is a classic **Troll Face** meme, using the iconic black-and-white \"trollface\" character (originally from Rage Comics, popular on 4chan and Reddit around 2008-2012). The meme uses a three-panel format showing an evolving expression and a \"logical\" progression of an absurd idea.\n\n## The References\n\n1. **Trollface**: The mischievous grinning face represents trolling or sneaky/clever thinking. Across the three panels, the face becomes increasingly satisfied and smug.\n\n2. **\"Dark matter/dark energy\" physics joke**: This is the real punchline. In physics and cosmology, scientists introduced concepts like **dark matter** and **dark energy** to explain discrepancies between observed measurements and theoretical predictions. These are \"invisible\" things that haven't been directly detected but are invoked to make the math/equations work out.\n\n## The Joke\n\nThe meme pokes fun at physicists by suggesting that when their calculations don't add up (1+1=3), instead of admitting an error, they just **invent a hypothetical \"dark number\"** to fill the gap and make the equation work.\n\n- Panel 1: Frustration that \"1+1=3\" doesn't make sense\n- Panel 2: The \"clever\" solution—add an invisible hypothetical value\n- Panel 3: Triumphant satisfaction—\"Now you're doing math like a physicist!\"\n\n## Why It's Funny\n\nIt's a tongue-in-cheek critique (and self-aware joke common among science enthusiasts) that dark matter and dark energy are somewhat like \"fudge factors\"—convenient invisible placeholders to reconcile observation with theory. The humor lands well with people familiar with physics, while gently teasing the discipline.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: astrophysicists/cosmologists using dark matter and dark energy as unseen placeholder factors to make equations and observations fit. That matches the ground truth’s explanation about incomplete models and adding invisible factors until the math works. Although the model adds extra framing about Trollface and a specific 1+1=3 setup that is not mentioned in the ground truth, it still captures the same specific scientific reference and the same humorous mechanism."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke about dark matter and dark energy being used as 'fudge factors' or placeholder variables to make physics equations/models work when observations don't match theory. The model specifically names dark matter and dark energy, explains the mechanism (adding invisible hypothetical values to make math work), and identifies the same subverted expectation that the ground truth describes. The model also correctly characterizes the humor as a tongue-in-cheek critique that scientists essentially 'invent' unseen factors when their models don't fit. This matches the ground truth explanation well, even though the model adds extra details about the Trollface format."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: physicists using 'dark matter' and 'dark energy' as placeholder/fudge factors to make their models fit observations when the math doesn't work out. It names the specific references (dark matter, dark energy) and explains the humor in the same way as the ground truth—that scientists invent an unseen factor to reconcile theory with observation. The additional context about the Trollface format does not detract from the correct understanding."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a three-panel rage comic parodying how physicists (especially cosmologists) handle equations that don't match observations.\n\n**References**  \n- **Dark matter/dark energy**: In real physics, these are hypothetical substances invoked to explain w...",
+          "fullText": "This meme is a three-panel rage comic parodying how physicists (especially cosmologists) handle equations that don't match observations.\n\n**References**  \n- **Dark matter/dark energy**: In real physics, these are hypothetical substances invoked to explain why galaxies rotate faster than expected or why the universe's expansion is accelerating. They make up ~95% of the universe's mass-energy but have never been directly observed.  \n- **Rage comic format**: Classic early-2010s meme style using exaggerated faces to convey reactions (top two are Trollface variants; the bottom is the approving \"Cool Guy\"/\"thumbs up\" face).\n\n**The joke**  \n- Setup: Simple arithmetic fails (1 + 1 ≠ 3).  \n- \"Fix\": Instead of admitting the equation is wrong, just invent a missing term (\"dark number\") to force it to match.  \n- Punchline: This is exactly how physicists are stereotyped—when the math or observations don't add up, they postulate a new invisible entity rather than discard the model. The meme presents this as both absurd and \"clever.\"\n\n**Visual elements**  \nThe escalating faces show the emotional arc: initial outrage at bad math → smug explanation → final approval, selling the idea that the \"dark number\" workaround is actually smart. The thumbs-up at the end seals the ironic endorsement.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: scientists/physicists/cosmologists using an unseen placeholder entity to make equations fit observations, specifically referencing dark matter and dark energy. This matches the ground truth’s point about astrophysicists adding unseen factors when galaxies and expansion don’t match current equations. The model also captures the irony that the model is incomplete but gets patched rather than neatly solved.\n\nIt does add extra details about the rage comic format and mentions 'dark number,' but those do not contradict the ground truth. The key references and the intended setup are understood correctly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: that physicists/cosmologists invoke 'dark matter' and 'dark energy' as placeholder terms to make their models fit observations, analogous to inventing a 'dark number' to make 1+1=3. The model identifies the same mechanism (adding an unseen/invented factor when the math doesn't work), the same references (dark matter, dark energy), and the same implication (science admitting incompleteness by adding invisible factors). The model also correctly notes the ironic/subverted expectation element. This matches the ground truth explanation closely."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: astrophysicists/cosmologists invoke 'dark matter' and 'dark energy' as unseen placeholder factors to make their equations fit observations when the math doesn't add up. It names both 'dark matter' and 'dark energy' specifically, explains the setup (equations not matching observations), and captures the punchline (inventing an invisible entity rather than discarding the model). This matches the ground truth's explanation of the subverted expectation and the humor of adding an unseen factor until the math works."
+            }
+          ]
         }
       ]
     },
@@ -5195,27 +5915,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References:**\n*   **\"Corner!\" and \"Behind!\":** These are standard safety phrases used in the professional culinary and restaurant industry. Cooks and waitstaff shout them to alert co...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References:**\n*   **\"Corner!\" and \"Behind!\":** These are standard safety phrases used in the professional culinary and restaurant industry. Cooks and waitstaff shout them to alert coworkers of their presence in tight, fast-paced kitchens to avoid dangerous collisions while carrying hot food, heavy pots, or sharp knives. \n*   **Restaurant Culture/Media:** This specific kitchen lingo has recently become much more widely known to the general public due to popular media focusing on intense restaurant environments, most notably the hit TV show *The Bear*. \n\n**2. The Joke:**\n*   **The Juxtaposition:** The humor comes from the extreme contrast between a high-stakes, fast-paced professional kitchen and a slow, mundane corporate office break room. \n*   **The Absurdity:** The joke highlights the absurdity of applying high-intensity kitchen safety protocols to the lowest-effort, least dangerous \"cooking\" task imaginable: microwaving poor-quality instant ramen (cup noodles). \n*   **The Implication:** It implies that the person posting used to work in the grueling food service industry, and the habits are so deeply ingrained in them (almost like a mild form of occupational PTSD) that they instinctively act like they are navigating a busy line kitchen even when they are just quietly making a cheap lunch at an office job. \n\n**3. Visual Elements:**\n*   There are no complex visual elements; this is a standard screenshot of a text-based post from Twitter/X. The joke relies entirely on the text painting a funny mental image for the reader.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls like \"behind\" and \"corner\" are being used in an ordinary office break room while making cup noodles, creating humor through absurd over-seriousness and the mismatch between a high-pressure kitchen environment and a low-stakes setting. It also correctly mentions The Bear as a relevant reference. This matches the ground truth closely."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: the professional kitchen safety calls ('behind,' 'corner,' 'hot'), the reference to *The Bear* as a show that popularized this language, and the core contrast/juxtaposition between a high-pressure kitchen environment and a mundane office break room with cup noodles. The model goes into more detail than the ground truth but captures the same essential joke mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific kitchen safety calls ('behind,' 'corner'), the reference to the TV show *The Bear*, and the core joke: the absurd contrast between high-pressure professional kitchen behavior and a mundane office break room task like making cup noodles. It matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a tweet joking about using **restaurant kitchen safety slang** in a very low-stakes setting.\n\n- **“Corner!”** and **“Behind!”** are things cooks/servers shout in busy restaurant kitchens:\n  - **“Corner!”** = “I’m coming around a blind corner, d...",
+          "fullText": "This meme is a tweet joking about using **restaurant kitchen safety slang** in a very low-stakes setting.\n\n- **“Corner!”** and **“Behind!”** are things cooks/servers shout in busy restaurant kitchens:\n  - **“Corner!”** = “I’m coming around a blind corner, don’t crash into me.”\n  - **“Behind!”** = “I’m passing behind you, don’t back up into me.”\n  These are especially important when people are carrying hot food, knives, pans, etc.\n\n- The joke is that the person is only **heating up cup noodles in an office break room**, which is mundane and not remotely as intense as a professional kitchen. They’re treating the break room like a chaotic restaurant line during dinner rush.\n\n- The humor comes from the contrast: **serious, high-pressure kitchen behavior** applied to **a sad little office lunch situation**. It’s especially relatable/funny to people who have worked in food service and still have those habits ingrained.\n\nVisually, it’s just a minimalist tweet screenshot, which fits the deadpan delivery: the absurd image is created entirely by the text.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls like “corner” and “behind” being used in an ordinary office break room while making cup noodles, creating absurd over-seriousness and a mismatch between a high-pressure kitchen mindset and a low-stakes setting. This matches the ground truth closely, including the specific kitchen slang and the office break room/cup noodles setup. The mention of restaurant kitchen behavior is aligned with the ground truth’s reference to places like a restaurant kitchen or The Bear, though the model does not explicitly name The Bear. That omission is acceptable here because the ground truth says “like a restaurant kitchen or in The Bear,” and the model captures the same specific mechanism and context."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: using professional kitchen safety calls ('Corner!' and 'Behind!') in a mundane office break room setting while making cup noodles. The model gets the key elements: the specific kitchen safety language, the contrast between high-pressure kitchen behavior and the low-stakes office setting, and the absurdity of applying serious kitchen protocols to making cup noodles. The ground truth mentions 'The Bear' as a reference, which the model doesn't mention, but the essential joke mechanism is correctly identified. The core understanding of the meme is accurate."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation aligns closely with the ground truth. Both identify the same core joke: using professional restaurant kitchen safety calls ('behind,' 'corner') in a mundane office break room setting while making cup noodles. Both explain the humor as the contrast between high-pressure kitchen behavior and a low-stakes office lunch situation. The model correctly identifies the specific phrases ('corner,' 'behind') and the setting (office break room, cup noodles). The ground truth mentions *The Bear* as an example of where this language is used, but it is not the central reference of the joke—the central joke is the contrast itself, which the model captures fully."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a joke about restaurant kitchen culture being out of place in an office.\n\n**The reference:**\nIn professional / commercial kitchens, it's standard procedure to loudly call out \"CORNER!\" when you're coming around a blind corner, and \"BEHIND!\" when you...",
+          "fullText": "This is a joke about restaurant kitchen culture being out of place in an office.\n\n**The reference:**\nIn professional / commercial kitchens, it's standard procedure to loudly call out \"CORNER!\" when you're coming around a blind corner, and \"BEHIND!\" when you're walking directly behind someone. It's a safety system because the kitchen is cramped, fast-paced, and everyone is carrying hot pans, boiling water, and sharp knives. You shout to avoid collisions.\n\n**The joke:**\nThe tweet describes someone doing that same callout while doing something extremely low-stakes: microwaving instant Cup Noodles in the office break room.\n\nThe humor is the contrast:\n\n1.  A high-intensity, dangerous, professional kitchen protocol vs. a mundane, solitary office task.\n2.  It paints a picture of someone being overly theatrical / self-important about making instant noodles, or a former line cook who can't turn off their kitchen habits in a normal workplace.\n\nIt's also funny because office break rooms *are* often tight and awkward when someone is using the microwave, so shouting like you're on a line during dinner rush is absurdly unnecessary and would make you that annoying coworker.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety callouts like “corner” and “behind” being used in an ordinary office break room while making cup noodles. This matches the ground truth’s emphasis on the absurd over-seriousness and the mismatch between a high-pressure kitchen mindset and a low-stakes office setting. The model also captures the same general reference to restaurant kitchen culture / line-cook behavior. It does not specifically mention every example from the ground truth (“hot,” “clear,” or *The Bear*), but it does identify the same specific kitchen-callout setup and the same contrast, which is sufficient here."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety callouts (like 'behind' and 'corner') being used in the mundane, low-stakes setting of an office break room while making Cup Noodles. The model captures the contrast between high-pressure kitchen protocol and ordinary office tasks, which is exactly what the ground truth describes. The model doesn't specifically mention 'The Bear' TV show, but the ground truth mentions it as an example context ('places like a restaurant kitchen or in The Bear'), not as a required reference. The model correctly identifies the specific phrases ('behind,' 'corner'), the specific setting (office break room), the specific food (Cup Noodles), and the mechanism of the joke (absurd over-seriousness and mismatch between high-pressure kitchen mindset and normal office setting)."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls ('behind,' 'corner') being used in a mundane office break room setting while making cup noodles. It captures the contrast between high-pressure kitchen culture and low-stakes office tasks, matching the ground truth's explanation of absurd over-seriousness and mismatch. The ground truth mentions 'The Bear' as an example of where this language appears, but it is not the central reference of the joke—the central reference is professional kitchen safety calls, which the model identifies correctly."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a tweet-format meme that plays on the contrast between professional kitchen culture and the mundane reality of an office break room.\n\n**The reference:**\nIn professional restaurant kitchens, cooks shout phrases like \"Corner!\" (when rounding a blind c...",
+          "fullText": "This is a tweet-format meme that plays on the contrast between professional kitchen culture and the mundane reality of an office break room.\n\n**The reference:**\nIn professional restaurant kitchens, cooks shout phrases like \"Corner!\" (when rounding a blind corner to avoid collisions) and \"Behind!\" (to warn coworkers you're moving behind them, often with hot pans or knives). These are real safety callouts used in busy, high-stakes kitchen environments, popularized in shows like *The Bear*, *Hell's Kitchen*, and various culinary media.\n\n**The joke:**\nThe humor comes from someone applying this intense, high-pressure restaurant terminology to the deeply unglamorous task of microwaving instant cup noodles in a quiet office break room. It's absurd overkill—treating a tiny, low-stakes act like a frantic dinner rush in a Michelin-starred kitchen. The image of a regular office worker yelling \"Corner!\" while no one is even near them, just to make instant noodles, is what makes it funny.\n\n**Why it lands:**\nIt taps into a common comedic format of taking something dramatic or specialized and inserting it into an utterly ordinary context. Many people will recognize these kitchen phrases from cooking shows, making the misapplication immediately recognizable and relatable.\n\nThe username \"@funeralpig\" and the blurry profile picture are just typical of the absurdist, low-effort aesthetic common to this style of comedy Twitter account.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety callouts like 'corner' and 'behind' being used in an ordinary office break room while making cup noodles, creating absurd over-seriousness from a high-pressure kitchen mindset in a low-stakes setting. It also mentions the same kind of kitchen-media reference the ground truth points to, including The Bear. The explanation matches the intended contrast and irony, so it understands the meme."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: using professional kitchen safety callouts ('Corner!', 'Behind!') in the mundane setting of an office break room while making instant/cup noodles. The model mentions The Bear specifically, along with other cooking shows. It correctly identifies the absurd mismatch between high-pressure kitchen culture and the low-stakes office setting. This matches the ground truth explanation well."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls ('behind,' 'corner') being applied to the mundane, low-stakes task of making cup noodles in an office break room. It mentions The Bear, which the ground truth also references. It captures the absurd over-seriousness and the mismatch between high-pressure kitchen culture and a normal office setting. All key elements from the ground truth are present."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a tweet joking about someone carrying over their old habits from working in a professional kitchen.\n\n**Reference**: In restaurant kitchens (especially busy ones), staff shout “Corner!” when approaching a blind corner with hot food or “Behind!”...",
+          "fullText": "This meme is a tweet joking about someone carrying over their old habits from working in a professional kitchen.\n\n**Reference**: In restaurant kitchens (especially busy ones), staff shout “Corner!” when approaching a blind corner with hot food or “Behind!” when passing behind someone to prevent collisions or burns. It’s standard safety lingo in that environment.\n\n**The joke**: The humor comes from transplanting that intense, professional kitchen behavior into the most mundane, low-stakes setting possible — an office break room while just heating up instant cup noodles. The implication is that the person is either overly dramatic or so deeply ingrained with kitchen habits that they can’t turn it off, even for something trivial like microwaving lunch.\n\nIt’s an exaggeration/absurdity joke playing on the contrast between the serious tone of the phrases and the casual context.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls like “Corner!” and “Behind!” being used in an ordinary office break room while making cup noodles. This matches the ground truth’s absurd over-seriousness and mismatch between a high-pressure kitchen mindset and a low-stakes office setting. The model also mentions the same specific kitchen lingo and the same mundane context. Although it doesn’t mention “hot” or “clear” or the reference to *The Bear*, it captures the same specific setup and humor mechanism described in the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: professional kitchen safety calls (like 'Behind!' and 'Corner!') being used in the mundane setting of an office break room while making instant noodles. The model identifies the same mechanism (absurd contrast between high-pressure kitchen mindset and low-stakes office setting), the same specific references (kitchen safety calls like 'behind' and 'corner'), and the same setup (transplanting professional kitchen behavior to an ordinary context). The model doesn't specifically mention 'The Bear' TV show, but the ground truth notes it as an example of where such language appears rather than as a required reference. The core joke is well-captured."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the professional kitchen safety calls ('behind,' 'corner,' etc.), the mundane office break room setting, the specific action of making cup noodles, and the absurd contrast between high-pressure kitchen behavior and a low-stakes situation. The ground truth mentions *The Bear* as an example of where this language is used, but the core joke is fully captured by the model's explanation."
+            }
+          ]
         }
       ]
     },
@@ -5233,27 +6043,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Setup and Joke**\nThe joke relies on dramatic contrast and an understatement. The poster is meeting his girlfriend's brother, who casually downplays his golfing skills by saying he \"play...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Setup and Joke**\nThe joke relies on dramatic contrast and an understatement. The poster is meeting his girlfriend's brother, who casually downplays his golfing skills by saying he \"plays a little golf.\" However, the poster then sees the brother's golf club, which reveals the brother is actually an exceptionally skilled, high-level player. \n\nRealizing he has likely agreed to play a round of golf to bond with the family, the poster concludes \"I'm cooked\" (internet slang for being doomed or about to be completely destroyed), knowing he is about to be humiliated on the course.\n\n**Important Visual Elements**\nThe punchline relies entirely on the close-up image of the golf club face (the 7-iron):\n*   **The Wear Mark:** There is a perfectly round, prominent wear mark right in the dead center of the club face (the \"sweet spot\"). \n*   **The Golf Context:** For average or even good amateur golfers, impact marks are scattered all over the face of the club because they don't strike the ball consistently. To wear away the metal in one focused, perfect circle requires hitting the ball in the exact same spot thousands of times. This is a visual hallmark of extremely low-handicap amateur golfers or touring professionals.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the golfer’s claim that he only plays “a little” golf is contradicted by the heavily worn sweet spot on the club face, implying he is actually highly skilled and has used it many times. This matches the ground truth’s irony of false modesty versus visual evidence. The model adds extra framing about meeting a girlfriend’s brother and being doomed, but that does not change the central interpretation. It also specifically notes the concentrated wear mark and its implication of thousands of uses, which aligns with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: someone claims to 'play a little golf' (false modesty/understatement), but the golf club shows a perfectly centered wear mark on the sweet spot, indicating they are actually an extremely skilled golfer who has hit the ball in the exact same spot thousands of times. The model correctly identifies the visual evidence (the wear mark on the club face), the irony of false modesty versus visual evidence, and what the wear pattern signifies about skill level. The model adds some framing about 'meeting girlfriend's brother' and 'I'm cooked' which may be part of the original meme's text, but the core joke identification matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the golfer claims to 'play a little golf' (false modesty), but the heavily worn club face in one specific spot reveals he is actually very skilled and has hit the ball thousands of times. The model matches the ground truth's explanation of the irony and the visual evidence. The model adds extra context about the social situation and 'I'm cooked' slang, but this does not detract from correctly getting the joke."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is about **golf skill being understated**.\n\n- The caption says the girlfriend’s brother claimed he “plays a little golf,” which sounds casual or modest.\n- But the photo shows the face of his **7 iron**, and there’s a very concentrated wear mark ri...",
+          "fullText": "This meme is about **golf skill being understated**.\n\n- The caption says the girlfriend’s brother claimed he “plays a little golf,” which sounds casual or modest.\n- But the photo shows the face of his **7 iron**, and there’s a very concentrated wear mark right in the middle of the clubface.\n- In golf, good players repeatedly strike the ball on the **sweet spot**—the center of the clubface. Over time, that creates a tight, dark wear pattern like the one shown here.\n- Bad or casual golfers usually have ball marks scattered all over the face, toward the toe, heel, top, etc.\n\nSo the joke is: the brother said he only plays “a little,” but his club reveals he’s actually a very consistent, probably very good golfer. The narrator says “I’m cooked” because he realizes the brother is either going to destroy him in golf or is generally intimidatingly competent. It’s also funny because the club exposes the brother’s fake humility/sandbagging.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the speaker claims to play golf only 'a little,' but the worn spot on the clubface shows repeated, skilled use, implying he is actually a serious golfer. This matches the ground truth's irony of false modesty versus visual evidence. The model also mentions the concentrated wear on the sweet spot and the implication of high skill, which aligns with the intended punchline. It adds some extra interpretation about the brother being intimidating or sandbagging, but that does not conflict with the main joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the joke: (1) the person claims to only play 'a little' golf, suggesting modesty/casual play, (2) the worn club face shows evidence of extensive, skilled use with consistent sweet spot contact, (3) the irony/humor comes from the false modesty versus the visual evidence of skill. The model even adds accurate golf knowledge about how good players consistently hit the sweet spot. The core mechanism - false modesty vs. visual evidence - is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the golfer claims to only play 'a little' golf, but the concentrated wear on the clubface reveals he is actually very skilled. This matches the ground truth's explanation of the irony between false modesty and visual evidence. The model adds accurate detail about the sweet spot and the 'I'm cooked' reaction, which is consistent with the meme's humor. No specific names, events, or references are missed."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a golf meme about a humblebrag being exposed.\n\n**The setup:**\nText says: \"Just met my girlfriends family. Her brother said he 'plays a little golf' - This is his 7 iron. I'm cooked\"\n\nMeeting a girlfriend's brother and playing golf with him is a clas...",
+          "fullText": "This is a golf meme about a humblebrag being exposed.\n\n**The setup:**\nText says: \"Just met my girlfriends family. Her brother said he 'plays a little golf' - This is his 7 iron. I'm cooked\"\n\nMeeting a girlfriend's brother and playing golf with him is a classic intimidating scenario. The brother downplays his skill as \"plays a little.\"\n\n**The visual punchline:**\n\nThe photo shows the face of his 7-iron - a common mid-range club. The important detail is the wear mark on the face.\n\nWhen you hit a golf ball, it leaves a little dirt / wear mark where it contacts the club. For an average amateur who *actually* plays a little, those marks would be scattered all over the face because they don't hit the ball consistently.\n\nThis club has one dark, concentrated, dime-sized wear patch dead in the center of the face - the \"sweet spot.\" That only happens if you have hit thousands and thousands of balls in the *exact* same spot. It's the sign of an elite ball-striker - a scratch golfer, college player, or pro. Not a casual.\n\nSo the joke is the contrast between what he *said* and what the evidence shows. He doesn't \"play a little\" golf, he is obsessively good at golf.\n\n**\"I'm cooked\":**\nGen Z slang for \"I'm doomed / finished.\" The poster is realizing he is about to be humiliated trying to play golf with his girlfriend's brother, who is going to be vastly better than him.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the golfer claims he only 'plays a little' golf, but the worn spot on the 7-iron shows extensive, highly skilled use, creating irony/false modesty versus visual evidence. This matches the ground truth’s explanation of the false modesty and the club wear indicating he is actually very skilled. No specific reference from the ground truth is missed."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the irony between the brother claiming he 'plays a little golf' versus the visual evidence (the wear mark on the 7-iron showing elite, consistent ball-striking). The model correctly explains that the concentrated wear mark in the sweet spot indicates thousands of precise hits, meaning the brother is actually very skilled. This matches the ground truth's description of 'false modesty versus the visual evidence.' The model also adds additional context about the specific meme setup and the 'I'm cooked' phrase, which enhances rather than contradicts the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the contrast between the brother's claim that he 'plays a little golf' and the visual evidence of a heavily worn 7-iron showing he is actually very skilled. The model explains the specific detail of the concentrated wear mark on the sweet spot, matching the ground truth's point about the club being heavily worn in one specific spot from thousands of hits. The model also correctly explains the 'I'm cooked' slang and the context of the intimidating scenario. This aligns well with the ground truth explanation."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "**What's happening:** This is a Snapchat-style meme where someone meets their girlfriend's family. The brother casually claims he \"plays a little golf,\" downplaying his ability. The poster then shows a close-up of the brother's 7 iron.\n\n**The joke / golf kn...",
+          "fullText": "**What's happening:** This is a Snapchat-style meme where someone meets their girlfriend's family. The brother casually claims he \"plays a little golf,\" downplaying his ability. The poster then shows a close-up of the brother's 7 iron.\n\n**The joke / golf knowledge needed:** To understand this, you need to know how golfers read a club face. The grooves on the face of the iron show extensive wear—there's a worn, faded patch right in the center where ball after ball has struck the exact same spot. This \"wear pattern\" is dead-center and very consistent.\n\nIn golf culture, a worn-out spot in the very middle of the club face is a tell-tale sign of an **extremely skilled player**. Good golfers strike the ball on the \"sweet spot\" repeatedly, which gradually wears that exact area. A beginner's club would show scattered wear marks all over the face (or barely any wear at all). The center-concentrated wear here signals thousands of well-struck shots.\n\n**Why it's funny:** The humor comes from the contrast between the brother's modest claim (\"plays a little golf\") and the evidence to the contrary. The worn club reveals he's secretly a very serious, highly competent golfer. The poster realizes the brother sandbagged (downplayed his skill), so any friendly round or competition is going to be humiliating.\n\n**\"I'm cooked\"** is internet slang meaning \"I'm done for / I'm in trouble,\" landing the punchline—the narrator knows he's about to get destroyed at golf and is intimidated trying to impress the family.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the person claims to only play 'a little' golf, but the worn spot on the club face visually contradicts that and implies he is actually highly skilled and has used the club extensively. This matches the ground truth's irony of false modesty versus visual evidence. The model adds extra context about meeting a girlfriend's family and being intimidated, but that does not change the central interpretation. It does not miss the specific mechanism of the joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: a person claims to 'play a little golf' (false modesty/sandbagging) but the worn club face reveals he is actually very skilled. The model correctly explains the visual evidence (worn sweet spot on the club face indicating thousands of well-struck shots) and the irony between the modest claim and the physical evidence. This matches the ground truth's identification of false modesty versus visual evidence as the humor mechanism. The model adds extra context about the 'I'm cooked' phrase and the girlfriend's brother setup, but these are supplementary details that enhance rather than contradict the core explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the golfer claims to only 'play a little golf' (false modesty), but the heavily worn club face in one specific spot reveals he is actually very skilled, having struck thousands of balls in the same consistent location. This matches the ground truth's explanation of the irony between false modesty and visual evidence. The model adds additional context about the Snapchat format and 'I'm cooked' slang, but these are supplementary details that don't detract from the correct understanding."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme shows a close-up of a heavily worn, dirty 7-iron golf club with a text caption claiming it belongs to the girlfriend's brother, who casually said he \"plays a little golf.\" The joke is the classic golf-culture understatement: saying you \"play a litt...",
+          "fullText": "The meme shows a close-up of a heavily worn, dirty 7-iron golf club with a text caption claiming it belongs to the girlfriend's brother, who casually said he \"plays a little golf.\" The joke is the classic golf-culture understatement: saying you \"play a little\" when your equipment is this beat-up actually signals that the brother is a serious, experienced player. The poster is jokingly intimidated (\"I'm cooked\").\n\nThe top panel sets up the innocent first meeting with the family; the bottom panel delivers the punchline by showing the incongruously abused club.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: false modesty/understatement about only playing 'a little' golf contrasted with visual evidence that the club is heavily worn from extensive use, implying the golfer is actually very experienced. This matches the ground truth's irony-based explanation. The model also mentions the worn club as evidence of skill and repeated use, which is the key mechanism. Although it adds extra framing about a girlfriend's brother and intimidation, those do not conflict with the ground truth and the essential joke is captured."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: someone claiming to 'play a little' golf, but the heavily worn club reveals they are actually very experienced and skilled. The model captures the irony of false modesty versus visual evidence. The model adds some extra details (7-iron, 'I'm cooked', girlfriend's brother) but these align with the meme's content and don't contradict the ground truth. The fundamental joke mechanism - understatement/false modesty contradicted by physical evidence - is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the irony of claiming to 'play a little golf' when the heavily worn club shows the person is actually a serious, experienced player. It matches the ground truth's explanation of the false modesty versus visual evidence. The model adds extra context (girlfriend's brother, 'I'm cooked') but captures the same humor mechanism."
+            }
+          ]
         }
       ]
     },
@@ -5271,27 +6171,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "**References:**\n*   **Cultural/Music Reference:** The caption references the famous lyric \"took the midnight train going anywhere\" from the 1981 hit song \"Don't Stop Believin'\" by the American rock band Journey.\n*   **Internet Discourse:** The meme taps int...",
+          "fullText": "**References:**\n*   **Cultural/Music Reference:** The caption references the famous lyric \"took the midnight train going anywhere\" from the 1981 hit song \"Don't Stop Believin'\" by the American rock band Journey.\n*   **Internet Discourse:** The meme taps into a common online discussion comparing the highly developed and easily accessible public rail infrastructure in Europe to the very sparse, car-dependent infrastructure in the United States. \n\n**Visual Elements:**\nThe image features a composite map showing the United States sitting entirely above Europe. Black lines represent passenger railway networks. \n*   The European section is covered in a dense, dark web of intersecting lines, showing you can take a train to almost any town or city. \n*   The United States section is largely empty green space, with only a few sparse lines representing the limited routes offered by Amtrak (the US passenger rail service). \n\n**The Joke:**\nThe humor relies on the **contrast** and **irony** between a romanticized American concept and physical reality. \n\nThe song \"Don't Stop Believin'\" uses the idea of jumping on a train \"going anywhere\" as a metaphor for freedom, open possibilities, and escaping to a new life. However, looking at the actual map of the US passenger rail system, the joke points out that practically speaking, the girl in the song couldn't actually go \"anywhere\" on a train—because the American rail network is so underdeveloped, she would only have a handful of possible destinations.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the key reference to Journey’s 'Don't Stop Believin'' and the lyric 'took the midnight train going anywhere.' It also captures the intended irony: in the U.S., train travel is limited, so the idea of going 'anywhere' by train is unrealistic/absurd. Although the model adds extra detail about Europe and a map comparison that is not in the ground truth, it still understands the same core joke and specific reference."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core elements: the Journey song 'Don't Stop Believin'' and the specific lyric 'took the midnight train going anywhere,' plus the irony that in the US, you can't actually go 'anywhere' by train due to the limited rail infrastructure. The model also correctly describes the visual (map comparing US and European rail networks) and explains the contrast/irony mechanism. This matches the ground truth explanation closely."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Journey song 'Don't Stop Believin'' and the specific lyric 'took the midnight train going anywhere.' It also correctly identifies the irony/subverted expectation that the U.S. rail network is so limited that taking a train 'going anywhere' is absurdly optimistic. The model adds extra detail about the visual map and the Europe vs. US rail comparison, but the core joke mechanism matches the ground truth."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme jokes about how limited passenger rail is in the United States compared with Europe.\n\n- The image compares rail networks: the U.S. map has only a few long passenger train lines, while Europe is covered in a dense web of rail routes.\n- The caption...",
+          "fullText": "This meme jokes about how limited passenger rail is in the United States compared with Europe.\n\n- The image compares rail networks: the U.S. map has only a few long passenger train lines, while Europe is covered in a dense web of rail routes.\n- The caption references the Journey song **“Don’t Stop Believin’”**, specifically the lyric:  \n  **“Just a small-town girl, livin’ in a lonely world / She took the midnight train going anywhere…”**\n- The joke is that in the U.S., if she took a passenger train “going anywhere,” she actually wouldn’t have many choices, because American passenger rail is relatively sparse. So “anywhere” becomes hilariously limited — “about five options.”\n\nThe visual humor comes from the stark contrast: Europe looks like a huge interconnected rail maze, while the U.S. looks like a few thin lines across a massive country.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Journey’s \"Don’t Stop Believin’\" and the lyric \"she took the midnight train going anywhere.\" It also captures the core joke: the irony that in the U.S., passenger rail is sparse, so the idea of taking a train \"going anywhere\" is absurdly optimistic or limited. This matches the ground truth’s subverted expectation about U.S. rail travel. The added comparison to Europe is extra context but does not change the core understanding."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Journey song 'Don't Stop Believin'' and the specific lyric about 'the midnight train going anywhere.' It also correctly identifies the core joke: that in the U.S., taking a train 'going anywhere' is absurdly limited because American passenger rail is sparse. The model adds the detail about comparing U.S. and European rail networks, which is consistent with the meme's visual content. The model captures the same irony/subverted expectation that the ground truth describes."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Journey song 'Don't Stop Believin'' and the specific lyric about taking the midnight train going anywhere. It also correctly explains the joke: that U.S. passenger rail is so limited that 'going anywhere' is ironically restricted to very few options. This matches the ground truth's core point about the irony/subverted expectation of train travel in the U.S."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a popular transit / geography joke about how poor American passenger rail is compared to Europe.\n\n**The visual:**\nThe image is a post from @TerribleMaps - an account that posts funny, editorialized maps. \n\nIt shows two maps at roughly the same scale...",
+          "fullText": "This is a popular transit / geography joke about how poor American passenger rail is compared to Europe.\n\n**The visual:**\nThe image is a post from @TerribleMaps - an account that posts funny, editorialized maps. \n\nIt shows two maps at roughly the same scale, with black lines representing passenger train routes:\n\n*   **Top: The United States** - Only a few long, sparse lines, mostly radiating from Chicago and the Northeast Corridor. Most of the country is empty.\n*   **Bottom: Europe** - A dense, almost black web of lines covering the entire continent, especially Central Europe. You can barely see the map underneath.\n\nThe point is that despite being similar in size, the US has almost no intercity rail while Europe is covered in it.\n\n**The reference:**\nThe caption is quoting Journey's 1981 US rock anthem *Don't Stop Believin'*:\n\n> *Just a small town girl, livin' in a lonely world*\n> *She took the midnight train going anywhere*\n\nIt's one of the most well-known lyrics in America.\n\n**The joke:**\nIt's a literal interpretation of that lyric.\n\nThe song presents the \"midnight train going anywhere\" as a symbol of infinite possibility - you can hop on and go chase your dreams anywhere.\n\nThe meme points out the irony: if she was actually in the United States - where Journey is from - \"anywhere\" is not true at all. Because the US passenger rail network is so limited, a midnight train would only have about 5 possible destinations, if it exists at all.\n\nIn Europe, the lyric would be literally true - a midnight train could take you to hundreds of places. In America, it's hyperbole.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific Journey lyric from \"Don't Stop Believin'\"—especially \"she took the midnight train going anywhere\"—and explains the joke as an ironic/subverted expectation about U.S. passenger rail being sparse, making \"going anywhere\" absurdly optimistic. This matches the ground truth's core reference and humor mechanism. The extra discussion of Europe vs. the U.S. is consistent with the setup and does not change the interpretation."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies: (1) Journey's 'Don't Stop Believin'' and the specific lyric 'she took the midnight train going anywhere', (2) the irony that in the US, where rail travel is extremely limited, taking a train 'going anywhere' is absurdly optimistic/hyperbolic, (3) the contrast with Europe where rail is extensive. The model goes into more detail than the ground truth but captures the exact same core joke mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Journey song 'Don't Stop Believin'', the specific lyric about the midnight train going anywhere, and the core joke: the irony that in the U.S., where passenger rail is limited, taking a train 'going anywhere' is absurdly optimistic. The model matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "# Meme Explanation\n\n**The Setup:**\nThis meme from the Twitter/X account \"Terrible Maps\" compares passenger rail networks in the United States versus Europe. The visual contrast is stark:\n- The **top map (USA)** shows very sparse rail lines, with only a few...",
+          "fullText": "# Meme Explanation\n\n**The Setup:**\nThis meme from the Twitter/X account \"Terrible Maps\" compares passenger rail networks in the United States versus Europe. The visual contrast is stark:\n- The **top map (USA)** shows very sparse rail lines, with only a few thin routes scattered across the country\n- The **bottom map (Europe)** shows an incredibly dense web of rail lines, so thick they appear almost solid black in central Europe\n\n**The Cultural Reference:**\nThe joke in the caption references the famous **Journey song \"Don't Stop Believin'\"** (1981). The opening lyrics describe:\n> *\"Just a small town girl, livin' in a lonely world / She took the midnight train going anywhere\"*\n\n**Why It's Funny:**\nThe humor comes from taking the romantic, open-ended lyric \"midnight train going **anywhere**\" and applying real-world logic to it. The joke implies:\n\n- If this \"small town girl\" was in **America**, with its notoriously limited passenger rail system, \"anywhere\" wouldn't actually mean *anywhere*—it would mean only about **five possible destinations** because there are so few train routes.\n\nThe caption pokes fun at America's underdeveloped passenger rail infrastructure compared to Europe's comprehensive network. The dramatic, freedom-implying lyric becomes comically deflated when you realize the practical limitations of actually catching a train in the US.\n\n**The Comedy Layer:**\nIt works on multiple levels—it's both a commentary on infrastructure differences AND a clever subversion of a beloved, idealistic song lyric by introducing mundane logistical reality.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Journey's \"Don't Stop Believin'\" and the lyric \"she took the midnight train going anywhere.\" It also captures the core irony/subversion: the lyric's open-ended optimism is contrasted with the reality that U.S. passenger rail is sparse, making \"going anywhere\" absurdly limited. This matches the ground truth's joke mechanism and specific reference. The extra discussion of Europe/rail maps is not necessary but does not conflict with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the meme references Journey's 'Don't Stop Believin'' and specifically the lyric 'she took the midnight train going anywhere.' The model correctly explains the irony/subverted expectation that in the US, with its limited passenger rail network, 'going anywhere' is absurdly optimistic because there are so few train routes. The model names the specific song, the specific lyric, and correctly identifies the humor mechanism (romantic lyric deflated by real-world infrastructure limitations). This matches the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the Journey song 'Don't Stop Believin'' and the specific lyric 'she took the midnight train going anywhere.' It also correctly identifies the joke: the irony/subverted expectation that taking a train 'going anywhere' in the U.S. is absurdly optimistic given the limited passenger rail network. The model matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "The meme contrasts the sparse US passenger rail network (mostly a handful of long-distance Amtrak routes connecting major cities) with Europe's dense, interconnected web of routes.\n\nThe joke references the common trope/phrasing of spontaneously \"taking the...",
+          "fullText": "The meme contrasts the sparse US passenger rail network (mostly a handful of long-distance Amtrak routes connecting major cities) with Europe's dense, interconnected web of routes.\n\nThe joke references the common trope/phrasing of spontaneously \"taking the midnight train going anywhere\" (evoking freedom, romance, or escape in songs and media). The caption points out the irony: in the US map, \"anywhere\" really just means one of ~5 actual lines.\n\nThe account name \"Terrible Maps\" signals that the image is highlighting an unflattering real-world disparity.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific Journey lyric/phrase “taking the midnight train going anywhere” from “Don’t Stop Believin’,” which is the key reference in the ground truth. It also captures the intended irony/subverted expectation: in the U.S., saying you can take a train “going anywhere” is absurdly optimistic because passenger rail is sparse. Although the model adds extra context about Europe and Amtrak that is not in the ground truth, it still gets the core joke and the named reference right."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference to 'taking the midnight train going anywhere' from Journey's 'Don't Stop Believin'' and the irony that in the US, rail travel is so limited that 'anywhere' is absurdly optimistic. The model also correctly notes the contrast with Europe's dense rail network. The model gets the specific lyric reference and the joke's mechanism (irony/subverted expectation about limited US rail travel). The model mentions the song/lyric trope correctly even if it doesn't explicitly name Journey's 'Don't Stop Believin'', but the essential joke and reference are captured."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "incorrect",
+              "reasoning": "The ground truth specifically identifies the reference as Journey's 'Don't Stop Believin'' and its lyric 'she took the midnight train going anywhere.' The model mentions the phrase 'taking the midnight train going anywhere' but only attributes it generically to 'songs and media' without naming Journey or 'Don't Stop Believin''. Since the ground truth names a specific song and artist, the model's generic attribution is insufficient."
+            }
+          ]
         }
       ]
     },
@@ -5309,27 +6299,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The References**\n*   **Iron Man (Marvel):** The superhero pictured on the top left. The text references his death in the 2019 Marvel Cinematic Universe (MCU) film *Avengers: Endgame*.\n*   *...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The References**\n*   **Iron Man (Marvel):** The superhero pictured on the top left. The text references his death in the 2019 Marvel Cinematic Universe (MCU) film *Avengers: Endgame*.\n*   **Man of Steel (DC):** This is the famous, decades-old nickname for **Superman**, a character owned by DC Comics, which is Marvel's primary rival. \n*   **Loki:** The character in the bottom panel is Loki, also from the Marvel Cinematic Universe (played by Tom Hiddleston). \n*   **\"You had one job\":** A popular internet phrase and meme format used to point out when someone fails spectacularly at a simple, foundational, or obvious task.\n\n**The Joke**\nThe joke relies on irony and a massive pop-culture oversight. The setup is that a town in Italy created a statue to honor the Marvel character Iron Man. However, they titled the statue \"Man of Steel.\" \n\nThe glaring mistake is twofold:\n1.  Metals: Iron Man is famously associated with *iron*, while Superman is associated with *steel*.\n2.  Rival Franchises: Giving a Marvel hero the most famous moniker of a DC hero is a massive blunder in comic book and movie fandom. \n\nLoki’s reaction at the bottom, \"You had one job,\" serves as the punchline. The creators successfully built a complex metal sculpture modeled perfectly after Iron Man, but failed at the basic \"one job\" of giving it the right superhero name.\n\n**Visual Elements**\n*   **The Side-by-Side Comparison:** The top half pairs a movie still of Iron Man doing a \"superhero landing\" next to the Italian metal statue doing the exact same pose. This visually confirms that the statue is undeniably meant to be Iron Man, making the title \"Man of Steel\" even more ridiculous.\n*   **The Reaction Panel:** Loki's deadpan, pointing expression channels the frustration a Marvel fan would feel seeing this mistake.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The ground truth says the joke is a pun/wordplay on 'Man of Steel' as Superman's nickname, contrasted with Iron Man: if it were 'Man of Iron,' that would refer to Iron Man. The model does identify that 'Man of Steel' is Superman's nickname and contrasts it with Iron Man, but it goes far beyond the actual joke and reframes it as a mistaken statue/title setup involving Iron Man, Superman, Loki, and 'You had one job.' That is not the same core joke as the ground truth, which is specifically the title/phrase swap pun. The model misses the concise wordplay mechanism and instead invents a different meme interpretation."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the pun/wordplay confusion between 'Man of Steel' (Superman's nickname) and Iron Man. The model explicitly states that 'Man of Steel' is Superman's famous moniker while the statue depicts Iron Man, and that these are rival DC/Marvel franchises. This matches the ground truth's explanation about the wordplay and superhero name mismatch. The model goes into additional detail about the specific context (Italian statue, Loki's reaction), but the core joke identification is correct."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies the core joke: the pun/wordplay on 'Man of Steel' (Superman's nickname) being mistakenly applied to Iron Man, who should be 'Man of Iron.' It explicitly mentions Superman, the DC/Marvel rivalry, and the metal mismatch (iron vs. steel). While the model adds extra context about an Italian statue and Loki's reaction, it still captures the same core mechanism (superhero name mismatch and wordplay) that the ground truth identifies. The model does not miss any specific references mentioned in the ground truth."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is making fun of a real/viral headline about an **Iron Man statue in Italy** being titled **“Man of Steel”** as a tribute to Tony Stark’s death in *Avengers: Endgame*.\n\nThe joke is that **“Man of Steel” is famously Superman’s nickname** and also t...",
+          "fullText": "This meme is making fun of a real/viral headline about an **Iron Man statue in Italy** being titled **“Man of Steel”** as a tribute to Tony Stark’s death in *Avengers: Endgame*.\n\nThe joke is that **“Man of Steel” is famously Superman’s nickname** and also the title of a Superman movie. Superman is a **DC Comics** character, while Iron Man is from **Marvel**. So the statue is supposedly honoring Iron Man, but the title accidentally sounds like it belongs to his rival-universe counterpart.\n\nThere’s also a smaller wordplay issue: **Iron Man** → “iron,” but the title says **steel**, which is a different metal.\n\nVisual elements:\n- The top-left image shows Iron Man in his iconic superhero landing pose.\n- The top-right shows the statue copying that pose.\n- The bottom image shows **Loki** with the caption **“You had one job”**, a common meme phrase meaning “this was simple, and you still messed it up.”\n\nSo the humor is basically: they tried to honor Iron Man, but named the tribute after Superman.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model identifies the key reference correctly: 'Man of Steel' as Superman’s nickname/title, contrasted with Iron Man. It also explains the wordplay around iron vs steel and the superhero mismatch. Although it adds extra details about a statue, Tony Stark, and Loki that are not in the ground truth, the core joke matches the ground truth’s pun and contrast between Superman and Iron Man."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: 'Man of Steel' is Superman's nickname/title, and it's being applied to an Iron Man statue, creating a humorous mismatch between DC and Marvel characters. The model also correctly notes the wordplay between 'iron' and 'steel.' The ground truth focuses on the pun/wordplay of 'Man of Steel' vs Iron Man, and the model captures this accurately. The model adds extra context about the specific statue and Loki image, but these additions don't detract from correctly identifying the core joke mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a superhero name mismatch and wordplay between Superman's title 'Man of Steel' and Iron Man. It explicitly points out that 'Man of Steel' is Superman's nickname and contrasts it with Iron Man, perfectly matching the ground truth's explanation of the humor. The model also provides additional context about the real-world event and the 'You had one job' meme, which supplements the correct understanding without contradicting it."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "This is a \"expectation vs. reality / you had one job\" meme about a real, widely mocked tribute statue.\n\n**References:**\n\n* **Iron Man / Avengers: Endgame:** Iron Man, played by Robert Downey Jr., dies at the end of the 2019 Marvel movie *Avengers: Endgame*....",
+          "fullText": "This is a \"expectation vs. reality / you had one job\" meme about a real, widely mocked tribute statue.\n\n**References:**\n\n* **Iron Man / Avengers: Endgame:** Iron Man, played by Robert Downey Jr., dies at the end of the 2019 Marvel movie *Avengers: Endgame*. It was a major cultural moment.\n* **The Italian statue:** In 2019 the town of Forte dei Marmi, Italy unveiled a 4-meter mirror-polished steel sculpture by artist Daniele Basso to honor Iron Man. News reports said it was officially titled *\"Man of Steel\"*.\n* **\"Man of Steel\":** That is the long-standing nickname for Superman, Iron Man's rival from DC Comics, not Marvel. Iron Man would be \"Man of Iron.\"\n* **Loki - \"You had one job\":** The bottom image is Tom Hiddleston as Loki in the MCU. His line captioned \"You had one job\" is a popular reaction meme format used to call out someone failing a very simple, obvious task.\n\n**The joke:**\n\nThe setup is presented like a news headline on top. You are told a town built a tribute to Iron Man. The joke is that they failed at it in two obvious ways:\n\n1.  **Wrong name:** They titled an Iron Man tribute \"Man of Steel\" - the wrong superhero from the wrong company.\n2.  **Wrong look:** The statue barely looks like Iron Man.\n\nThe meme implies the creators had one job - make a recognizable Iron Man statue and correctly label it - and failed at both. Loki, a fellow MCU character, is used as the audience surrogate to call out that incompetence.\n\n**Important visual elements:**\n\n* **Top left vs. top right:** This is an expectation vs. reality comparison. On the left is the actual Iron Man in his famous superhero landing pose from *Iron Man 3*. On the right is the statue trying to copy that same pose. Instead of a detailed red-and-gold armor, it's a faceless, angular, low-poly chrome blob.\n* **The headline text:** It explicitly points out the naming error so you don't miss it.\n* **Loki's expression:** He is pointing and looking exasperated, which sells the \"you had one job\" punchline.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The model does identify the 'Man of Steel' vs. 'Man of Iron' wordplay and notes that 'Man of Steel' is Superman's nickname while Iron Man would fit 'Man of Iron.' However, it goes far beyond the ground truth by reframing the meme as a specific real-world statue/news story and an 'expectation vs. reality / you had one job' joke. The ground truth only describes a pun on superhero titles and the mismatch between Superman/Iron Man naming. Since the model includes extra references and a different meme interpretation not present in the ground truth, it does not match the intended explanation closely enough."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The ground truth identifies the core joke as a pun/wordplay on 'Man of Steel' being Superman's nickname, contrasted with Iron Man (who would be 'Man of Iron'). The model does identify this specific element - it mentions that 'Man of Steel' is Superman's nickname and that Iron Man would be 'Man of Iron,' and calls it out as a naming error. However, the model also adds extensive additional context about a real Italian statue, Loki's 'you had one job' meme format, and visual comparisons that may or may not be part of the actual meme. The core joke identified in the ground truth - the wordplay/pun between 'Man of Steel' (Superman) and Iron Man ('Man of Iron') - is correctly identified by the model. The model captures this specific wordplay and the superhero name mismatch that the ground truth points to."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation is far more detailed than the ground truth and covers the same core joke: the pun/mismatch between 'Man of Steel' (Superman) and 'Man of Iron' (Iron Man). The model correctly identifies the superhero name mismatch as the central joke. Additionally, the model provides extra context about the Italian statue, the Loki 'you had one job' meme, and the visual comparison, but it does not contradict the ground truth. The model successfully identifies the specific references and the wordplay mentioned in the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "# Meme Explanation\n\n**The References:**\n\nThis meme combines several Marvel Cinematic Universe (MCU) elements:\n\n1. **Iron Man** (top left) - Tony Stark/Iron Man in his classic armor, posing in his iconic superhero landing position\n2. **The Statue** (top righ...",
+          "fullText": "# Meme Explanation\n\n**The References:**\n\nThis meme combines several Marvel Cinematic Universe (MCU) elements:\n\n1. **Iron Man** (top left) - Tony Stark/Iron Man in his classic armor, posing in his iconic superhero landing position\n2. **The Statue** (top right) - A chrome/metallic statue in Italy depicting a similar dynamic pose\n3. **Loki** (bottom) - Tom Hiddleston's character from the MCU, with the caption \"You had one job\"\n\n**The Joke:**\n\nThe humor comes from a **naming error**. The meme claims an Iron Man statue in Italy was titled **\"Man of Steel\"** — but \"Man of Steel\" is actually **Superman's** nickname, who belongs to the **DC universe**, a completely separate (and rival) comic book franchise from Marvel!\n\nSo the joke is that whoever titled this Iron Man tribute statue accidentally used Superman's iconic moniker, mixing up two competing superhero universes — a major faux pas for comic book fans.\n\n**The Visual Punchline:**\n\nThe bottom panel uses the popular **\"You had one job\"** meme format, featuring Loki pointing his finger as if scolding someone. Loki is essentially calling out the statue-makers for messing up the one simple task of correctly naming an Iron Man tribute.\n\n**Why It Works:**\n\nThe Marvel vs. DC rivalry is a long-running source of fandom humor. Confusing the two universes — especially attributing DC's Superman title to Marvel's Iron Man — is exactly the kind of mistake fans find both frustrating and hilarious.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The ground truth says the joke is a pun/wordplay on 'Man of Steel' versus 'Man of Iron': 'Man of Steel' is Superman's nickname, and if it were 'Man of Iron' that would refer to Iron Man. The model does identify the Superman/Iron Man mismatch and the 'Man of Steel' title being wrongly applied to Iron Man, which is the core reference. However, it adds a lot of extra material about Loki, the 'You had one job' format, MCU/Marvel vs DC rivalry, and a statue in Italy. Those additions are not in the ground truth, but they do not contradict the main joke. Since it still captures the specific pun and the superhero name mismatch, it matches the ground truth sufficiently."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: 'Man of Steel' is Superman's nickname/title, but it was used to label what appears to be an Iron Man statue/reference. The model correctly identifies the wordplay/naming mismatch between 'Man of Steel' (Superman, DC) and Iron Man (Marvel), which is exactly what the ground truth describes. The model also adds some extra details about Loki and the 'You had one job' format, but the core joke identification matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core elements of the joke: 'Man of Steel' is Superman's nickname/title, and it is being applied to Iron Man, creating a superhero name mismatch. The model names both Superman and Iron Man, recognizes the DC vs. Marvel confusion, and explains that the humor comes from the incorrect attribution of Superman's moniker to Iron Man. While the ground truth frames it more specifically as a pun on 'Man of Steel' vs. 'Man of Iron,' the model captures the same essential joke mechanism and references. The model also adds context about the 'You had one job' meme format and Loki, which is supplementary but not contradictory."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme mocks a real-life statue (right image) erected in Italy as a tribute to Iron Man/Tony Stark after *Avengers: Endgame*. \n\n**The joke**: The statue is incorrectly titled *\"Man of Steel\"* — a famous nickname that actually belongs to Superman, not Iron...",
+          "fullText": "The meme mocks a real-life statue (right image) erected in Italy as a tribute to Iron Man/Tony Stark after *Avengers: Endgame*. \n\n**The joke**: The statue is incorrectly titled *\"Man of Steel\"* — a famous nickname that actually belongs to Superman, not Iron Man. It's a straightforward \"you mixed up the superheroes\" error. Loki's reaction image (\"You had one job\") underlines the fail.\n\nThe visual contrast (real Iron Man on the left vs. the mislabeled statue) makes the mix-up obvious.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model identifies the key reference mismatch: 'Man of Steel' is Superman's nickname, not Iron Man's, and explains the humor as a superhero name/title mix-up. This matches the ground truth's pun/wordplay on 'Man of Steel' versus 'Man of Iron' pointing to Iron Man. The added details about a statue in Italy and Loki are extra, but they do not change the core understanding. The model correctly gets the joke and the specific references involved."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: 'Man of Steel' is Superman's nickname/title but is being applied to Iron Man, creating a superhero name mismatch/mix-up. The model gets the wordplay and the contrast between the two superheroes. The ground truth says the humor comes from 'Man of Steel' being Superman's nickname contrasted with Iron Man, and the model identifies exactly this. The additional context about a real statue in Italy and Loki's reaction image are extra details, but the core joke identification is correct."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the confusion between Superman's title 'Man of Steel' and Iron Man. It accurately points out that 'Man of Steel' belongs to Superman, not Iron Man, which matches the ground truth's explanation of the superhero name mismatch and wordplay."
+            }
+          ]
         }
       ]
     },
@@ -5347,27 +6427,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "Here is an explanation of the meme:\n\n**1. References**\n*   **Visual source:** The images are from the classic anime series *Great Teacher Onizuka* (GTO). The character shown is the long-suffering Vice Principal, Hiroshi Uchiyamada. \n*   **Meme format:** Thi...",
+          "fullText": "Here is an explanation of the meme:\n\n**1. References**\n*   **Visual source:** The images are from the classic anime series *Great Teacher Onizuka* (GTO). The character shown is the long-suffering Vice Principal, Hiroshi Uchiyamada. \n*   **Meme format:** This specific two-panel sequence is a popular reaction meme template often referred to as \"Shocked Uchiyamada\" or \"Uchiyamada realization.\" It is used to express the sudden dawning of a dark, disturbing, or profound realization.\n\n**2. The Joke**\n*   **The Setup:** The text asks the viewer to consider a seemingly innocent fact: the game \"hide and seek\" exists in almost every human culture throughout history. Normally, one would just assume it's a naturally fun way for kids to play.\n*   **The Implication/Realization:** The joke relies on the viewer figuring out the grim reason *why* this game is so universal. Historically, human settlements faced constant, deadly threats such as wild predators, invading armies, and raiders. For thousands of years, a child's ability to run, hide in small spaces, and remain absolutely silent was not a game—it was a vital survival skill. \n*   **The Mechanism:** The humor is based on \"fridge horror\" (a realization that becomes terrifying the more you think about it) and juxtaposition. It takes an innocent, nostalgic childhood activity and reframes it as a grim, evolutionary defense mechanism born from a violent past.\n\n**3. Visual Elements**\nThe joke is entirely dependent on the contrast between the two panels:\n*   **Panel 1:** The character looks calm, driving his car, perhaps having a mildly interesting thought. This represents the initial stage of reading the text (\"Huh, I wonder why kids always play hide and seek?\").\n*   **Panel 2:** The character's face drastically changes to one of wide-eyed horror and shock. This visually represents the punchline: the exact moment the dark implication of historical survival clicks in the viewer's mind.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The model captures the core joke: it explains hide-and-seek as a survival behavior from dangerous historical conditions, and notes the ironic contrast between a children's game and real wartime/violent survival. However, it adds incorrect specific references to the meme template and character (Great Teacher Onizuka, Uchiyamada) that are not in the ground truth, and it shifts the explanation toward a broader evolutionary/fridge-horror framing rather than the specific wartime raids/invasions explanation. Since the benchmark requires matching the specific reference when present, this is not a clean match."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: that hide-and-seek, a seemingly innocent children's game, is universally practiced because it historically served as a survival skill — children needed to hide silently from threats like invaders and raiders. The model captures the ironic contrast between a playful kids' game and a real life-or-death survival skill, which is exactly what the ground truth describes. The model also adds additional context about the meme format (GTO/Uchiyamada), which is not mentioned in the ground truth but doesn't contradict it. The core mechanism — the dark realization that a fun children's game has origins in wartime/survival hiding — is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek and similar children's games are reframed as originating from real life-or-death survival situations involving raids, invaders, and predators. The model captures the ironic contrast between a playful childhood activity and a grim survival skill, which matches the ground truth. The model adds extra detail about the anime source image, but this does not detract from its correct understanding of the meme's central joke."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "The meme is about a “dark realization” hidden inside a normal children’s game.\n\nThe text says: **“realizing why kids playing hide and seek has been important in every civilization”**. At first, hide-and-seek seems like just a silly universal childhood game....",
+          "fullText": "The meme is about a “dark realization” hidden inside a normal children’s game.\n\nThe text says: **“realizing why kids playing hide and seek has been important in every civilization”**. At first, hide-and-seek seems like just a silly universal childhood game. But the implied realization is that it may train useful survival skills:\n\n- **Hiding from danger** — predators, enemies, invaders, abusive adults, etc.\n- **Searching for hidden people** — useful in hunting, rescue, tracking, or warfare.\n- **Staying quiet and still under pressure**\n- **Noticing good hiding places and detecting others’ hiding spots**\n\nSo the joke is that something innocent and fun suddenly seems like it has a grim evolutionary/civilizational purpose.\n\nThe image is a two-panel anime-style reaction: the man starts with a calm, skeptical expression, then his eyes go wide in shock. That visual shift represents the moment of realization: “Wait… hide-and-seek might exist because children historically needed to learn how to survive.”",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The ground truth says the joke is specifically that hide-and-seek and similar children's hiding games originated from wartime survival: kids learned to hide quietly during raids or invasions to avoid attackers. The humor comes from the ironic contrast between a playful game and a real life-or-death survival tactic.\n\nThe model captures the broad idea that the meme is about a dark realization behind a children's game and mentions hiding from danger, enemies, invaders, and warfare. However, it does not identify the specific wartime/raid/invasion survival explanation as the core reference; instead it generalizes into evolutionary/civilizational usefulness, predators, hunting, rescue, and tracking. That shifts the joke away from the specific historical wartime origin in the ground truth.\n\nBecause the benchmark requires the same specific setup and reference, this is only a generic approximation, not a correct match."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek being reframed as a survival skill with dark/grim implications rather than just a fun children's game. The model mentions hiding from danger, enemies, invaders, and staying quiet under pressure - which aligns with the ground truth's mention of wartime survival, hiding during raids/invasions to avoid attackers. The model gets the ironic contrast between a playful kids' game and real survival skills. While the ground truth is more specific about 'wartime raids/invasions,' the model correctly captures the essential mechanism of the joke."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the dark realization that hide-and-seek may have originated as a survival skill, specifically mentioning hiding from enemies/invaders and staying quiet under pressure. This matches the ground truth's explanation of wartime survival during raids or invasions and the ironic contrast between a playful children's game and a life-or-death skill."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The image is a \"dawning realization / existential horror\" reaction meme.\n\n**Reference / Visual:**\nThe two panels show the same balding, bespectacled man in a car going from calm and neutral to wide-eyed, slack-jawed shock. It's a still from an anime that ha...",
+          "fullText": "The image is a \"dawning realization / existential horror\" reaction meme.\n\n**Reference / Visual:**\nThe two panels show the same balding, bespectacled man in a car going from calm and neutral to wide-eyed, slack-jawed shock. It's a still from an anime that has become a popular reaction template for a sudden, disturbing epiphany. The left panel is the thought forming, the right panel is the horrified understanding.\n\n**Text / Setup:**\nThe caption is: \"realizing why kids playing hide and seek has been important in every civilization\"\n\nHide and seek is a universal children's game - every culture has some version of it. We normally think of it as just innocent fun.\n\n**The joke:**\nThe joke is a dark re-contextualization of that innocent game as survival training.\n\nThe realization is: hide and seek isn't popular in every civilization just because it's fun, it's popular because knowing how to hide quickly and effectively, and stay quiet while staying hidden, has been a literal life-or-death skill for children throughout human history. During invasions, raids, wars, genocides, slave raids, pogroms - children who were good at hiding survived.\n\nIt also works in the other direction: playing at \"seeking\" trains tracking and searching, useful for hunting and warfare.\n\nThe humor comes from the contrast and the dark turn - taking something trivial and wholesome and suddenly seeing its grim, practical, evolutionary purpose. It's meant to be morbid and unsettling, which is why the shocked reaction image fits.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: it explains hide-and-seek as a darkly recontextualized survival skill from wartime/raids, contrasting an innocent children's game with life-or-death hiding. That matches the ground truth's main ironic setup. However, the ground truth specifically frames it as children being taught to hide quietly during raids or invasions so they wouldn't be found by attackers, and the model adds broader speculative details (genocides, slave raids, hunting/tracking) that are not in the ground truth. Those additions don't change the central interpretation, so the meme is understood correctly."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek as a universal children's game that originated from or served as survival training, where children needed to hide quietly during raids, invasions, and wartime situations. The model captures the key contrast between the innocent, playful game and its dark, life-or-death practical origins. The model also correctly identifies the meme format (dawning realization/existential horror reaction meme with the two panels showing increasing shock). The ground truth explanation aligns with what the model describes - the ironic contrast between a playful kids' game and a real life-or-death survival skill."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek is being re-contextualized as a life-or-death survival skill from wartime, with the humor coming from the dark contrast between an innocent children's game and the grim reality of needing to hide during raids, invasions, or wars. This matches the ground truth's explanation of the ironic contrast between a playful kids' game and real survival skill. The model also correctly identifies the reaction image format and its purpose in conveying the 'horrified realization' tone."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "## Explanation\n\n**The Format:** This uses a two-panel reaction image of an older anime man (a balding businessman in a car). In the left panel he looks calm/neutral, and in the right panel his eyes widen in sudden shocked realization. This \"sudden horrifyin...",
+          "fullText": "## Explanation\n\n**The Format:** This uses a two-panel reaction image of an older anime man (a balding businessman in a car). In the left panel he looks calm/neutral, and in the right panel his eyes widen in sudden shocked realization. This \"sudden horrifying realization\" template is used when someone connects dots to reach a dark or unsettling conclusion.\n\n**The Joke:** The humor comes from a dark realization about why hide-and-seek is a universal children's game across all human civilizations. On the surface it's just a fun kids' game, but the implied \"horror\" is that it likely served as **survival training**:\n- Children learning to **hide silently** would survive predators, raiders, invaders, or other dangers.\n- Children learning to **seek/find** hidden things developed useful tracking and searching skills.\n\nIn essence, the meme suggests that a seemingly innocent game has dark evolutionary/survival origins—kids who were good at staying quiet and hidden when danger came were more likely to survive, which is why the game persists everywhere.\n\n**Why It Works:** The man's expression perfectly captures the \"I just thought of something disturbing\" moment. The contrast between the lighthearted topic (a children's game) and the grim implication (life-or-death survival) creates the comedic irony typical of this meme genre.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek is framed as having originated from real survival behavior, where children had to hide quietly during raids/invasions to avoid attackers. It also captures the ironic contrast between a playful children's game and a life-or-death wartime survival skill. Although it adds some extra evolutionary/tracking speculation not present in the ground truth, it does not miss the specific reference or the main mechanism of the joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek is a children's game that likely originated as survival training, specifically teaching children to hide quietly during dangerous situations (raids, invasions, predators). The model correctly identifies the contrast between the playful game and its dark real-life origins. The model mentions hiding from raiders and invaders specifically, which aligns with the ground truth. The model also correctly identifies the shocked realization format and the ironic contrast that creates the humor. While the model adds some additional elements (seeking/tracking skills, evolutionary angle), the core interpretation matches the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek is being explained as originating from wartime survival, where children needed to hide quietly to avoid attackers. It captures the ironic contrast between a playful kids' game and a life-or-death survival skill, matching the ground truth. The model also correctly notes the 'sudden horrifying realization' format and the comedic irony. No specific named references are required here, and the model covers all the key elements the ground truth mentions."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "**Meme explanation:**\n\n- **Reference**: This uses the classic two-panel \"slow realization\" reaction image (a character from the anime *Legend of the Galactic Heroes*). Left panel = calm/neutral thinking, right panel = sudden wide-eyed \"oh no\" realization. T...",
+          "fullText": "**Meme explanation:**\n\n- **Reference**: This uses the classic two-panel \"slow realization\" reaction image (a character from the anime *Legend of the Galactic Heroes*). Left panel = calm/neutral thinking, right panel = sudden wide-eyed \"oh no\" realization. The top caption drives the joke.\n\n- **The joke**: The viewer is meant to have the same realization as the character. Hide-and-seek isn't just a random children's game—it's a universal activity across cultures because it instinctively trains kids in **hiding, stealth, and evasion**, which were critical survival skills in every era of human history (escaping predators, enemies, raiders, etc.). The humor comes from the unexpectedly serious \"evolutionary purpose\" being applied to something so innocent and playful.\n\n- **Visual element**: The stark contrast between the character's mild expression and his sudden bug-eyed shock sells the \"wait a minute...\" moment the caption describes.\n\nIn short: \"Hide-and-seek was literally humanity's training sim.\"",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The model captures the broad idea that a children's hiding game is being reframed as a serious survival skill, and it notes the ironic contrast between innocent play and danger. However, it misses the specific wartime context in the ground truth: children hiding quietly during raids or invasions to avoid being found by attackers. Instead, it generalizes to an evolutionary/ancient survival explanation involving predators and enemies. Because the benchmark requires the specific reference and setup when present, this is not a precise match."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek as a children's game has origins in or connection to real survival skills (hiding from threats/enemies). The model mentions hiding, stealth, and evasion from enemies/raiders as the serious underlying purpose, which aligns with the ground truth's explanation about wartime survival and avoiding attackers. The model captures the ironic contrast between a playful children's game and a life-or-death survival skill. While the model frames it slightly more broadly (evolutionary/universal history) rather than specifically wartime raids, the core mechanism is the same. The model also correctly identifies the visual format as a 'slow realization' meme. The essential joke is understood correctly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: hide-and-seek is explained as training for hiding/evading attackers, with the humor coming from the contrast between an innocent children's game and serious survival skills. The model mentions raiders, enemies, and evasion, which aligns with the ground truth's mention of wartime survival, raids, or invasions. The model also captures the ironic contrast between playful kids' game and life-or-death survival. While the ground truth specifically frames it as 'wartime survival' and the model frames it more broadly as 'evolutionary purpose' across human history, the essential joke mechanism and target are the same. The model's explanation is consistent with the ground truth."
+            }
+          ]
         }
       ]
     },
@@ -5385,27 +6555,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**The Format and Visual Elements:**\nThe image is a text-based meme consisting of nested screenshots: a tweet posted onto Tumblr, which was then screen-grabbed and posted onto Instagram. There...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**The Format and Visual Elements:**\nThe image is a text-based meme consisting of nested screenshots: a tweet posted onto Tumblr, which was then screen-grabbed and posted onto Instagram. There are no visual cues needed to understand the joke; it relies entirely entirely on text. \n\n**The Setup and References:**\nThe setup relies on traditional vampire mythology: the classic way to kill a vampire is to drive a wooden **stake** through its heart. \n\nThe tweet introduces a cultural stereotype by asking how one would kill a *French* vampire, substituting a wooden stake for a classic French item: a **baguette** (a long loaf of crusty bread). \n\n**The Joke / Wordplay:**\nThe joke revolves around a bilingual pun on the word **painstaking**. \n\n*   **In English:** \"Painstaking\" means an action requiring a lot of care, effort, and trouble (which driving a loaf of bread through a chest cavity would certainly be). \n*   **The Bilingual Pun:** The French word for bread is spelled **pain**. \n\nTherefore, using a baguette to stab a vampire is literally **\"pain-staking\"** (using bread as a stake). The commenter below the tweet is expressing appreciation for this clever multilingual wordplay.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: French \"pain\" means bread, so \"painstaking\" is read as \"pain-staking\" with bread, producing the absurd vampire-killing image of using a baguette/bread instead of a wooden stake. This matches the ground truth’s specific joke and wordplay. It also mentions the vampire stake setup and baguette, which are the key elements. Although it adds extra framing about tweet/Tumblr/Instagram that is not in the ground truth, that does not change the correctness of the joke interpretation."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core French-English bilingual pun: French 'pain' means bread, so 'painstaking' = 'pain-staking' = staking with bread/baguette. This matches the ground truth exactly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the bilingual pun where French 'pain' means bread, making 'painstaking' read as 'staking with bread' to kill a French vampire. It matches the ground truth's explanation of the absurd vampire-killing image using bread instead of a stake."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a multilingual pun.\n\n- **Reference 1: Vampire lore** — Traditionally, you kill a vampire by driving a **wooden stake** through its heart.\n- **Reference 2: French stereotype/food** — A **baguette** is a famously French type of bread.\n- **Referen...",
+          "fullText": "This meme is a multilingual pun.\n\n- **Reference 1: Vampire lore** — Traditionally, you kill a vampire by driving a **wooden stake** through its heart.\n- **Reference 2: French stereotype/food** — A **baguette** is a famously French type of bread.\n- **Reference 3: French language** — The French word **“pain”** means **bread**.\n\nSo the tweet says:\n\n> “To kill a French vampire you need to drive a baguette through its heart. Sounds easy but the process is painstaking.”\n\nThe joke is that **“painstaking”** normally means “very difficult or requiring great care,” but here it can be read as **“pain-staking”**: using **pain** — French for bread — as a **stake**.\n\nSo it’s funny because “painstaking” secretly becomes “bread-staking,” which perfectly describes stabbing a vampire with a baguette. The comment underneath points out that it’s a **multilingual joke**, because you need to know the French word *pain* to fully get it.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: French \"pain\" means bread, and \"painstaking\" is being read as \"pain-staking,\" i.e. staking with bread/baguette instead of a wooden stake. This matches the ground truth's absurd vampire-killing image using bread. It also correctly notes the multilingual/French-language aspect. The extra vampire lore and baguette details are consistent with the joke and do not conflict with the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: 'painstaking' = 'pain' (French for bread) + 'staking', creating the absurd image of killing a vampire with a baguette/bread instead of a wooden stake. This matches the ground truth exactly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the French pun ('pain' = bread), the vampire-killing stake reference, the baguette/bread image, and the wordplay on 'painstaking' as 'pain-staking' (bread-staking). It matches the ground truth's core mechanism and references."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a bilingual pun.\n\n**Reference:**\n\n* To kill a vampire you're supposed to drive a wooden stake through its heart.\n* A baguette is the long, crusty bread stereotypically associated with France.\n* In French, `pain` means \"bread\" - it's spelled exactly...",
+          "fullText": "This is a bilingual pun.\n\n**Reference:**\n\n* To kill a vampire you're supposed to drive a wooden stake through its heart.\n* A baguette is the long, crusty bread stereotypically associated with France.\n* In French, `pain` means \"bread\" - it's spelled exactly like the English word \"pain\" meaning suffering/hurt.\n\n**The joke:**\n\nThe tweet by @CatstreyDave says:\n\n> To kill a French Vampire you need to drive a baguette through its heart. Sounds easy but the process is painstaking.\n\nThe punchline is the word **painstaking**. \n\nIn English, painstaking means requiring a lot of careful effort. In the context of the joke, it's re-read literally as **pain-staking**:\n\n* `pain` = bread in French\n* `staking` = killing with a stake\n\nSo a \"pain stake\" is a bread stake - a baguette used as a vampire-killing stake. \n\nThere's a second layer: trying to drive a soft baguette through a heart *would* actually be difficult and painstaking in the normal English sense.\n\nThe Tumblr reblog underneath by that1girlsierra saying \"Multilingual jokes are my favorite\" is pointing out that the joke only works if you know both English and French, because English \"pain\" and French \"pain\" are homographs with different meanings.\n\n**Visual elements:**\n\nIt's a screenshot of a tweet embedded in a Tumblr reblog, then screenshotted again for Instagram by a_human_bean_. The format itself isn't part of the joke - the core is the text pun.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: French \"pain\" means bread, and \"painstaking\" is being reinterpreted as \"pain-staking,\" i.e. using bread/baguette as the vampire stake. This matches the ground truth’s French-language pun and absurd vampire-killing image. It also mentions the baguette/bread angle and the vampire stake setup. Although it adds extra details not in the ground truth, it does not miss the specific reference or joke mechanism."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: 'painstaking' is broken into 'pain' (French for bread) + 'staking' (killing with a stake), resulting in the absurd image of staking a vampire with a baguette. The model correctly mentions the French word 'pain' meaning bread, the vampire-staking reference, and the baguette connection. This matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the bilingual pun: French 'pain' means bread, so 'painstaking' is reinterpreted as 'pain-staking' (staking with bread/a baguette) to kill a French vampire. This matches the ground truth's core mechanism and specific references (French 'pain' = bread, baguette as the stake, vampire-killing image). The model even adds extra context about the double meaning, but the core joke is correctly captured."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a multilayered wordplay joke shared as a screenshot of a Tumblr post containing a tweet.\n\n**The setup:** The tweet by \"Catstrey\" jokes that to kill a French vampire, you need to drive a *baguette* (instead of the traditional wooden stake) through it...",
+          "fullText": "This is a multilayered wordplay joke shared as a screenshot of a Tumblr post containing a tweet.\n\n**The setup:** The tweet by \"Catstrey\" jokes that to kill a French vampire, you need to drive a *baguette* (instead of the traditional wooden stake) through its heart—a play on French stereotypes, since baguettes are iconically French.\n\n**The punchline/wordplay:** The key joke is in the word \"**painstaking**.\" This works on two levels:\n1. **English meaning:** \"Painstaking\" means something requiring careful, laborious effort—a normal English word.\n2. **French/bilingual pun:** In French, \"**pain**\" (pronounced like \"pan\") means *bread*. So you're literally \"*pain*-staking\"—staking the vampire with bread (the baguette). \n\nThe humor comes from how seamlessly the word \"painstaking\" already exists in English while secretly containing the French word for bread, perfectly tying back to the baguette stake.\n\n**The bottom comment** from \"that1girlsierra\" explicitly calls out why it's clever: \"Multilingual jokes are my favorite. I have stored this away forever.\" This reaction reinforces the appreciation for cross-language wordplay and is part of why the post got shared—it's both a clever joke and a relatable expression of delight at discovering it.\n\nIt's a well-constructed pun that rewards readers who know a bit of French.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core pun: French \"pain\" means bread, so \"painstaking\" can be read as \"pain-staking,\" i.e., staking with bread. It also captures the absurd vampire-killing image involving a baguette/bread instead of a wooden stake, which matches the ground truth. Although it adds extra context about Tumblr/Twitter and comments, it does not miss the specific joke or reference. The explanation aligns with the intended bilingual wordplay and absurd image."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: 'pain' in French means bread, so 'painstaking' can be read as 'staking with bread/pain,' making a baguette-stake for killing a French vampire. The model identifies the same pun mechanism, the same French word 'pain' meaning bread, and the connection to baguettes. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the French pun where 'pain' means bread, making 'painstaking' read as 'staking with bread,' and the absurd image of using a baguette to stake a French vampire. It matches the ground truth on all key points."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a screenshot of this tweet:\n\n> To kill a French Vampire you need to drive a baguette through its heart. Sounds easy but the process is painstaking.\n\n**Joke mechanism**  \nIt’s a bilingual pun. In English, “painstaking” means “requiring great care...",
+          "fullText": "The meme is a screenshot of this tweet:\n\n> To kill a French Vampire you need to drive a baguette through its heart. Sounds easy but the process is painstaking.\n\n**Joke mechanism**  \nIt’s a bilingual pun. In English, “painstaking” means “requiring great care or effort.” In French, *pain* means “bread.” By replacing the traditional wooden *stake* with a French *baguette* (bread), the writer turns “pain-staking” into a literal description: you are literally “staking” the vampire with *pain* (bread). The humor comes from the double meaning only being visible if you know both languages.\n\n**Visual context**  \nThe tweet is shown inside another post that simply praises it (“Multilingual jokes are my favorite…”), so the meme’s appeal is the clever wordplay itself rather than any added image or reaction image.\n\nNo other cultural references are needed beyond basic vampire lore and the French word for bread.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core French pun: French \"pain\" means bread, and \"painstaking\" is being read as \"staking with bread,\" which matches the ground truth’s absurd vampire-killing image using a baguette/bread instead of a stake. It also captures the vampire setup and the bilingual wordplay. Although it adds extra commentary about the tweet context, it does not miss the specific joke mechanism or reference."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies: (1) the French word 'pain' means bread, (2) 'painstaking' is reinterpreted as 'staking with bread/pain', (3) the absurd image of using a baguette to kill a vampire, and (4) the bilingual pun mechanism. This matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the bilingual pun: French 'pain' means bread, so 'painstaking' is read as 'staking with bread' using a baguette instead of a wooden stake. This matches the ground truth exactly, including the absurd vampire-killing image and the specific wordplay involved."
+            }
+          ]
         }
       ]
     },
@@ -5423,27 +6683,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The \"Three Deaths\" Concept:** The first post references a well-known philosophical concept (often attributed to various cultures or authors like David Eagleman) th...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The References**\n*   **The \"Three Deaths\" Concept:** The first post references a well-known philosophical concept (often attributed to various cultures or authors like David Eagleman) that a person truly \"dies\" only when their name is spoken for the last time, symbolizing the end of their memory and legacy. \n*   **Ea-nasir:** The reply is a direct reference to **Ea-nasir**, an ancient Babylonian copper merchant who lived around 1750 BC. He is famous on the internet because archaeologists discovered a clay tablet addressed to him from a man named Nanni. This tablet holds the Guinness World Record for the \"oldest known customer service complaint.\" The letter extensively complains that Ea-nasir sold him substandard, \"shitty\" copper ingots and treated his servant rudely. Ea-nasir has become a massive, enduring meme for being a terrible businessman whose ancient scams outlived him by millennia.\n\n**2. The Joke**\n*   **The Setup:** The top post is a classic \"writing prompt\" meant to inspire dramatic, supernatural, or heroic fictional stories. It sets up an epic mystery: Why would a \"normal \" person's name still be spoken centuries after their death? The reader expects a profound or magical explanation.\n*   **The Inversion/Anticlimax:** The joke relies on a complete subversion of expectations. Instead of a heroic sacrifice or a magical curse keeping the person's memory alive, the reply provides a historically accurate, incredibly mundane, and petty reason: they are remembered solely because they were terrible at their job making bad copper deals thousands of years ago. \n\n**3. Visual Elements**\n*   The image is a screenshot of a **Tumblr thread**. This formatting is key to the joke's delivery. \n*   The original poster's username, **writing-prompt-s**, establishes a serious tone meant to spark fictional creativity. \n*   The second user, **stupid-elf**, acts as the comedic foil, aggressively popping the dramatic bubble of the prompt with a blunt, slang-heavy response (\"man, I don't know what to tell you\") that grounds the fantasy prompt in an absurd historical reality.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir and the ancient complaint tablet from Nanni, and it understands the core joke as an anticlimactic inversion: instead of a grand or mystical reason for being remembered, Ea-Nasir is remembered for being a bad copper merchant and preserving the complaint. It also mentions the ancient customer-service complaint angle, which matches the ground truth. However, it adds extra details about a 'Three Deaths' concept and Tumblr formatting that are not necessary to the ground truth, but these do not contradict the main joke. The key specific reference and irony are correctly captured."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all the key elements of the meme: Ea-nasir (spelled Ea-nasir/Ea-Nasir), the ancient Babylonian/Mesopotamian copper merchant from 1750 BC, the complaint tablet from Nanni about substandard copper, and the irony that he's remembered centuries later because he was a terrible businessman/seller. The model also correctly identifies the setup (philosophical concept about being remembered when your name is spoken), and the punchline/inversion (the reason someone's name is still spoken millennia later is the mundane/petty reason of being a scammer). This matches the ground truth explanation about Ea-Nasir being famous for the ancient complaint tablet and the irony of being remembered for preserving his own hate mail."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian/Babylonian copper merchant, the complaint tablet from Nanni dating to around 1750 BCE, and the fact that he sold substandard copper. It also captures the irony that Ea-Nasir is remembered because his ancient 'hate mail' survived. The model explains the joke's setup and anticlimax accurately, matching the ground truth's core points."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is riffing on a dramatic **writing prompt** and answering it with a very specific historical joke.\n\nThe top post says: people “die three times” — physically, when buried, and finally when their name is spoken for the last time. The prompt imagines...",
+          "fullText": "This meme is riffing on a dramatic **writing prompt** and answering it with a very specific historical joke.\n\nThe top post says: people “die three times” — physically, when buried, and finally when their name is spoken for the last time. The prompt imagines someone from centuries ago realizing their name is still being said and trying to discover why.\n\nThe reply says:\n\n> “You sold some shitty copper, man…”\n\nThat’s a reference to **Ea-nasir**, an ancient Mesopotamian copper merchant from around 1750 BCE. He is famous today because archaeologists found a cuneiform tablet called the **Complaint tablet to Ea-nasir**, often described as one of the oldest known customer complaints. A customer named Nanni angrily complained that Ea-nasir sold him low-quality copper and treated his messenger badly.\n\nThe joke is that the “normal person” wondering why they achieved immortality isn’t remembered for heroism, art, politics, or greatness — he’s remembered thousands of years later because he sold bad copper and got roasted in writing.\n\nImportant visual/context elements:\n\n- The top account is “writing-prompt-s,” a Tumblr writing-prompt blog, setting up a serious, mystical story premise.\n- The reply undercuts the dramatic tone with blunt modern slang: “shitty copper, man.”\n- The humor comes from the contrast between the grand idea of eternal remembrance and the petty, mundane reason someone’s name survived history.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian copper merchant, and the complaint tablet from Nanni about bad copper. It also captures the core irony: Ea-Nasir is remembered not for greatness but because of an ancient customer complaint preserved on a tablet, effectively an absurdly old bad review. This matches the ground truth’s setup and joke. The extra discussion of the writing prompt context is not in the ground truth, but it does not change the correct identification of the meme’s reference and humor."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian copper merchant, the Complaint tablet to Ea-nasir from around 1750 BCE, the customer Nanni, and the joke that Ea-nasir is remembered for selling bad copper rather than for any noble achievement. The model also captures the irony of eternal remembrance tied to a petty complaint, and the contrast between the dramatic writing prompt setup and the blunt punchline. This aligns well with the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian copper merchant from around 1750 BCE, the complaint tablet from Nanni, and the core joke: that Ea-Nasir is remembered thousands of years later not for greatness but for selling bad copper and being the subject of an ancient customer complaint. This matches the ground truth on all specific references and the intended humor/irony."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a Tumblr writing-prompt joke that relies on internet history knowledge.\n\n**1. The references:**\n\n*   **The Three Deaths:** A common saying - popularized by books like David Eagleman's *Sum*, the movie *Coco*, and anime *One Piece* - that you die thr...",
+          "fullText": "This is a Tumblr writing-prompt joke that relies on internet history knowledge.\n\n**1. The references:**\n\n*   **The Three Deaths:** A common saying - popularized by books like David Eagleman's *Sum*, the movie *Coco*, and anime *One Piece* - that you die three times: when your body dies, when you are buried, and when your name is spoken for the last time. The third death is true oblivion.\n\n*   **Ea-Nasir and the shitty copper:** In ~1750 BCE, a Mesopotamian copper merchant named Ea-nasir sold very low-quality copper ingots. A customer named Nanni wrote a cuneiform complaint tablet about it, which is now in the British Museum. That tablet - the **Complaint Tablet to Ea-Nasir** - is the oldest known customer complaint and became a massive meme. On Tumblr, Reddit, TikTok, etc., Ea-Nasir is jokingly called history's worst businessman / a scammer. His name is mentioned constantly.\n\n**2. The joke:**\n\n*   **Setup / The Prompt:** The top post by writing-prompt-s sets up a serious, spooky, supernatural mystery. You were a completely normal person, you died hundreds [actually, thousands] of years ago, but you *still* exist as a spirit because someone is still saying your name, preventing your \"third\" and final death.\n\nYou'd expect the answer to be something epic - you were secretly a king, a god, a hero whose legend lives on.\n\n*   **Punchline / Inversion:** The reply by stupid-elf provides a bathetic, anticlimactic answer. You are not immortal because you were great. You are immortal because you are *infamous*.\n\n\"You sold some shitty copper, man\" = you are Ea-Nasir. The reason you can't have your final death is because the entire internet will not stop talking about you as a meme for selling bad copper 3,750 years later.\n\nThe humor is the contrast between the grand, poetic setup for eternal remembrance and the embarrassingly mundane, annoying reason for it. You wanted to be forgotten, but you're stuck forever because you're famous for being a bad merchant.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model does identify Ea-Nasir and the complaint tablet from Nanni, and it correctly explains the core irony: Ea-Nasir is remembered because of the ancient complaint about his bad copper, making him an absurdly ancient bad customer-service/Yelp-style meme. However, it adds a large amount of unrelated material about a Tumblr writing prompt and the 'three deaths' concept, which is not in the ground truth. The ground truth only requires the Ea-Nasir / preserved hate mail joke, and the model does capture that specific reference and the same ironic setup. Extra context does not negate the correct identification of the meme."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: Ea-Nasir is the ancient Mesopotamian copper merchant who sold substandard copper, became famous for the complaint tablet from Nanni (1750 BCE), and is now an internet meme. The model also correctly identifies the three deaths concept as the setup, and explains the irony/bathetic punchline that Ea-Nasir is remembered (and thus cannot die his 'third death') not for being great but for being infamous for selling bad copper. The model identifies all the specific references mentioned in the ground truth (Ea-Nasir, the complaint tablet, 1750 BCE, Nanni, substandard copper) and correctly explains the joke mechanism about being remembered as an absurd ancient bad review. The model actually provides a more detailed explanation than the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the Mesopotamian copper merchant, the complaint tablet from Nanni (~1750 BCE), and the irony that he is remembered because of his preserved hate mail / meme status. It also explains the setup-punchline contrast. This matches the ground truth."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a **Tumblr writing prompt and its response**, with the joke relying on a famous piece of ancient history.\n\n**The setup (writing-prompt-s):** A poetic prompt about the idea that \"you die three times\"—physical death, burial, and finally when your...",
+          "fullText": "This meme is a **Tumblr writing prompt and its response**, with the joke relying on a famous piece of ancient history.\n\n**The setup (writing-prompt-s):** A poetic prompt about the idea that \"you die three times\"—physical death, burial, and finally when your name is spoken for the last time. The prompt imagines someone who has been dead for hundreds of years but somehow has never had their \"third death\" (i.e., people keep talking about them), and they set out to discover why.\n\n**The punchline (stupid-elf):** \"You sold some shitty copper, man, I don't know what to tell you.\"\n\n**The reference:** This is about **Ea-nāṣir**, a Babylonian copper merchant from around 1750 BC. A clay tablet survives containing a complaint from a customer named Nanni, who was furious that Ea-nāṣir sold him sub-standard copper and treated him poorly. This tablet is recognized as the **oldest known written customer complaint in human history**, and it's housed in the British Museum.\n\n**Why it's funny:** Because the tablet is famous, Ea-nāṣir's name has literally been \"spoken\" continuously for nearly 4,000 years—achieving a strange, ironic kind of immortality. He didn't become legendary for any heroic deed; he's remembered forever specifically *because* he was a scammer who sold bad copper. The reply hilariously deflates the grand, mystical tone of the prompt by giving the most mundane, unflattering explanation possible for why someone might be immortalized.\n\nIt's a popular running joke in internet history-meme circles to keep saying Ea-nāṣir's name precisely to deny him his \"third death\" as a punishment for his ancient bad business practices.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to Ea-Nasir, the ancient Mesopotamian/Babylonian copper merchant, and the complaint tablet from Nanni about substandard copper. It also captures the core irony: Ea-Nasir is remembered because of an ancient customer complaint, effectively an absurdly old bad review. This matches the ground truth’s joke mechanism. The extra Tumblr/writing-prompt framing is not in the ground truth, but it does not change the fact that the model understood the meme’s specific reference and punchline."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke about Ea-Nasir (Ea-nāṣir), the ancient Mesopotamian/Babylonian copper merchant from ~1750 BC. It identifies the complaint tablet from Nanni, the fact that he sold substandard copper, and the irony that he achieved immortality specifically because of his bad business practices. The model also correctly captures the 'three deaths' framework from the writing prompt and how the punchline deflates it with 'you sold some shitty copper.' The model even adds the detail about the internet meme culture around Ea-Nasir. All key elements from the ground truth are present: the specific person (Ea-Nasir), the time period (1750 BCE), the substandard copper, the complaint/hate mail, and the irony of being remembered for bad behavior."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian/Babylonian copper merchant, the complaint tablet from Nanni (circa 1750 BCE), and the substandard copper. It also correctly captures the irony that Ea-Nasir is remembered because the complaint tablet survived—essentially preserving his own hate mail. The model additionally explains the writing prompt setup and the punchline, which aligns with the ground truth's core joke about an absurdly ancient bad customer-service complaint. All specific references mentioned in the ground truth are present in the model's explanation."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme references the ~1750 BC \"complaint tablet to Ea-nasir\" (an ancient Babylonian clay tablet that became an internet meme), in which a customer angrily complains about receiving poor-quality copper ingots from a merchant named Ea-nasir.\n\nThe writing p...",
+          "fullText": "The meme references the ~1750 BC \"complaint tablet to Ea-nasir\" (an ancient Babylonian clay tablet that became an internet meme), in which a customer angrily complains about receiving poor-quality copper ingots from a merchant named Ea-nasir.\n\nThe writing prompt sets up a serious premise about a person whose name is still spoken centuries after their death. The reply undercuts it with absurd deadpan humor by implying the only reason anyone remembers you is that you're Ea-nasir, infamous for selling shitty copper.\n\n(The image itself is just plain Tumblr text; the joke is entirely in the reference + the tonal whiplash of the reply.)",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the ancient Mesopotamian/Babylonian copper merchant, and the complaint tablet from Nanni around 1750 BCE. It also captures the core joke: an absurdly ancient bad customer-service complaint / bad Yelp-style review, with the irony that Ea-Nasir is remembered for selling poor-quality copper and for the preserved complaint against him. This matches the ground truth’s specific reference and humorous setup."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all key elements: Ea-Nasir (the ancient Mesopotamian copper merchant), the ~1750 BC complaint tablet, the poor-quality copper, and the irony that he's remembered because of his bad reputation/complaint. The model also captures the joke mechanism (the absurdity of being remembered millennia later for selling bad copper). This matches the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies Ea-Nasir, the complaint tablet from around 1750 BCE, the substandard copper, and the humor/irony that Ea-Nasir is remembered specifically because of this ancient customer complaint. It matches the ground truth on all key references and the core joke mechanism."
+            }
+          ]
         }
       ]
     },
@@ -5461,27 +6811,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the joke:\n\n**The Core Joke (Wordplay/Innuendo)**\nThe joke relies entirely on phonetic wordplay hidden within the fake car license plate: **NE14 ABJ**.\nWhen read aloud quickly, it sounds like **\"Anyone f...",
+          "fullText": "Based on the image provided, here is an explanation of the joke:\n\n**The Core Joke (Wordplay/Innuendo)**\nThe joke relies entirely on phonetic wordplay hidden within the fake car license plate: **NE14 ABJ**.\nWhen read aloud quickly, it sounds like **\"Anyone for a blowjob?\"**\n*   **NE14** = \"Anyone for\"\n*   **A** = \"A\"\n*   **BJ** = \"BJ\" (slang for blowjob)\n\n**The Setup and Mechanism**\nThe meme is a screenshot of a real tweet from AFC Fylde, an English football club. The setup is a classic \"Bart Simpson\" style prank. \n\nThe kids in the photo tricked the stadium announcer into broadcasting over the public address system that a specific car needed to be moved. By doing so, the announcer unwittingly asked the entire stadium, \"Anyone for a blowjob?\"\n\n**Visual Elements**\nThe humor is elevated by the photo attached to the tweet. The club is \"hunting\" the culprits, and the image prominently features the \"trio\" of young boys leaning over the railing. The boy on the right is giving a double thumbs-up with a smug smile, serving as a visual confirmation that they know exactly what they did and are incredibly proud of pulling off the prank.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun in the plate text \"NE14 ABJ\" and explains that it sounds like a crude sexual invitation when spoken aloud. However, it does not match the ground truth exactly: the ground truth says it sounds like \"Anyone for a BJ,\" while the model expands this to \"Anyone for a blowjob?\" and adds extra, unsupported context about a tweet, stadium announcer, and prank. Since the key joke mechanism and reference are correctly understood, the explanation is substantially aligned with the ground truth despite the embellishment."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun of 'NE14 ABJ' sounding like 'Anyone for a BJ' when read aloud. The model breaks down the wordplay correctly and understands the crude sexual invitation hidden in the plate text. The model also adds additional context about the meme being a tweet from AFC Fylde where kids tricked a stadium announcer into broadcasting the message, which is consistent with the image described. The core joke mechanism - the phonetic pun hiding a crude sexual invitation - is correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the phonetic pun: 'NE14 ABJ' sounds like 'Anyone for a BJ' (blowjob). It breaks down the phonetic mapping (NE14 = 'Anyone for', A = 'a', BJ = 'BJ') and explains that the humor comes from hiding a crude sexual invitation in plain sight on a license plate. This matches the ground truth's core explanation. The model also adds extra context about the football club tweet and the prank setup, but this does not detract from correctly getting the joke."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a prank based on a fake car registration announcement at an English football stadium.\n\n- **AFC Fylde** is a football club in England. Stadium announcers often read out messages like “Would the owner of a white Nissan Micra, registration ___, please...",
+          "fullText": "This is a prank based on a fake car registration announcement at an English football stadium.\n\n- **AFC Fylde** is a football club in England. Stadium announcers often read out messages like “Would the owner of a white Nissan Micra, registration ___, please move your car?”\n- The boys apparently persuaded the announcer to call out the registration **“NE14 ABJ.”**\n- Written differently, **NE14 ABJ** can be read as **“NE1 4 A BJ”**:\n  - **NE1** sounds like “anyone”\n  - **4** = “for”\n  - **A BJ** = “a blowjob”\n\nSo the announcer accidentally broadcast something that sounds like: **“Anyone for a BJ?”**\n\nThe humor comes from the childish but clever wordplay and the fact that it was allegedly said over the official stadium PA system. The “WANTED” and “CRIME” wording makes the tweet look like a mock police notice, while the photo shows the “culprits” — the three kids in the middle — proudly giving thumbs-up from inside the stadium.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun: the plate text 'NE14 ABJ' sounds like 'Anyone for a BJ' when read aloud. That matches the ground truth's explanation that the joke is a crude sexual invitation hidden in the registration. The extra details about AFC Fylde and the stadium prank are not necessary, but they do not contradict the main joke. The model also captures the same wordplay mechanism and the intended crude meaning."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun: 'NE14 ABJ' sounds like 'Anyone for a BJ' when read aloud. The model breaks it down precisely: NE1 = 'anyone', 4 = 'for', ABJ = 'a BJ'. This matches the ground truth explanation perfectly. The model even adds additional context about the stadium PA system announcement, which enriches the explanation without contradicting the ground truth."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the phonetic pun where 'NE14 ABJ' sounds like 'Anyone for a BJ.' It breaks down the wordplay (NE1 = anyone, 4 = for, A BJ = a blowjob) exactly as the ground truth does. The model also adds additional context about the stadium prank setting, but this does not detract from correctly getting the joke. The essential mechanism—a crude sexual invitation hidden in a registration plate—is fully captured."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a real viral tweet from English football club AFC Fylde, not a templated meme format. The joke is a classic British football prank.\n\n**The reference / setup:**\n\nIn the UK, if a car is blocking an exit at a match, fans will go to the stadium announce...",
+          "fullText": "This is a real viral tweet from English football club AFC Fylde, not a templated meme format. The joke is a classic British football prank.\n\n**The reference / setup:**\n\nIn the UK, if a car is blocking an exit at a match, fans will go to the stadium announcer and ask them to announce over the PA: \"Can the owner of [car make / color / license plate] please move your car.\"\n\nIt's a long-standing banter tradition for kids / away fans to give a fake plate that spells something rude when read aloud, tricking the announcer into saying it to the whole stadium. It's the same joke as Bart prank-calling Moe in *The Simpsons*.\n\n**The crime:**\n\nThey told the announcer there was a:\n\n> white Nissan Micra NE14 ABJ\n\nNE14 ABJ is not a random plate, it's chosen to sound like a sexual proposition when read out in text-speak:\n\n* **NE1 = Anyone** - NE1 is common UK text shorthand for \"anyone\"\n* **4 = for**\n* **A BJ = a blowjob**\n\nSo NE14 ABJ = \"Anyone for a BJ / blowjob\"\n\nThe announcer apparently read it out innocently over the PA last night before realizing.\n\n**Visuals:**\n\nThe tweet is framed like a jokey WANTED poster. The photo shows the three culprits in the middle of a balcony, smiling and giving thumbs up - clearly proud of themselves. The club is pretending to be angry while actually finding it funny and sharing it.\n\nThe humor is that the kids cunningly made an official authority figure say something highly inappropriate in front of thousands of people.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a phonetic pun: the plate text \"NE14 ABJ\" sounds like \"Anyone for a BJ\" / \"Anyone for a blowjob\" when read aloud. That matches the ground truth exactly. It also explains that the humor comes from hiding a crude sexual invitation in a license plate. The extra football/PA-announcer context is not in the ground truth, but it does not contradict the main joke and the specific pun is correctly understood."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun: NE14 ABJ sounds like 'Anyone for a BJ' when read aloud. The model goes into extensive detail about the context (AFC Fylde football club, stadium announcement prank), which is additional correct information. The ground truth focuses on the phonetic pun mechanism, and the model correctly identifies this as the central joke. The model also correctly breaks down how NE1 = Anyone, 4 = for, ABJ = a BJ. This matches the ground truth explanation perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the license plate 'NE14 ABJ' is a phonetic pun that sounds like 'Anyone for a BJ' (blowjob). It breaks down the text-speak (NE1 = anyone, 4 = for, A BJ = a blowjob) and explains that the humor comes from hiding a crude sexual invitation in plain sight, tricking an announcer into reading it aloud. This matches the ground truth's explanation of the pun and its crude sexual proposition. The model provides extra context about the football prank tradition, but the core joke mechanism is correctly identified."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is a humorous tweet from **AFC Fylde**, an English non-league football (soccer) club, mocking three young fans who pulled a cheeky prank.\n\n**The joke / wordplay:**\nThe humor lies entirely in the fake license/registration plate they gave the announ...",
+          "fullText": "This meme is a humorous tweet from **AFC Fylde**, an English non-league football (soccer) club, mocking three young fans who pulled a cheeky prank.\n\n**The joke / wordplay:**\nThe humor lies entirely in the fake license/registration plate they gave the announcer: **\"NE14 ABJ.\"**\n\nUK number plates use letters and numbers that can be read phonetically. When you sound it out:\n- **NE14** = \"Anyone for\" (NE = \"any,\" 14 = \"for\")\n- **ABJ** = a crude abbreviation\n\nSo the plate effectively reads **\"Anyone for a BJ\"** (a sexual innuendo).\n\n**Why it's funny:**\nThe kids \"cunningly duped\" the stadium announcer into reading this rude message aloud over the PA system to the entire crowd, asking for the (non-existent) white Nissan Micra to be moved. The announcer presumably didn't realize what they were actually broadcasting until it was too late.\n\n**The tone:**\nThe club leaned into the joke by framing it as a mock \"WANTED\" poster, complete with \"CRIME\" details, in classic British football banter style. Rather than being genuinely angry, they're playfully celebrating the prank.\n\n**Visual elements:**\n- The three grinning boys in the middle giving thumbs-up confirm they're proud of their stunt.\n- The partially visible **\"...ers and ...als Only\"** sign (likely \"Players and Officials Only\") adds authentic stadium context.\n\nIt's a wholesome bit of cheeky schoolboy humor that the club shared good-naturedly, which is why it went viral.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a phonetic/number-plate pun: \"NE14 ABJ\" sounds like \"Anyone for a BJ\" when spoken aloud, which matches the ground truth exactly. It also explains that the crude sexual invitation is hidden in the registration plate. Although it adds extra context about AFC Fylde and the prank, those additions do not conflict with the ground truth. The essential reference and mechanism are correctly understood."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun: 'NE14 ABJ' sounds like 'Anyone for a BJ' when read aloud. The model breaks down the wordplay correctly (NE14 = 'anyone for', ABJ = crude abbreviation for BJ). The model gets the joke in the same way as the ground truth, identifying the specific crude sexual invitation hidden in the license plate. The model even provides additional context about how the prank was executed (stadium announcer reading it aloud), which is consistent with the meme's content."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the phonetic pun where 'NE14 ABJ' sounds like 'Anyone for a BJ,' hiding a crude sexual invitation in the registration plate text. This matches the ground truth exactly. The model also provides additional context about the football club and the prank, but the essential joke mechanism is correctly captured."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a screenshot of a humorous \"wanted\"-style post from the official Twitter account of English football club AFC Fylde.\n\n**The joke**  \nThree young fans tricked the stadium PA announcer into reading out a fake car number plate that sounds like a cr...",
+          "fullText": "The meme is a screenshot of a humorous \"wanted\"-style post from the official Twitter account of English football club AFC Fylde.\n\n**The joke**  \nThree young fans tricked the stadium PA announcer into reading out a fake car number plate that sounds like a crude request for oral sex when spoken aloud:  \n- \"white Nissan Micra, NE14 ABJ\"  \n- Phonetically becomes roughly \"…any for a BJ?\" (BJ = blowjob).  \n\nThe post treats the kids like criminals for pulling off the classic childish stadium prank, and the accompanying photo shows them looking extremely pleased with themselves.\n\n**Key visual details**  \n- The three boys in the centre are giving cheeky thumbs-ups directly at the camera.  \n- An older man behind them appears to be either scolding them or reacting to the announcement.  \n- The \"Wanted\" framing and deadpan \"crime\" description deliberately over-dramatise a harmless schoolboy gag.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke as a phonetic pun involving the plate text \"NE14 ABJ\" sounding like \"Anyone for a BJ\" when spoken aloud. That matches the ground truth exactly: the humor comes from the registration hiding a crude sexual invitation in plain sight. The extra details about AFC Fylde, the stadium PA prank, and the boys are not necessary for the ground truth, but they do not contradict it. Since the specific pun and its meaning are correctly understood, the explanation matches the ground truth."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core phonetic pun: 'NE14 ABJ' sounds like 'anyone for a BJ' when read aloud. The model explicitly explains the mechanism (phonetic reading of the number plate) and the crude sexual meaning (BJ = blowjob). This matches the ground truth explanation perfectly. The model also provides additional context about the specific situation (AFC Fylde, stadium PA announcement, boys in the photo), which enriches rather than contradicts the core joke identification."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the license plate text 'NE14 ABJ' is a phonetic pun that sounds like a crude sexual invitation ('anyone for a BJ'). It matches the ground truth's explanation of the pun and the hidden crude meaning. The model also provides additional context about the football club and the 'wanted' framing, but this does not contradict the ground truth and the essential joke mechanism is correctly captured."
+            }
+          ]
         }
       ]
     },
@@ -5499,27 +6939,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. References:**\n*   **Uber Eats / Gig Economy:** Uber Eats is a food delivery app. Gig economy delivery driving is traditionally viewed as a side-hustle or difficult, low-paying labor ofte...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. References:**\n*   **Uber Eats / Gig Economy:** Uber Eats is a food delivery app. Gig economy delivery driving is traditionally viewed as a side-hustle or difficult, low-paying labor often taken on by people struggling financially.\n*   **\"Shorting\":** This is a stock market term. To \"short\" a stock means to bet that its price will go down. Therefore, \"short everything now\" means betting that the entire economy is about to crash. \n*   **The Visual / Media Reference:** The image at the bottom is a still frame of actor Ryan Gosling from the 2015 movie ***The Big Short***. The film is about the real-life finance professionals who noticed the impending 2008 housing market crash before anyone else did and made billions by \"shorting\" the market. \n\n**2. The Joke:**\nThe joke uses hyperbolic (exaggerated) logic to predict an economic collapse based on a single mundane observation. \n\n*   **The Setup:** The poster notes seeing an \"attractive white girl\" working for Uber Eats. Societal stereotypes suggest that conventionally attractive young women usually have access to \"easier\" or more lucrative entry-level jobs (like hostessing, bartending, or social media influencing) and usually don't resort to grueling gig-economy delivery driving. \n*   **The Implication:** Because someone who traditionally wouldn't \"need\" to do gig-labor is now doing it, the poster jokingly concludes that the job market and standard of living must be in absolute ruins.\n*   **The Punchline:** Treating this everyday observation as a secret macroeconomic indicator, the poster acts like a Wall Street insider who just realized a massive financial crisis is imminent.\n\n**3. Visual Elements:**\nThe image of Ryan Gosling's character (a frantic Wall Street trader on a cell phone) perfectly captures the joke's intended tone. He looks panicked and urgent, matching the text \"short everything now,\" pretending that the poster is urgently calling their broker to bet against the US economy before it collapses.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The model captures the broad idea that seeing an attractive white girl doing Uber Eats/DoorDash is treated as a bad economic sign, implying the economy is in trouble. However, the ground truth specifically identifies this as a 'hot waitress index' joke, where the key point is that an attractive white girl doing service/side-hustle work means 'we're fucked.' The model instead reframes it as a generic gig-economy/market-crash joke and adds an unrelated detailed explanation about 'shorting' and The Big Short/Ryan Gosling that is not part of the ground truth. Because it misses the specific meme framing and introduces extra references not mentioned in the ground truth, it does not fully match the intended explanation."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies all key elements of the meme: the 'hot waitress index' concept (attractive women doing gig economy work signals economic trouble), the reference to The Big Short and Ryan Gosling, the 'short everything' financial terminology, and the core joke that seeing a conventionally attractive white girl doing Uber Eats delivery is treated as a macroeconomic indicator of impending collapse. The model even explicitly names the 'hot waitress index' logic without using that exact term, explaining the same underlying mechanism. All specific references are correctly identified."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: the 'hot waitress index' concept where seeing an attractive white girl doing gig economy work like Uber Eats implies the economy is so bad that even conventionally attractive people need extra money. The model captures the setup, implication, and the hyperbolic conclusion that the economy is collapsing. It also correctly identifies the Ryan Gosling/The Big Short reference and the 'shorting' terminology, which adds specific context to the meme's visual elements. The model's explanation aligns with the ground truth's identification of the economic indicator joke and the implication that 'we're fucked.'"
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is joking that seeing “an attractive white girl” working as an Uber Eats delivery driver is a sign that the economy is collapsing.\n\n- **“Short everything now”** is finance slang: to “short” something means to bet its price will fall. So “short eve...",
+          "fullText": "This meme is joking that seeing “an attractive white girl” working as an Uber Eats delivery driver is a sign that the economy is collapsing.\n\n- **“Short everything now”** is finance slang: to “short” something means to bet its price will fall. So “short everything” means “the market is about to crash; bet against everything.”\n- The joke is that the poster treats one random observation — a conventionally attractive white girl picking up an Uber Eats order — like a serious macroeconomic recession indicator.\n- It plays on stereotypes/class assumptions: the idea that someone perceived as socially privileged or likely to have easier job options doing gig-work delivery implies that money/jobs are tight for everyone.\n- The image underneath shows a stressed businessman/trader on the phone, like someone in a financial crisis movie reacting urgently to market disaster. That visual exaggerates the tweet’s panic: “This is the signal. Sell everything.”\n\nSo the humor comes from the absurd overreaction: turning a mundane Uber Eats pickup into evidence of an imminent economic crash.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an attractive white girl doing Uber Eats/side-hustle work is treated as a sign the economy is bad and that people should panic about it. This matches the ground truth's 'hot waitress index' idea and the implication that even conventionally attractive people need extra money. The model also captures the overreaction/market-crash framing. It does not explicitly use the exact phrase 'hot waitress index,' but it does identify the same specific setup and meaning, so it is correct."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: seeing an attractive white girl doing gig/delivery work (Uber Eats) is treated as an economic indicator signaling that the economy is bad. The model correctly identifies the 'short everything' finance language meaning to bet against the market/economy crashing. The model also correctly identifies the class/privilege assumption underlying the joke - that someone perceived as socially privileged doing gig work signals economic hardship for everyone. This matches the ground truth's 'hot waitress index' concept (attractive people doing service/gig work = bad economy). The model gets the core joke correctly, even if it doesn't use the specific term 'hot waitress index.'"
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an attractive white girl doing Uber Eats/gig delivery work is treated as a macroeconomic recession indicator (the 'hot waitress index' concept). It names Uber Eats, the attractive white girl, the economy collapsing, and the finance slang 'short everything.' It also explains the visual of the stressed businessman reinforcing the panic. This matches the ground truth's setup and implication."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "2C / 1I"
+          "text": "This is a finance / recession indicator joke.\n\n**The references:**\n\n*   **Uber Eats** - app-based food delivery gig work. It's low-pay, no-benefits independent contractor work, often stereotyped as a last-resort job.\n*   **\"Short everything now\"** - finance...",
+          "fullText": "This is a finance / recession indicator joke.\n\n**The references:**\n\n*   **Uber Eats** - app-based food delivery gig work. It's low-pay, no-benefits independent contractor work, often stereotyped as a last-resort job.\n*   **\"Short everything now\"** - finance slang. To \"short\" is to bet that an asset will fall in value. To \"short everything\" means you think the entire economy / stock market is about to crash.\n*   **The video** - a viral reaction clip of a panicked businessman in an airport on the phone. It's used online as the \"SELL EVERYTHING RIGHT NOW\" meme - the moment someone realizes a market crash is happening and frantically calls his broker.\n\n**The joke:**\n\nIt's based on a deliberately sexist / classist assumption, taken to an absurd extreme.\n\nThe premise is: an attractive white woman is seen as the most privileged person in the American labor market. The stereotype is that she would have many other, easier, higher-paying options - corporate job, family support, influencer / OnlyFans money, dating wealthy, etc. - and would never *need* to do Uber Eats delivery.\n\nSo the tweet treats seeing one do it as a non-traditional economic indicator. If even *she* has to resort to gig delivery, the job market must be so terrible that a full-blown economic collapse is imminent.\n\nThe punchline \"short everything now\" is the hyperbolic leap of logic: one anecdotal observation of a delivery driver -> the entire economy is doomed, liquidate all your investments immediately.\n\nIt's part of a larger trend on FinTwit / TikTok of fake \"recession indicators\" - like \"when strippers say business is down, a recession is coming.\"\n\n**Visuals:**\n\nThe tweet screenshot on top is the setup. The bottom video of the man grimacing and screaming into a phone is the visual punchline - it sells the panic and urgency of the overreaction.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "incorrect",
+              "reasoning": "The model correctly identifies the core joke as a recession/economy indicator meme tied to Uber Eats gig work and the absurd leap to “short everything now.” However, it misses the specific ground-truth framing: the meme is specifically the “hot waitress index” joke, where an attractive white girl doing DoorDash/Uber Eats implies the economy is so bad that even conventionally attractive people need side-hustle/service work. The model expands into a broader finance/recession explanation and mentions sexist/classist assumptions, but it does not explicitly name or center the “hot waitress index” reference that the ground truth calls out. Since the benchmark requires the specific reference when present, this is not fully correct."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: seeing an attractive white woman doing Uber Eats delivery is treated as an economic indicator suggesting the economy is terrible, leading to the hyperbolic 'short everything' response. The model mentions the 'hot waitress index' concept implicitly (attractive privileged person doing gig work = bad economy), identifies the specific references (Uber Eats, 'short everything'), and correctly explains the setup and punchline. The model goes into more detail than the ground truth but captures the same essential joke mechanism. The ground truth mentions 'hot waitress index' by name, but the model describes the same concept even without naming it explicitly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an attractive white woman doing gig delivery work (Uber Eats) is treated as a recession indicator, implying the economy is so bad that even the most privileged demographic needs extra money. This matches the ground truth's 'hot waitress index' explanation. The model also correctly notes the hyperbolic 'short everything now' reaction and the broader fake recession indicator trend. It includes additional detail about the finance slang and the viral video, but these are accurate and do not detract from the correct interpretation."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme combines a tweet with a still image from a film to create a financial/stock-market joke.\n\n**The tweet:**\nThe text reads: \"i just watched an attractive white girl pick up an order for Uber Eats / short everything now\"\n\n**The joke:**\n\"Short everythi...",
+          "fullText": "This meme combines a tweet with a still image from a film to create a financial/stock-market joke.\n\n**The tweet:**\nThe text reads: \"i just watched an attractive white girl pick up an order for Uber Eats / short everything now\"\n\n**The joke:**\n\"Short everything\" is a reference to short selling in the stock market—a trading strategy where you bet that a stock or asset will go down in value. The humor comes from the absurd, exaggerated logic that seeing an attractive, conventionally well-off person doing gig economy delivery work (typically associated with people needing extra income) is supposedly a sign that the economy is in such bad shape that *everyone* is desperate for money. Therefore, the joke goes, you should bet against the entire economy (\"short everything\").\n\nIt plays on the trope of \"recession indicators\"—a popular running internet joke where people humorously point to small, often trivial observations as supposed signs of an impending economic collapse.\n\n**The image:**\nThe bottom shows a still of a distressed, panicked-looking man in a suit talking urgently on a phone. This appears to be from a finance-themed film (the imagery resembles scenes from movies like *The Big Short* or *Margin Call*, which deal with financial market crashes). The man's frantic expression reinforces the joke—he looks like a panicking trader reacting to bad market news, matching the \"short everything now\" panic.\n\n**TikTok elements:**\nThe engagement metrics (125K likes, etc.) on the right indicate this is a screenshot of a TikTok video, where the format of pairing a relatable/absurd tweet with a reaction video clip is extremely common.\n\nThe overall humor is in treating a mundane observation with the dramatic urgency of an impending financial apocalypse.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model captures the core joke: seeing an attractive white girl doing Uber Eats/side-hustle work is treated as a recession indicator, implying the economy is so bad that even conventionally attractive people need extra money. That matches the ground truth’s 'hot waitress index' idea. The model also correctly mentions the specific 'short everything now' stock-market panic framing, which is consistent with the meme’s implication. Although it adds extra speculation about the film clip and TikTok format, it does not miss the central reference or joke."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an attractive white girl doing gig economy work (Uber Eats) is treated as a recession indicator, leading to the punchline 'short everything now.' The model correctly explains the 'hot waitress index' concept (without using that exact term) - that when conventionally attractive/well-off people need to do side hustle work, it signals the economy is bad. The model correctly identifies 'short everything' as a financial trading term meaning to bet against assets declining in value. The model gets the essential setup, punchline, and mechanism of the joke, even if it doesn't use the specific 'hot waitress index' terminology. The ground truth's core elements are all present in the model's explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: seeing an attractive white girl doing Uber Eats/gig work is treated as a sign the economy is bad, prompting the exaggerated 'short everything' reaction. It captures the recession-indicator logic and the financial panic imagery. While it doesn't use the exact phrase 'hot waitress index,' it conveys the same concept and mechanism as the ground truth."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a screenshot of a tweet using a reaction GIF of Owen Wilson (from the 2013 film *The Internship*) on the phone looking distressed/shocked.\n\n**The joke**: The tweet author claims that spotting an attractive white woman doing a low-status gig-econ...",
+          "fullText": "The meme is a screenshot of a tweet using a reaction GIF of Owen Wilson (from the 2013 film *The Internship*) on the phone looking distressed/shocked.\n\n**The joke**: The tweet author claims that spotting an attractive white woman doing a low-status gig-economy job (Uber Eats pickup) is such an apocalyptic economic signal that the only rational response is to “short everything” (i.e., aggressively bet against the stock market because society is collapsing). It’s absurd, hyperbolic class/race/gender stereotyping meant to mock both economic anxiety and the idea that certain demographics “shouldn’t” be doing delivery work.\n\nThe distressed reaction face visually sells the over-the-top panic.\n\n(The “attractive white girl” phrasing is deliberately blunt/offensive to heighten the dark-comedy effect; it’s not meant to be taken literally.)",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: seeing an attractive white woman doing gig-economy delivery work is treated as a bad economic omen, implying the economy is so bad that even conventionally attractive people need side hustles. This matches the ground truth's 'hot waitress index' idea and the 'we're fucked' implication. The model also captures the hyperbolic market-panic framing. It does add extra specifics about Owen Wilson and a tweet, but those are not necessary to the ground truth and do not contradict it. Overall, it understood the same meme mechanism and reference target."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: seeing an attractive white woman doing gig economy work (Uber Eats pickup) is treated as an economic indicator that things are bad. The model correctly identifies the 'hot waitress index' concept (though doesn't name it explicitly), the economic signal aspect, and the implication that we're in trouble economically. The model also correctly captures the hyperbolic panic response ('short everything' vs 'we're fucked'). The core setup, implication, and mechanism are correctly identified - conventionally attractive people doing service/gig work signals economic distress."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core joke: an attractive white woman doing gig-economy delivery work (Uber Eats/DoorDash) is treated as an apocalyptic economic signal, implying the economy is in terrible shape. This matches the ground truth's 'hot waitress index' concept. The model also correctly notes the panic/distress reaction and the hyperbolic economic anxiety. The additional detail about Owen Wilson and 'short everything' phrasing doesn't detract from correctly getting the joke."
+            }
+          ]
         }
       ]
     },
@@ -5537,27 +7067,117 @@ window.basedBenchTaggedExamples = {
         {
           "model": "Gemini 3.1 Pro",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe phrase \"because of the implication\" is a famous quote from the comedic television series *It's Always Sunny in Philadelphia* (specifically Season 6, Episode 3: \"The G...",
+          "fullText": "Based on the image provided, here is an explanation of the meme:\n\n**1. The Reference**\nThe phrase \"because of the implication\" is a famous quote from the comedic television series *It's Always Sunny in Philadelphia* (specifically Season 6, Episode 3: \"The Gang Buys a Boat\"). \n\nIn the show, the sociopathic character Dennis Reynolds explains to his friend Mac why he wants to buy a boat: to take women out to the middle of the ocean where they will feel obligated to sleep with him. Dennis insists he would never actually hurt them, but notes that they wouldn't dare refuse him \"because of the implication\" that something bad might happen to them if they say no while isolated at sea. \n\n**2. The Visual Elements**\nThe foundational visual is the original tweet by the user \"@carrharrt,\" which shows a man proposing to a woman. Crucially, they are on a small boat in a large body of water, seemingly somewhat far from land.\n\n**3. The Joke**\nThe joke is a dark, humorous inversion of a genuinely romantic moment. \n\nThe original poster uploaded the photo of the proposal on the boat with the presumably happy caption \"She said yea.\" The person quote-tweeting it applies the dark logic of the *It's Always Sunny* character to the image. \n\nThe joke implies that the woman didn't say \"yes\" out of love, but rather because she was trapped on a tiny boat in the middle of the water with nowhere to run, and felt too afraid to reject him...\"because of the implication.\"",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to the 'implication' scene from It's Always Sunny in Philadelphia, including Dennis Reynolds, the boat in open ocean, and the coercive subtext that women feel unable to refuse because they have nowhere to run. It also captures the dark inversion of a normal romantic proposal into a threatening setup. This matches the ground truth closely and includes the required specific reference."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation is thorough and accurate. It correctly identifies the 'implication' scene from It's Always Sunny in Philadelphia, names the correct character (Dennis Reynolds), correctly describes the scene's content (taking women on a boat in open ocean where they can't safely say no), and correctly explains the joke mechanism (applying this dark logic to a boat proposal photo where the woman said yes). The model even identifies the specific episode. This matches all key elements of the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to It's Always Sunny in Philadelphia, the character Dennis Reynolds, and the 'implication' scene about taking women out on a boat where they can't safely say no. It also captures the dark humor and euphemistic framing of coercion. The model goes further to explain the specific meme image context (a boat proposal tweet), but this doesn't contradict the ground truth—it enhances it. All key elements from the ground truth are present."
+            }
+          ]
         },
         {
           "model": "GPT-5.5",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme is referencing **It’s Always Sunny in Philadelphia**, specifically Dennis Reynolds’ infamous line: **“because of the implication.”**\n\nIn that scene, Dennis talks about taking women out on a boat and says they’ll be more likely to agree to sex **“b...",
+          "fullText": "This meme is referencing **It’s Always Sunny in Philadelphia**, specifically Dennis Reynolds’ infamous line: **“because of the implication.”**\n\nIn that scene, Dennis talks about taking women out on a boat and says they’ll be more likely to agree to sex **“because of the implication”**—meaning the woman might feel trapped or pressured because she’s isolated on the water. The joke is that Dennis clearly sounds creepy and predatory while insisting nothing bad would actually happen.\n\nHere, the original post says **“She said yea”** over a romantic photo of a man proposing to a woman on a boat at sunset. The reply/quote says **“because of the implication,”** implying that she only accepted the proposal because they were out on a boat and she felt she couldn’t safely say no.\n\nThe humor comes from taking what should be a sweet engagement photo and reframing it through a dark, absurd reference to *Always Sunny*. The important visual detail is that the proposal is happening **on a boat**, which directly triggers the “implication” joke.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to It's Always Sunny in Philadelphia and Dennis Reynolds’ “because of the implication” scene. It also captures the core joke: a boat setting makes the woman feel trapped or pressured, turning a normal romantic proposal into a dark, coercive implication. This matches the ground truth’s explanation of the euphemistic, threatening subversion of a dating setup. The model even notes the boat/open ocean context and the implication that she couldn’t safely say no, which is the key mechanism of the meme."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the 'implication' scene from It's Always Sunny in Philadelphia, correctly names Dennis Reynolds, correctly explains the boat/coercion dynamic, and correctly explains how the meme applies this reference to the engagement photo on a boat. This matches the ground truth perfectly."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the show (It's Always Sunny in Philadelphia), the character (Dennis Reynolds), the specific scene/line ('because of the implication'), and the dark context of taking women out on a boat where they feel they can't safely say no. It also correctly applies the reference to the meme's boat proposal setup. This matches the ground truth in all key details."
+            }
+          ]
         },
         {
           "model": "Muse Spark 1.1",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This is a reference to *It's Always Sunny in Philadelphia*.\n\n**1. The reference:**\n\"because of the implication\" comes from Season 6, Episode 3 \"The Gang Buys a Boat\". In it, Dennis Reynolds explains his system for seducing women on a boat. He says he would...",
+          "fullText": "This is a reference to *It's Always Sunny in Philadelphia*.\n\n**1. The reference:**\n\"because of the implication\" comes from Season 6, Episode 3 \"The Gang Buys a Boat\". In it, Dennis Reynolds explains his system for seducing women on a boat. He says he would never actually hurt a woman, but if they're alone in the middle of the ocean, they are in no position to say no *because of the implication* that something bad could happen if they refuse. Dennis is a delusional narcissist/sociopath, so he doesn't see how sinister that sounds.\n\nThat line has become a meme shorthand for any situation where someone can't really say no because of a power imbalance or being trapped.\n\n**2. The joke:**\nThe original post is a wholesome proposal photo captioned \"She said yea\" - a man on one knee proposing to a woman on the bow of a boat at sunset.\n\nThe quote tweet \"because of the implication\" reframes that romantic moment in the darkest possible way. The joke is that she didn't say yes because she wanted to get married, she said yes because she was trapped on a small boat in open water with no way to leave or get away from an awkward/dangerous situation. If she says no, she's stuck on that boat with him.\n\nIt's not literally accusing the guy of threatening her, it's applying Dennis's sociopathic logic to a popular proposal trope - a proposal on a boat - where saying no would be socially and logistically very difficult.\n\n**3. Visual elements that matter:**\nThe fact that they are on a small boat, in the middle of calm water, far from shore at sunset. She is standing at the very front of the bow with nowhere to go. The isolation and inability to just walk away is what makes \"the implication\" joke work.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to *It's Always Sunny in Philadelphia* and the “because of the implication” scene involving Dennis Reynolds on a boat in open ocean. It also captures the core joke: a romantic boat proposal is darkly reframed as coercive because the woman is trapped and unable to safely refuse. This matches the ground truth’s emphasis on the euphemistic, sinister use of “implication” and the boat/open-ocean setup. The model even names the episode and explains the same ironic contrast, so it understands the meme accurately."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference to 'It's Always Sunny in Philadelphia,' specifically the 'implication' scene where Dennis Reynolds explains that women on a boat feel they can't say no because they have nowhere to run. The model even correctly identifies the specific episode (Season 6, Episode 3, 'The Gang Buys a Boat'). The model accurately explains the joke: a romantic boat proposal photo is recontextualized with 'because of the implication,' suggesting the woman said yes not out of love but because she was trapped on the boat with nowhere to go. This matches the ground truth explanation perfectly, including the euphemistic framing of coercion/sexual threat as 'the implication' and the dark subversion of a normal romantic setup."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model's explanation matches the ground truth in all critical aspects. Both identify the specific reference: the 'implication' scene from It's Always Sunny in Philadelphia, specifically Dennis Reynolds explaining that women on a boat in open ocean can't safely say no. Both correctly identify the dark humor in euphemistically framing coercion/sexual threat as a vague 'implication.' The model even provides additional detail (season/episode, meme usage) and explains the specific application to the proposal photo, which aligns with the ground truth's description of 'a shocking subversion of a normal dating setup.' The model correctly identifies the same core joke mechanism, the same specific show, the same character (Dennis Reynolds), and the same dark implication about being trapped on a boat."
+            }
+          ]
         },
         {
           "model": "Claude Opus 4.8",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "This meme combines a wholesome image with a dark comedic reference.\n\n**The reference:** \"Because of the implication\" is a famous quote from the TV show *It's Always Sunny in Philadelphia*, specifically the episode \"The Gang Buys a Boat.\" In that scene, Denn...",
+          "fullText": "This meme combines a wholesome image with a dark comedic reference.\n\n**The reference:** \"Because of the implication\" is a famous quote from the TV show *It's Always Sunny in Philadelphia*, specifically the episode \"The Gang Buys a Boat.\" In that scene, Dennis explains his predatory \"Dennis System\" for attracting women, describing how he takes them out on a boat. When Mac asks why women would be more inclined to be with him on a boat, Dennis explains it's \"because of the implication\"—the unsettling suggestion that, stranded at sea, the women feel they *can't* refuse his advances because they're in a vulnerable position with nowhere to escape. The scene is famously dark and uncomfortable, as Dennis insists \"the implication of danger\" makes them compliant while frantically denying he'd actually hurt anyone.\n\n**The joke:** \n- The bottom post (@carrharrt) shows a genuinely romantic marriage proposal on a boat at sunset, with the caption \"She said yea.\"\n- The top reply (@redrum) responds \"because of the implication\"—jokingly suggesting she only said yes because they're stranded on a boat in the middle of the ocean and she felt she couldn't refuse.\n\n**Why it's funny:** It takes a sweet, sincere moment and reframes it through the sinister logic of the Dennis System, implying the woman was essentially coerced by her circumstances. The contrast between the beautiful, heartfelt proposal and the dark *Always Sunny* implication creates the comedic dissonance. It's a popular format—pairing any boat-related content with the \"implication\" reference is a recurring inside joke among fans of the show.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to the 'implication' scene from It's Always Sunny in Philadelphia, including Dennis Reynolds on a boat in open ocean and the idea that women feel unable to refuse because of the implied danger. It also correctly explains the joke as a dark reframing of a wholesome boat proposal through that scene's coercive implication. This matches the ground truth's core setup, reference, and humor mechanism."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model's explanation correctly identifies: 1) The specific show (It's Always Sunny in Philadelphia), 2) The specific scene/episode (Gang Buys a Boat), 3) The character Dennis Reynolds and his 'Dennis System', 4) The core mechanism of the 'implication' - that women on a boat feel they can't say no because they have nowhere to go, 5) The humor of applying this dark framing to a wholesome marriage proposal on a boat. The model goes into even more detail than the ground truth, explaining both the original scene and how it's applied in the meme context. This clearly matches the ground truth explanation."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference: the 'implication' scene from It's Always Sunny in Philadelphia, Dennis Reynolds, the boat setup, and the dark euphemistic framing of coercion/sexual threat. It also correctly explains the meme's joke: a wholesome boat proposal reframed by the sinister 'implication' reference. All key elements from the ground truth are present."
+            }
+          ]
         },
         {
           "model": "Grok 4.3",
           "verdict": "correct",
-          "score": "3C / 0I"
+          "text": "The meme is a quote-tweet referencing the \"implication\" bit from *It's Always Sunny in Philadelphia* (Season 5, \"The Gang Buys a Boat\"). In the original scene, Dennis explains that taking women out on a boat creates \"the implication\" they might be in danger...",
+          "fullText": "The meme is a quote-tweet referencing the \"implication\" bit from *It's Always Sunny in Philadelphia* (Season 5, \"The Gang Buys a Boat\"). In the original scene, Dennis explains that taking women out on a boat creates \"the implication\" they might be in danger if they say no to him—because refusing would feel unsafe when stranded at sea.\n\nHere, the top poster is jokingly framing a man's boat proposal the same way: she said \"yes\" not purely out of love, but because of the unsettling pressure created by being isolated on the water with him. The romantic sunset photo (standard proposal imagery) is the straight setup that gets inverted by the creepy reference.\n\nThe humor comes from the deliberate mismatch between wholesome romance and the show's dark, predatory logic.",
+          "judges": [
+            {
+              "model": "gpt-5.4-mini",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference to the 'implication' scene from It's Always Sunny in Philadelphia, including Dennis Reynolds, the boat/open ocean setup, and the idea that women feel unable to safely refuse because they are stranded. It also captures the joke's inversion of a wholesome boat proposal into a creepy, coercive implication. This matches the ground truth's core setup and humor mechanism closely."
+            },
+            {
+              "model": "claude-sonnet-4-6",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the core reference (It's Always Sunny in Philadelphia), the specific scene/episode about 'the implication' with Dennis Reynolds on a boat, the mechanism of the joke (isolation on a boat creating implied coercion), and why it's funny (wholesome romance setup inverted by dark predatory logic). The model even adds the specific episode name ('The Gang Buys a Boat') which isn't in the ground truth but is accurate. All key elements match: the show, the scene, the implication concept, and the humor mechanism."
+            },
+            {
+              "model": "z-ai/glm-5.2",
+              "verdict": "correct",
+              "reasoning": "The model correctly identifies the specific reference: the 'implication' scene from It's Always Sunny in Philadelphia, Dennis's explanation about taking women out on a boat, and the dark humor of framing coercion as a vague 'implication.' It matches the ground truth on all key points: the show, the character's logic, the boat setting, and the dark subversion of a normal dating/romantic setup. The model adds extra context about the specific meme format (a quote-tweet of a boat proposal), but this does not detract from the correct identification of the core joke and references."
+            }
+          ]
         }
       ]
     }
