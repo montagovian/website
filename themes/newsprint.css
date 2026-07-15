@@ -849,6 +849,10 @@
   margin-top: 0.75rem;
 }
 
+.inspect-response-full > p + p {
+  margin-top: 0.9rem;
+}
+
 .inspect-response-full :is(ul, ol) {
   display: grid;
   gap: 0.35rem;
@@ -963,6 +967,10 @@
 
 .inspect-judge-reasoning > * + * {
   margin-top: 0.6rem;
+}
+
+.inspect-judge-reasoning > p + p {
+  margin-top: 0.75rem;
 }
 
 .inspect-judge-reasoning :is(ul, ol) {
