@@ -2662,6 +2662,41 @@
           linkify: true,
           typographer: false,
         });
+        const preloadedImages = new Map();
+        const queuedImagePreloads = new Set();
+
+        const preloadImage = (source) => {
+          if (!source || preloadedImages.has(source)) return;
+          const preload = new Image();
+          preload.decoding = "async";
+          preload.src = source;
+          preloadedImages.set(source, preload);
+          if (typeof preload.decode === "function") {
+            preload.decode().catch(() => {});
+          }
+        };
+
+        const scheduleImagePreloads = (sources) => {
+          const pending = sources.filter((source) => {
+            if (!source || preloadedImages.has(source) || queuedImagePreloads.has(source)) return false;
+            queuedImagePreloads.add(source);
+            return true;
+          });
+          if (!pending.length) return;
+
+          const run = () => {
+            pending.forEach((source) => {
+              queuedImagePreloads.delete(source);
+              preloadImage(source);
+            });
+          };
+
+          if ("requestIdleCallback" in window) {
+            window.requestIdleCallback(run, { timeout: 1200 });
+          } else {
+            window.setTimeout(run, 0);
+          }
+        };
 
         const renderMarkdown = (markdown) => {
           const template = document.createElement("template");
@@ -2846,6 +2881,15 @@
             .replace(/[^a-z0-9_-]/gi, "-");
 
           let activeIndex = 0;
+          let preloadNearby = !("IntersectionObserver" in window);
+
+          const warmAdjacentImages = () => {
+            if (!preloadNearby || examples.length < 2) return;
+            scheduleImagePreloads([
+              examples[(activeIndex + 1) % examples.length].image,
+              examples[(activeIndex - 1 + examples.length) % examples.length].image,
+            ]);
+          };
 
           const render = (nextIndex) => {
             activeIndex = (nextIndex + examples.length) % examples.length;
@@ -2869,6 +2913,8 @@
                 dot.removeAttribute("aria-current");
               }
             });
+
+            warmAdjacentImages();
           };
 
           const makeDot = (example, dotIndex) => {
@@ -2887,6 +2933,16 @@
           prev.addEventListener("click", () => render(activeIndex - 1));
           next.addEventListener("click", () => render(activeIndex + 1));
           render(0);
+
+          if ("IntersectionObserver" in window) {
+            const preloadObserver = new IntersectionObserver((entries) => {
+              if (!entries.some((entry) => entry.isIntersecting)) return;
+              preloadNearby = true;
+              warmAdjacentImages();
+              preloadObserver.disconnect();
+            }, { rootMargin: "300px 0px" });
+            preloadObserver.observe(viewer);
+          }
         };
 
         document.querySelectorAll("[data-inspect-viewer]").forEach((viewer) => {
